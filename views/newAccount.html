@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Account</title>
+    <!-- <meta name="viewport" content="width=device-width,height:100%, initial-scale=1"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v3.0.1/dist/bootstrap-float-label.min.css"/>
+    <link rel="stylesheet" href="../css/newAccount.css">
+  </head>
+  <body>
+    <div class="newAccount" id="registration_form">
+      <div class="top">
+         <div class="heading">
+           <span class="text-primary">F</span><span class="text-danger">u</span><span class="text-warning">n</span><span class="text-primary">d</span><span class="text-success">o</span><span class="text-danger">o</span>
+         </div>
+         <p11>Create New Fundoo Account</p11>
+      </div>
+    
+  <div class="data">
+    <div class="left">
+      <div class="one" >
+          <div class="form-group input-group names">
+              <span class="has-float-label">
+                <input data-bind="firstName" class="form-control" id="first" type="text" placeholder=" " required=""/>
+                <label for="first">Firstname</label>
+              </span>
+        
+              <span class="has-float-label">
+                <input data-bind="lastName"  class="form-control" id="second" type="text" placeholder=" " required=""/>
+                <label for="second">Lastname</label>
+              </span>
+          </div>  
+          <span class="has-float-label form-text emailbox">
+              <input data-bind="userName" class="form-control" id="email" type="text" placeholder=" " required=""/>
+              <label for="email">Username<span class="static-value">@gmail.com</span></label>
+              <!-- <span>@gmail.com</span> -->
+          </span>
+
+          <div class="paragraphs">
+            <p1>You can use letters,numbers and periods</p1>
+            <p2>Use my current email address instead</p2>
+          </div>
+
+          <div class="last">
+            <span class="has-float-label">
+              <input data-bind="password" class="form-control" id="pass" type="text" placeholder=" " required=""/>
+              <label for="first">Password</label>
+            </span>
+      
+            <span class="has-float-label">
+              <input data-bind="confirm" class="form-control" id="conf" type="text" placeholder=" " required=""/>
+              <label for="second">Confirm</label>
+            </span>
+            <div class="eye"><i class="far fa-eye-slash"></i></div>
+          </div>
+          <p1>Use 8 or more characters with a mix of letters, numbers & symbols</p1>
+
+          <div class="new" >
+            <div class="card-text" style="  transform: rotate(0);margin-top: 10px;">
+              <a href="#login" class="text-primary stretched-link">Sign in instead?</a>
+            </div>
+            <input type="submit" id="myButton" value="Register" name=""  class="btn btn-primary">
+          </div>
+      </div>
+     </div>
+     <div class=" right">
+         <img src="../images/newAcc.svg" alt="" class="image1">
+         <p>One account. All of Google working for you.</p>
+    </div>
+    </div>
+   </div>
+
+    <script src="../js/newAccount.js"></script>
+  </body>
+</html> 
