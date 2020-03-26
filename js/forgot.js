@@ -32,8 +32,28 @@ $(function() {
   
        check_email();
   
+       const userData={
+         email:$('#email').val(),
+      };
        if ( error_email === false ) {
-          alert("link send Successfull");
+         var token= localStorage.getItem("token");
+         $.ajax({
+            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset?access_token=token",
+            data: JSON.stringify(userData),
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+            console.log("forget result ==>", result);
+
+            alert(" Successfull");
+            resetForm();
+            },
+            error: function (errorMessage) {
+            console.log("Error", errorMessage);
+            alert("errorMessage==>",errorMessage.responseText);
+            }
+         })
           return true;
        } else {
           alert("Please Fill the form Correctly");
@@ -41,4 +61,6 @@ $(function() {
        }
     });
   });
-
+  function resetForm(){
+   document.getElementById("email").value="";
+   }
