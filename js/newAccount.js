@@ -257,11 +257,11 @@ $(function() {
       
        if (error_fname === false && error_sname === false && error_email === false && error_password === false && error_retype_password === false) {
          
-              
-          localStorage.setItem("email",$('#email').val());
-          localStorage.setItem("password",$('#pass').val());    
-          resetForm();
-          $.ajax({
+             localStorage.setItem("email",$('#email').val());
+             localStorage.setItem("password",$('#pass').val());    
+             resetForm();
+         
+            $.ajax({
             url: "http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp",
             data: JSON.stringify(userData),
             type: "POST",
@@ -276,7 +276,6 @@ $(function() {
             alert("errorMessage",errorMessage);
             }
          })
-          
           return true;
        } else {
           alert("Please Fill the form Correctly");
