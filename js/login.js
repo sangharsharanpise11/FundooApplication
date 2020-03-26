@@ -73,8 +73,6 @@ $(function() {
             success: function (result) {
             console.log("Login result ==>", result);
 
-            //localStorage.setItem("token", result.id);
-            //localStorage.setItem("id", result.data.id);
             localStorage.setItem("token",result.id);
             console.log("id============>", result.id);
             alert("Login Successfull");
