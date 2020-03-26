@@ -144,10 +144,7 @@ p2{
 /******************************************************************/
 @media screen and (max-width: 425px) {
 .right {
-  width: 350px;
   display: none !important;
-  display: grid;
-  justify-content: center;
 }
 .new {
   display: flex;

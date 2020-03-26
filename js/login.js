@@ -68,33 +68,33 @@ $(function() {
     });
   });
 
- let signin= document.getElementById('signin');
- signin.addEventListener('click',buttonClickHandler)
+//  let signin= document.getElementById('signin');
+//  signin.addEventListener('click',buttonClickHandler)
 
-  function buttonClickHandler(){
-    const xhr=new XMLHttpRequest();
-    console.log("i am called");
+//   function buttonClickHandler(){
+//     const xhr=new XMLHttpRequest();
+//     console.log("i am called");
     
-    xhr.open('POST','http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp',true)
-    xhr.getResponseHeader('content-type','application/json')
+//     xhr.open('POST','http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp',true)
+//     xhr.getResponseHeader('content-type','application/json')
 
-    xhr.onprogress=function()
-    {
-       console.log("in progress");  
-    }
+//     xhr.onprogress=function()
+//     {
+//        console.log("in progress");  
+//     }
 
-    xhr.onload=function()
-    {
-       if(this.status===200)
-       {
-          console.log(this.responseText);
-       }
-       else
-       {
-          console.error("some error occured");
-       }
-    }  
+//     xhr.onload=function()
+//     {
+//        if(this.status===200)
+//        {
+//           console.log(this.responseText);
+//        }
+//        else
+//        {
+//           console.error("some error occured");
+//        }
+//     }  
     
-    param={"email":"document.getElementById('email')","password":"document.getElementById('password')"}
-    xhr.send(param);
-   }; 
+//     param={"email":"document.getElementById('email')","password":"document.getElementById('password')"}
+//     xhr.send(param);
+//    }; 
