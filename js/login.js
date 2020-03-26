@@ -55,46 +55,44 @@ $(function() {
        check_email();
        check_password();
   
+       const userData={
+         email:$('#email').val(),
+         password:$('#password').val() 
+      };
+
+      console.log("user data ",userData);
+
        if ( error_email === false && error_password === false)
        {
-          alert("login Successfull");
+         $.ajax({
+            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/login",
+            data: JSON.stringify(userData),
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+            console.log("Login result ==>", result);
+
+            //localStorage.setItem("token", result.id);
+            //localStorage.setItem("id", result.data.id);
+            localStorage.setItem("token",result.id);
+            console.log("id============>", result.id);
+            alert("Login Successfull");
+            resetForm();
+            },
+            error: function (errorMessage) {
+            console.log("Error", errorMessage);
+            alert("errorMessage==>",errorMessage.responseText);
+            }
+         })
           return true;
-       }
-        else 
-       {
+       } else {
           alert("Please Fill the form Correctly");
           return false;
        }
     });
   });
-
-//  let signin= document.getElementById('signin');
-//  signin.addEventListener('click',buttonClickHandler)
-
-//   function buttonClickHandler(){
-//     const xhr=new XMLHttpRequest();
-//     console.log("i am called");
-    
-//     xhr.open('POST','http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp',true)
-//     xhr.getResponseHeader('content-type','application/json')
-
-//     xhr.onprogress=function()
-//     {
-//        console.log("in progress");  
-//     }
-
-//     xhr.onload=function()
-//     {
-//        if(this.status===200)
-//        {
-//           console.log(this.responseText);
-//        }
-//        else
-//        {
-//           console.error("some error occured");
-//        }
-//     }  
-    
-//     param={"email":"document.getElementById('email')","password":"document.getElementById('password')"}
-//     xhr.send(param);
-//    }; 
+  function resetForm(){
+   document.getElementById("email").value="";
+   document.getElementById("password").value="";
+   }

@@ -259,7 +259,7 @@ $(function() {
          
              localStorage.setItem("email",$('#email').val());
              localStorage.setItem("password",$('#pass').val());    
-             resetForm();
+           
          
             $.ajax({
             url: "http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp",
@@ -270,41 +270,18 @@ $(function() {
             success: function (result) {
             console.log("Register", result);
             alert("Registration Successfull");
+            resetForm();
             },
             error: function (errorMessage) {
             console.log("Error", errorMessage);
-            alert("errorMessage",errorMessage);
+            alert("errorMessage",errorMessage.responseText);
             }
          })
           return true;
        } else {
           alert("Please Fill the form Correctly");
           return false;
-       }
-
-     
-      //  const xhr=new XMLHttpRequest();
-      //  xhr.open('POST','http://fundoonotes.incubation.bridgelabz.com/api/user/userSignUp',true)
-      //  xhr.getResponseHeader('content-type','application/json')
-
-      //      xhr.onprogress=function()
-      //      {
-      //         console.log("in progress");  
-      //      }
-       
-      //      xhr.onload=function()
-      //      {
-      //         if(this.status===200)
-      //         {
-      //            console.log("RESPONSE TEXT===========",this.responseText);
-      //         }
-      //         else
-      //         {
-      //            console.error("some error occured");
-      //         }
-      //      } 
-
-      //  xhr.send(userData); 
+       } 
     });
   });
 
