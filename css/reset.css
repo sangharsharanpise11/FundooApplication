@@ -54,9 +54,10 @@ p11{
   margin: -1px;
 }
 .forgot {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  justify-content: center;
   margin-top: 12px;
+  grid-row-gap: 20px;
 }
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
@@ -74,14 +75,10 @@ p11{
     margin-left: 35px;
   }
   .forget {
+    justify-content: space-around;
+    margin-top: 12px;
     display: grid;
-    width: 60%;
-    border-radius: 8px;
-    border: 1px solid #dadce0;
-    padding: 40px;
-    width: 305px;
-    height: 325px;
-    justify-content: center;
+    grid-row-gap: 20px;
     
   }
   

@@ -28,13 +28,39 @@ $(function() {
   
        check_password();
   
+       const userData={
+         password:$('#password').val(),
+      };
+
        if ( error_password === false) {
-          alert("reset password Successfull");
+         localStorage.setItem("password",$('#password').val());    
+         var token= localStorage.getItem("token");
+         console.log("token =>",token);
+
+         $.ajax({
+            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password?access_token=token",
+            data: JSON.stringify(userData),
+            type: "POST",
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+            console.log("reset result ==>", result);
+
+            alert(" Password Changed Successfully");
+            resetForm();
+            },
+            error: function (errorMessage) {
+            console.log("Error", errorMessage);
+            alert("errorMessage==>",errorMessage.responseText);
+            }
+         })
           return true;
        } else {
-          alert("Please Fill the form Correctly");
+          alert("Please Fill the field");
           return false;
        }
     });
   });
-
+  function resetForm(){
+   document.getElementById("email").value="";
+   }

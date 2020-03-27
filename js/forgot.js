@@ -3,12 +3,9 @@ $(function() {
 
     var error_email = false;
   
-   
     $("#email").focusout(function() {
        check_email();
     });
-    
-  
     
     function check_email() {
         var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
