@@ -1,3 +1,5 @@
+console.log("in reset.js");
+
 $(function() {
     $("#password_error_message").hide();
 
@@ -29,20 +31,21 @@ $(function() {
        check_password();
   
        const userData={
-         password:$('#password').val(),
+         newPassword:$('#password').val(),
       };
 
        if ( error_password === false) {
-         localStorage.setItem("password",$('#password').val());    
-         var token= localStorage.getItem("token");
-         console.log("token =>",token);
+         localStorage.setItem("newPassword",$('#password').val());    
+         // var token= localStorage.getItem("token");
+         // console.log("token =>",token);
 
-         $.ajax({
-            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password?access_token=token",
+         $.ajax({//take a token from email
+            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password?access_token=9lrks86B47tsH2QPZ8ruyBDAYAUxYj3XyYj1mrTHP8wGaJqqlHYRcEMvE8oAptAV",
             data: JSON.stringify(userData),
             type: "POST",
             contentType: "application/json;charset=utf-8",
             dataType: "json",
+            //headers: {"Authorization": "FlQj4C6jtK5aNc4pN3g8KsaPck8NDk8mUAEC70lKZ3ZzOqmuKR8Ze4oFLEbH24GK"},
             success: function (result) {
             console.log("reset result ==>", result);
 
@@ -62,5 +65,5 @@ $(function() {
     });
   });
   function resetForm(){
-   document.getElementById("email").value="";
+   document.getElementById("password").value="";
    }

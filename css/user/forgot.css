@@ -75,7 +75,7 @@ p11{
     border: 1px solid #dadce0;
     padding: 40px;
     width: 305px;
-    height: 325px;
+    height: 402px;
     justify-content: center;
   }
   
@@ -112,6 +112,14 @@ p11{
   height: 36px;
   margin-left: 34px;
 }
+.buttons{
+  display: grid;
+  grid-row-gap: 15px;
+}
+.resetBtn{
+  WIDTH: 159px;
+    margin-left: 34px;
+}
 }
 /********************************************************/
 @media screen and (min-width:321px) and (max-width: 425px) {
@@ -124,6 +132,11 @@ p11{
     padding: 40px;
     width: 405px;
     height: 400px;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px!important;
 }
 .top {
   padding: 10px;
@@ -140,12 +153,12 @@ p11 {
   margin-top: -25px;
   margin-left: 62px;
 }
-.paragraph{
+.paragraph {
   box-sizing: border-box;
-    text-align: center;
-    word-break: break-word;
-    margin-top: -30px;
-  }
+  text-align: center;
+  word-break: break-word;
+  margin-top: -10px;
+}
 .form-control {
   display: block;
   width: 342px;
@@ -162,12 +175,33 @@ p11 {
   margin: -1px;
 }
 .names{
-  margin-top: -30px;
+  margin-top: 0px;
 }
 .signinBtn {
+  margin-left: -25px;
+  margin-top: 10px;
+}
+.resetBtn{
   width: 160px;
+  margin-top: 10px;
+  margin-left: -27px;
+}
+.buttons{
+  display: flex;
+    justify-content: space-between;
+    margin-left: -3px;
+}
+
+
+}
+/********************************************************/
+@media screen and  (min-width: 425px) {
+.resetBtn{
   height: 36px;
-  margin-left: 90px;
-  margin-top: -50px;
+}
+.buttons{
+  display: flex;
+    justify-content: space-between;
+    margin-left: -182px;
 }
 }

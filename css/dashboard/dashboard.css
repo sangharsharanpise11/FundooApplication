@@ -1,0 +1,40 @@
+.nav-item{
+    font-size: x-large;
+    font-weight: 300;
+}
+.navbar-nav{
+    justify-content: space-between;
+    width: 100%;
+}
+.form-control{
+    width: 555px !important;
+    border-radius: 10px;
+    height: 50px;
+}
+.threeIcons, .twoIcons{
+    list-style-type: none;
+    display: flex;
+    margin: 10px;
+
+}
+.ul > .li {
+    margin-left: 20px !important;
+    margin-top: 15px !important;
+}
+.image{
+    width: 35px;
+    height: 35px;
+    border-radius: 70%;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    left: 0;
+    z-index: 1030;
+    color: gray;
+    height: 67px;
+    border-bottom: ridge;
+    border-bottom-color: white;
+  }

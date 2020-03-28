@@ -33,6 +33,8 @@ $(function() {
          email:$('#email').val(),
       };
        if ( error_email === false ) {
+          console.log("========",email);
+          
          var token= localStorage.getItem("token");
          $.ajax({
             url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset?access_token=token",
