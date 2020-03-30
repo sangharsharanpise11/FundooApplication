@@ -177,3 +177,48 @@ a {
         margin-left: 260px;
     }
 }
+/********************************************************************/
+@media screen and (min-width: 320px) and (max-width:425px){
+    .keepLogo {
+        display: none;
+    }
+    .navbar-nav {
+        display: list-item;
+        width: 100%;
+    }
+    .form-inline {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        display: none;
+    }
+    .app{
+        display: none
+    }
+    .threeIcons {
+        list-style-type: none;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 115px;
+        margin-top: 2px;
+        margin-left: 109px;
+        margin-right: -94px;
+    }
+    .menu {
+            margin-left: 20px;
+            margin-top: 6px;
+            font-size: 25px;
+    }        
+    .image {
+        width: 42px;
+        height: 42px;
+        border-radius: 70%;
+        margin-top: -18px;
+        /* margin-right: 32px; */
+        margin-left: 128px;
+    }
+}
