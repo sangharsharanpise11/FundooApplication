@@ -38,7 +38,7 @@ span{
  ul li {
     display: inline-block;
 }
-img {
+.keepLogo{
     vertical-align: middle;
     border-style: none;
     margin-left: -50px;
@@ -131,4 +131,49 @@ a {
     background-color: lavender;
     color: black;    text-decoration: none;
     border-radius: 50px;
+}
+
+/******************* MEDIA QUERY STARTED **************************************************/
+@media screen and (max-width: 320px) {
+    .keepLogo {
+        display: none;
+    }
+    .navbar-nav {
+        display: list-item;
+        width: 100%;
+    }
+    .form-inline {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        display: none;
+    }
+    .app{
+        display: none
+    }
+    .threeIcons {
+            list-style-type: none;
+            display: flex;
+            font-size: 22px !important;
+            justify-content: space-between;
+            width: 115px;
+            margin-top: 2px;
+            margin-left: 10px;
+    }
+    .menu {
+            margin-left: 20px;
+            margin-top: 6px;
+            font-size: 25px;
+    }        
+    .image {
+        width: 42px;
+        height: 42px;
+        border-radius: 70%;
+        margin-top: -120px;
+        /* margin-right: 32px; */
+        margin-left: 260px;
+    }
 }
