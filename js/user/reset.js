@@ -40,7 +40,7 @@ $(function() {
          // console.log("token =>",token);
 
          $.ajax({//take a token from email
-            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password?access_token=9lrks86B47tsH2QPZ8ruyBDAYAUxYj3XyYj1mrTHP8wGaJqqlHYRcEMvE8oAptAV",
+            url: "http://fundoonotes.incubation.bridgelabz.com/api/user/reset-password?access_token=0tKykLfQL6q6SDJ2mUDHyaGNJVFpBLd17aZ9YTacuyQUGIYL55FNqq1EwrKRLFiM",
             data: JSON.stringify(userData),
             type: "POST",
             contentType: "application/json;charset=utf-8",

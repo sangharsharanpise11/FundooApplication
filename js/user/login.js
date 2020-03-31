@@ -77,6 +77,7 @@ $(function() {
             console.log("id============>", result.id);
             alert("Login Successfull");
             resetForm();
+            $(location).attr('href',"/views/dashboard/dashboard.html");
             },
             error: function (errorMessage) {
             console.log("Error", errorMessage);
