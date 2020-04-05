@@ -1,6 +1,7 @@
 body{
     height: 100%;
     width: 100%;
+    background-color: ghostwhite;
   }
 span{
     margin-left: 25px;
@@ -100,7 +101,7 @@ span{
     -webkit-font-smoothing: antialiased;
 }
 .w3-sidebar{
-    margin-top: 70px;
+    margin-top: 67px;
     font-size: -21px;
     font-weight: 500;
     display: grid;
@@ -132,7 +133,68 @@ a {
     color: black;    text-decoration: none;
     border-radius: 50px;
 }
-
+/**************** create note *********************************/
+#flip{
+    display: flex;
+    padding: 5px;
+    text-align: left;
+    background-color: #e5eecc;
+    border-radius: 5px;
+    justify-content: space-between;
+    height: 35px;margin-top: -70px;
+    width: 450px;margin-left: 240px;
+ }
+ .sideBody{
+    height: 500px !important;
+    width: 100% !important;
+    display: flex;
+ }
+ .createNote{
+    background-color: white;
+    width: 450px;
+    border-radius: 5px;
+    display: grid;
+    grid-row-gap: 15px;
+    margin-top: 90px;
+    margin-left: 240px;
+    height: 180px;
+ }
+ .material-icons{
+    font-size: 18px !important;
+ }
+ .fa-paint-brush, .fa-image{
+     font-size: 15px;
+ }
+ .form-control{
+     outline: none;
+ }
+ input[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: gray;
+}
+.icons{
+    margin-left: 19px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+#desc{
+    margin-top: -10px;
+}
+.close{
+    width: 70px;
+    margin-left: 370px;
+    margin-top: -5px;
+    font-size: 15px;
+    font-weight: 500;
+}
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
     .keepLogo {
