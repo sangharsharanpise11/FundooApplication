@@ -45,7 +45,8 @@ $(function() {
             type: "POST",
             contentType: "application/json;charset=utf-8",
             dataType: "json",
-            //headers: {"Authorization": "FlQj4C6jtK5aNc4pN3g8KsaPck8NDk8mUAEC70lKZ3ZzOqmuKR8Ze4oFLEbH24GK"},
+            beforeSend : function( xhr ) {
+               xhr.setRequestHeader( 'Authorization', 'BEARER ' + token );   },
             success: function (result) {
             console.log("reset result ==>", result);
 

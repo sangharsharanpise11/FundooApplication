@@ -80,33 +80,39 @@ $("#close").click(function () {
   check_desc();
 
    const noteData={
+
      title:$('#title').val(),
      description:$('#desc').val(),
-     labelIdList:"",	
-     checklist:"",	
-     isPined:"",		
-     isArchived:"",
-     color:"",	
-     reminder	:"",
-     collaberators:"" 
+     
   };
 
-  console.log("note data ",noteData);
+  
+  title=$('#title').val();
+  description=$('#desc').val();
+
+  console.log("title=",title);
+  console.log("desc=",description);
+console.log(noteData);
+
 
   if ( error_title === false && error_desc === false)
   {
      var token= localStorage.getItem("token");
      console.log("token =>",token);
+     console.log("notes data ",noteData);
+     
      $.ajax({
-        url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes?access_token=token",
-        data: JSON.stringify(noteData), 
-        type: "POST",
-        contentType: "application/json;charset=utf-8",
-        dataType: "json",
-        success: function (result) {
-        console.log("note create result ==>", result);
+      url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes",
+      data:  JSON.stringify(noteData),  
+      type: "POST",
+      headers: {
+         'Authorization': localStorage.getItem('token')
+       },
+      contentType: "application/json;charset=utf-8",
+      success: function (result) {
+      console.log("note create result ==>", result);
 
-        localStorage.setItem("token",result.id);
+       
         console.log("id============>", result.id);
         alert("note create Successfull");
         resetForm();
@@ -119,7 +125,7 @@ $("#close").click(function () {
      })
       return true;
    } else {
-      alert("Please Fill the form Correctly");
+      alert("Please Fill Correctly");
       return false;
    }
   });
