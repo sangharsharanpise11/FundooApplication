@@ -11,19 +11,6 @@
     });
   });
 
-
-// title	
-// description	
-// labelIdList	
-// checklist	
-// isPined		
-// isArchived
-// color	
-// reminder	
-// collaberators	
-//http://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes?access_token=token
-
-
 $(function() {
   $("#title_error_message").hide();
   $("#desc_error_message").hide();
@@ -42,7 +29,7 @@ $(function() {
 
   
   function check_title() {
-    var pattern = /^[a-zA-Z]*$/;
+    var pattern = /^[a-zA-Z ]*$/;
     var title = $("#title").val()
     if (pattern.test(title) && desc !== ''){
          $("#title_error_message").hide();
@@ -56,7 +43,7 @@ $(function() {
    }
  
   function check_desc() {
-    var pattern = /^[a-zA-Z]*$/;
+    var pattern = /^[a-zA-Z ]*$/;
     var desc = $("#desc").val()
     if (pattern.test(desc) && desc !== '') 
     {
@@ -134,3 +121,45 @@ function resetForm(){
 document.getElementById("title").value="";
 document.getElementById("desc").value="";
 }
+
+/****************************** display note on dashboard ************************************************/
+  
+console.log("in display note");
+  
+$(document).ready(function(){
+  $("#note").click(function(){
+      $("#openNote").css("display","block")
+  });
+});
+
+ var token= localStorage.getItem("token");
+ console.log("token =>",token);
+
+ var notes=[];
+ $(document).ready(function(){
+  
+    $.ajax({
+        
+        url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/getNotesList",
+        type: "GET",
+        headers: { 'Authorization': localStorage.getItem('token') },
+        
+        success: function(result){
+        notes=result.data.data;
+        console.log("notes = ",notes);
+setTimeout(() => {
+  
+        var wrapper = document.getElementById("display");
+        var myHTML = '';
+      
+        for (var i = 0; i <notes.length; i++) {
+          myHTML += '<div class="card" id="note"><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span>'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div><div class="icons" style="padding-right: 10px;"><i class="material-icons">add_alert</i><i class="material-icons">person_add</i><i class="fas fa-palette"></i><i class="far fa-image"></i><img src="/images/archieve.png" style="width: 20px; height: 18px;"> <i class="fas fa-ellipsis-v"></i> </div></div></div></div>';
+        }
+           wrapper.innerHTML = myHTML
+      }, 1000);
+        
+     }});
+  });
+
+
+  
