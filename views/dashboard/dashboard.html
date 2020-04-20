@@ -42,7 +42,7 @@
       <li>
         <div class="threeIcons">
           <div>
-              <i class="fas fa-redo"></i>
+              <i class="fas fa-redo" ></i>
           </div>
           <div>
               <i class="material-icons" style="font-size: 25px !important; margin-top: 5px;">view_stream</i>
@@ -98,7 +98,7 @@
           <div id="flip">
               <b class="head">Take a note ...</b>
               <div class="threeIcons">
-                  <i class="material-icons">assignment_turned_in</i>
+                  <i class="material-icons" style="margin-top: 0px;">assignment_turned_in</i>
                   <i class='fas fa-paint-brush'></i>
                   <i class='fas fa-image'></i>
               </div> 
@@ -126,16 +126,56 @@
     </div>
 
 <!-- display note  on dashboard-->
-    <div class="container" id="display"></div>
-    
+    <table class="container" id="display">
+    <!-- <tr>
+        <div class="card">
+          <div class="card-body">
+            <div class="info" style="color: black; "  data-toggle="modal" data-target="#myModal">
+              <div class="tit" id="tit"><span>abc</span></div>
+              <div id="desc" class="desc" style="margin-top: 20px;"><span>abcdehghi</span></div>
+            </div>
+            <ul class="icon" style="padding-right: 10px; display: flex;">
+                    <li class="icon-item">
+                      <i class="material-icons" id="">add_alert</i>
+                    </li>
+                    <li class="icon-item">
+                      <i class="material-icons" id="">person_add</i>
+                    </li>
+                    <li class="icon-item">
+                      <i class="fas fa-palette" id=""></i>
+                    </li>
+                    <li class="icon-item">
+                      <i class="far fa-image" id=""></i>
+                    </li>
+                    <li class="icon-item" id="archieveNote">
+                      <img src="/images/archieve.png" style="width: 20px; height: 18px;"></i>
+                    </li>
+                    <li class="icon-item dropdown" >
+                      <i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i>
+                      <ul class="dropdown-menu" aria-labelledby="moreIcon">
+                         <li class="dropdown-item" id="deleteNote">Delete note</li>
+                         <li class="dropdown-item" href="#">Change labels</li>
+                         <li class="dropdown-item" href="#">Add drawing</li>
+                         <li class="dropdown-item" href="#">Make a copy</li>
+                      </ul>
+                    </li>
+                </ul>   
+
+            </div>
+            </div>
+            </div>
+          </tr> -->
+</table> 
+ 
+<!-- modal is here -->
     <div class="modal" id="myModal" role="dialog">
        <div class="modal-dialog">
     
     
       <div class="modal-content">
         <div class="modalData">
-          <input class="form-control updateTitle" style="box-shadow: none;" type="text" value="Click to focus...">
-          <input class="form-control updateDesc"  style="box-shadow: none;" type="text" value="Click to focus...">
+          <input class="form-control updateTitle" style="box-shadow: none;" type="text" value="">
+          <input class="form-control updateDesc"  style="box-shadow: none;" type="text" value="">
         </div>
         <div class="footer">
           <i class="material-icons">add_alert</i>
@@ -146,39 +186,15 @@
           <i class='fas fa-ellipsis-v'></i>
           <i class="fas fa-undo"></i>
           <i class="fas fa-redo"></i>   
-          <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-top: -8px;">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="updateData" style="margin-top: -8px;">Close</button>
         </div>
       </div>
       
     </div>
   </div> 
 
-     <!-- <div class="card" data-toggle="modal" data-target="#myModal">
-      <div class="card-body">
-        <div class="info" style="color: black; ">
-          <div class="tit" id="tit"><span>'+notes[i].title+'</span></div>
-            <div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div>
-                <div class="icon dropdown" style="padding-right: 10px; display: flex;">
-                  
-                  <div role="button" type="button" class="btn" data-toggle="dropdown"><i class="material-icons">add_alert</i></div>
-                  <div role="button" type="button" class="btn" data-toggle="dropdown"><i class="material-icons">person_add</i></div>
-                  <div role="button" type="button" class="btn" data-toggle="dropdown"><i class="fas fa-palette"></i></div>
-                  <div role="button" type="button" class="btn" data-toggle="dropdown"><i class="far fa-image"></i></div>
-                  <div role="button" type="button" class="btn" data-toggle="dropdown"><img src="/images/archieve.png" style="width: 20px; height: 18px;"></i></div>
-                  <div role="button" type="button" class="btn" data-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></div>
-    
-                  
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" id="delete">Delete note</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change labels</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add drawing</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Make a copy</a></li>    
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Show checkboxes</a></li>      
-                 </ul>
-                </div>
-          </div>
-      </div>
-    </div> --> 
+
+
   
   
   
