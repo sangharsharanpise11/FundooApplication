@@ -1048,16 +1048,262 @@ However, delay the fade out process for 2.5 seconds */
     span {
         margin-left: 3px;
     }
-    .keepLogo {
-        vertical-align: middle;
-        border-style: none;
-        margin-left: 0px;
-    }
     .form-control {
-        width: 495px !important;
+        width: 760px !important;
         border-radius: 10px;
         height: 45px;
         box-shadow: none;
         font-size: 20px;
+        margin-left: 53px !important;
+    }
+    #unpin {
+        width: 25px;
+        height: 22px;
+        margin-left: 314px;
+        margin-top: 10px;
+        z-index: 1;
+    }
+    .keepLogo {
+        vertical-align: middle;
+        border-style: none;
+        margin-left: -22px;
+    }
+    .twoIcons {
+        list-style-type: none;
+        display: flex;
+        margin-top: 10px;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 90px;
+        margin-right: 6px;
+        margin-left: 31px;
+    }
+    .threeIcons {
+        list-style-type: none;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 115px;
+        margin-top: 10px;
+        margin-left: 125px;
+    }
+    #flip {
+        display: flex;
+        padding: 5px;
+        text-align: left;
+        background-color: #e5eecc;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 50px;
+        margin-top: -70px;
+        width: 600px;
+        margin-left: 240px;
+    }
+    .head{
+        color: gray;
+        font-size: 20px;
+    }
+    .archive{
+        width: 27px;
+        height: 25px; 
+    }
+    .card {
+        width: 270px;
+        background-color: white;
+        height: 170px;
+        width: 350px;
+        background-color: white;
+        height: 205px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
+       }
+   
+    #display {
+        width: fit-content;
+        height: 100%;
+        margin-left: -35px;
+        margin-top: 10px;
+    }
+    .noteIcon {
+        padding-right: 10px;
+        margin-top: -10px;
+        display: flex;
+        margin-left: -35px;
+    }
+    .material-icons {
+        font-size: 26px !important;
+    }
+    .app {
+        font-size: 30px !important;
+        margin-top: 3px;
+    }
+    .createNote {
+        background-color: white;
+        width: 665px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 90px;
+        margin-left: 240px;
+        height: 248px;
+    }
+    .close {
+        width: 70px;
+        margin-left: 364px;
+        margin-top: -42px;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+        margin-top: 45px !important;
+        margin-left: 20px;    padding-right: 170px;
+    }
+    #desc {
+        margin-top: 20px !important;
+    }
+}
+
+/********************************************************************/
+@media screen and (min-width:1441px){
+    span {
+        margin-left: 3px;
+    }
+    .form-control {
+        width: 760px !important;
+        border-radius: 10px;
+        height: 45px;
+        box-shadow: none;
+        font-size: 20px;
+        margin-left: 53px !important;
+    }
+    input[type=text] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 18px;
+    }
+    #unpin {
+        width: 25px;
+        height: 22px;
+        margin-left: 314px;
+        margin-top: 10px;
+        z-index: 1;
+    }
+    .keepLogo {
+        vertical-align: middle;
+        border-style: none;
+        margin-left: -22px;
+    }
+    .twoIcons {
+        list-style-type: none;
+        display: flex;
+        margin-top: 10px;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 90px;
+        margin-right: 6px;
+        margin-left: 31px;
+    }
+    .threeIcons {
+        list-style-type: none;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 115px;
+        margin-top: 10px;
+        margin-left: 125px;
+    }
+    #flip {
+        display: flex;
+        padding: 5px;
+        text-align: left;
+        background-color: #e5eecc;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 50px;
+        margin-top: -70px;
+        width: 600px;
+        margin-left: 240px;
+    }
+    .head{
+        color: gray;
+        font-size: 20px;
+    }
+    .archive{
+        width: 27px;
+        height: 25px; 
+    }
+    .card {
+        width: 270px;
+        background-color: white;
+        height: 170px;
+        width: 350px;
+        background-color: white;
+        height: 205px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
+       }
+   
+    #display {
+        width: fit-content;
+        height: 100%;
+        margin-left: -35px;
+        margin-top: 10px;
+    }
+    .noteIcon {
+        padding-right: 10px;
+        margin-top: -10px;
+        display: flex;
+        margin-left: -35px;
+    }
+    .material-icons {
+        font-size: 26px !important;
+    }
+    .app {
+        font-size: 30px !important;
+        margin-top: 3px;
+    }
+    .createNote {
+        background-color: white;
+        width: 570px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 90px;
+        margin-left: 240px;
+        height: 219px;
+    }
+    .close {
+        width: 70px;
+        margin-top: -35px;
+        font-size: 19px;
+        font-weight: 500;
+        margin-right: 34px;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+        margin-top: 45px !important;
+        margin-left: 20px;    padding-right: 170px;
+    }
+    #desc {
+        margin-top: 20px !important;
+    }
+
+    .tit, .desc {
+        border: none;
+        font-size: 18px !important;
     }
 }
