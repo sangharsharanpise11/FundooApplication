@@ -737,7 +737,7 @@ However, delay the fade out process for 2.5 seconds */
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
-    .form-control {
+    /* .form-control {
         width: 275px !important;
         border-radius: 10px;
         height: 46px;margin-top: 3px;
@@ -751,7 +751,192 @@ However, delay the fade out process for 2.5 seconds */
     }
     span {
         margin-left: 2px;
+    } */
+    span {
+        margin-left: 15px;
+    font-size: 17px;
     }
+    li {
+        float: left;
+        margin-top: -11px;
+    }
+    .keepLogo {
+        vertical-align: middle;
+        border-style: none;
+        margin-left: 15px;
+        margin-top: 6px;
+    }
+    .navbar{
+        height: 65px !important;
+    }
+    #flip{
+        display: flex;
+        padding: 5px;
+        text-align: left;
+        background-color: #e5eecc;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 70px;
+        margin-top: -62px;
+        width: 660px;
+        margin-left: -135px;
+        font-size: 18px;
+        height: 50px;
+    }
+    .cal{
+        margin-top: -15px;
+    }
+    .app{
+        margin-top: 10px;
+        margin-left: 8px;
+    }
+    .navbar-nav {
+        display: list-item;
+        width: 100%;
+        font-size: 40px;
+    }
+    .form-inline {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        display: none;
+    }
+
+    .threeIcons {
+        list-style-type: none;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 115px;
+        margin-top: 25px;
+        margin-left: 360px;
+    }
+    .menu {
+        margin-left: 20px;
+        margin-top: 6px;
+        font-size: 15px;
+    }     
+    .middleIcon{
+        font-size: 30px !important;
+    }   
+   
+    .navbar{
+        height: 85px;
+    }
+    .fas, .far {
+        font-size: 20px;
+    margin-top: -12px;
+    }
+
+    .createNote {
+        background-color: white;
+    width: 530px;
+    border-radius: 5px;
+    display: grid;
+    grid-row-gap: 15px;
+    margin-top: 100px;
+    margin-left: -162px;
+    height: 247px;
+    }
+    input[type=text] {
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 25px;
+    }
+    #desc {
+        margin-top: 25px;
+    }
+    .archive{
+        width: 27px;
+        height: 25px; 
+    }
+    .material-icons {
+        font-size: 25px !important;
+    }
+    .icons{
+        display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 13px;
+    margin-top: 25px !important;
+    margin-left: -33px;
+    }
+    .noteIcon{
+        margin-top: 25px;
+        display: flex;
+    }
+    .close {
+        width: 70px;
+        /* margin-left: -52px; */
+        margin-top: -46px;
+        font-size: 30px;
+        font-weight: 500;
+        margin-right: 20px;
+    }
+    #display {
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+    }
+    .container {
+        display: table-cell;
+        flex-wrap: inherit;
+    }
+    
+    .card {
+        margin-left: -160px;
+        width: 270px;
+        background-color: white;
+        height: 170px;
+        width: 325px;
+        background-color: white;
+        height: 190px;
+        border-radius: 6px;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
+    #unpin{
+        width: 30px;
+        height: 25px;
+        margin-left: 295px;
+        margin-top: 8px;
+    }
+    .info {
+        display: grid;
+        height: 88px;
+        margin-top: -35px;
+    }
+  .image{
+    width: 45px;
+    height: 45px;
+    border-radius: 70%;
+    margin-top: 7px;
+    margin-left: 17px;
+  }
+  .w3-sidebar {
+    margin-top: 80px;
+    font-size: -21px;
+    font-weight: 500;
+    display: grid;
+    grid-row-gap: -155px;
+    padding: 20px;
+    height: 100%;
+    width: 270px;
+    padding-bottom: 360px;
+    font-size: 20px !important;
+}
+#mySidebar a:hover{
+    background-color: lavender;
+    color: black;  
+    text-decoration: none;
+    border-radius: 50px;
+}
+
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
