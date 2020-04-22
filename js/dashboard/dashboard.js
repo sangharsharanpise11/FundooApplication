@@ -208,15 +208,14 @@ $(document).ready(function(){
     
        var myHTML = ''; 
        for (var i = 0; i <notes.length; i++) {  
-         // myHTML +='<tr><div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li>   <li class="icon-item"><i class="fas fa-palette" id=""></i></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div></tr>';
-         myHTML +='<div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn" id="colors" data-toggle="dropdown" role="button" ></i><ul class="dropdown-menu"  aria-labelledby="colors"><li><div href="#" class="color" style="background-color: red;"></div></li><li><div href="#" class="color" style="background-color: blue;"></div></li><li><div href="#" class="color" style="background-color: aqua;"></div></li><li><div href="#" class="color" style="background-color: blueviolet;"></div></li><li><div href="#" class="color" style="background-color: rgb(165, 82, 204);"></div></li><li><div href="#" class="color" style="background-color: rgb(255, 174, 0);"></div></li><li><div href="#" class="color" style="background-color: rgb(0, 255, 106);"></div></li><li><div href="#" class="color" style="background-color: rgb(139, 134, 134);"></div></li><li><div href="#" class="color" style="background-color: rgb(231, 104, 189);"></div></li></ul></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
+          myHTML +='<tr><div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li>   <li class="icon-item"><i class="fas fa-palette" id=""></i></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div></tr>';
+       // myHTML +='<div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn" id="colors" data-toggle="dropdown" role="button" ></i><ul class="dropdown-menu"  aria-labelledby="colors"><li><div href="#" class="color" value="red" onclick="insrt('red')" style="background-color: red;"></div></li><li><div href="#" class="color" value="blue" onclick="insrt('blue')"style="background-color: blue;"></div></li><li><div href="#" class="color" value="aqua" onclick="insrt('aqua')"style="background-color: aqua;"></div></li><li><div href="#" class="color" value="blueviolet" onclick="insrt('blueviolet')"style="background-color: blueviolet;"></div></li><li><div href="#" class="color" value="pink" onclick="insrt('pink')"style="background-color: pink"></div></li><li><div href="#" class="color" value="skyblue" onclick="insrt('skyblue')"style="background-color: skyblue;"></div></li><li><div href="#" class="color" value="black" onclick="insrt('black')"style="background-color: black;"></div></li><li><div href="#" class="color" value="yellow" onclick="insrt('yellow')"style="background-color:yellow ;"></div></li><li><div href="#" class="color" value="green" onclick="insrt('green')"style="background-color: green;"></div></li></ul></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
 
       }
          wrapper.innerHTML = myHTML
        
    }});
 });
-
 
 /*********************** update note ************************************************************************/
 $(document).ready(function () {
@@ -410,29 +409,14 @@ $(document).on("click" , "#deleteNote" , function(e) {
      });
   });
 
-  /****************** get all pinned note**********************************************************************/ 
-  // $(document).ready(function(){
+  /******************color to note**********************************************************************/ 
+  $(document).on("click" , "#unpin" , function(e) { 
+  
+    noteId=$(this).closest('div.card').attr('id');
+        
+    data = notes[noteId].id;
+  });
 
-  //   $.ajax({
-        
-  //       url: "",
-  //       type: "GET",
-  //       headers: { 'Authorization': localStorage.getItem('token') },
-        
-  //       success: function(result){
-  //       notes=result.data.data;
-  //       console.log("notes = ",notes);
-  
-  //        var wrapper = document.getElementById("pinnedNotes");
-  //        var id = document.getElementById("id");
-      
-  //        var myHTML = ''; 
-  //        for (var i = 0; i <notes.length; i++) {  
-  //          // myHTML +='<tr><div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li>   <li class="icon-item"><i class="fas fa-palette" id=""></i></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div></tr>';
-  //          myHTML +='<div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li>   <li class="icon-item"><i class="fas fa-palette" id=""></i></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
-  
-  //       }
-  //          wrapper.innerHTML = myHTML
-         
-  //    }});
-  // });
+  function insrt(color) {
+    $('.card').css("background-color",color);
+  }
