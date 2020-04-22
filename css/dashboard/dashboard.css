@@ -1,3 +1,48 @@
+.dropbtn {
+    font-size: 16px;
+    border: none;
+  }
+  
+.dropup {
+    position: relative;
+    display: inline-block;
+  }
+  .color{
+    width: 45px;
+    height: 45px;
+    border-radius: 70%;
+    margin-left: 4px;
+
+  }
+  .dropup-content {
+    display: block;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    height: 200px;
+    bottom: 50px;
+    z-index: 1;
+    margin-top: 10px;
+  }
+  
+  .dropup-content li {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+  
+  .dropup-content a:hover {background-color: #ccc}
+  
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+  
+  .dropup:hover .dropbtn {
+    background-color: #2980B9;
+  }
+/* ************************************************** */
 body{
     height: 100%;
     width: 100%;
@@ -291,13 +336,13 @@ font-weight: 500;
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
-}
+}ss
 .fas , .far{
     font-size: 18px;
 }
-.dropdown-menu{
+.dropdown-menu, .dropup-content{
     position: absolute;
-    transform: translate3d(106px, 25px, 0px);    top: 0px;
+    transform: translate3d(106px, 25px, 0px); top: 0px;
     left: 0px;
     will-change: transform;
     width: 80px;
@@ -391,6 +436,10 @@ However, delay the fade out process for 2.5 seconds */
         border-style: none;
         margin-left: 23px;
     }
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      
     #flip{
         display: flex;
         padding: 5px;
@@ -556,6 +605,10 @@ However, delay the fade out process for 2.5 seconds */
         border-style: none;
         margin-left: 15px;
     }
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      
     .navbar{
         height: 120px;
     }
@@ -737,10 +790,15 @@ However, delay the fade out process for 2.5 seconds */
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
-  
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      
     span {
         margin-left: 15px;
-    font-size: 17px;
+        font-size: 15px;
+        word-wrap: break-word;
+        word-break: break-word;
     }
     li {
         float: left;
@@ -933,6 +991,10 @@ However, delay the fade out process for 2.5 seconds */
         font-weight: 300;
         color: gray;
     }
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      
     .card {
         width: 270px;
         background-color: white;
@@ -991,6 +1053,7 @@ However, delay the fade out process for 2.5 seconds */
     .tit, .desc {
         border: none;
         font-size: 18px;
+        margin-top: -15px;
     }
     .form-control {
         width: 475px !important;
@@ -1005,7 +1068,10 @@ However, delay the fade out process for 2.5 seconds */
     }
     span {
         margin-left: 2px;
+        word-wrap: break-word;
+        word-break: break-word;
     }
+    
     .threeIcons {
         list-style-type: none;
         display: flex;
@@ -1047,14 +1113,20 @@ However, delay the fade out process for 2.5 seconds */
 @media screen and (min-width: 1025px) and (max-width:1440px){
     span {
         margin-left: 3px;
+        word-wrap: break-word;
+        word-break: break-word;
     }
+        .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      
     .form-control {
-        width: 760px !important;
-        border-radius: 10px;
-        height: 45px;
-        box-shadow: none;
-        font-size: 20px;
-        margin-left: 53px !important;
+        width: 438px !important;
+    border-radius: 10px;
+    height: 45px;
+    box-shadow: none;
+    font-size: 20px;
+    margin-left: 53px !important;
     }
     #unpin {
         width: 25px;
@@ -1166,13 +1238,25 @@ However, delay the fade out process for 2.5 seconds */
     #desc {
         margin-top: 20px !important;
     }
+    .tit, .desc {
+        border: none;
+        font-size: 25px;
+        margin-top: -22px;
+    }
 }
 
 /********************************************************************/
 @media screen and (min-width:1441px){
     span {
-        margin-left: 3px;
+        margin-left: 15px;
+        font-size: 17px;
+        word-wrap: break-word;
+        word-break: break-word;
     }
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      
     .form-control {
         width: 760px !important;
         border-radius: 10px;
@@ -1306,4 +1390,5 @@ However, delay the fade out process for 2.5 seconds */
         border: none;
         font-size: 18px !important;
     }
+    
 }

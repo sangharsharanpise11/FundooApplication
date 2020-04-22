@@ -124,6 +124,8 @@
 
 <!-- display note  on dashboard-->
     <div class="container" id="display">
+      <!-- <div class="pinnedNotes" id="pinnedNotes"></div>
+      <div class="unpinNotes" id="unpinNotes"></div> -->
      <!-- <tr>
         <div class="card">
           <img src="/images/unpinnnn.png" id="unpin" style="width: 25px; height: 23px; margin-left: 235px;margin-top: 3px;">
@@ -139,12 +141,26 @@
                     <li class="icon-item">
                       <i class="material-icons" id="">person_add</i>
                     </li>
-                    <li class="icon-item">
-                      <i class="fas fa-palette" id=""></i>
+
+                    <li class="icon-item dropdown">
+                      <i class="fas fa-palette dropbtn" id="colors" data-toggle="dropdown" role="button" ></i>
+                       <ul class="dropdown-menu"  aria-labelledby="colors">
+                          <li><div href="#" class="color" style="background-color: red;"></div></li>
+                          <li><div href="#" class="color" style="background-color: blue;"></div></li>
+                          <li><div href="#" class="color" style="background-color: aqua;"></div></li>
+                          <li><div href="#" class="color" style="background-color: blueviolet;"></div></li>
+                          <li><div href="#" class="color" style="background-color: rgb(165, 82, 204);"></div></li>
+                          <li><div href="#" class="color" style="background-color: rgb(255, 174, 0);"></div></li>
+                          <li><div href="#" class="color" style="background-color: rgb(0, 255, 106);"></div></li>
+                          <li><div href="#" class="color" style="background-color: rgb(139, 134, 134);"></div></li>
+                          <li><div href="#" class="color" style="background-color: rgb(231, 104, 189);"></div></li>
+                       </ul>
                     </li>
+
                     <li class="icon-item">
                       <i class="far fa-image" id=""></i>
                     </li>
+
                     <li class="icon-item" id="archieveNote">
                       <img src="/images/archieve.png" style="width: 20px; height: 18px;"></i>
                     </li>
@@ -162,7 +178,7 @@
             </div>
             </div>
             </div>
-          </tr>   -->
+          </tr>    -->
         </div> 
  
 <!-- modal is here -->
