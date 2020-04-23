@@ -409,6 +409,63 @@ However, delay the fade out process for 2.5 seconds */
 .middleIcon{
     font-size: 25px !important; margin-top: 5px;
 }
+
+/* ************************************************* */
+.today{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+h6, span{
+    font-size: 20px;
+}
+.remainderContent{
+    height: 435px;
+    width: 400px;
+}
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 0 0;
+    padding: 1rem;
+}
+.pickData{
+    float: left;
+    margin-right: 299px;
+}
+.modal-content{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 335px;
+    margin-left: -240px;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.today:hover {
+    background-color: lightgrey;
+  }
+  .options{
+    display:grid;grid-gap-row:10px;
+    }
+    #cars{
+        border: none;
+        margin-top: 10px;
+    }
+    .pickDataContent{
+        height: 225px;
+        width: 390px;
+        font-size: 20px;
+    }
+   
+
 /***************************** update note ***********************************************/
 .updateDesc{
     box-shadow: none;

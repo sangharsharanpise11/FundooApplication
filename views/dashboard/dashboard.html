@@ -136,7 +136,7 @@
             </div>
             <ul class="icon" style="padding-right: 10px; display: flex;">
                     <li class="icon-item">
-                      <i class="material-icons" id="">add_alert</i>
+                      <i class="material-icons" id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i>
                     </li>
                     <li class="icon-item">
                       <i class="material-icons" id="">person_add</i>
@@ -206,6 +206,80 @@
       
     </div>
   </div> 
+  <!-- modal is here for remainder-->
+  <div class="modal" id="myRemindModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content remainderContent">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Remainder :</h4>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="today">
+              <h6>Later Today</h6><span style="color: gray;">8:00 PM</span> 
+            </div>
+            <div class="today">
+              <h6>Tomarrow</h6><span  style="color: gray;">8:00 AM</span> 
+            </div>
+            <div class="today">
+              <h6>Next Week</h6><span  style="color: gray;">Mon,8:00 PM</span> 
+            </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="pickData">
+            <h6 class="today" data-toggle="modal" data-target="#myPickDataModal">Pick date and Time</h6>
+            <h6 class="today">Pick place</h6>
+          </h6>
+        </div>
+        
+      </div>
+   </div>
+</div> 
+
+ <!-- modal is here for pick data -->
+ <div class="modal" id="myPickDataModal" role="dialog">
+  <div class="modal-dialog">
+      <div class="modal-content pickDataContent">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Pick date and time</h4>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="options">
+          <select id="cars" name="cars">
+             <option value="volvo">April 22</option>
+          </select>
+          <select id="cars" name="cars">
+              <option value="volvo">8:00</option>
+              <option value="saab">morning</option>
+              <option value="fiat">afternoon</option>
+              <option value="saab">evening</option>
+              <option value="fiat">night</option> 
+              <option value="fiat">custom</option> 
+          </select>
+          <select id="cars" name="cars">
+              <option value="volvo">Does not repeat</option>
+              <option value="saab">Daily</option>
+              <option value="fiat">weekly</option> 
+              <option value="saab">monthly</option>
+              <option value="fiat">yearly</option>
+              <option value="saab">custom</option>
+          </select>
+        </form>
+      </div>
+      
+     
+      
+    </div>
+ </div>
+</div> 
+
   <i class="fas fa-thumbtack"></i>
   <div id="snackbarPin">Note is Pinned ...</div> 
   <div id="snackbarTrash">Note is Trashed ...</div>
