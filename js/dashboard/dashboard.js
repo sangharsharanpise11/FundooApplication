@@ -209,7 +209,7 @@ $(document).ready(function(){
        var myHTML = ''; 
        for (var i = 0; i <notes.length; i++) {  
        //  myHTML +='<tr><div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons" id="">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li>   <li class="icon-item"><i class="fas fa-palette" id=""></i></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div></tr>';
-       myHTML +='<div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" ></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color" onClick="insert(\'red\')" class="color" value="red"  style="background-color: red;"></div></li><li><div href="#" class="color" onClick="insert(\'blue\')" value="blue" style="background-color: blue;"></div></li><li><div href="#" class="color" onClick="insert(\'aqua\')" value="aqua" style="background-color: aqua;"></div></li><li><div href="#" class="color" onClick="insert(\'blueviolet\')" value="blueviolet" style="background-color: blueviolet;"></div></li><li><div href="#" class="color" onClick="insert(\'pink\')" value="pink" style="background-color: pink"></div></li><li><div href="#" class="color" onClick="insert(\'black\')" value="pink" style="background-color: pink"></div></li><li><div href="#" class="color"  onClick="insert(\'skyblue\')"value="skyblue" style="background-color: skyblue;"></div></li><li><div href="#" class="color"  onClick="insert(\'black\')"value="black" style="background-color: black;"></div></li><li><div href="#" class="color" onClick="insert(\'yellow\')" value="yellow" style="background-color:yellow ;"></div></li><li><div href="#" class="color" onClick="insert(\'green\')" value="green" style="background-color: green;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
+       myHTML +='<div class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 20px;"><span>'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
 
       }
          wrapper.innerHTML = myHTML
@@ -307,7 +307,6 @@ $(document).on("click" , "#deleteNote" , function(e) {
     data = notes[noteId].id;
  
     var x = document.getElementById("snackbarTrash")
-    // Add the "show" class to DIV
     x.className = "show";
 
     $.ajax({
@@ -373,10 +372,11 @@ $(document).on("click" , "#deleteNote" , function(e) {
 
   /********************* pinUnpin note **********************************************************/ 
   $(document).on("click" , "#unpin" , function(e) { 
-  
+    
     noteId=$(this).closest('div.card').attr('id');
     data = notes[noteId].id;
- 
+    console.log(data);
+    
     var x = document.getElementById("snackbarPin")
     // Add the "show" class to DIV
     x.className = "show";
@@ -394,12 +394,9 @@ $(document).on("click" , "#deleteNote" , function(e) {
         contentType: "application/json;charset=utf-8",
         success: function (result) {
        
-        console.log("id============>", result.id);
         // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
         
-        resetForm();
-      //   $(location).attr('href',"/views/dashboard/dashboard.html");
         },
         error: function (errorMessage) {
         console.log("Error", errorMessage);
@@ -408,61 +405,57 @@ $(document).on("click" , "#deleteNote" , function(e) {
   });
 
   /******************color to note**********************************************************************/ 
-   function insert(color) {
-     console.log("in insert");
-     $('.card').css("background-color",color);
+   function insert(color,noteId) {
+     console.log("in insert",noteId);
+     
+     $('noteId').closest('div.card').css("background-color",color);
   }
 
-  // $(document).ready(function(){
-  //   insert();
-  // });
-
-  // $(document).on("click" , "#colorList .color" , function(e) { 
-  //  console.log('in color'); 
-
-  //   noteId=$(this).closest('div.card').attr('id');
-  //   data = notes[noteId].id;
-  //   console.log("id is :",data);
-
-  //   var x = document.getElementById("snackbarColor");
-  //   x.className = "show";
-
-  //   $(document).on("click" , "#colorList" , function(e) { 
-     
-  //     noteId=$(this).closest('div.color').attr('value');
-  //     console.log(" 2 color is :",noteId);
-  //     console.log("after val");  
-
-  //     $.ajax({
-  //     url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/changesColorNotes",
-  //     data:  JSON.stringify({
-  //       "color" : "t", 
-  //       "noteIdList" : [data]
-  //     }),   
-  //     type: "POST",
-  //     headers: {
-  //        'Authorization': localStorage.getItem('token')
-  //      },
-  //       contentType: "application/json;charset=utf-8",
-  //       success: function (result) {
+  $(document).on("click" , "#colors" , function(e) { 
+    console.log("in color ajax");
+    
+    noteId=$(this).closest('div.card').attr('id');
        
-  //       $('.card').css("background-color",color);
-  //       // After 3 seconds, remove the show class from DIV
-  //       setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+    data = notes[noteId].id;
+    console.log("note id is :",data);
+
+    var x = document.getElementById("snackbarColor");
+    x.className = "show";
+
+    $(document).on("click" , "#colorList .color" , function(e) { 
+      color=$(this).attr('value');
+      console.log("color is :",color);
+
+      $.ajax({
+      url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/changesColorNotes",
+      data:  JSON.stringify({
+        "color" : color, 
+        "noteIdList" : [data]
+      }),   
+      type: "POST",
+      headers: {
+         'Authorization': localStorage.getItem('token')
+       },
+        contentType: "application/json;charset=utf-8",
+        success: function (result) {
+        insert(color,noteId) ;
+    
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
             
-  //       },
-  //       error: function (errorMessage) {
-  //       console.log("Error", errorMessage);
-  //       }
-  //    });
-  // });
-  // });
+        },
+        error: function (errorMessage) {
+        console.log("Error", errorMessage);
+        }
+     });
+  });
+});
 
   /**************** remainder note **********************/ 
-  // $(function () {
-  //   console.log("in datetimepicker");
-  //   $('#datetimepicker1').datetimepicker();
-  // });
+  $(function () {
+    console.log("in datetimepicker");
+    $('#datetimepicker1').datetimepicker();
+  });
 
      $(document).on("click" , "#remainder" , function(e) { 
      console.log("in reminder ajax");
