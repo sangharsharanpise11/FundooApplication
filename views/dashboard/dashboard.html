@@ -4,7 +4,7 @@
     <title>DASHBOARD</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,height:100%, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width,height:100%, initial-scale=1"> -->
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Bootstrap CSS -->
@@ -19,7 +19,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/dashboard/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head> 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <!-- calender -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  </head> 
   
 <body> 
  <!--navigation bar  -->
@@ -123,10 +134,10 @@
     </div>
 
 <!-- display note  on dashboard-->
-    <div class="container" id="display1">
+    <div class="container" id="display">
       <!-- <div class="pinnedNotes" id="pinnedNotes"></div>
       <div class="unpinNotes" id="unpinNotes"></div> -->
-     <tr>
+     <!-- <tr>
         <div class="card">
           <img src="/images/unpinnnn.png" id="unpin" style="width: 25px; height: 23px; margin-left: 235px;margin-top: 3px;">
           <div class="card-body">
@@ -143,17 +154,18 @@
                     </li>
 
                     <li class="icon-item dropdown">
-                      <i class="fas fa-palette dropbtn" id="colors" data-toggle="dropdown" role="button" ></i>
-                       <ul class="dropdown-menu"  aria-labelledby="colors">
-                          <li><div href="#" class="color" value="red" onclick="insrt('red')" style="background-color: red;"></div></li>
-                          <li><div href="#" class="color" value="blue" onclick="insrt('blue')"style="background-color: blue;"></div></li>
-                          <li><div href="#" class="color" value="aqua" onclick="insrt('aqua')"style="background-color: aqua;"></div></li>
-                          <li><div href="#" class="color" value="blueviolet" onclick="insrt('blueviolet')"style="background-color: blueviolet;"></div></li>
-                          <li><div href="#" class="color" value="pink" onclick="insrt('pink')"style="background-color: pink"></div></li>
-                          <li><div href="#" class="color" value="skyblue" onclick="insrt('skyblue')"style="background-color: skyblue;"></div></li>
-                          <li><div href="#" class="color" value="black" onclick="insrt('black')"style="background-color: black;"></div></li>
-                          <li><div href="#" class="color" value="yellow" onclick="insrt('yellow')"style="background-color:yellow ;"></div></li>
-                          <li><div href="#" class="color" value="green" onclick="insrt('green')"style="background-color: green;"></div></li>
+                      <i class="fas fa-palette dropbtn"  id="colors" data-toggle="dropdown" role="button" ></i>
+                       <ul class="dropdown-menu" id="colorList" aria-labelledby="colors">
+                          <li><div href="#" class="color" onClick="insert('red')" class="color" value="red"  style="background-color: red;"></div></li>
+                          <li><div href="#" class="color" onClick="insert('blue')" value="blue" style="background-color: blue;"></div></li>
+                          <li><div href="#" class="color" onClick="insert('aqua')" value="aqua" style="background-color: aqua;"></div></li>
+                          <li><div href="#" class="color" onClick="insert('blueviolet')" value="blueviolet" style="background-color: blueviolet;"></div></li>
+                          <li><div href="#" class="color" onClick="insert('pink')" value="pink" style="background-color: pink"></div></li>
+                          <li><div href="#" class="color" onClick="insert('black')" value="pink" style="background-color: pink"></div></li>
+                          <li><div href="#" class="color"  onClick="insert('skyblue')"value="skyblue" style="background-color: skyblue;"></div></li>
+                          <li><div href="#" class="color"  onClick="insert('black')"value="black" style="background-color: black;"></div></li>
+                          <li><div href="#" class="color" onClick="insert('yellow')" value="yellow" style="background-color:yellow ;"></div></li>
+                          <li><div href="#" class="color" onClick="insert('green')" value="green" style="background-color: green;"></div></li>
                        </ul>
                     </li>
 
@@ -178,7 +190,7 @@
             </div>
             </div>
             </div>
-          </tr>   
+          </tr>     -->
         </div> 
  
 <!-- modal is here -->
@@ -252,9 +264,19 @@
       <!-- Modal body -->
       <div class="modal-body">
         <form class="options">
-          <select id="cars" name="cars">
-             <option value="volvo">April 22</option>
-          </select>
+          <div class="container">
+            <div class="row">
+                <div class='col-sm-6'>
+                   <div class="input-group date" id="datepicker" data-provide="datepicker">
+                      <input type="text" class="form-control " id="reminderDate">
+                      <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+             
           <select id="cars" name="cars">
               <option value="volvo">8:00</option>
               <option value="saab">morning</option>
@@ -272,10 +294,8 @@
               <option value="saab">custom</option>
           </select>
         </form>
+        <button type="button" class="btn btn-default" id="reminderData">save</button>
       </div>
-      
-     
-      
     </div>
  </div>
 </div> 
@@ -285,7 +305,8 @@
   <div id="snackbarTrash">Note is Trashed ...</div>
   <div id="snackbarArchive">Note is Archived ...</div>
   <div id="snackbarNoteCreate">Note is Created ...</div>
-
+  <div id="snackbarColor">color is updated ...</div>
+  <div id="snackbarReminder">Remainder added successfully ...</div>
     </div> 
     </div>
   </div>

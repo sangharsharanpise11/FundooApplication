@@ -417,7 +417,7 @@ However, delay the fade out process for 2.5 seconds */
     margin-top: 30px;
 }
 h6, span{
-    font-size: 20px;
+    font-size: 19px !important;
 }
 .remainderContent{
     height: 435px;
@@ -457,15 +457,25 @@ h6, span{
     }
     #cars{
         border: none;
-        margin-top: 10px;
+        margin-top: 50px;
+        width: 350px;
     }
     .pickDataContent{
-        height: 225px;
+        height: 350px;
         width: 390px;
         font-size: 20px;
+    
     }
-   
-
+    .input-group-addon, .input-group-btn, .input-group .form-control {
+        display: table-cell;
+        width: 303px !important;
+    }
+   #reminderData{
+    font-size: 23px;
+    border: none;
+    float: right;
+    margin-top: 35px;
+   }
 /***************************** update note ***********************************************/
 .updateDesc{
     box-shadow: none;
