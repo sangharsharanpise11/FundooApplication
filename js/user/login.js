@@ -73,7 +73,10 @@ $(function() {
             success: function (result) {
             console.log("Login result ==>", result);
 
+            localStorage.setItem("firstName","sangharsha");
+            localStorage.setItem("lastName","ranpise");
             localStorage.setItem("token",result.id);
+            localStorage.setItem("userId",result.userId);
             console.log("id============>", result.id);
             alert("Login Successfull");
             resetForm();

@@ -4,7 +4,7 @@
     <title>DASHBOARD</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width,height:100%, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width" />
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Bootstrap CSS -->
@@ -108,7 +108,7 @@
       <div class="noteOne" style="margin-top: 160px;" id="note">
           <div id="flip">
               <b class="head" style="color: gray;">Take a note ...</b>
-              <div class="threeIcons">
+              <div class="threeIcons1">
                   <i class="material-icons cal">assignment_turned_in</i>
                   <i class='fas fa-paint-brush'></i>
                   <i class='fas fa-image'></i>
@@ -150,9 +150,8 @@
                       <i class="material-icons" id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i>
                     </li>
                     <li class="icon-item">
-                      <i class="material-icons" id="">person_add</i>
+                      <i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i>
                     </li>
-
                     <li class="icon-item dropdown">
                       <i class="fas fa-palette dropbtn"  id="colors" data-toggle="dropdown" role="button" ></i>
                        <ul class="dropdown-menu" id="colorList" aria-labelledby="colors">
@@ -168,11 +167,9 @@
                           <li><div href="#" class="color" onClick="insert('green')" value="green" style="background-color: green;"></div></li>
                        </ul>
                     </li>
-
                     <li class="icon-item">
                       <i class="far fa-image" id=""></i>
                     </li>
-
                     <li class="icon-item" id="archieveNote">
                       <img src="/images/archieve.png" style="width: 20px; height: 18px;"></i>
                     </li>
@@ -186,38 +183,35 @@
                       </ul>
                     </li>
                 </ul>   
-
             </div>
             </div>
             </div>
           </tr>     -->
         </div> 
  
-<!-- modal is here -->
+<!-- modal is here for update note -->
     <div class="modal" id="myModal" role="dialog">
        <div class="modal-dialog">
-    
-    
-      <div class="modal-content">
-        <div class="modalData">
-          <input class="form-control updateTitle" style="box-shadow: none;" type="text" value="">
-          <input class="form-control updateDesc"  style="box-shadow: none;" type="text" value="">
-        </div>
-        <div class="footer">
-          <i class="material-icons">add_alert</i>
-          <i class="material-icons">person_add</i>
-          <i class='fas fa-palette'></i>
-          <i class='far fa-image'></i>
-          <img src="/images/archieve.png" style="width: 20px; height: 18px;">
-          <i class='fas fa-ellipsis-v'></i>
-          <i class="fas fa-undo"></i>
-          <i class="fas fa-redo"></i>   
-          <button type="button" class="btn btn-default" data-dismiss="modal" id="updateData" style="margin-top: -8px;">Close</button>
-        </div>
-      </div>
-      
-    </div>
+          <div class="modal-content">
+              <div class="modalData">
+                <input class="form-control updateTitle" style="box-shadow: none;" type="text" value="">
+                <input class="form-control updateDesc"  style="box-shadow: none;" type="text" value="">
+              </div>
+              <div class="footer">
+                <i class="material-icons">add_alert</i>
+                <i class="material-icons">person_add</i>
+                <i class='fas fa-palette'></i>
+                <i class='far fa-image'></i>
+                <img src="/images/archieve.png" style="width: 20px; height: 18px;">
+                <i class='fas fa-ellipsis-v'></i>
+                <i class="fas fa-undo"></i>
+                <i class="fas fa-redo"></i>   
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="updateData" style="margin-top: -8px;">Close</button>
+              </div>
+            </div>
+       </div>
   </div> 
+  
   <!-- modal is here for remainder-->
   <div class="modal" id="myRemindModal" role="dialog">
     <div class="modal-dialog">
@@ -250,7 +244,40 @@
         
       </div>
    </div>
+  </div> 
+</div>
+
+  <!-- The Modal for collaborator -->
+ <div class="modal" id="myCollaboratorModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content collaboratorContent">
+         <!-- Modal Header -->
+         <div class="modal-header">
+          <h4 class="modal-title">Collaborator </h4>
+        </div>
+
+         <div class="modalData">
+           <div class="owner">
+            <img src="/images/natural.jpg" class="colab-data">
+                <div class="selfData">
+                  <b id="fullName"></b><span class="own">(Owner)</span>
+                  <div id="emailData"></div>
+                </div>
+           </div>
+           <div class="owner">
+            <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
+            <input type="text" class="center newPerson" style='font-size:15px'placeholder="Person or email to share with"/>
+           </div>
+      </div> 
+
+         <div class="footer-collab">
+            <button type="button" class="btn btn-default " id="collabSaveBtn">save</button>
+            <button type="button" class="btn btn-default " id="collabCancelBtn">cancel</button>
+         </div>
+       </div>
+  </div>
 </div> 
+  
 
  <!-- modal is here for pick data -->
  <div class="modal" id="myPickDataModal" role="dialog">
@@ -300,17 +327,17 @@
  </div>
 </div> 
 
-  <i class="fas fa-thumbtack"></i>
-  <div id="snackbarPin">Note is Pinned ...</div> 
-  <div id="snackbarTrash">Note is Trashed ...</div>
-  <div id="snackbarArchive">Note is Archived ...</div>
-  <div id="snackbarNoteCreate">Note is Created ...</div>
-  <div id="snackbarColor">color is updated ...</div>
-  <div id="snackbarReminder">Remainder added successfully ...</div>
-    </div> 
-    </div>
+      <i class="fas fa-thumbtack"></i>
+      <div id="snackbarPin">Note is Pinned ...</div> 
+      <div id="snackbarTrash">Note is Trashed ...</div>
+      <div id="snackbarArchive">Note is Archived ...</div>
+      <div id="snackbarNoteCreate">Note is Created ...</div>
+      <div id="snackbarColor">color is updated ...</div>
+      <div id="snackbarReminder">Remainder added successfully ...</div>
+   </div> 
   </div>
- </div>
+</div>
+ 
    
     <script src="/js/dashboard/dashboard.js"></script>
     <!-- <script src="/js/notes/note.js"></script> -->

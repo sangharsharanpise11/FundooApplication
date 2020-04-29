@@ -496,6 +496,49 @@ h6, span{
 .noteIcon{
     padding-right: 10px; margin-top: -35px; display: flex;
 }
+.modal-title{
+    font-weight: 600;
+    margin-left: -360px !important;
+}
+.collaboratorContent{
+    margin-left: -130px;
+}
+.colab-data{
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    margin-top: 8px !important;
+    margin-left: 10px !important;
+}
+.own{
+    margin-top: -27px;
+    margin-left: 135px;
+    font-size: 15px !important;
+    font-style: oblique;
+}
+.owner{
+    display: flex;
+}
+.footer-collab {
+    background-color: lightgrey;
+    margin-top: 15px;
+}
+#collabSaveBtn, #collabCancelBtn{
+    font-size: 23px;
+    border: none;
+    float: right;
+    margin-top: 17px;
+    float: right;
+    background: lightgrey;
+    margin-left: 36px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+}
+.selfData{
+    display: grid !important;
+    margin-left: 15px;
+    margin-top: 10px;
+}
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
     .keepLogo {
@@ -503,10 +546,15 @@ h6, span{
         border-style: none;
         margin-left: 23px;
     }
+    h6, span {
+        font-size: 30px !important;
+    }
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
-      
+      .main{
+        width: 535px;
+      }
     #flip{
         display: flex;
         padding: 5px;
@@ -515,9 +563,9 @@ h6, span{
         border-radius: 5px;
         justify-content: space-between;
         height: 70px;
-        margin-top: -62px;
-        width: 600px;
-        margin-left: -127px;
+        margin-top: -115px;
+        width: 577px;
+        margin-left: -154px;
         font-size: 30px;
     }
     .cal{
@@ -526,8 +574,8 @@ h6, span{
     }
     .app{
         font-size: 50px !important;
-        margin-top: -8px;
-        margin-left: 12px;
+        margin-top: -89px;
+        margin-left: 224px;
     }
     .navbar-nav {
         display: list-item;
@@ -550,8 +598,8 @@ h6, span{
         font-size: 22px !important;
         justify-content: space-between;
         width: 197px;
-        margin-top: 20px;
-        margin-left: 9px;
+        margin-top: -54px;
+        margin-left: 231px;
     }
     .menu {
         margin-left: 20px;
@@ -566,11 +614,16 @@ h6, span{
         width: 75px;
         height: 75px;
         border-radius: 70%;
-        margin-top: -21px;
+        margin-top: -160px;
         margin-left: 50px;
     }
     .navbar{
-        height: 85px;
+        position: relative;
+        min-height: 100px !important;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        width: 500px !important;
+        margin-left: 2px;
     }
     .fas, .far {
         font-size: 35px;
@@ -664,6 +717,15 @@ h6, span{
         margin-left: 470px;
         margin-top: 8px;
     }
+    .threeIcons1{
+        list-style-type: none;
+    display: flex;
+    font-size: 22px !important;
+    justify-content: space-between;
+    width: 197px;
+    margin-top: 15px;
+    margin-left: 212px;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
@@ -671,6 +733,15 @@ h6, span{
         vertical-align: middle;
         border-style: none;
         margin-left: 15px;
+    }
+    .threeIcons1{
+        list-style-type: none;
+    display: flex;
+    font-size: 22px !important;
+    justify-content: space-between;
+    width: 197px;
+    margin-top: 15px;
+    margin-left: 212px;
     }
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
@@ -687,9 +758,9 @@ h6, span{
     border-radius: 5px;
     justify-content: space-between;
     height: 70px;
-    margin-top: -62px;
-    width: 530px;
-    margin-left: -135px;
+    margin-top: -150px;
+    width: 575px;
+    margin-left: -103px;
     font-size: 30px;
     }
     .cal{
@@ -697,8 +768,8 @@ h6, span{
     font-size: 35px !important;
     }
     .app{
-        margin-top: 0px;
-        margin-left: 8px;
+        margin-top: 3px;
+        margin-left: 97px;
     }
     .navbar-nav {
         display: list-item;
@@ -716,13 +787,14 @@ h6, span{
     }
 
     .threeIcons {
+        margin-right: -135px;
         list-style-type: none;
         display: flex;
         font-size: 22px !important;
         justify-content: space-between;
         width: 152px;
         margin-top: 15px;
-        margin-left: 55px;
+        margin-left: 197px;
     }
     .menu {
         margin-left: 20px;
@@ -735,7 +807,11 @@ h6, span{
     }   
    
     .navbar{
-        height: 85px;
+        position: relative;
+        min-height: 50px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        width: 745px !important;
     }
     .fas, .far {
         font-size: 30px;
@@ -812,16 +888,16 @@ h6, span{
     }
     
     .card {
-        margin-left: -160px;
-        width: 270px;
-        background-color: white;
-        height: 170px;
-        width: 520px;
-        background-color: white;
-        height: 275px;
-        border-radius: 6px;
-        border-radius: 6px;
-        margin-top: 10px;
+        margin-left: -85px;
+    width: 270px;
+    background-color: white;
+    height: 170px;
+    width: 520px;
+    background-color: white;
+    height: 275px;
+    border-radius: 6px;
+    border-radius: 6px;
+    margin-top: 10px;
     }
     #unpin{
         width: 45px;
@@ -833,7 +909,7 @@ h6, span{
     width: 55px;
     height: 55px;
     border-radius: 70%;
-    margin-top: -8px;
+    margin-top: -5px;
     margin-left: 17px;
   }
   .w3-sidebar {
@@ -853,6 +929,9 @@ h6, span{
     color: black;  
     text-decoration: none;
     border-radius: 50px;
+}
+span{
+    font-size: 25px !important;
 }
  }
 /********************************************************************/
@@ -899,7 +978,7 @@ h6, span{
     }
     .app{
         margin-top: 10px;
-        margin-left: 8px;
+        margin-left: 25px;
     }
     .navbar-nav {
         display: list-item;
@@ -915,8 +994,7 @@ h6, span{
         align-items: center;
         display: none;
     }
-
-    .threeIcons {
+       .threeIcons {
         list-style-type: none;
         display: flex;
         font-size: 22px !important;

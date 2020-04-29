@@ -123,7 +123,8 @@ $(function() {
       console.log("user data ",userData);
       
        if (error_fname === false && error_sname === false && error_email === false && error_password === false && error_retype_password === false) {
-         
+             localStorage.setItem("firstName",$('#first').val());
+             localStorage.setItem("lastName",$('#second').val());
              localStorage.setItem("email",$('#email').val());
              localStorage.setItem("password",$('#pass').val());    
            
