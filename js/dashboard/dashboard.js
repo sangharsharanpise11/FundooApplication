@@ -407,7 +407,6 @@ $(document).on("click" , "#deleteNote" , function(e) {
   /******************color to note**********************************************************************/ 
    function insert(color,noteId) {
      console.log("in insert",noteId);
-     
      $('#noteId').closest('div.card').css("background-color",color);
   }
 
@@ -419,12 +418,13 @@ $(document).on("click" , "#deleteNote" , function(e) {
     data = notes[noteId].id;
     console.log("note id is :",data);
 
-    var x = document.getElementById("snackbarColor");
-    x.className = "show";
-
     $(document).on("click" , "#colorList .color" , function(e) { 
       color=$(this).attr('value');
       console.log("color is :",color);
+
+      var x = document.getElementById("snackbarColor")
+      // Add the "show" class to DIV
+      x.className = "show";
 
       $.ajax({
       url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/changesColorNotes",
@@ -439,11 +439,10 @@ $(document).on("click" , "#deleteNote" , function(e) {
         contentType: "application/json;charset=utf-8",
         success: function (result) {
         insert(color,noteId) ;
-    
+        
         // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-            
-        },
+       },
         error: function (errorMessage) {
         console.log("Error", errorMessage);
         }
@@ -464,15 +463,15 @@ $(document).on("click" , "#deleteNote" , function(e) {
      data = notes[noteId].id;
      console.log("data is :",data);
      localStorage.setItem("noteid",data);
-
-      var x = document.getElementById("snackbarReminder");
-      x.className = "show";
-     
+    
       $(document).on("click" , "#reminderData" , function(e) { 
         console.log("hiii");
         var date=$('#reminderDate').val();
         console.log("date is",date);
         
+        var x = document.getElementById("snackbarReminder")
+        x.className = "show";
+
         $.ajax({
             url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",
             data:  JSON.stringify({
@@ -533,6 +532,9 @@ $(document).on("click" , "#collaborator" , function(e) {
     noteIdList:data,
     userId:localStorage.getItem('userId')
     }
+
+    var x = document.getElementById("snackbarCollaborator")
+    x.className = "show";
 
    $.ajax({
     url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/"+data+"/AddcollaboratorsNotes",
