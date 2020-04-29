@@ -273,8 +273,9 @@ ul {
  }
   
  .container{
-    display: inline-flex;
+    display: grid;
     flex-wrap: wrap-reverse;
+    grid-row-gap: 20px;
  }
 .card{
 width: 270px;background-color: white;
@@ -539,6 +540,13 @@ h6, span{
     margin-left: 15px;
     margin-top: 10px;
 }
+#pinnedNotes, #unpinNotes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    place-content: initial;
+}
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
     .keepLogo {
@@ -695,8 +703,9 @@ h6, span{
         margin-top: 10px;
     }
     .container {
-        display: table-cell;
-        flex-wrap: inherit;
+        display: grid;
+        flex-wrap: wrap-reverse;
+        grid-row-gap: 20px;
     }
     
     .card {
@@ -883,8 +892,9 @@ h6, span{
         margin-top: 10px;
     }
     .container {
-        display: table-cell;
-        flex-wrap: inherit;
+        display: grid;
+        flex-wrap: wrap-reverse;
+        grid-row-gap: 20px;
     }
     
     .card {
@@ -1073,8 +1083,9 @@ span{
         margin-top: 10px;
     }
     .container {
-        display: table-cell;
-        flex-wrap: inherit;
+        display: grid;
+        flex-wrap: wrap-reverse;
+        grid-row-gap: 20px;
     }
     
     .card {
@@ -1250,8 +1261,9 @@ span{
         margin-top: -4px;
     }
     .container {
-        display: flex;
+        display: grid;
         flex-wrap: wrap-reverse;
+        grid-row-gap: 20px;
     }
 }
 /********************************************************************/
