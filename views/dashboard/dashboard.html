@@ -69,7 +69,7 @@
                 <i class="material-icons app" >apps</i> 
             </div>
             <div>
-                <img src="/images/natural.jpg" class="image">
+                <img src="/images/natural.jpg" class="image" data-toggle="modal" data-target="#viewProfile">
             </div>
       </div>
      </li>
@@ -89,7 +89,7 @@
           <div class="line"></div>
           <a class="w3-bar-item w3-button">LABELS</a>
           <a href="#">
-            <i class='fas fa-pencil-alt'></i><span>Edit Labels</span>
+            <i class='fas fa-pencil-alt'  ></i><span data-toggle="modal" data-target="#createLabel">Edit Labels</span>
           </a>
           <div class="line"></div>
           <a href="#">
@@ -217,6 +217,41 @@
             </div>
        </div>
   </div> 
+
+  <!-- modal for viewProfile -->
+  <div class="modal" id="viewProfile" role="dialog">
+    <div class="modal-dialog">
+       <div class="modal-content">
+          
+           <!-- Modal Header -->
+        <div class="modal-header viewData">
+          <img src="/images/natural.jpg" class="viewImage">
+          <div class="selfData">
+            <b id="fullName"></b>
+            <div id="emailData"></div>
+          </div>
+          <button class="button manageAccount">Manage your Fundoo Account</button>
+        </div>
+   
+        <!-- Modal body -->
+        <div class="modal-body">
+           <div class="anotherAcc">
+            <i class="material-icons">person_add</i><b class="anotherAccBold">Add another Account</b>
+           </div>
+           <hr>
+           <button class="button signout">Sign out</button>
+           <hr>
+        </div>
+        <!-- footer -->
+           <div class="footer signoutFooter">
+            <ul>
+              <li>Privacy Policy</li>
+              <li>Terms of Services</li>
+            </ul>
+          </div>
+         </div>
+    </div>
+</div> 
   
   <!-- modal is here for remainder-->
   <div class="modal" id="myRemindModal" role="dialog">
@@ -285,6 +320,27 @@
 </div> 
   
 
+ <!-- The Modal for create Label -->
+ <div class="modal" id="createLabel" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content labelContent">
+         <!-- Modal Header -->
+         <div class="modal-header">
+          <h4 class="modal-title">Edit Labels </h4>
+        </div>
+
+         <div class="modalData">
+           <input type="text" class="center newLabel" style='font-size:15px'placeholder="create new label"/>
+         </div> 
+
+         <div class="footer-label">
+            <button type="button" class="btn btn-default " id="createLabel">done</button>
+         </div>
+       </div>
+  </div>
+</div> 
+  
+
  <!-- modal is here for pick data -->
  <div class="modal" id="myPickDataModal" role="dialog">
   <div class="modal-dialog">
@@ -340,7 +396,7 @@
       <div id="snackbarColor">color is updated ...</div>
       <div id="snackbarReminder">Remainder added successfully ...</div>
       <div id="snackbarCollaborator">Collaborator added successfully ...</div>
-
+      <div id="snackbarLabel">Label created ...</div>
     </div> 
   </div>
 </div>

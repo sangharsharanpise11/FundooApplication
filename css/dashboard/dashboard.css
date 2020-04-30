@@ -128,7 +128,7 @@ span{
     border-bottom-color: white;
   }
   .fas .fa-bars{
-    margin-left: 20px;
+    margin-left: 20px;color: black;
     margin-top: 15px;
     font-size: 35px !important;
   }
@@ -136,7 +136,7 @@ span{
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 32px !important;
+    font-size: 24px;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -144,10 +144,12 @@ span{
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
+    -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
+    color: black;
 }
 .w3-sidebar{
-    margin-top: 67px;
+    margin-top: -23px !important;
     font-size: -21px;
     font-weight: 500;
     display: grid;
@@ -222,7 +224,7 @@ a {
     font-size: 18px !important;
  }
  .fa-paint-brush, .fa-image{
-     font-size: 15px;
+     font-size: 15px;color: black;
  }
  
  input[type=text] {
@@ -339,7 +341,7 @@ font-weight: 500;
     -webkit-font-smoothing: antialiased;
 }ss
 .fas , .far{
-    font-size: 18px;
+    font-size: 18px;color: black;
 }
 .dropdown-menu, .dropup-content{
     position: absolute;
@@ -364,7 +366,7 @@ font-weight: 500;
     margin-top: 10px;
     z-index: 1;
 }
-#snackbarTrash, #snackbarPin, #snackbarArchive, #snackbarNoteCreate,#snackbarColor, #snackbarReminder, #snackbarCollaborator {
+#snackbarTrash, #snackbarPin, #snackbarArchive, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
@@ -419,6 +421,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 h6, span{
     font-size: 19px !important;
+    color: black;
 }
 .remainderContent{
     height: 435px;
@@ -547,6 +550,59 @@ h6, span{
     align-items: flex-start;
     place-content: initial;
 }
+.viewImage{
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    margin-left: 77px
+}
+.viewData{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.manageAccount{
+    border-radius: 60px;
+    width: 235px;
+    border: none;
+    height: 35px;
+    margin-top: 10px;
+}
+.anotherAcc{
+    display: flex;
+    justify-content: space-around;
+}
+
+.anotherAccBold{
+    margin-left: -245px;
+}
+.signout{
+    margin-left: 173px;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+}
+.signoutFooter{
+    margin-top: -29px;
+    margin-bottom: 20px;
+}
+.labelContent{
+    margin-left: 10px;
+}
+#createLabel{
+    float: right;
+    margin-right: 53px;
+    margin-top: 10px;
+    font-weight: 800;
+    outline: none;
+    background-color: lightgrey;
+}
+.footer-label{
+    background-color: lightgrey;
+    margin-top: 24px;
+    height: 50px;
+}
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
     .keepLogo {
@@ -635,6 +691,7 @@ h6, span{
     }
     .fas, .far {
         font-size: 35px;
+        color: black;
     }
 
     .createNote {
@@ -735,6 +792,7 @@ h6, span{
     margin-top: 15px;
     margin-left: 212px;
     }
+    
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){

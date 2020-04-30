@@ -581,4 +581,50 @@ $(document).on("click" , "#collaborator" , function(e) {
   });
 
 
+/**************************************** Label create ***********************************************************************/ 
+
+// $(document).on("click" , "#createLabel" , function(e) { 
+//   console.log("in label ");
+ 
+  // noteId=$(this).closest('div.card').attr('id');
+  // data = notes[noteId].id;
+  // console.log("data is :",data);
+  
+  $(document).on("click" , "#createLabel" , function(e) { 
+   console.log("in label");
+  
+ var newlabel= $('.newLabel').val();
+ console.log("***",newlabel);
+ 
+   var labelCreate =
+    {
+      label: $('.newLabel').val(),
+      isDeleted : false,
+      userId: localStorage.getItem('userId')
+    }
+
+
+    var x = document.getElementById("snackbarLabel")
+    x.className = "show";
+
+   $.ajax({
+    url: "http://fundoonotes.incubation.bridgelabz.com/api/noteLabels",
+    data:  JSON.stringify(labelCreate), 
+    type: "POST",
+      headers: {
+         'Authorization': localStorage.getItem('token')
+       },
+        contentType: "application/json;charset=utf-8",
+        success: function (result) 
+        {
+          console.log("success");
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+        },
+        error: function (errorMessage)
+        {
+         console.log("Error", errorMessage);
+        }
+      });
+    });   
+
 
