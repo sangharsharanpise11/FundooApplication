@@ -88,6 +88,7 @@
           </a>
           <div class="line"></div>
           <a class="w3-bar-item w3-button">LABELS</a>
+          <div class="allLabels" id="allLabels"></div>
           <a href="#">
             <i class='fas fa-pencil-alt'  ></i><span data-toggle="modal" data-target="#createLabel">Edit Labels</span>
           </a>
@@ -143,9 +144,13 @@
       <div class="unpinNotes" id="unpinNotes">
         
       </div>
+      <!-- <div class="labelData"  style="background-color :grey">
+          <i class='fas fa-caret-right' style='font-size:24px ;font-size: 24px;margin-left: 20px;'></i>
+             <input type="text" id="labelName"  value="abc">
+          <i class="material-icons">mode_edit</i>
+      </div> -->
      <!-- <tr>
-        <div class="card">
-          <img src="/images/unpinnnn.png" id="unpin" style="width: 25px; height: 23px; margin-left: 235px;margin-top: 3px;">
+        <div class="card"> png" id="unpin" style="width: 25px; height: 23px; margin-left: 235px;margin-top: 3px;">
           <div class="card-body">
             <div class="info" style="color: black; "  data-toggle="modal" data-target="#myModal">
               <div class="tit" id="tit"><span>abc</span></div>
@@ -193,6 +198,7 @@
             </div>
             </div>
           </tr>     -->
+
         </div> 
  
 <!-- modal is here for update note -->
@@ -331,10 +337,11 @@
 
          <div class="modalData">
           <span class="glyphicon glyphicon-remove"></span></span><input type="text" class="center newLabel" style='font-size:15px'placeholder="create new label"/><span class="glyphicon glyphicon-ok ok"></span>
+          <div class="labelsAll" id="labelsAll"></div>
          </div> 
-
+         <hr>
          <div class="footer-label">
-            <button type="button" class="btn btn-default " id="createLabel">done</button>
+            <button type="button" class="btn btn-default " id="createLabel">Done</button>
          </div>
        </div>
   </div>

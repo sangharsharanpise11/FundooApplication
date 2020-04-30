@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $("#openNav").click(function(){
     $(".w3-sidebar").toggle();
+    $("#display").css({"width":"fit-content", "height": "100%","margin-left": "100px","margin-top": "10px"});
   });
 });
 
@@ -551,11 +552,16 @@ $(document).on("click" , "#collaborator" , function(e) {
    var collaboratorObject = {
     firstName: firstName,
     lastName: lastName,
-    email: email,
+    email: $('.newPerson').val(),
     noteIdList:data,
     userId:localStorage.getItem('userId')
     }
-
+    // var collaboratorObject = {
+    //   firstName: collaborator.firstName,
+    //   lastName: collaborator.lastName,
+    //   email: collaborator.email,
+    //   userId: collaborator.userId
+    //   }
     var x = document.getElementById("snackbarCollaborator")
     x.className = "show";
 
@@ -589,14 +595,37 @@ $(document).on("click" , "#collaborator" , function(e) {
   // noteId=$(this).closest('div.card').attr('id');
   // data = notes[noteId].id;
   // console.log("data is :",data);
+  $(function() {
+    $("#label_error_message").hide();
+    
+    var error_label = false;
+    
+    $("#label").focusout(function() {
+       check_label();
+    });  
+    
+    function check_label() {
+      var pattern = /^[a-zA-Z ]*$/;
+      var title = $("#labelName").val()
+      if (pattern.test(title) && desc !== ''){
+           $("#label_error_message").hide();
+           $("#label").css("border-bottom","2px solid #34F458");
+        } else {
+           $("#label_error_message").html("Invalid title");
+           $("#label_error_message").show();
+           $("#label").css("border-bottom","2px solid #F90A0A");
+           error_label = true;
+        }
+     }
+    
+    
   
   $(document).on("click" , "#createLabel" , function(e) { 
    console.log("in label");
   
     var newlabel= $('.newLabel').val();
-    console.log("***",newlabel);
-    
-   var labelCreate = {
+       
+    var labelCreate = {
       label: $('.newLabel').val(),
       isDeleted : false,
       userId: localStorage.getItem('userId')
@@ -625,7 +654,8 @@ $(document).on("click" , "#collaborator" , function(e) {
         }
       });
     });   
-
+  });
+  
 /******** get all label **********************************/ 
 var labels=[];
 
@@ -639,7 +669,23 @@ $(document).ready(function(){
       console.log("success in  labels");
       labels=result.data.details;
       console.log("labels = ",labels);
-      
+  
+       var wrapperLabel=document.getElementById("labelsAll");  
+       var myHTML = ''; 
+       for (var i = 0; i < labels.length; i++)
+        {  
+          myHTML +=' <div class="labelData"><i class="fas fa-caret-right" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i><input type="text" id="labelName"  value='+labels[i].label+'><i class="material-icons">mode_edit</i></div>';
+        }
+        wrapperLabel.innerHTML = myHTML
+
+       var wrapper = document.getElementById("allLabels");
+       var myHTML = ''; 
+       for (var i = 0; i < labels.length; i++)
+        {  
+          myHTML +=' <div class="labelData"><i class="fas fa-caret-right" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i><input type="text" id="labelName"  value='+labels[i].label+'></div>';
+        }
+        wrapper.innerHTML = myHTML
+
       }
       ,
         error: function (errorMessage)
