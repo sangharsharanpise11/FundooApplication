@@ -593,11 +593,10 @@ $(document).on("click" , "#collaborator" , function(e) {
   $(document).on("click" , "#createLabel" , function(e) { 
    console.log("in label");
   
- var newlabel= $('.newLabel').val();
- console.log("***",newlabel);
- 
-   var labelCreate =
-    {
+    var newlabel= $('.newLabel').val();
+    console.log("***",newlabel);
+    
+   var labelCreate = {
       label: $('.newLabel').val(),
       isDeleted : false,
       userId: localStorage.getItem('userId')
@@ -627,4 +626,27 @@ $(document).on("click" , "#collaborator" , function(e) {
       });
     });   
 
+/******** get all label **********************************/ 
+var labels=[];
 
+$(document).ready(function(){
+   $.ajax({
+      url: "http://fundoonotes.incubation.bridgelabz.com/api/noteLabels/getNoteLabelList",
+      type: "GET",
+      headers: { 'Authorization': localStorage.getItem('token') },
+            
+      success: function(result){
+      console.log("success in  labels");
+      labels=result.data.details;
+      console.log("labels = ",labels);
+      
+      }
+      ,
+        error: function (errorMessage)
+        {
+         console.log("failed");
+         console.log("Error", errorMessage);
+        }
+    });
+   });
+ 

@@ -588,7 +588,7 @@ h6, span{
     margin-bottom: 20px;
 }
 .labelContent{
-    margin-left: 10px;
+    margin-left: 10px;    width: 350px
 }
 #createLabel{
     float: right;
@@ -602,6 +602,12 @@ h6, span{
     background-color: lightgrey;
     margin-top: 24px;
     height: 50px;
+}
+.labelTitle{
+    margin-left: -220px !important;
+}
+.ok{
+    margin-left: 45px;
 }
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
