@@ -713,6 +713,14 @@ $(document).on("click" , "#deleteLabelIcon" , function(e) {
        success: function (result) 
        {
          console.log("success");
+         for( var i = 0; i < labels.length; i++)
+         {
+            if ( labels[i] === data) 
+            {
+              console.log(labels[i]);
+              labels.splice(i, 1);
+            }
+          }
          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
        },
        error: function (errorMessage)
@@ -722,4 +730,4 @@ $(document).on("click" , "#deleteLabelIcon" , function(e) {
      });
    });   
 
-  
+ 
