@@ -721,6 +721,7 @@ $(document).on("click" , "#deleteLabelIcon" , function(e) {
               labels.splice(i, 1);
             }
           }
+         $(location).attr('href',"/views/dashboard/dashboard.html");
          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
        },
        error: function (errorMessage)
@@ -730,4 +731,45 @@ $(document).on("click" , "#deleteLabelIcon" , function(e) {
      });
    });   
 
- 
+   /************ update label *****************************************************/  
+$(document).on("click" , "#editLabel" , function(e) { 
+  console.log("in update label");
+      
+  labelId=$(this).closest('div .labelData').attr('id');
+  console.log("labelid ",labelId);
+
+  updatingLabel=$('#labelName').val();
+  console.log("updatingLabel ",updatingLabel);
+
+  
+  data = labels[labelId].id;
+  console.log("data is :",data);
+
+  var labelUpdate={
+      label: $('#labelName').val(),
+      isDeleted : false,
+      userId: localStorage.getItem('userId')
+  }
+   var x = document.getElementById("snackbarLabelUpdated")
+   x.className = "show";
+
+  $.ajax({
+   url: "http://fundoonotes.incubation.bridgelabz.com/api/noteLabels/"+data+"/updateNoteLabel",
+   data:  JSON.stringify(labelUpdate), 
+   type: "POST",
+     headers: {
+        'Authorization': localStorage.getItem('token')
+      },
+       contentType: "application/json;charset=utf-8",
+       success: function (result) 
+       {
+         console.log("success");
+         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+       },
+       error: function (errorMessage)
+       {
+        console.log("Error", errorMessage);
+       }
+     });
+   });  
+   
