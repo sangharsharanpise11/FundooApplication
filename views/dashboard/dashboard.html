@@ -90,7 +90,7 @@
           <a class="w3-bar-item w3-button">LABELS</a>
           <div class="allLabels" id="allLabels"></div>
           <a href="#">
-            <i class='fas fa-pencil-alt'  ></i><span data-toggle="modal" data-target="#createLabel">Edit Labels</span>
+            <i class='fas fa-pencil-alt'  ></i><span data-toggle="modal" data-target="#createLabelModal">Edit Labels</span>
           </a>
           <div class="line"></div>
           <a href="#">
@@ -148,6 +148,12 @@
           <i class='fas fa-caret-right' style='font-size:24px ;font-size: 24px;margin-left: 20px;'></i>
              <input type="text" id="labelName"  value="abc">
           <i class="material-icons">mode_edit</i>
+
+          <div class="labelData">
+            <i class="fa fa-trash" id="deleteLabel" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i>
+            <input type="text" id="labelName"  value='+labels[i].label+'>
+            <i class="material-icons">mode_edit</i>
+          </div>
       </div> -->
      <!-- <tr>
         <div class="card"> png" id="unpin" style="width: 25px; height: 23px; margin-left: 235px;margin-top: 3px;">
@@ -327,7 +333,7 @@
   
 
  <!-- The Modal for create Label -->
- <div class="modal" id="createLabel" role="dialog">
+ <div class="modal" id="createLabelModal" role="dialog">
   <div class="modal-dialog">
      <div class="modal-content labelContent">
          <!-- Modal Header -->
@@ -404,6 +410,8 @@
       <div id="snackbarReminder">Remainder added successfully ...</div>
       <div id="snackbarCollaborator">Collaborator added successfully ...</div>
       <div id="snackbarLabel">Label created ...</div>
+      <div id="snackbarLabelDeleted">label deleted ...</div>
+      <div id="snackbarLabelUpdated">Label uodated ...</div>
     </div> 
   </div>
 </div>

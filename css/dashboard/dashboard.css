@@ -219,6 +219,8 @@ a {
     margin-top: 90px;
     margin-left: 240px;
     height: 180px;
+    border-style: solid;
+    border-color: lightgrey;
  }
  .material-icons{
     font-size: 18px !important;
@@ -366,7 +368,7 @@ font-weight: 500;
     margin-top: 10px;
     z-index: 1;
 }
-#snackbarTrash, #snackbarPin, #snackbarArchive, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
+#snackbarTrash, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
@@ -722,6 +724,8 @@ h6, span{
     margin-top: 100px;
     margin-left: -160px;
     height: 300px;
+    border-style: solid;
+    border-color: lightgrey;
     }
     input[type=text] {
         width: 70%;
@@ -912,6 +916,8 @@ h6, span{
     margin-top: 100px;
     margin-left: -162px;
     height: 247px;
+    border-style: solid;
+    border-color: lightgrey;
     }
     input[type=text] {
         width: 70%;
@@ -1116,6 +1122,8 @@ span{
     margin-top: 100px;
     margin-left: -162px;
     height: 247px;
+    border-style: solid;
+    border-color: lightgrey;
     }
     input[type=text] {
         width: 70%;
@@ -1454,6 +1462,8 @@ span{
         margin-top: 90px;
         margin-left: 240px;
         height: 248px;
+        border-style: solid;
+        border-color: lightgrey;
     }
     .close {
         width: 70px;
@@ -1601,6 +1611,8 @@ span{
         margin-top: 90px;
         margin-left: 240px;
         height: 219px;
+        border-style: solid;
+        border-color: lightgrey;
     }
     .close {
         width: 70px;
@@ -1624,5 +1636,5 @@ span{
         border: none;
         font-size: 18px !important;
     }
-    
 }
+
