@@ -667,7 +667,7 @@ $(document).ready(function(){
        var myHTML = ''; 
        for (var i = 0; i < labels.length; i++)
         {  
-          myHTML +='<div id='+[i]+' class="labelData"><i class="fa fa-trash" id="deleteLabelIcon" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i><input type="text" id="labelName"  value='+labels[i].label+'><i class="material-icons">mode_edit</i></div>';
+          myHTML +='<div id='+[i]+' class="labelData"><i class="fa fa-trash" id="deleteLabelIcon" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i><input type="text" id="labelName"  value='+labels[i].label+'><i class="material-icons" id="editLabel">mode_edit</i></div>';
         }
         wrapperLabel.innerHTML = myHTML
 
@@ -705,7 +705,7 @@ $(document).on("click" , "#deleteLabelIcon" , function(e) {
   $.ajax({
    url: "http://fundoonotes.incubation.bridgelabz.com/api/noteLabels/"+data+"/deleteNoteLabel",
    data:  JSON.stringify(data), 
-   type: "POST",
+   type: "DELETE",
      headers: {
         'Authorization': localStorage.getItem('token')
       },
@@ -722,3 +722,4 @@ $(document).on("click" , "#deleteLabelIcon" , function(e) {
      });
    });   
 
+  
