@@ -474,7 +474,7 @@ $(document).on("click" , "#deleteNote" , function(e) {
   });
 });
 
-  /**************** remainder note **********************/ 
+/**************** remainder note *********************************/ 
   $(function () {
     console.log("in datetimepicker");
     $('#datetimepicker1').datetimepicker();
@@ -518,8 +518,7 @@ $(document).on("click" , "#deleteNote" , function(e) {
                 }
              });
       });
-    
-    });
+   });
 /**************************************** collaborator note ***********************************************************************/ 
 function closeButton() {
   console.log("in close");
@@ -534,6 +533,7 @@ localStorage.setItem("fullName",fullName);
 
 document.getElementById("fullName").innerHTML = fullName;
 document.getElementById("emailData").innerHTML = email;
+console.log(fullName, "  " ,email);
 
 
 $(document).on("click" , "#collaborator" , function(e) { 
@@ -543,7 +543,7 @@ $(document).on("click" , "#collaborator" , function(e) {
   data = notes[noteId].id;
   console.log("data is :",data);
   
-  $(document).on("click" , "#collabSaveBtn" , function(e) { 
+  $(document).on("click" , "#collabSaveBtn" , function(e) {   
    console.log("in save");
    
    var newPerson=$('.newPerson').val();

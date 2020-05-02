@@ -287,13 +287,16 @@ ul {
     grid-row-gap: 20px;
  }
 .card{
-width: 270px;background-color: white;
-height: 170px;   width: 270px;
-background-color: white;
-height: 170px;
-border-radius: 6px;
-margin: 5px;
-border-radius: 6px;
+    width: 270px;
+    background-color: white;
+    height: 170px;
+    width: 285px;
+    background-color: white;
+    height: 170px;
+    border-radius: 6px;
+    margin: 5px;
+    border-radius: 6px;
+    margin-left: 15px;
 }
 .fa-paint-brush, .fa-image{
     font-size: 15px;
@@ -369,7 +372,7 @@ font-weight: 500;
 #unpin{
     width: 25px;
     height: 22px;
-    margin-left: 235px;
+    margin-left: 255px;
     margin-top: 10px;
     z-index: 1;
 }
@@ -505,7 +508,10 @@ h6, span{
     margin-top: 0px;
 }
 .noteIcon{
-    padding-right: 10px; margin-top: -35px; display: flex;
+    padding-right: 10px;
+    margin-top: -31px;
+    display: flex;
+    margin-left: -35px;
 }
 .modal-title{
     font-weight: 600;
@@ -771,8 +777,10 @@ h6, span{
         margin-left: -33px;
     }
     .noteIcon{
-        margin-top: 25px;
+        padding-right: 10px;
+        margin-top: -31px;
         display: flex;
+        margin-left: -35px;
     }
     .close {
         width: 70px;
@@ -799,7 +807,7 @@ h6, span{
     }
     
     .card {
-        margin-left: -125px;
+        /* margin-left: -125px;
         width: 270px;
         background-color: white;
         height: 170px;
@@ -808,13 +816,24 @@ h6, span{
         height: 275px;
         border-radius: 6px;
         border-radius: 6px;
-        margin-top: 10px;
+        margin-top: 10px; */
+        width: 270px;
+        background-color: white;
+        height: 170px;
+        width: 285px;
+        background-color: white;
+        height: 170px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
     }
     #unpin{
-        width: 45px;
-        height: 40px;
-        margin-left: 470px;
-        margin-top: 8px;
+        width: 25px;
+    height: 22px;
+    margin-left: 255px;
+    margin-top: 10px;
+    z-index: 1;
     }
     .threeIcons1{
         list-style-type: none;
@@ -938,8 +957,8 @@ h6, span{
         font-size: 25px;
     }
     #desc {
-        margin-top: 25px;
-    }
+        margin-top: 9px !important;
+        }
     .archive{
         width: 40px;
         height: 35px;
@@ -968,8 +987,10 @@ h6, span{
     margin-left: -33px;
     }
     .noteIcon{
-        margin-top: 25px;
+        padding-right: 10px;
+        margin-top: -31px;
         display: flex;
+        margin-left: -35px;
     }
     .close {
         width: 70px;
@@ -996,7 +1017,7 @@ h6, span{
     }
     
     .card {
-        margin-left: -85px;
+        /* margin-left: -85px;
     width: 270px;
     background-color: white;
     height: 170px;
@@ -1005,13 +1026,24 @@ h6, span{
     height: 275px;
     border-radius: 6px;
     border-radius: 6px;
-    margin-top: 10px;
+    margin-top: 10px; */
+    width: 270px;
+    background-color: white;
+    height: 170px;
+    width: 285px;
+    background-color: white;
+    height: 170px;
+    border-radius: 6px;
+    margin: 5px;
+    border-radius: 6px;
+    margin-left: 15px;
     }
     #unpin{
-        width: 45px;
-        height: 40px;
-        margin-left: 470px;
-        margin-top: 8px;
+        width: 25px;
+        height: 22px;
+        margin-left: 255px;
+        margin-top: 10px;
+        z-index: 1;
     }
   .image{
     width: 55px;
@@ -1166,8 +1198,10 @@ span{
     margin-left: -33px;
     }
     .noteIcon{
-        margin-top: 25px;
+        padding-right: 10px;
+        margin-top: -31px;
         display: flex;
+        margin-left: -35px;
     }
     .close {
         width: 70px;
@@ -1194,7 +1228,7 @@ span{
     }
     
     .card {
-        margin-left: -160px;
+        /* margin-left: -160px;
     width: 270px;
     background-color: white;
     height: 170px;
@@ -1203,13 +1237,23 @@ span{
     height: 190px;
     border-radius: 6px;
     border-radius: 6px;
-    margin-top: 10px;
+    margin-top: 10px; */
+    width: 270px;
+    background-color: white;
+    height: 170px;
+    width: 285px;
+    height: 170px;
+    border-radius: 6px;
+    margin: 5px;
+    border-radius: 6px;
+    margin-left: 15px;
     }
     #unpin{
-        width: 30px;
-    height: 25px;
-    margin-left: 260px;
-    margin-top: 8px;
+        width: 25px;
+    height: 22px;
+    margin-left: 255px;
+    margin-top: 10px;
+    z-index: 1;
     }
     .info {
         display: grid;
@@ -1260,12 +1304,22 @@ span{
         width: 270px;
         background-color: white;
         height: 170px;
+        width: 285px;
+        background-color: white;
+        height: 170px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
+        /* width: 270px;
+        background-color: white;
+        height: 170px;
         width: 270px;
         background-color: white;
         height: 185px;
         border-radius: 6px;
         margin: 5px;
-        border-radius: 6px;margin-left: 15px;
+        border-radius: 6px;margin-left: 15px; */
     }
     .form-control {
         width: 490px !important;
@@ -1397,10 +1451,10 @@ span{
     }
     #unpin {
         width: 25px;
-        height: 22px;
-        margin-left: 314px;
-        margin-top: 10px;
-        z-index: 1;
+    height: 22px;
+    margin-left: 255px;
+    margin-top: 10px;
+    z-index: 1;
     }
     .keepLogo {
         vertical-align: middle;
@@ -1450,13 +1504,23 @@ span{
         width: 270px;
         background-color: white;
         height: 170px;
+        width: 285px;
+        background-color: white;
+        height: 170px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
+        /* width: 270px;
+        background-color: white;
+        height: 170px;
         width: 350px;
         background-color: white;
         height: 205px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
-        margin-left: 15px;
+        margin-left: 15px; */
        }
    
     #display {
@@ -1472,7 +1536,7 @@ span{
     }
     .noteIcon {
         padding-right: 10px;
-        margin-top: -10px;
+        margin-top: -31px;
         display: flex;
         margin-left: -35px;
     }
@@ -1510,8 +1574,8 @@ span{
         margin-left: 20px;    padding-right: 170px;
     }
     #desc {
-        margin-top: 20px !important;
-    }
+        margin-top: 9px !important;
+        }
     .tit, .desc {
         border: none;
         font-size: 25px;
@@ -1552,7 +1616,7 @@ span{
     #unpin {
         width: 25px;
         height: 22px;
-        margin-left: 314px;
+        margin-left: 255px;
         margin-top: 10px;
         z-index: 1;
     }
@@ -1604,13 +1668,23 @@ span{
         width: 270px;
         background-color: white;
         height: 170px;
+        width: 285px;
+        background-color: white;
+        height: 170px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
+        /* width: 270px;
+        background-color: white;
+        height: 170px;
         width: 350px;
         background-color: white;
         height: 205px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
-        margin-left: 15px;
+        margin-left: 15px; */
        }
    
     #display {
@@ -1626,9 +1700,9 @@ span{
     }
     .noteIcon {
         padding-right: 10px;
-        margin-top: -10px;
-        display: flex;
-        margin-left: -35px;
+    margin-top: -32px;
+    display: flex;
+    margin-left: -35px;
     }
     .material-icons {
         font-size: 26px !important;
@@ -1664,8 +1738,7 @@ span{
         margin-left: 20px;    padding-right: 170px;
     }
     #desc {
-        margin-top: 20px !important;
-    }
+        margin-top: 9px !important;    }
 
     .tit, .desc {
         border: none;
