@@ -206,24 +206,7 @@ $(document).ready(function(){
       notes=result.data.data;
       console.log("notes = ",notes);
 
-/*********************** pin and unpin notes **************************************************************/ 
-      // var pinNotes=[];var unpinNotes=[];
-      // for(var i=0;i<notes.length;i++){
-      //   if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].isDeleted === false){
-      //     pinNotes.push(notes[i]);
-      //   }
-      // }
-
-      // for(var i=0;i<notes.length;i++){
-      //   if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].isDeleted === false){
-      //     unpinNotes.push(notes[i]);
-      //   }
-      // }
-
-      // console.log("pin : ",pinNotes);
-      // console.log("unpin : ",unpinNotes);
-
-        /** PIN ****/  
+         /** PIN ****/  
        var wrapper = document.getElementById("pinnedNotes");
        var id = document.getElementById("id");
     
@@ -369,11 +352,8 @@ $(document).on("click" , "#deleteNote" , function(e) {
         },     
       });
     });
-  
- /*
-        error: function (errorMessage) {
-        console.log("Error", errorMess age);
-******************** archieve note **********************************************************/ 
+ 
+/******************** archieve note **********************************************************/ 
     $(document).on("click" , "#archieveNote" , function(e) { 
     noteId=$(this).closest('div.card').attr('id');  
     data = notes[noteId].id;
