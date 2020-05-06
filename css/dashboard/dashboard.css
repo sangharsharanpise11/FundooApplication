@@ -45,7 +45,7 @@
 /* ************************************************** */
 body{
     height: 100%;
-    width: 100%;font-size: 20px;
+    width: 100%;
     background-color: ghostwhite;
   }
 span{
@@ -639,13 +639,122 @@ h6, span{
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
     .keepLogo {
-        vertical-align: middle;
+    vertical-align: middle;
         border-style: none;
         margin-left: 23px;
+        height: 80px;
     }
-    h6, span {
-        font-size: 30px !important;
+    .viewProfileContent{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 10px;
     }
+    .pickDataContent .titleDateTime{
+        margin-right: -230px;
+    }
+    .anotherAcc .material-icons{
+        font-size: 35px !important;
+    }
+    .anotherAccBold {
+        margin-left: -60px;
+    }
+    .collaboratorContent {
+        margin-left: -9px;
+        width: 320px;
+    }
+    .collaboratorContent .modal-title{
+        font-weight: 600;
+        margin-left: -200px !important;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: -7px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 17px;
+        border: none;
+        float: right;
+        margin-top: 1px;
+        float: right;
+        background: lightgrey;
+        margin-left: 56px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
+    .newCollaborator{
+        margin-top: -5px;
+    }
+    .signout {
+        margin-left: 87px;
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .remainderContent{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .remainderContent .modal-title {
+        font-weight: 600;
+        margin-left: -178px !important;
+    }
+    .today h6 span{
+        font-size: 15px !important;
+    }
+    /* .dropdown-menu .show{
+        position: absolute;
+        height: 350px;
+    width: 355px !important;
+    margin-left: -280px;
+    } */
+/* 
+    ul .show .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1.5rem;
+        clear: both;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+        font-size: 50px;
+    } */
+  .info .tite, .descr {
+    font-size: 65px !important;
+    color: black;
+}
+.pickData {
+    float: left;
+    margin-right: 101px;
+    margin-top: -20px;
+}
+.pickDataContent {
+    height: 350px;
+    width: 306px;
+    font-size: 20px;
+    margin-left: -5px;
+    margin-top: 95px;
+}
+#cars {
+    border: none;
+    margin-top: 22px;
+    width: 270px;
+}
+
+#display b, strong {
+        font-weight: bold;
+        font-size: 50px;
+    }
+    .keepData{
+        margin-top: -10px;
+        margin-left: 25px;
+    }
+    /* h6,li span {
+        font-size: 65px !important;
+    } */
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
@@ -657,22 +766,21 @@ h6, span{
         padding: 5px;
         text-align: left;
         background-color: #e5eecc;
-        border-radius: 5px;
+        border-radius: 22px;
         justify-content: space-between;
-        height: 70px;
+        height: 140px;
         margin-top: -115px;
-        width: 577px;
+        width: 1230px;
         margin-left: -154px;
-        font-size: 30px;
+        font-size: 69px;
     }
     .cal{
         margin-top: 0px;
     font-size: 35px !important;
     }
     .app{
-        font-size: 50px !important;
-        margin-top: -89px;
-        margin-left: 224px;
+        margin-top: -13px;
+    margin-left: 83px;
     }
     .navbar-nav {
         display: list-item;
@@ -695,7 +803,7 @@ h6, span{
         font-size: 22px !important;
         justify-content: space-between;
         width: 197px;
-        margin-top: -54px;
+        margin-top: -3px;
         margin-left: 231px;
     }
     .menu {
@@ -708,36 +816,37 @@ h6, span{
     margin-top: -5px;
     }   
     .image {
-        width: 75px;
-        height: 75px;
+        width: 130px;
+        height: 130px;
         border-radius: 70%;
-        margin-top: -160px;
+        margin-top: -39px;
         margin-left: 50px;
     }
     .navbar{
-        position: relative;
+        position: fixed;
         min-height: 100px !important;
         margin-bottom: 20px;
         border: 1px solid transparent;
-        width: 500px !important;
+        width: 1290px !important;
         margin-left: 2px;
+        height: 190px;
     }
     .fas, .far {
-        font-size: 35px;
-        color: black;
+        font-size: 75px;
+    color: black;
     }
 
     .createNote {
         background-color: white;
-    width: 610px;
-    border-radius: 5px;
-    display: grid;
-    grid-row-gap: 15px;
-    margin-top: 100px;
-    margin-left: -160px;
-    height: 300px;
-    border-style: solid;
-    border-color: lightgrey;
+        width: 1254px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 100px;
+        margin-left: -160px;
+        height: 550px;
+        border-style: solid;
+        border-color: lightgrey;
     }
     input[type=text] {
         width: 70%;
@@ -745,14 +854,14 @@ h6, span{
         outline: none;
         font-weight: 600;
         color: gray;
-        font-size: 25px;
+        font-size: 65px;
     }
     #desc {
         margin-top: 45px !important;
     }
     .archive{
-        width: 40px;
-        height: 35px;
+       width: 83px;
+    height: 76px;
     }
     .material-icons {
         font-family: 'Material Icons';
@@ -768,37 +877,70 @@ h6, span{
         direction: ltr;
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
-        font-size: 38px !important;
+        font-size: 103px !important;
     }
     .icons{
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 13px;
-        margin-top: 45px !important;
-        margin-left: -33px;
+        margin-top: 50px !important;
+        margin-left: -98px;
+        margin-right: 210px;
     }
+    /* .close{
+        font-size: 70px;
+        opacity: 1.25;
+        margin-top: -102px;
+        margin-right: 
+    } */
     .noteIcon{
-        padding-right: 10px;
-        margin-top: -31px;
+        padding-right: 45px;
+        margin-top: 245px;
         display: flex;
         margin-left: -35px;
     }
-    .close {
-        float: right;
-        font-size: 19px;
-        font-weight: bold;
-        line-height: 1;
-        color: black;
+    .color {
+        width: 90px;
+        height: 87px;
+        border-radius: 70%;
+        margin-left: 7px;
+        z-index: 3;
     }
+    .lastDropdown{
+        position: absolute;
+    transform: translate3d(-215px, 100px, 50px);
+    top: 0px;
+    width: 358px;
+    height: 330px;
+    font-size: 46px;
+    width: 300;
+    height: 300;
+    }
+    .closeBtn{
+        margin-top: -143px;
+        float: right;
+        color: black;
+        font-size: 53px;
+        margin-left: 10;
+        margin-right: 32px;
+        border: none;
+        background-color: white;
+    }
+  #colorList{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform: translate3d(0px, 75px, 0px);
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+  }
     #display {
-        width: 100%;
-        height: 100%;
         margin-top: 10px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
         align-items: flex-start;
         place-content: initial;
+        grid-row-gap: 60px;
     }
     .container {
         display: grid;
@@ -807,44 +949,62 @@ h6, span{
     }
     
     .card {
-        /* margin-left: -125px;
         width: 270px;
         background-color: white;
         height: 170px;
-        width: 520px;
+        width: 1000px;
         background-color: white;
-        height: 275px;
-        border-radius: 6px;
-        border-radius: 6px;
-        margin-top: 10px; */
-        width: 270px;
-        background-color: white;
-        height: 170px;
-        width: 285px;
-        background-color: white;
-        height: 170px;
+        height: 595px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
-        margin-left: 15px;
+        margin-left: -250px;
     }
     #unpin{
-        width: 25px;
-    height: 22px;
-    margin-left: 255px;
-    margin-top: 10px;
-    z-index: 1;
+        width: 100px;
+        height: 85px;
+        z-index: 1;
+        float: right;
+        margin-left: 885px;
     }
     .threeIcons1{
         list-style-type: none;
     display: flex;
-    font-size: 22px !important;
-    justify-content: space-between;
-    width: 197px;
+    justify-content: space-around;
+    width: 300px;
     margin-top: 15px;
     margin-left: 212px;
     }
-    
+    .createNote .noteIcon{
+        margin-top: 10px;
+    padding-right: -99px;
+    margin-right: 335px;
+    }
+    .input-group-addon, .input-group-btn, .input-group .form-control {
+        width: 220px !important;
+        height: 35px;
+        margin-left: -23px;
+    }
+    #snackbarTrash, #snackbarPin, #snackbarLabelUpdated, #snackbarArchive, #snackbarLabelDeleted, #snackbarNoteCreate, #snackbarColor, #snackbarReminder, #snackbarLabel, #snackbarCollaborator {
+        visibility: hidden;
+        min-width: 500px;
+        height: 135px;
+        font-size: 61px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 100;
+        left: 50%;
+        bottom: 30px;
+    }
+    .keepData span{
+        font-size: 70px !important;
+        color: black;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
@@ -1589,6 +1749,16 @@ span{
         word-wrap: break-word;
         word-break: break-word;
     }
+    .closeBtn{
+        margin-top: -73px;
+    float: right;
+    color: black;
+    font-size: 23px;
+    margin-left: 10;
+    margin-right: -150px;
+    border: none;
+    background-color: white;
+        }
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
@@ -1598,14 +1768,14 @@ span{
         border-radius: 70%;
         margin-top: -5px;
       }
-    .form-control {
-        width: 760px !important;
-        border-radius: 10px;
-        height: 45px;
-        box-shadow: none;
-        font-size: 20px;
-        margin-left: 53px !important;
-    }
+    .input-group .form-control {
+        width: 308px !important;
+        margin-left: 55px;
+     }
+     .input-group-addon{
+        display: table-cell;
+        width: -22px !important;
+     }
     .createNote input[type=text] {
         width: 70%;
         padding: 12px 20px;
@@ -1638,6 +1808,17 @@ span{
         vertical-align: middle;
         border-style: none;
         margin-left: 12px;
+    }
+    .titleDateTime{
+        margin-right: -150px !important;
+    }
+    .date{
+        margin-left: -78px;
+    }
+    .date input .form-control {
+        display: table-cell;
+        width: 304px !important;
+        height: 45px;
     }
     .twoIcons {
         list-style-type: none;
@@ -1703,11 +1884,12 @@ span{
         align-items: flex-start;
         place-content: initial;
     }
-    .noteIcon {
+   .createNote .noteIcon {
         padding-right: 10px;
-    margin-top: -32px;
-    display: flex;
-    margin-left: -35px;
+        margin-top: -32px;
+        display: flex;
+        margin-left: -9px;
+        padding-right: 266px;
     }
     .material-icons {
         font-size: 26px !important;
@@ -1798,6 +1980,27 @@ span{
     .middleIcon{
         font-size: 33px !important;
     margin-top: 1px;
+    }
+    .pickDataContent {
+        height: 400px;
+        width: 390px;
+        font-size: 20px;
+    }
+    .viewProfileContent{
+        position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -15px;
+    margin-left: 460px;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
     }
 }
 

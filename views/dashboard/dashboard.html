@@ -39,7 +39,7 @@
   <div class="navbar-nav">
     <ul>
       <li><i class="fas fa-bars menu" id="openNav"></i></li>
-      <li> <img class="keepLogo" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png"><span >Keep</span></li>
+      <li class="keepData"> <img class="keepLogo" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png"><span >Keep</span></li>
       <li> 
         <form class="form-inline">
         <div class="input-group">
@@ -124,15 +124,41 @@
           <input type="text" placeholder="Title" id="title" >
           <input type="text" placeholder="Take a note ..." id="desc" >  
       </form>
-      <div class="icons">
-          <i class="material-icons">add_alert</i>
-          <i class="material-icons">person_add</i>
-          <i class='fas fa-palette'></i>
-          <i class='far fa-image'></i>
-          <img src="/images/archieve.png" class="archive">
-          <i class='fas fa-ellipsis-v'></i>
-      </div>
-      <button type="button" class="btn btn-link close" id="close">Close</button>      
+      <ul class="noteIcon" >
+        <li class="icon-item">
+          <i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i>
+        </li>
+        <li class="icon-item">
+          <i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i>
+        </li> 
+        <li class="icon-item dropdown">
+          <i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i>
+          <ul class="dropdown-menu" id="colorList" aria-labelledby="colors">
+              <li><div href="#" class="color"  value="#FF0000"  style="background-color: #FF0000;"></div></li>
+              <li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li>
+              <li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li>
+              <li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li>
+              <li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li>
+              <li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li>
+              <li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li>
+              <li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li>
+              <li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li>
+          </ul>
+        </li>
+        <li class="icon-item">
+              <i class="far fa-image" id=""></i></li>
+              <li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li>
+              <li class="icon-item dropdown" >
+              <i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i>
+              <ul class="dropdown-menu lastDropdown" aria-labelledby="moreIcon">
+              <li class="dropdown-item" id="deleteNote">Delete note</li>
+              <li class="dropdown-item">Change labels</li>
+              <li class="dropdown-item">Add drawing</li>
+              <li class="dropdown-item">Make a copy</li>
+             </ul>
+            </li>
+      </ul>
+      <button type="button" class="closeBtn" id="close">Close</button>      
     </div>
 
 <!-- display note  on dashboard-->
@@ -145,6 +171,50 @@
         <div class="unpinNotes" id="unpinNotes">
           
         </div>
+        <!-- <div class="card" id='+[i]+'>
+          <img src="/images/unpinnnn.png" id="unpin" >
+          <div class="card-body"><div class="info" style="color: black; ">
+            <div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div>
+            <div id="desc" class="desc" style="margin-top: 10px;"><span>'+notes[i].description+'</span></div>
+          </div>
+            <ul class="noteIcon" ><li class="icon-item">
+              <i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li>
+              <li class="icon-item">
+                <i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> 
+                <li class="icon-item dropdown">
+                  <i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i>
+                  <ul class="dropdown-menu" id="colorList" aria-labelledby="colors">
+                    <li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li>
+                    <li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li>
+                    <li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li>
+                    <li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li>
+                    <li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li>
+                    <li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li>
+                    <li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li>
+                    <li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li>
+                    <li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li>
+                  </ul>
+                </li>
+              </li>
+                    <li class="icon-item">
+                      <i class="far fa-image" id=""></i>
+                    </li>
+                    <li class="icon-item" id="archieveNote">
+                      <img src="/images/archieve.png" class="archive"></i>
+                    </li>
+                    <li class="icon-item dropdown" >
+                      <i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon">
+                    </i>
+                     <ul class="dropdown-menu lastDropdown" aria-labelledby="moreIcon">
+                        <li class="dropdown-item" id="deleteNote">Delete note</li>
+                        <li class="dropdown-item">Change labels</li>
+                        <li class="dropdown-item">Add drawing</li>
+                        <li class="dropdown-item">Make a copy</li>
+                    </ul>
+                  </li>
+                </ul></div></div></div>; -->
+
+
     </div> 
  
 <!-- modal is here for update note -->
@@ -173,7 +243,7 @@
   <!-- modal for viewProfile -->
   <div class="modal" id="viewProfile" role="dialog">
     <div class="modal-dialog">
-       <div class="modal-content">
+       <div class="modal-content viewProfileContent">
           
            <!-- Modal Header -->
         <div class="modal-header viewData">
@@ -250,14 +320,14 @@
         </div>
 
          <div class="modalData">
-           <div class="owner">
+          <div class="owner">
             <img src="/images/natural.jpg" class="colab-data">
                 <div class="selfData">
-                  <b id="fullName"></b><span class="own">(Owner)</span>
-                  <div id="emailData"></div>
+                  <b id="ownerFullName"></b><span class="own">(Owner)</span>
+                  <div id="ownerEmailData"></div>
                 </div>
            </div>
-           <div class="owner">
+           <div class="newCollaborator">
             <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
             <input type="text" class="center newPerson" style='font-size:15px'placeholder="Person or email to share with"/>
            </div>
@@ -300,7 +370,7 @@
       <div class="modal-content pickDataContent">
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Pick date and time</h4>
+        <h4 class="modal-title titleDateTime">Pick date and time</h4>
       </div>
       
       <!-- Modal body -->
