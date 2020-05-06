@@ -900,8 +900,8 @@ h6, span{
         margin-left: -35px;
     }
     .color {
-        width: 90px;
-        height: 87px;
+        width: 122px;
+        height: 104px;
         border-radius: 70%;
         margin-left: 7px;
         z-index: 3;
@@ -926,20 +926,21 @@ h6, span{
         border: none;
         background-color: white;
     }
-  #colorList{
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    transform: translate3d(0px, 75px, 0px);
-    top: 0px;
-    left: 0px;
-    will-change: transform;
-  }
+  
+    #colorList{width: 400px;
+        height: 370px;
+        position: absolute;
+        transform: translate3d(0px, 75px, 0px);
+        top: 0px;
+        left: 0px;
+        will-change: transform;
+    }
     #display {
         margin-top: 10px;
+        margin-top: 10px;
         display: grid;
-        align-items: flex-start;
-        place-content: initial;
+        /* align-items: flex-start; */
+        /* place-content: initial; */
         grid-row-gap: 60px;
     }
     .container {
@@ -947,7 +948,7 @@ h6, span{
         flex-wrap: wrap-reverse;
         grid-row-gap: 20px;
     }
-    
+  
     .card {
         width: 270px;
         background-color: white;
@@ -1008,6 +1009,105 @@ h6, span{
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
+    .viewProfileContent{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .color {
+        width: 80px;
+        height: 77px;
+        border-radius: 70%;
+        margin-left: 8px;
+    }
+    .tit, .desc {
+        border: none;
+        font-size: 35px;
+    }
+    b, strong {
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .closeBtn{
+        float: right;
+        margin-top: -85px !important;
+        color: black;
+        font-size: 29px;
+        margin-left: 10;
+        margin-right: 32px;
+        border: none;
+        background-color: white;
+    }
+    #a1, #a2{
+        margin-left: -312px;
+    }
+    .pickData {
+        float: left;
+        margin-right: 208px;
+    }
+    .pickDataContent{
+        margin-left: 10px;
+    height: 350px;
+    width: 390px;
+    font-size: 20px;
+    margin-top: 10px;
+    }
+    .pickDataContent .titleDateTime{
+        margin-right: -230px;
+    }
+    .anotherAcc .material-icons{
+        font-size: 35px !important;
+    }
+    .anotherAccBold {
+        margin-left: -129px;
+    }
+    .collaboratorContent {
+        margin-left: -9px;
+        width: 423px;
+    }
+    .collaboratorContent .modal-title{
+        font-weight: 600;
+        margin-left: -286px !important;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: -7px;
+    }
+    #ownerFullName{
+        font-size: 14px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 17px;
+        border: none;
+        float: right;
+        margin-top: 1px;
+        float: right;
+        background: lightgrey;
+        margin-left: 56px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
+    .newCollaborator{
+        margin-top: -5px;
+    }
+    .signout {
+        margin-left: 132px;
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .remainderContent{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .remainderContent .modal-title {
+        font-weight: 600;
+        margin-left: -178px !important;
+    }
+    .today h6 span{
+        font-size: 15px !important;
+    }
     .keepLogo {
         vertical-align: middle;
         border-style: none;
@@ -1098,15 +1198,15 @@ h6, span{
 
     .createNote {
         background-color: white;
-    width: 530px;
-    border-radius: 5px;
-    display: grid;
-    grid-row-gap: 15px;
-    margin-top: 100px;
-    margin-left: -162px;
-    height: 247px;
-    border-style: solid;
-    border-color: lightgrey;
+        width: 710px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 40px;
+        margin-left: -162px;
+        height: 247px;
+        border-style: solid;
+        border-color: lightgrey;
     }
     input[type=text] {
         width: 70%;
@@ -1147,10 +1247,10 @@ h6, span{
     margin-left: -33px;
     }
     .noteIcon{
-        padding-right: 10px;
-        margin-top: -31px;
-        display: flex;
-        margin-left: -35px;
+        padding-right: 285px;
+    margin-top: -31px;
+    display: flex;
+    margin-left: -19px;
     }
     .close {
         float: right;
@@ -1163,9 +1263,9 @@ h6, span{
         width: 100%;
         height: 100%;
         margin-top: 10px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
         align-items: flex-start;
         place-content: initial;
     }
@@ -1176,33 +1276,35 @@ h6, span{
     }
     
     .card {
-        /* margin-left: -85px;
-    width: 270px;
-    background-color: white;
-    height: 170px;
-    width: 520px;
-    background-color: white;
-    height: 275px;
-    border-radius: 6px;
-    border-radius: 6px;
-    margin-top: 10px; */
-    width: 270px;
-    background-color: white;
-    height: 170px;
-    width: 285px;
-    background-color: white;
-    height: 170px;
-    border-radius: 6px;
-    margin: 5px;
-    border-radius: 6px;
-    margin-left: 15px;
+        background-color: white;
+        height: 170px;
+        width: 585px;
+        background-color: white;
+        height: 260px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: -317px;
+    }
+    .card #unpin{
+        width: 40px;
+        height: 35px;
+        z-index: 1;
+        float: right;
+        margin-left: 540px;
+    }
+    .card-body .noteIcon{
+        padding-right: 35px;
+        margin-top: 22px;
+        margin-left: -10px;
     }
     #unpin{
-        width: 25px;
-        height: 22px;
-        margin-left: 255px;
-        margin-top: 10px;
-        z-index: 1;
+        width: 32px;
+    height: 32px;
+    /* margin-left: 531px; */
+    /* margin-top: 10px; */
+    z-index: 1;
+    float: right;
     }
   .image{
     width: 55px;
@@ -1231,6 +1333,31 @@ h6, span{
 }
 span{
     font-size: 25px !important;
+}
+#cars {
+    border: none;
+    margin-top: 24px;
+    width: 350px;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+    width: 272px !important;
+    height: 45px;
+}
+#snackbarTrash, #snackbarPin, #snackbarLabelUpdated, #snackbarArchive, #snackbarLabelDeleted, #snackbarNoteCreate, #snackbarColor, #snackbarReminder, #snackbarLabel, #snackbarCollaborator {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    font-size: 32px;
+    z-index: 100;
+    left: 50%;
+    bottom: 30px;
 }
  }
 /********************************************************************/

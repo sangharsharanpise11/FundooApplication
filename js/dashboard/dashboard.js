@@ -937,3 +937,23 @@ $(document).on("click" , "#editLabel" , function(e) {
       }
     });
   });
+
+  /**************** signout *********************************************************/ 
+  document.getElementById("fullName").innerHTML = fullName;
+document.getElementById("emailData").innerHTML = email;
+
+$(document).on("click" , ".signout" , function(e) { 
+  console.log("in signout");
+
+  $.ajax({
+    
+    url: "http://fundoonotes.incubation.bridgelabz.com/api/user/logout",
+    type: "GET",
+    headers: { 'Authorization': localStorage.getItem('token') },
+    
+    success: function(result){
+    console.log(result);
+    
+    }
+  });
+});
