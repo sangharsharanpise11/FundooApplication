@@ -1697,6 +1697,13 @@ span{
     margin-left: 4px;
     margin-top: 13px;
 }
+.createNote .noteIcon {
+    padding-right: 10px;
+    margin-top: 9px;
+    display: flex;
+    margin-left: -25px;
+    margin-right: 355px;
+}
 #moreData{
     position: absolute;
     transform: translate3d(-78px, 34px, 38px);
