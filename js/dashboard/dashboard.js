@@ -8,6 +8,7 @@ $(document).ready(function(){
     //   "margin-left": "140px","padding-right": "170px"});
     $(".data").css("margin-left", "298px");
     $("#display").css("margin-left","-25px");
+    //$('#pinnedNotes, #unpinNotes').css("width" ,"1165px");
   });
 });
 
