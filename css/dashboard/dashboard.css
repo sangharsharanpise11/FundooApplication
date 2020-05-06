@@ -1365,7 +1365,110 @@ span{
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
-      
+     #a1, #a2{
+        margin-left: -194px;
+    }
+    .pickData {
+        float: left;
+    margin-right: 135px;
+    }
+    .input-group-addon, .input-group-btn, .input-group .form-control {
+        display: table-cell;
+        width: 300px !important;
+        height: 45px;
+        margin-left: -20px;
+    }
+    .pickDataContent{
+        margin-left: 160px;
+        height: 350px;
+        width: 390px;
+        font-size: 20px;
+        margin-top: 160px;
+    }
+    .pickDataContent .titleDateTime{
+        margin-right: -230px;
+    }
+    .anotherAcc .material-icons{
+        font-size: 35px !important;
+    }
+    .anotherAccBold {
+        margin-left: -129px;
+    }
+    .collaboratorContent {
+        margin-left: 150px;
+        width: 423px;
+        margin-top: 160px;
+    }
+    .collaboratorContent .modal-title{
+        font-weight: 600;
+        margin-left: -286px !important;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: -7px;
+    }
+    #ownerFullName{
+        font-size: 14px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 17px;
+        border: none;
+        float: right;
+        margin-top: 1px;
+        float: right;
+        background: lightgrey;
+        margin-left: 56px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
+    .newCollaborator{
+        margin-top: -5px;
+    }
+    .signout {
+        margin-left: 124px;
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .remainderContent{
+        margin-left: 205px;
+        margin-top: 75px;
+        width: 335px;
+    }
+    #cars {
+        border: none;
+        margin-top: 27px;
+        width: 345px;
+    }
+    .remainderContent .modal-title {
+        font-weight: 600;
+        margin-left: -211px !important;
+    }
+    .today h6 span{
+        font-size: 15px !important;
+    }
+    .signoutFooter {
+        margin-top: -4px;
+        margin-bottom: 20px;
+    }
+    .manageAccount {
+        border-radius: 60px;
+        width: 235px;
+        border: none;
+        height: 35px;
+        margin-top: 10px;
+        margin-left: 23px;
+    }
+     .closeBtn{
+        margin-top: -75px;
+        float: right;
+        color: black;
+        font-size: 24px;
+        margin-left: 10;
+        margin-right: 32px;
+        border: none;
+        background-color: white;
+    }
     span {
         margin-left: 15px;
         font-size: 15px;
@@ -1384,6 +1487,7 @@ span{
     }
     .navbar{
         height: 65px !important;
+        width: 985px;
     }
     #flip{
         display: flex;
@@ -1393,9 +1497,9 @@ span{
         border-radius: 5px;
         justify-content: space-between;
         height: 70px;
-        margin-top: -62px;
+        margin-top: -140px;
         width: 660px;
-        margin-left: -135px;
+        margin-left: -23px;
         font-size: 18px;
         height: 50px;
     }
@@ -1422,17 +1526,27 @@ span{
     }
        .threeIcons {
         list-style-type: none;
+    display: flex;
+    font-size: 22px !important;
+    justify-content: space-between;
+    width: 115px;
+    margin-top: 25px;
+    margin-left: 535px;
+    }
+    .threeIcons1{
+        width: 175px;
+        justify-content: space-around;
         display: flex;
-        font-size: 22px !important;
-        justify-content: space-between;
-        width: 115px;
-        margin-top: 25px;
-        margin-left: 360px;
+        margin-top: 22px;
+    }
+    .keepData span
+    {
+        font-size: 30px !important;
+        color: black;
     }
     .menu {
-        margin-left: 20px;
-        margin-top: 6px;
-        font-size: 15px;
+        margin-left: 21px;
+        font-size: 25px !important;
     }     
     .middleIcon{
         font-size: 30px !important;
@@ -1448,26 +1562,26 @@ span{
 
     .createNote {
         background-color: white;
-    width: 530px;
-    border-radius: 5px;
-    display: grid;
-    grid-row-gap: 15px;
-    margin-top: 100px;
-    margin-left: -162px;
-    height: 247px;
-    border-style: solid;
-    border-color: lightgrey;
+        width: 804px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 30px;
+        margin-left: -15px;
+        height: 247px;
+        border-style: solid;
+        border-color: lightgrey;
     }
     input[type=text] {
         width: 70%;
         border: none;
         outline: none;
-        font-weight: 600;
+        font-weight: 500;
         color: gray;
         font-size: 25px;
     }
     #desc {
-        margin-top: 25px;
+        margin-top: -7px;
     }
     .archive{
         width: 27px;
@@ -1485,9 +1599,10 @@ span{
     }
     .noteIcon{
         padding-right: 10px;
-        margin-top: -31px;
+        margin-top: 35px;
         display: flex;
-        margin-left: -35px;
+        margin-left: -25px;
+        margin-right: 10px;
     }
     .close {
         float: right;
@@ -1500,9 +1615,7 @@ span{
         width: 100%;
         height: 100%;
         margin-top: 10px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
         align-items: flex-start;
         place-content: initial;
     }
@@ -1511,34 +1624,33 @@ span{
         flex-wrap: wrap-reverse;
         grid-row-gap: 20px;
     }
-    
+    #pinnedNotes, #unpinNotes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        place-content: initial;
+        width: 700px;
+        margin-left: -208px;
+    }
     .card {
-        /* margin-left: -160px;
-    width: 270px;
-    background-color: white;
-    height: 170px;
-    width: 290px;
-    background-color: white;
-    height: 190px;
-    border-radius: 6px;
-    border-radius: 6px;
-    margin-top: 10px; */
-    width: 270px;
-    background-color: white;
-    height: 170px;
-    width: 285px;
-    height: 170px;
-    border-radius: 6px;
-    margin: 5px;
-    border-radius: 6px;
-    margin-left: 15px;
+        width: 270px;
+        background-color: white;
+        height: 170px;
+        width: 330px;
+        height: 200px;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
     }
     #unpin{
-        width: 25px;
-    height: 22px;
-    margin-left: 255px;
-    margin-top: 10px;
-    z-index: 1;
+        width: 30px;
+        height: 30px;
+        margin-left: 295px;
+        margin-top: 10px;
+        z-index: 1;
+        float: right;
     }
     .info {
         display: grid;
@@ -1570,7 +1682,59 @@ span{
     text-decoration: none;
     border-radius: 50px;
 }
-
+#colorList{
+    position: absolute;
+    transform: translate3d(0px, 18px, 0px);
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+    height: 150px;
+}
+.color {
+    width: 48px;
+    height: 45px;
+    border-radius: 70%;
+    margin-left: 4px;
+    margin-top: 13px;
+}
+#moreData{
+    position: absolute;
+    transform: translate3d(-78px, 34px, 38px);
+    top: 0px;
+    height: 155px;
+    font-size: 27px;
+    left: 0px;
+    width: 195px;
+    will-change: transform;
+}
+#snackbarTrash, #snackbarPin, #snackbarLabelUpdated, #snackbarArchive, #snackbarLabelDeleted, #snackbarNoteCreate, #snackbarColor, #snackbarReminder, #snackbarLabel, #snackbarCollaborator {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 100;
+    font-size: 20px;
+    left: 50%;
+    bottom: 30px;
+}
+.viewProfileContent{
+    margin-top: 10px;
+    margin-left: 340px;
+    height: 445px;
+    width: 395px;
+}
+b, strong {
+    font-weight: bold;
+    font-size: 19px;
+}
+#emailData{
+    font-size: 17px;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
