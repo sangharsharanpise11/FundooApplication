@@ -7,6 +7,7 @@ $(document).ready(function(){
     // "border-color":"lightgrey","display": "flex","justify-content": "space-between","margin-bottom": "13px","margin-top": "11px !important",
     //   "margin-left": "140px","padding-right": "170px"});
     $(".data").css("margin-left", "298px");
+    $("#display").css("margin-left","-25px");
   });
 });
 

@@ -1487,7 +1487,7 @@ span{
     }
     .navbar{
         height: 65px !important;
-        width: 985px;
+        width: 1040px;
     }
     #flip{
         display: flex;
@@ -1747,36 +1747,142 @@ b, strong {
 @media screen and (min-width: 769px) and (max-width:1024px){
     input[type=text] {
         width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
         border: none;
         outline: none;
-        font-weight: 300;
+        font-weight: 600;
         color: gray;
+        font-size: 17px;
+    }
+    .keepData{
+        margin-left: 55px;
+    }
+    .viewProfileContent{
+        margin-left: 250px;
+    width: 433px;
+    }
+    .navbar{
+        width: 1040px;
     }
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
-      
+      #title , #desc{
+        margin-top: -10px;
+      }
+      .createNote .noteIcon {
+        padding-right: 10px;
+        margin-top: -31px;
+        display: flex;
+        margin-left: -26px;
+        margin-right: 335px;
+    }
+    .closeBtn{
+        border: none;
+        margin-top: -66px;
+        float: right;
+        margin-right: 10px;
+        font-size: 20px;
+        background-color: white;
+    }
+    .viewProfileContent{
+        margin-top: 10px;
+    margin-left: 240px;
+    }
+    .selfData {
+        display: grid !important;
+        margin-left: 15px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .collaboratorContent{
+        border-bottom: 10px !important;
+    width: 700px;
+    border-radius: 10px;
+    height: 189px;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: -10px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 23px;
+        border: none;
+        float: right;
+        margin-top: 4px;
+        float: right;
+        background: lightgrey;
+        margin-left: 36px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
+    .viewImage {
+        width: 100px;
+        height: 100px;
+        border-radius: 70%;
+        margin-left: 91px;
+    }
+    .anotherAccBold {
+        margin-left: -192px;
+    font-size: 15px;
+    }
+    .signoutFooter {
+        margin-top: -29px;
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+    .signout {
+        margin-left: 145px;
+        width: 100px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .remainderContent{
+        margin-left: 10px;
+    margin-top: 200px;
+    }
+    .input-group .form-control {
+        display: table-cell;
+        width: 247px !important;
+        height: 45px;
+    }
+    #cars {
+        border: none;
+        margin-top: 27px;
+        width: 350px;
+    }
+    .pickDataContent .titleDateTime  {
+        font-weight: 600;
+        margin-left: -200px !important;
+    }
+    .pickDataContent{
+        margin-top: 196px;
+        margin-left: 10px;
+    }
+    .manageAccount {
+        border-radius: 60px;
+        width: 235px;
+        border: none;
+        font-size: 16px;
+        height: 35px;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
     .card {
         width: 270px;
-        background-color: white;
-        height: 170px;
-        width: 285px;
-        background-color: white;
-        height: 170px;
-        border-radius: 6px;
-        margin: 5px;
-        border-radius: 6px;
-        margin-left: 15px;
-        /* width: 270px;
-        background-color: white;
-        height: 170px;
-        width: 270px;
-        background-color: white;
-        height: 185px;
-        border-radius: 6px;
-        margin: 5px;
-        border-radius: 6px;margin-left: 15px; */
-    }
+    background-color: white;
+    height: 170px;
+    width: 285px;
+    background-color: white;
+    height: 180px;
+    border-radius: 6px;
+    margin: 5px;
+    border-radius: 6px;
+    margin-left: 15px;
+      }
     .form-control {
         width: 490px !important;
         border-radius: 10px;
@@ -1860,17 +1966,17 @@ b, strong {
     }
     #flip{
         display: flex;
-    padding: 5px;
-    text-align: left;
-    background-color: #e5eecc;
-    border-radius: 5px;
-    justify-content: space-between;
-    height: 65px;
-    margin-top: -70px;
-    width: 730px;
-    margin-left: 25px !important;
-    font-size: 20px;
-    font-weight: 400;
+        padding: 5px;
+        text-align: left;
+        background-color: #e5eecc;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 60px;
+        margin-top: -70px;
+        width: 680px;
+        margin-left: 25px !important;
+        font-size: 20px;
+        font-weight: 400;
     }
     .middleIcon {
         font-size: 39px !important;
@@ -1885,9 +1991,82 @@ b, strong {
         flex-wrap: wrap-reverse;
         grid-row-gap: 20px;
     }
+    .searchBox{
+        width: 492px;
+        background-color: white;
+        border-radius: 10px;
+        height: 50px;
+        margin-right: 68px;
+    }
+    .center{
+        height: 40px;
+        margin-top: -8px;
+    }
+    .threeIcons1{
+        width: 110px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+    }
+    .createNote {
+        background-color: white;
+        width: 700px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 35px;
+        margin-left: 35px;
+        height: 180px;
+        border-style: solid;
+        border-color: lightgrey;
+    }
+    #unpin {
+        width: 25px;
+        height: 22px;
+        /* margin-left: 255px; */
+        margin-top: 10px;
+        z-index: 1;
+        float: right;
+    }
+    .collaboratorContent .modal-title {
+        font-weight: 600;
+        margin-left: -551px !important;
+    }
+    .twoIcons {
+        list-style-type: none;
+        display: flex;
+        margin-top: 10px;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 90px;
+        margin-right: 4px;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
+    .collaboratorContent{
+        border-bottom: 10px !important;
+    width: 700px;
+    border-radius: 10px;
+    height: 189px;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: -10px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 23px;
+        border: none;
+        float: right;
+        margin-top: 4px;
+        float: right;
+        background: lightgrey;
+        margin-left: 36px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
     span {
         margin-left: 3px;
         word-wrap: break-word;
@@ -2299,6 +2478,29 @@ b, strong {
     border: 1px solid rgba(0,0,0,.2);
     border-radius: .3rem;
     outline: 0;
+    }
+    .collaboratorContent{
+        border-bottom: 10px !important;
+    width: 700px;
+    border-radius: 10px;
+    height: 189px;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: -10px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 23px;
+        border: none;
+        float: right;
+        margin-top: 4px;
+        float: right;
+        background: lightgrey;
+        margin-left: 36px;
+        margin-right: 35px;
+        margin-bottom: 10px;
     }
 }
 
