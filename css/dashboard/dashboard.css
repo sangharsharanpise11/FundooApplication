@@ -2309,6 +2309,11 @@ b, strong {
         word-wrap: break-word;
         word-break: break-word;
     }
+    #cars {
+        border: none;
+        margin-top: 23px;
+        width: 350px;
+    }
     .closeBtn{
         margin-top: -73px;
     float: right;
@@ -2542,9 +2547,8 @@ b, strong {
     margin-top: 1px;
     }
     .pickDataContent {
-        height: 400px;
-        width: 390px;
-        font-size: 20px;
+        margin-top: 155px;
+        margin-left: 10px;
     }
     .viewProfileContent{
         position: relative;
@@ -2561,6 +2565,10 @@ b, strong {
     border: 1px solid rgba(0,0,0,.2);
     border-radius: .3rem;
     outline: 0;
+    }
+    .collaboratorContent .modal-title {
+        font-weight: 600;
+        margin-left: -540px !important;
     }
     .collaboratorContent{
         border-bottom: 10px !important;
@@ -2584,6 +2592,10 @@ b, strong {
         margin-left: 36px;
         margin-right: 35px;
         margin-bottom: 10px;
+    }
+    .remainderContent{
+        margin-top: 153px;
+        margin-left: 10px;
     }
 }
 
