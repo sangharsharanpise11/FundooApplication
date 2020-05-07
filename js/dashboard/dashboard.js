@@ -115,7 +115,7 @@ if ( error_title === false && error_desc === false)
       console.log(localStorage.getItem('NoteId is :',NoteId));
       console.log("id============>", result.data.data.id);
       resetForm();
-      location.reload();
+      location.reload(true);
       //$( "div.createNote" ).replaceWith( "<div class='noteOne' style='margin-top: 160px;' id='note'><div id='flip'><b class='head' style='color: gray;'>Take a note ...</b><div class='threeIcons'><i class='material-icons cal'>assignment_turned_in</i><i class='fas fa-paint-brush'></i><i class='fas fa-image'></i></div></div></div>" );
       setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
 
@@ -307,8 +307,7 @@ $(document).ready(function(){
 //       console.log("id============>", result.id);
 //       alert("note update Successfull");
 //       resetForm();
-//       $(location).attr('href',"/views/dashboard/dashboard.html");
-//       },
+//       location.reload(true);       },
 //       error: function (errorMessage) {
 //       console.log("Error", errorMessage);
 //       alert("errorMessage==>",errorMessage.responseText);
@@ -351,8 +350,7 @@ $(document).on("click" , "#deleteNote" , function(e) {
        
         console.log("id============>", result.id);
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-        resetForm();
-        // $(location).attr('href',"/views/dashboard/dashboard.html");
+        location.reload(true);
         },     
       });
     });
@@ -383,8 +381,40 @@ $(document).on("click" , "#deleteNote" , function(e) {
        
         console.log("id============>", result.id);
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-        resetForm();
-      //   $(location).attr('href',"/views/dashboard/dashboard.html");
+        location.reload(true);
+       },
+        error: function (errorMessage) {
+        console.log("Error", errorMessage);
+        }
+     });
+  });
+
+  /******************** unArchive note **********************************************************/ 
+  $(document).on("click" , "#archieveNote" , function(e) { 
+    noteId=$(this).closest('div.card').attr('id');  
+    data = notes[noteId].id;
+
+    var x = document.getElementById("snackbarunArchive")
+    // Add the "show" class to DIV
+    x.className = "show";
+ 
+    $.ajax({
+      url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/archiveNotes",
+      data:  JSON.stringify({
+        "isArchived" : false, 
+        "noteIdList" : [data]
+      }),   
+      type: "POST",
+      headers: {
+         'Authorization': localStorage.getItem('token')
+       },
+      contentType: "application/json;charset=utf-8",
+      success: function (result) {
+      console.log("note archive result ==>", result);
+      
+        console.log("id============>", result.id);
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+        location.reload(true);
          },
         error: function (errorMessage) {
         console.log("Error", errorMessage);
@@ -392,7 +422,7 @@ $(document).on("click" , "#deleteNote" , function(e) {
      });
   });
 
-  /********************* pinUnpin note **********************************************************/ 
+  /********************* pin note **********************************************************/ 
   $(document).on("click" , "#unpin" , function(e) { 
     
     noteId=$(this).closest('div.card').attr('id');
@@ -418,14 +448,46 @@ $(document).on("click" , "#deleteNote" , function(e) {
        
         // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-        
+        location.reload(true);
         },
         error: function (errorMessage) {
         console.log("Error", errorMessage);
         }
      });
   });
+ /********************* unpin note **********************************************************/ 
+ $(document).on("click" , "#unpin" , function(e) { 
+    
+  noteId=$(this).closest('div.card').attr('id');
+  data = notes[noteId].id;
+  console.log(data);
+  
+  var x = document.getElementById("snackbarunPin")
+  // Add the "show" class to DIV
+  x.className = "show";
 
+    $.ajax({
+    url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/pinUnpinNotes",
+    data:  JSON.stringify({
+      "isPined" : false, 
+      "noteIdList" : [data]
+    }),   
+    type: "POST",
+    headers: {
+       'Authorization': localStorage.getItem('token')
+     },
+      contentType: "application/json;charset=utf-8",
+      success: function (result) {
+     
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+      location.reload(true);
+      },
+      error: function (errorMessage) {
+      console.log("Error", errorMessage);
+      }
+   });
+});
   /******************color to note**********************************************************************/ 
    function insert(color) {
      console.log("in insert",noteId);
@@ -464,7 +526,8 @@ $(document).on("click" , "#deleteNote" , function(e) {
 
            // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-       },
+        location.reload(true);
+      },
         error: function (errorMessage) {
         console.log("Error", errorMessage);
         }
@@ -509,6 +572,7 @@ $(document).on("click" , "#deleteNote" , function(e) {
                 {
                   console.log("success");
                   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+                  location.reload(true);
                 },
                 error: function (errorMessage)
                 {
@@ -574,8 +638,12 @@ $(document).on("click" , "#collaborator" , function(e) {
         contentType: "application/json;charset=utf-8",
         success: function (result) 
         {
-          console.log("success");
-          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+          console.log("result =",result);
+           if(result.statusCode === 200){
+            console.log("success");
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+            location.reload(true);
+          }
         },
         error: function (errorMessage)
         {
@@ -639,6 +707,7 @@ $(document).on("click" , "#collaborator" , function(e) {
         {
           console.log("success");
           setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+          location.reload(true);
         },
         error: function (errorMessage)
         {
@@ -764,7 +833,8 @@ $(document).on("click" , "#editLabel" , function(e) {
        {
          console.log("success");
          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-       },
+         location.reload(true);
+        },
        error: function (errorMessage)
        {
         console.log("Error", errorMessage);

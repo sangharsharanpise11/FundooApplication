@@ -376,7 +376,7 @@ height: 200px;
     margin-top: 10px;
     z-index: 1;
 }
-#snackbarTrash, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
+#snackbarTrash,#snackbarunPin,#snackbarunArchive, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
