@@ -111,14 +111,11 @@ if ( error_title === false && error_desc === false)
     success: function (status) {
     // console.log("note create result ==>", result);
 
-   // localStorage.setItem("NoteId ",status.collaborators.id);
-      console.log(localStorage.getItem('NoteId is :',NoteId));
       console.log("id============>", result.data.data.id);
+     
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
       resetForm();
       location.reload(true);
-      //$( "div.createNote" ).replaceWith( "<div class='noteOne' style='margin-top: 160px;' id='note'><div id='flip'><b class='head' style='color: gray;'>Take a note ...</b><div class='threeIcons'><i class='material-icons cal'>assignment_turned_in</i><i class='fas fa-paint-brush'></i><i class='fas fa-image'></i></div></div></div>" );
-      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-
       },
       error: function (errorMessage) {
       console.log("Error", errorMessage);
@@ -653,7 +650,41 @@ $(document).on("click" , "#collaborator" , function(e) {
     });   
   });
 
+  /*************************** search userlist *****************************************/ 
+  // $(document).ready(function(){
+  //   //  var searchUser= {
+  //   //   "searchWord": "sang"
+  //   //   }
 
+  //   var users=[];
+  //   $.ajax({
+  //       url: "http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",
+  //       data:  JSON.stringify({
+  //         "searchWord" : "sang"
+  //        }), 
+  //       type: "POST",
+  //       headers: { 'Authorization': localStorage.getItem('token') },
+        
+  //       success: function(result){
+  //       users=result.data.details;
+  //       console.log("users = ",users);
+  
+  //          /** users ****/  
+  //       //  var wrapper = document.getElementById("pinnedNotes");
+  //       //  var id = document.getElementById("id");
+      
+  //       //  var myHTML = ''; 
+  //       //  for (var i = 0; i < notes.length; i++)
+  //       //   {  
+  //       //     if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].isDeleted === false)
+  //       //     {
+  //       //       myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/newImagePin.svg" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
+  //       //     }
+  //       // }
+  //       //    wrapper.innerHTML = myHTML
+  //       }
+  //    });
+  //   });
 /**************************************** Label create ***********************************************************************/ 
   $(function() {
     $("#label_error_message").hide();
@@ -880,9 +911,9 @@ $(document).on("click" , "#editLabel" , function(e) {
              {
                myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/newImagePin.svg"s id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
              }
-         }
+           }
             wrapper.innerHTML = myHTML
-   
+     
            /** UNPIN ****/  
           var wrapper = document.getElementById("unpinNotes");
           var id = document.getElementById("id");
@@ -896,7 +927,8 @@ $(document).on("click" , "#editLabel" , function(e) {
              }
          }
             wrapper.innerHTML = myHTML
-         }});
+         }
+        });
       });
    
   /************* archive notes********************************/ 
@@ -1018,14 +1050,13 @@ $(document).on("click" , ".signout" , function(e) {
   console.log("in signout");
 
   $.ajax({
-    
     url: "http://fundoonotes.incubation.bridgelabz.com/api/user/logout",
-    type: "GET",
+    type: "POST",
     headers: { 'Authorization': localStorage.getItem('token') },
     
     success: function(result){
     console.log(result);
-    
+    $(location).attr('href',"http://127.0.0.1:5500/views/user/login.html");
     }
   });
 });
