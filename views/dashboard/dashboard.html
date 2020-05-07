@@ -329,10 +329,12 @@
            </div>
            <div class="newCollaborator">
               <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
-              <input type="text" class="center newPerson" style='font-size:15px'placeholder="Person or email to share with"/>
-           </div>
+              <input type="text" id="newPerson" type="button" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/>
+             <!-- <ul id="collabUser" class="dropdown-menu elements" role="menu" aria-labelledby="newPerson"></ul> -->
+            </div>
+            <table id="collabUser" class="elements" ></table>
 
-           <div class="footer-collab">
+          <div class="footer-collab">
               <button type="button" class="btn btn-default " id="collabSaveBtn">save</button>
               <button type="button" class="btn btn-default " id="collabCancelBtn">cancel</button>
            </div>

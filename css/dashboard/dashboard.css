@@ -1359,6 +1359,16 @@ span{
     left: 50%;
     bottom: 30px;
 }
+/* .newCollaborator  #collabUser{
+    display: grid;
+ position: absolute;
+ transform: translate3d(71px, 192px, 61px);
+ top: 0px;
+ width: 500px;
+ left: 0px;
+ height: 100px;
+ will-change: transform;
+} */
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
@@ -1742,6 +1752,30 @@ b, strong {
 #emailData{
     font-size: 17px;
 }
+.newCollaborator  .dropdown-menu{
+    display: grid;
+ position: absolute;
+ transform: translate3d(71px, 192px, 61px);
+ top: 0px;
+ width: 500px;
+ left: 0px;
+ height: 100px;
+ will-change: transform;
+}
+#newPerson ul > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    width: 500px;
+    height: 35px;
+    white-space: nowrap;
+    margin-bottom: -1px;
+    text-align: left;
+    margin-top: -13px;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
@@ -1798,15 +1832,16 @@ b, strong {
     }
     .collaboratorContent{
         border-bottom: 10px !important;
-    width: 700px;
-    border-radius: 10px;
-    height: 189px;
+        width: 700px;
+        border-radius: 10px;
+        height: 265px;
     }
+    
     .footer-collab {
         background-color: lightgrey;
-        margin-top: -10px;
+        margin-top: 27px;
         height: 50px;
-        border-radius: 10px;
+        border-radius: 4px;
     }
     #collabSaveBtn, #collabCancelBtn {
         font-size: 23px;
@@ -2039,6 +2074,29 @@ b, strong {
         width: 90px;
         margin-right: 4px;
     }
+    .newCollaborator  #collabUser{
+        display: grid;
+     position: absolute;
+     transform: translate3d(71px, 192px, 61px);
+     top: 0px;
+     width: 500px;
+     left: 0px;
+     height: 100px;
+     will-change: transform;
+ }
+ /* #newPerson .dropdown-menu > li > a {
+   
+    clear: both;
+    width: 497px;
+    font-weight: normal;
+    margin-top: -24px;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    margin-bottom: -7px;
+  
+    text-align: left;
+} */
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
@@ -2046,7 +2104,7 @@ b, strong {
         border-bottom: 10px !important;
     width: 700px;
     border-radius: 10px;
-    height: 189px;
+    height: 265px;
     }
     .keepData{
         margin-left: 28px !important;
@@ -2299,6 +2357,30 @@ b, strong {
         font-weight: 600;
         margin-left: -559px !important;
     }
+    .newCollaborator  #collabUser{
+        display: grid;
+     position: absolute;
+     transform: translate3d(71px, 192px, 61px);
+     top: 0px;
+     width: 500px;
+     left: 0px;
+     height: 100px;
+     will-change: transform;
+ }
+ /* #newPerson .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    width: 500px;
+    height: 35px;
+    white-space: nowrap;
+    margin-bottom: -1px;
+    text-align: left;
+    margin-top: -13px;
+} */
 }
 
 /********************************************************************/
@@ -2602,5 +2684,36 @@ b, strong {
         margin-top: 153px;
         margin-left: 10px;
     }
+    .newCollaborator  #collabUser{
+       display: grid;
+    position: absolute;
+    transform: translate3d(71px, 192px, 61px);
+    top: 0px;
+    width: 500px;
+    left: 0px;
+    height: 250px;
+    will-change: transform;
+}
+#collabUser li{
+    padding-top: 10px;
+}
+.newCollaborator .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 3px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    width: 500px;
+    height: 30px;
+    white-space: nowrap;
+    margin-bottom: -3px !important;
+    text-align: left;
+    margin-top: -20px;
+}
+table tr:not(:first-child){
+    cursor: pointer;transition: all .25s ease-in-out;
+}
+table tr:not(:first-child):hover{background-color: #ddd;}
 }
 

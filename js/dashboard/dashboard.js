@@ -579,11 +579,6 @@ $(document).on("click" , "#deleteNote" , function(e) {
       });
    });
 /**************************************** collaborator note ***********************************************************************/ 
-// function closeButton() {
-//   console.log("in close");
-//   $('#myCollaboratorModal').hide();
-// }
-
 firstName=localStorage.getItem('firstName');
 lastName=localStorage.getItem('lastName');
 email=localStorage.getItem('email');
@@ -594,97 +589,98 @@ document.getElementById("ownerFullName").innerHTML = fullName;
 document.getElementById("ownerEmailData").innerHTML = email;
 console.log(fullName, "  " ,email);
 
-$("#emailData").innerHTML = "eee";
+
 
 $(document).on("click" , "#collaborator" , function(e) { 
   console.log("in collaborator ");
- 
+
   noteId=$(this).closest('div.card').attr('id');
-  data = notes[noteId].id;
+  console.log("noteId",noteId);
+  var data = notes[noteId].id;
   console.log("data is :",data);
-  
-  $(document).on("click" , "#collabSaveBtn" , function(e) {   
-   console.log("in save");
-   
-   var newPerson=$('.newPerson').val();
-   console.log("newPerson is",newPerson);
 
-   var collaboratorObject = {
-    firstName: firstName,
-    lastName: lastName,
-    email: $('.newPerson').val(),
-    noteIdList:data,
-    userId:localStorage.getItem('userId')
+  var users=[];
+ 
+  $("#newPerson").keyup(function (){
+    var searchUser={
+      searchWord :$("#newPerson").val()
     }
-    // var collaboratorObject = {
-    //   firstName: collaborator.firstName,
-    //   lastName: collaborator.lastName,
-    //   email: collaborator.email,
-    //   userId: collaborator.userId
-    //   }
-    var x = document.getElementById("snackbarCollaborator")
-    x.className = "show";
+    console.log("@",$("#newPerson").val)
 
-   $.ajax({
-    url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/"+data+"/AddcollaboratorsNotes",
-    data:  JSON.stringify(collaboratorObject), 
-    type: "POST",
-      headers: {
-         'Authorization': localStorage.getItem('token')
-       },
+    /*************************** search userlist *****************************************/ 
+    $.ajax({
+        url: "http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",
+        data:  JSON.stringify(searchUser), 
+        type: "POST",
+        headers: { 'Authorization': localStorage.getItem('token') },
         contentType: "application/json;charset=utf-8",
-        success: function (result) 
-        {
-          console.log("result =",result);
-           if(result.statusCode === 200){
-            console.log("success");
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-            location.reload(true);
-          }
-        },
-        error: function (errorMessage)
-        {
-         console.log("Error", errorMessage);
-        }
-      });
-    });   
-  });
-
-  /*************************** search userlist *****************************************/ 
-  // $(document).ready(function(){
-  //   //  var searchUser= {
-  //   //   "searchWord": "sang"
-  //   //   }
-
-  //   var users=[];
-  //   $.ajax({
-  //       url: "http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",
-  //       data:  JSON.stringify({
-  //         "searchWord" : "sang"
-  //        }), 
-  //       type: "POST",
-  //       headers: { 'Authorization': localStorage.getItem('token') },
+        success: function(result){
+        users=result.data.details;
+        console.log("users = ",users);
+                 
+          /** display users ****/  
+       var wrapper = document.getElementById("collabUser");
+           
+       var myHTML = ''; 
+       for (var i = 0; i < users.length; i++)
+        {  
+          //myHTML +='<li role="presentation">1<a role="menuitem" tabindex="-1" href="#">'+users[i].email+'</a></li>';
+          myHTML +='<tr><td>'+users[i].email+'</td></li>';
         
-  //       success: function(result){
-  //       users=result.data.details;
-  //       console.log("users = ",users);
-  
-  //          /** users ****/  
-  //       //  var wrapper = document.getElementById("pinnedNotes");
-  //       //  var id = document.getElementById("id");
-      
-  //       //  var myHTML = ''; 
-  //       //  for (var i = 0; i < notes.length; i++)
-  //       //   {  
-  //       //     if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].isDeleted === false)
-  //       //     {
-  //       //       myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/newImagePin.svg" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item">Change labels</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
-  //       //     }
-  //       // }
-  //       //    wrapper.innerHTML = myHTML
-  //       }
-  //    });
-  //   });
+        }
+         wrapper.innerHTML = myHTML
+
+         var table = document.getElementById('collabUser');
+         console.log("length === > ",table.rows.length);
+         var   newCollaborator;
+          for(var i = 1; i < table.rows.length; i++)
+          {
+              table.rows[i].onclick = function()
+              { 
+                newCollaborator =  this.cells[0].innerHTML;
+                document.getElementById("newPerson").value = this.cells[0].innerHTML;
+                console.log("fname = > ",newCollaborator);
+                console.log("user is arr = ",users);
+                
+                var res = users.find(({email}) => email === newCollaborator );
+                console.log("res = >",res);   
+
+                $(document).on("click" , "#collabSaveBtn" , function(e) {   
+                                  
+                  var x = document.getElementById("snackbarCollaborator")
+                   x.className = "show";
+
+                   $.ajax({
+                      url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/"+data+"/AddcollaboratorsNotes",
+                      data:  JSON.stringify(res), 
+                      type: "POST",
+                        headers: {
+                           'Authorization': localStorage.getItem('token')
+                         },
+                          contentType: "application/json;charset=utf-8",
+                          success: function (result) 
+                          {
+                            console.log("result =",result);
+                             if(result.statusCode === 200){
+                              console.log("success");
+                              setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+                              location.reload(true);
+                            }
+                          },
+                          error: function (errorMessage)
+                          {
+                           console.log("Error", errorMessage);
+                          }
+                        });
+                  
+                });
+              };
+          }    
+      }
+     });
+  });
+ });
+
 /**************************************** Label create ***********************************************************************/ 
   $(function() {
     $("#label_error_message").hide();
