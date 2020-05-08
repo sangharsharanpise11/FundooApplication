@@ -429,10 +429,10 @@ However, delay the fade out process for 2.5 seconds */
     justify-content: space-between;
     margin-top: 30px;
 }
-h6, span{
+/* h6, span{
     font-size: 19px !important;
     color: black;
-}
+} */
 .remainderContent{
     height: 435px;
     width: 400px;
@@ -1839,7 +1839,10 @@ height: 76px;position: absolute;
 z-index: 34 !important;
 border: ridge;
 }
-
+#dateAndTime{
+    font-size: 15px;
+color: grey;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
@@ -1851,6 +1854,10 @@ border: ridge;
         outline: none;
         font-weight: 600;
         color: gray;
+    }
+    #dateAndTime{
+        font-size: 15px;
+    color: grey;
     }
     #pinnedNotes ,#unpinNotes{
         display: flex;
@@ -1986,21 +1993,14 @@ border: ridge;
         margin-left: 27px;
         margin-top: 10px;
     }
+
     #remainderTime{
         border-radius: 60px;
         width: 200px;
         border: none;
+        display: flex;
         font-size: 16px;
-        height: 35px;
-        margin-left: 27px;
-        margin-top: 10px;
-    }
-    #remainderTime{
-        border-radius: 60px;
-        width: 200px;
-        border: none;display: flex;
-        font-size: 16px;
-        height: 35px;
+        height: 25px;
         margin-left: 27px;
         margin-top: 10px;
     }
@@ -2192,6 +2192,10 @@ border: ridge;
     width: 700px;
     border-radius: 10px;
     height: 265px;
+    }
+    #dateAndTime{
+        font-size: 15px;
+    color: grey;
     }
     #addCollaborator{
         content: "\e013";
@@ -2494,6 +2498,17 @@ border: ridge;
     .today h6:hover {
         background-color: lightgrey;
     }
+    #remainderTime{
+        border-radius: 60px;
+    width: 200px;
+    border: none;
+    display: flex;
+    font-size: 15px;
+    height: 25px;
+    margin-left: 27px;
+    margin-top: 10px;
+    }
+    
 }
 
 /********************************************************************/
@@ -2503,6 +2518,10 @@ border: ridge;
         font-size: 17px;
         word-wrap: break-word;
         word-break: break-word;
+    }
+    #dateAndTime{
+        font-size: 15px;
+    color: grey;
     }
     #cars {
         border: none;
@@ -2819,8 +2838,9 @@ border: ridge;
         border-radius: 60px;
         width: 200px;
         border: none;
-        font-size: 16px;display: flex;
-        height: 35px;
+        display: flex;
+        font-size: 15px;
+        height: 25px;
         margin-left: 27px;
         margin-top: 10px;
     }
