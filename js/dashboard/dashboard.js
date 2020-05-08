@@ -138,12 +138,6 @@ document.getElementById("desc").value="";
 
 console.log("in display note");
 
-// $(document).ready(function(){
-// $("#note").click(function(){
-//     $("#openNote").css("display","block")
-// });
-// });
-
 var token= localStorage.getItem("token");
 console.log("token =>",token);
 
@@ -538,15 +532,6 @@ $(document).on("click" , "#deleteNote" , function(e) {
     $('#datetimepicker1').datetimepicker();
   });
 
-  //  $(function() {
-  //   $("#today").selectable({
-  //       selected: function( event, ui ) { 
-  //           var $variable = $('.ui-selected').text(); 
-  //           console.log($variable);
-  //       }
-  //   });
-  // });
-
      $(document).on("click" , "#remainder" , function(e) { 
      console.log("in reminder ");
      
@@ -597,11 +582,32 @@ $(document).on("click" , "#deleteNote" , function(e) {
                 variable = $('.ui-selected').text(); 
                 console.log(variable);
 
-               document.getElementById("dateAndTime").innerHTML =variable;
-               
+                 
+              var months    = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+              var now       = new Date();
+              var thisMonth = months[now.getMonth()];
+              var output = document.getElementById('output');
+              console.log(thisMonth);
+
+              var remindData;
+              var today = new Date();
+               console.log("today => ",today);
+               var date =today.getDate();
+               console.log("date => ",date);
+               var time = today.getHours() + ":" + today.getMinutes() ;
+               console.log("time => ",time);
+
                 var x = document.getElementById("snackbarReminder")
                 x.className = "show";
         
+                if(variable === "Tomarrow 8:00 PM")
+                {
+                  var tomarrow =  new Date();
+                  tomarrow.setDate(tomarrow.getDate()+1);
+                  console.log("tom date = > ",tomarrow.getDate()+","+tomarrow.getHours()+":"+tomarrow.getMinutes());
+                }
+                
+
                 $.ajax({
                     url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",
                     data:  JSON.stringify({
@@ -617,7 +623,7 @@ $(document).on("click" , "#deleteNote" , function(e) {
                         {
                           console.log("success");
                           setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-                          location.reload(true);
+                          //location.reload(true);
                         },
                         error: function (errorMessage)
                         {
