@@ -369,7 +369,7 @@ height: 200px;
 .data{
     margin-left: 170px;
 }
-#unpin{
+#unpin, #pin {
     width: 25px;
     height: 22px;
     margin-left: 255px;
@@ -2298,12 +2298,9 @@ border: ridge;
         height: 25px; 
     }
     .card {
-        width: 270px;
+        width: 300px;
         background-color: white;
-        height: 170px;
-        width: 285px;
-        background-color: white;
-        height: 185px;
+        height: 235px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
@@ -2418,6 +2415,8 @@ border: ridge;
     .remainderContent{
         margin-top: 171px;
     margin-left: 10px;
+    width: 70%;
+    height: 270px;
     }
     .pickDataContent{
         margin-top: 170px;
@@ -2449,17 +2448,42 @@ border: ridge;
     z-index: 34 !important;
     border: ridge;
     }
+    #laterToday, #laterTomarrow{
+        justify-content: space-between;
+        width: 265px;
+    }
+    .today:hover {
+        background-color: none;
+    }
     table td{
         padding-left: 10px;
        }
-       #remainderTime{
-        border-radius: 60px;
-        width: 200px;
-        border: none;display: flex;
-        font-size: 16px;
-        height: 35px;
-        margin-left: 27px;
-        margin-top: 10px;
+       
+       .remainderContent .modal-title {
+        font-weight: 600;
+        margin-left: -219px !important;
+    }
+    .today{
+        display: grid;
+        justify-content: space-between;
+        margin-top: -42px;
+    }
+    .remainderContent .modal-footer h6{
+        margin-right: 140px;
+        margin-top: 14px;
+    }
+
+    .remainderContent .modal-footer{
+        padding: 15px;
+        text-align: right;
+        margin-top: -31px;
+        border-top: 1px solid #e5e5e5;
+    }
+    #time{
+    float: right;
+    }
+    .today h6:hover {
+        background-color: lightgrey;
     }
 }
 
@@ -2544,7 +2568,7 @@ border: ridge;
         margin-left: 12px;
     }
     .titleDateTime{
-        margin-right: -150px !important;
+        margin-right: -145px !important;
     }
     .date{
         margin-left: -78px;
@@ -2594,12 +2618,9 @@ border: ridge;
         height: 25px; 
     }
     .card {
-        width: 270px;
+        width: 290px;
         background-color: white;
-        height: 170px;
-        width: 285px;
-        background-color: white;
-        height: 170px;
+        height: 220px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
@@ -2815,7 +2836,7 @@ border: ridge;
     .remainderContent .modal-footer{
         padding: 15px;
         text-align: right;
-        margin-top: -31px;
+        margin-top: -19px;
         border-top: 1px solid #e5e5e5;
     }
     #time{
