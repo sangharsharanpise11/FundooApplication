@@ -279,30 +279,20 @@
   <div class="modal" id="myRemindModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content remainderContent">
-        <!-- Modal Header -->
+     
         <div class="modal-header">
           <h4 class="modal-title">Remainder :</h4>
         </div>
-        
-        <!-- Modal body -->
+            
         <div class="modal-body">
-            <div class="today">
-              <h6>Later Today</h6><span style="color: gray;">8:00 PM</span> 
-            </div>
-            <div class="today">
-              <h6>Tomarrow</h6><span  style="color: gray;">8:00 AM</span> 
-            </div>
-            <div class="today">
-              <h6>Next Week</h6><span  style="color: gray;">Mon,8:00 PM</span> 
-            </div>
+            <ul class="today" id="today">
+              <h6><div class="laterToday" id="laterToday" style="justify-content: space-between;">Later Today <span id="time"style="scolor: gray;">8:00 PM</span></div></h6>
+              <h6><div class="laterTomarrow" id="laterTomarrow" style="justify-content: space-between;">Later Tomarrow <span id="time"style="scolor: gray;">8:00 PM</span></div></h6>
+            </ul>
         </div>
-        
-        <!-- Modal footer -->
+              
         <div class="modal-footer">
-          <div class="pickData">
-            <h6 class="today" data-toggle="modal" data-target="#myPickDataModal">Pick date and Time</h6>
-            <h6 class="today">Pick place</h6>
-          </h6>
+           <h6  class="today"data-toggle="modal" data-target="#myPickDataModal">Pick date and Time</h6>
         </div>
         
       </div>
@@ -329,10 +319,10 @@
            </div>
            <div class="newCollaborator">
               <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
-              <input type="text" id="newPerson" type="button" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/>
+              <input type="text" id="newPerson" type="button" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/><button class="glyphicon glyphicon-ok ok" id="addCollaborator"></button>
              <!-- <ul id="collabUser" class="dropdown-menu elements" role="menu" aria-labelledby="newPerson"></ul> -->
             </div>
-            <table id="collabUser" class="elements" ></table>
+            <table id="collabUser" class="elements" style="height: 200px; overflow-y: auto;"></table>
 
           <div class="footer-collab">
               <button type="button" class="btn btn-default " id="collabSaveBtn">save</button>
@@ -413,7 +403,14 @@
     </div>
  </div>
 </div> 
+<!-- remainder on note -->
+<div class="remainderOnNote" >
+  <button class="button remainderTime" id="remainderTime">
+    <i class='far fa-clock' style='font-size:24px'></i>
+    <span id="dateAndTime">abc</span>
+  </button>
 
+</div>
       <div id="snackbarPin">Note is Pinned ...</div> 
       <div id="snackbarTrash">Note is Trashed ...</div>
       <div id="snackbarArchive">Note is Archived ...</div>

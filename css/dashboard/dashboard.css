@@ -539,7 +539,11 @@ h6, span{
 }
 .footer-collab {
     background-color: lightgrey;
-    margin-top: 15px;
+    margin-top: -24px;
+    height: 50px;
+    position: fixed;
+    border-radius: 4px;
+    width: 698px;
 }
 #collabSaveBtn, #collabCancelBtn{
     font-size: 23px;
@@ -581,6 +585,15 @@ h6, span{
     width: 235px;
     border: none;
     height: 35px;
+    margin-top: 10px;
+}
+#remainderTime{
+    border-radius: 60px;
+    width: 200px;
+    border: none;display: flex;
+    font-size: 16px;
+    height: 35px;
+    margin-left: 27px;
     margin-top: 10px;
 }
 .anotherAcc{
@@ -635,6 +648,16 @@ h6, span{
     text-align: left;
     color: black;
     margin-top: 4px;
+}
+table  td{
+    padding-left: 10px;
+   }
+table{
+    width: 510px;
+margin-left: 65px;
+height: 76px;
+z-index: 34 !important;
+border: ridge;position: absolute;
 }
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
@@ -935,6 +958,14 @@ h6, span{
         left: 0px;
         will-change: transform;
     }
+    #remainder-menu{
+        height: 370px;
+        position: absolute;
+        transform: translate3d(0px, 75px, 0px);
+        top: 0px;
+        left: 0px;
+        will-change: transform;
+    }
     #display {
         margin-top: 10px;
         margin-top: 10px;
@@ -1006,6 +1037,25 @@ h6, span{
         font-size: 70px !important;
         color: black;
     }
+    table{
+        width: 510px;
+    margin-left: 65px;
+    height: 76px;position: absolute;
+    z-index: 34 !important;
+    border: ridge;
+    }
+    table td{
+        padding-left: 10px;
+       }
+       #remainderTime{
+        border-radius: 60px;
+        width: 200px;
+        border: none;
+        font-size: 16px;
+        height: 35px;
+        margin-left: 27px;display: flex;
+        margin-top: 10px;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
@@ -1014,6 +1064,9 @@ h6, span{
         margin-left: 0px;
         margin-top: 10px;
     }
+    table  td{
+        padding-left: 10px;
+       }
     .color {
         width: 80px;
         height: 77px;
@@ -1359,22 +1412,31 @@ span{
     left: 50%;
     bottom: 30px;
 }
-/* .newCollaborator  #collabUser{
-    display: grid;
- position: absolute;
- transform: translate3d(71px, 192px, 61px);
- top: 0px;
- width: 500px;
- left: 0px;
- height: 100px;
- will-change: transform;
-} */
+table{
+    width: 510px;
+margin-left: 65px;
+height: 76px;
+z-index: 34 !important;
+border: ridge;position: absolute;
+}
+#remainderTime{
+    border-radius: 60px;
+    width: 200px;
+    border: none;display: flex;
+    font-size: 16px;
+    height: 35px;
+    margin-left: 27px;
+    margin-top: 10px;
+}
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
+     table td{
+        padding-left: 10px;
+       }
      #a1, #a2{
         margin-left: -194px;
     }
@@ -1468,6 +1530,15 @@ span{
         height: 35px;
         margin-top: 10px;
         margin-left: 23px;
+    }
+    #remainderTime{
+        border-radius: 60px;
+        width: 200px;
+        border: none;
+        font-size: 16px;display: flex;
+        height: 35px;
+        margin-left: 27px;
+        margin-top: 10px;
     }
      .closeBtn{
         margin-top: -75px;
@@ -1700,6 +1771,14 @@ span{
     will-change: transform;
     height: 150px;
 }
+#remainder-menu{
+    height: 370px;
+    position: absolute;
+    transform: translate3d(0px, 75px, 0px);
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+}
 .color {
     width: 48px;
     height: 45px;
@@ -1752,42 +1831,32 @@ b, strong {
 #emailData{
     font-size: 17px;
 }
-.newCollaborator  .dropdown-menu{
-    display: grid;
- position: absolute;
- transform: translate3d(71px, 192px, 61px);
- top: 0px;
- width: 500px;
- left: 0px;
- height: 100px;
- will-change: transform;
+table{
+    width: 510px;
+margin-left: 65px;
+height: 76px;position: absolute;
+z-index: 34 !important;
+border: ridge;
 }
-#newPerson ul > li > a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
-    color: #333;
-    width: 500px;
-    height: 35px;
-    white-space: nowrap;
-    margin-bottom: -1px;
-    text-align: left;
-    margin-top: -13px;
-}
+
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
     input[type=text] {
-        width: 70%;
+        width: 80%;
         padding: 12px 20px;
         margin: 8px 0;
         border: none;
         outline: none;
         font-weight: 600;
         color: gray;
-        font-size: 17px;
+    }
+    #addCollaborator{
+        content: "\e013";
+        margin-right: 11px;
+        margin-left: -17px;
+        border: none;
+        background-color: white;
     }
     .keepData{
         margin-left: 55px;
@@ -1841,7 +1910,9 @@ b, strong {
         background-color: lightgrey;
         margin-top: 27px;
         height: 50px;
+        position: fixed;
         border-radius: 4px;
+        width: 698px;
     }
     #collabSaveBtn, #collabCancelBtn {
         font-size: 23px;
@@ -1901,6 +1972,24 @@ b, strong {
         border-radius: 60px;
         width: 235px;
         border: none;
+        font-size: 16px;
+        height: 35px;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
+    #remainderTime{
+        border-radius: 60px;
+        width: 200px;
+        border: none;
+        font-size: 16px;
+        height: 35px;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
+    #remainderTime{
+        border-radius: 60px;
+        width: 200px;
+        border: none;display: flex;
         font-size: 16px;
         height: 35px;
         margin-left: 27px;
@@ -2074,29 +2163,18 @@ b, strong {
         width: 90px;
         margin-right: 4px;
     }
-    .newCollaborator  #collabUser{
-        display: grid;
-     position: absolute;
-     transform: translate3d(71px, 192px, 61px);
-     top: 0px;
-     width: 500px;
-     left: 0px;
-     height: 100px;
-     will-change: transform;
- }
- /* #newPerson .dropdown-menu > li > a {
-   
-    clear: both;
-    width: 497px;
-    font-weight: normal;
-    margin-top: -24px;
-    line-height: 1.42857143;
-    color: #333;
-    white-space: nowrap;
-    margin-bottom: -7px;
-  
-    text-align: left;
-} */
+    table{
+        width: 510px;
+        margin-left: 65px;
+        height: 76px;
+        z-index: 350 !important;
+        border: ridge;position: absolute;
+        transform: translate3d(14px, 17px, -2px);
+        background-color: white !important;
+    }
+   table td{
+    padding-left: 10px;
+   }
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
@@ -2105,6 +2183,13 @@ b, strong {
     width: 700px;
     border-radius: 10px;
     height: 265px;
+    }
+    #addCollaborator{
+        content: "\e013";
+        margin-right: 11px;
+        margin-left: -17px;
+        border: none;
+        background-color: white;
     }
     .keepData{
         margin-left: 28px !important;
@@ -2117,7 +2202,7 @@ b, strong {
     }
     .footer-collab {
         background-color: lightgrey;
-        margin-top: -10px;
+        margin-top: -50px;
         height: 50px;
         border-radius: 10px;
     }
@@ -2357,30 +2442,25 @@ b, strong {
         font-weight: 600;
         margin-left: -559px !important;
     }
-    .newCollaborator  #collabUser{
-        display: grid;
-     position: absolute;
-     transform: translate3d(71px, 192px, 61px);
-     top: 0px;
-     width: 500px;
-     left: 0px;
-     height: 100px;
-     will-change: transform;
- }
- /* #newPerson .dropdown-menu > li > a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
-    color: #333;
-    width: 500px;
-    height: 35px;
-    white-space: nowrap;
-    margin-bottom: -1px;
-    text-align: left;
-    margin-top: -13px;
-} */
+    table{
+        width: 510px;position: absolute;
+    margin-left: 65px;
+    height: 76px;background-color: white !important;
+    z-index: 34 !important;
+    border: ridge;
+    }
+    table td{
+        padding-left: 10px;
+       }
+       #remainderTime{
+        border-radius: 60px;
+        width: 200px;
+        border: none;display: flex;
+        font-size: 16px;
+        height: 35px;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
 }
 
 /********************************************************************/
@@ -2395,6 +2475,13 @@ b, strong {
         border: none;
         margin-top: 23px;
         width: 350px;
+    }
+    #addCollaborator{
+        content: "\e013";
+        margin-right: 11px;
+        margin-left: -17px;
+        border: none;
+        background-color: white;
     }
     .closeBtn{
         margin-top: -73px;
@@ -2662,12 +2749,12 @@ b, strong {
     }
     .footer-collab {
         background-color: lightgrey;
-        margin-top: 9px;
+        margin-top: -50px;
         height: 50px;
+        position: fixed;
+        border-radius: 4px;
         margin-left: -10px;
         width: 698px;
-        border-bottom-left-radius: 7px;
-        border-bottom-right-radius: 7px;
     }
     #collabSaveBtn, #collabCancelBtn {
         font-size: 23px;
@@ -2683,37 +2770,59 @@ b, strong {
     .remainderContent{
         margin-top: 153px;
         margin-left: 10px;
+        width: 70%;
+        height: 250px;
     }
-    .newCollaborator  #collabUser{
-       display: grid;
-    position: absolute;
-    transform: translate3d(71px, 192px, 61px);
-    top: 0px;
-    width: 500px;
-    left: 0px;
-    height: 250px;
-    will-change: transform;
-}
-#collabUser li{
-    padding-top: 10px;
-}
-.newCollaborator .dropdown-menu > li > a {
-    display: block;
-    padding: 3px 3px;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.42857143;
-    color: #333;
-    width: 500px;
-    height: 30px;
-    white-space: nowrap;
-    margin-bottom: -3px !important;
-    text-align: left;
-    margin-top: -20px;
-}
-table tr:not(:first-child){
-    cursor: pointer;transition: all .25s ease-in-out;
-}
-table tr:not(:first-child):hover{background-color: #ddd;}
+   
+    tbody{
+        margin-left: 20px;
+    }
+    table{
+        width: 510px;
+    margin-left: 65px;
+    height: 60px;
+    z-index: 34 !important;
+    border: ridge;position: absolute;
+    background-color: white !important;
+    }
+    #remainderTime{
+        border-radius: 60px;
+        width: 200px;
+        border: none;
+        font-size: 16px;display: flex;
+        height: 35px;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
+    table td{
+        padding-left: 10px;
+       }
+       
+       .remainderContent .modal-title {
+        font-weight: 600;
+        margin-left: -219px !important;
+    }
+    .today{
+        display: grid;
+        justify-content: space-between;
+        margin-top: -42px;
+    }
+    .remainderContent .modal-footer h6{
+        margin-right: 140px;
+        margin-top: 0px;
+    }
+
+    .remainderContent .modal-footer{
+        padding: 15px;
+        text-align: right;
+        margin-top: -31px;
+        border-top: 1px solid #e5e5e5;
+    }
+    #time{
+    float: right;
+    }
+    .today h6:hover {
+        background-color: lightgrey;
+    }
 }
 

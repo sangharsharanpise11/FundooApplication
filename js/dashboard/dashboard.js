@@ -533,51 +533,101 @@ $(document).on("click" , "#deleteNote" , function(e) {
 });
 
 /**************** remainder note *********************************/ 
-  $(function () {
-    console.log("in datetimepicker");
-    $('#datetimepicker1').datetimepicker();
-  });
+  // $(function () {
+  //   console.log("in datetimepicker");
+  //   $('#datetimepicker1').datetimepicker();
+  // });
 
-     $(document).on("click" , "#remainder" , function(e) { 
-     console.log("in reminder ajax");
+  // //  $(function() {
+  // //   $("#today").selectable({
+  // //       selected: function( event, ui ) { 
+  // //           var $variable = $('.ui-selected').text(); 
+  // //           console.log($variable);
+  // //       }
+  // //   });
+  // // });
+
+  //    $(document).on("click" , "#remainder" , function(e) { 
+  //    console.log("in reminder ");
      
-     noteId=$(this).closest('div.card').attr('id');
-     data = notes[noteId].id;
-     console.log("data is :",data);
-     localStorage.setItem("noteid",data);
+  //    noteId=$(this).closest('div.card').attr('id');
+  //    data = notes[noteId].id;
+  //    console.log("data is :",data);
+  //    localStorage.setItem("noteid",data);
     
-      $(document).on("click" , "#reminderData" , function(e) { 
-        console.log("hiii");
-        var date=$('#reminderDate').val();
-        console.log("date is",date);
+  //     $(document).on("click" , "#reminderData" , function(e) { 
+  //       console.log("hiii");
+  //       var date=$('#reminderDate').val();
+  //       console.log("date is",date);
         
-        var x = document.getElementById("snackbarReminder")
-        x.className = "show";
+  //       var x = document.getElementById("snackbarReminder")
+  //       x.className = "show";
 
-        $.ajax({
-            url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",
-            data:  JSON.stringify({
-              "reminder" : date,
-              "noteIdList" : [data]
-            }), 
-            type: "POST",
-              headers: {
-                 'Authorization': localStorage.getItem('token')
-               },
-                contentType: "application/json;charset=utf-8",
-                success: function (result) 
-                {
-                  console.log("success");
-                  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-                  location.reload(true);
-                },
-                error: function (errorMessage)
-                {
-                 console.log("Error", errorMessage);
-                }
-             });
-      });
-   });
+  //       $.ajax({
+  //           url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",
+  //           data:  JSON.stringify({
+  //             "reminder" : date,
+  //             "noteIdList" : [data]
+  //           }), 
+  //           type: "POST",
+  //             headers: {
+  //                'Authorization': localStorage.getItem('token')
+  //              },
+  //               contentType: "application/json;charset=utf-8",
+  //               success: function (result) 
+  //               {
+  //                 console.log("success");
+  //                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+  //                 location.reload(true);
+  //               },
+  //               error: function (errorMessage)
+  //               {
+  //                console.log("Error", errorMessage);
+  //               }
+  //            });
+  //     });
+
+
+  //     $(function() {
+  //       var variable;
+  //       $("#today").selectable({
+  //           selected: function( event, ui ) { 
+  //               variable = $('.ui-selected').text(); 
+  //               console.log(variable);
+
+  //              // $("#dateAndTime").innerHTML=variable;
+  //               //document.getElementById("dateAndTime").innerHTML = variable;
+
+  //               var x = document.getElementById("snackbarReminder")
+  //               x.className = "show";
+        
+  //               $.ajax({
+  //                   url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addUpdateReminderNotes",
+  //                   data:  JSON.stringify({
+  //                     "reminder" : variable,
+  //                     "noteIdList" : [data]
+  //                   }), 
+  //                   type: "POST",
+  //                     headers: {
+  //                        'Authorization': localStorage.getItem('token')
+  //                      },
+  //                       contentType: "application/json;charset=utf-8",
+  //                       success: function (result) 
+  //                       {
+  //                         console.log("success");
+  //                         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+  //                         //location.reload(true);
+  //                       },
+  //                       error: function (errorMessage)
+  //                       {
+  //                        console.log("Error", errorMessage);
+  //                       }
+  //                   });
+  //           }
+  //       });
+  //     });
+    
+     
 /**************************************** collaborator note ***********************************************************************/ 
 firstName=localStorage.getItem('firstName');
 lastName=localStorage.getItem('lastName');
@@ -589,7 +639,13 @@ document.getElementById("ownerFullName").innerHTML = fullName;
 document.getElementById("ownerEmailData").innerHTML = email;
 console.log(fullName, "  " ,email);
 
+$(document).on("click","#collabSaveBtn",function(e){
+location.reload(true);
+})
 
+$(document).on("click","#collabCancelBtn",function(e){
+  location.reload(true);
+})
 
 $(document).on("click" , "#collaborator" , function(e) { 
   console.log("in collaborator ");
@@ -601,7 +657,8 @@ $(document).on("click" , "#collaborator" , function(e) {
 
   var users=[];
  
-  $("#newPerson").keyup(function (){
+  $("#newPerson").keyup(function ()
+  {
     var searchUser={
       searchWord :$("#newPerson").val()
     }
@@ -645,7 +702,7 @@ $(document).on("click" , "#collaborator" , function(e) {
                 var res = users.find(({email}) => email === newCollaborator );
                 console.log("res = >",res);   
 
-                $(document).on("click" , "#collabSaveBtn" , function(e) {   
+                $(document).on("click" , "#addCollaborator" , function(e) {   
                                   
                   var x = document.getElementById("snackbarCollaborator")
                    x.className = "show";
