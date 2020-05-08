@@ -1713,6 +1713,7 @@ border: ridge;position: absolute;
         place-content: initial;
         width: 700px;
         margin-left: -208px;
+        
     }
     .card {
         width: 270px;
@@ -1850,6 +1851,14 @@ border: ridge;
         outline: none;
         font-weight: 600;
         color: gray;
+    }
+    #pinnedNotes ,#unpinNotes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        place-content: initial;
+        /* width: 1270px; */
     }
     #addCollaborator{
         content: "\e013";
@@ -2844,6 +2853,14 @@ border: ridge;
     }
     .today h6:hover {
         background-color: lightgrey;
+    }
+    #pinnedNotes ,#unpinNotes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        place-content: initial;
+        width: 1270px;
     }
 }
 
