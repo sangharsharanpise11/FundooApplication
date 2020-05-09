@@ -2940,7 +2940,12 @@ color: grey;
         width: 250px;
         border: 1px solid rgba(0,0,0,.125);
       }
-  
+      .remAndLabel{
+        justify-content: space-around;
+    display: flex;
+    display: flexbox;
+    width: 275px;
+      }
 }
 
 
