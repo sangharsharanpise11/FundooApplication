@@ -50,6 +50,7 @@ body{
   }
 span{
     margin-left: 25px;
+    color: black;
 }
 .nav-item {
     font-size: x-large;
@@ -589,10 +590,11 @@ However, delay the fade out process for 2.5 seconds */
 }
 #remainderTime{
     border-radius: 60px;
-    width: 200px;
-    border: none;display: flex;
-    font-size: 16px;
-    height: 35px;
+    width: 125px;
+    border: none;
+    display: flex;
+    font-size: 15px;
+    height: 25px;
     margin-left: 27px;
     margin-top: 10px;
 }
@@ -723,7 +725,7 @@ border: ridge;position: absolute;
         margin-left: -178px !important;
     }
     .today h6 span{
-        font-size: 15px !important;
+        font-size: 15px !important;color: black;
     }
     /* .dropdown-menu .show{
         position: absolute;
@@ -1049,11 +1051,12 @@ border: ridge;position: absolute;
        }
        #remainderTime{
         border-radius: 60px;
-        width: 200px;
+        width: 125px;
         border: none;
-        font-size: 16px;
-        height: 35px;
-        margin-left: 27px;display: flex;
+        display: flex;
+        font-size: 15px;
+        height: 25px;
+        margin-left: 27px;
         margin-top: 10px;
     }
 }
@@ -1159,7 +1162,7 @@ border: ridge;position: absolute;
         margin-left: -178px !important;
     }
     .today h6 span{
-        font-size: 15px !important;
+        font-size: 15px !important;color: black;
     }
     .keepLogo {
         vertical-align: middle;
@@ -1385,7 +1388,7 @@ border: ridge;position: absolute;
     border-radius: 50px;
 }
 span{
-    font-size: 25px !important;
+    font-size: 25px !important;color: black;
 }
 #cars {
     border: none;
@@ -1421,10 +1424,11 @@ border: ridge;position: absolute;
 }
 #remainderTime{
     border-radius: 60px;
-    width: 200px;
-    border: none;display: flex;
-    font-size: 16px;
-    height: 35px;
+    width: 125px;
+    border: none;
+    display: flex;
+    font-size: 15px;
+    height: 25px;
     margin-left: 27px;
     margin-top: 10px;
 }
@@ -1517,7 +1521,7 @@ border: ridge;position: absolute;
         margin-left: -211px !important;
     }
     .today h6 span{
-        font-size: 15px !important;
+        font-size: 15px !important;color: black;
     }
     .signoutFooter {
         margin-top: -4px;
@@ -1533,10 +1537,11 @@ border: ridge;position: absolute;
     }
     #remainderTime{
         border-radius: 60px;
-        width: 200px;
+        width: 125px;
         border: none;
-        font-size: 16px;display: flex;
-        height: 35px;
+        display: flex;
+        font-size: 15px;
+        height: 25px;
         margin-left: 27px;
         margin-top: 10px;
     }
@@ -1552,7 +1557,7 @@ border: ridge;position: absolute;
     }
     span {
         margin-left: 15px;
-        font-size: 15px;
+        font-size: 15px;color: black;
         word-wrap: break-word;
         word-break: break-word;
     }
@@ -1996,10 +2001,10 @@ color: grey;
 
     #remainderTime{
         border-radius: 60px;
-        width: 200px;
+        width: 125px;
         border: none;
         display: flex;
-        font-size: 16px;
+        font-size: 15px;
         height: 25px;
         margin-left: 27px;
         margin-top: 10px;
@@ -2080,7 +2085,7 @@ color: grey;
         border-style: none;
     }
     span {
-        margin-left: 2px;
+        margin-left: 2px;color: black;
         word-wrap: break-word;
         word-break: break-word;
     }
@@ -2232,7 +2237,7 @@ color: grey;
     }
     span {
         margin-left: 3px;
-        word-wrap: break-word;
+        word-wrap: break-word;color: black;
         word-break: break-word;
     }
         .card:hover {
@@ -2397,7 +2402,7 @@ color: grey;
         font-size: 45px !important;
     }
     .keepData span{
-        font-size: 35px;
+        font-size: 35px;color: black;
     } 
     #a1, #a2 {
         margin-left: 18px;
@@ -2500,13 +2505,13 @@ color: grey;
     }
     #remainderTime{
         border-radius: 60px;
-    width: 200px;
-    border: none;
-    display: flex;
-    font-size: 15px;
-    height: 25px;
-    margin-left: 27px;
-    margin-top: 10px;
+        width: 125px;
+        border: none;
+        display: flex;
+        font-size: 15px;
+        height: 25px;
+        margin-left: 27px;
+        margin-top: 10px;
     }
     
 }
@@ -2514,11 +2519,12 @@ color: grey;
 /********************************************************************/
 @media screen and (min-width:1441px){
     span {
-        margin-left: 15px;
+        margin-left: 4px;
         font-size: 17px;
+        color: black;
         word-wrap: break-word;
         word-break: break-word;
-    }
+      }
     #dateAndTime{
         font-size: 15px;
     color: grey;
@@ -2628,14 +2634,21 @@ color: grey;
     #flip {
         display: flex;
         padding: 5px;
+        border: ridge;
         text-align: left;
-        background-color: #e5eecc;
+        background-color: white;
         border-radius: 5px;
         justify-content: space-between;
         height: 50px;
         margin-top: -140px;
+        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+       /* / box-shadow: inset 2px 3px -3 rgba(4,-2,6,3.1), inset 6 -7px 5 rgba(0,0,4,5.07); */
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 1px 2px 1px 2px;
         width: 600px;
-        margin-left: 240px;
+        border-color: lightgrey;
+        margin-left: 240px
     }
     .head{
         color: gray;
@@ -2758,7 +2771,7 @@ color: grey;
         font-size: 25px;
     }
     li span{
-        font-size: 25px !important;
+        font-size: 25px !important;color: black;
     }
     .middleIcon{
         font-size: 33px !important;
@@ -2836,12 +2849,12 @@ color: grey;
     }
     #remainderTime{
         border-radius: 60px;
-        width: 200px;
+        width: 125px;
         border: none;
         display: flex;
         font-size: 15px;
         height: 25px;
-        margin-left: 27px;
+        margin-left: -2px;
         margin-top: 10px;
     }
     table td{
@@ -2881,6 +2894,13 @@ color: grey;
         align-items: flex-start;
         place-content: initial;
         width: 1270px;
+    }
+    #flip .head  {
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        color: gray;
     }
 }
 
