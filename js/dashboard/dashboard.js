@@ -246,11 +246,11 @@ $(document).ready(function(){
           var newRemDate=new Date(notes[i].reminder);
           newReminderDate=thisMonth+" "+newRemDate.getDate()+","+newRemDate.getHours()+":"+newRemDate.getMinutes();
          
-          if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder != " " && notes[i].isDeleted === false)
+          if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder.length > 0 && notes[i].isDeleted === false)
           {
            myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><div class="remainderOnNote"><button class="button remainderTime" id="remainderTime"><i class="far fa-clock" style="font-size:18px ;color:grey;"></i><span id="dateAndTime">'+newReminderDate+'</span></button></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"   style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu lastDropdown" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item" id="addLabel>Add label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
           }
-          else if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder === "" && notes[i].isDeleted === false)
+          else if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder.length === 0 && notes[i].isDeleted === false)
           {
            myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"   style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu lastDropdown" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item" id="addLabel">Add Label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
           }
@@ -903,8 +903,17 @@ $(document).ready(function(){
           myHTML +=' <div class="labelData"><i class="fas fa-caret-right" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i><input type="text" id="labelName"  value='+labels[i].label+'></div>';
         }
         wrapper.innerHTML = myHTML
-      }
-      ,
+
+        var wrapper = document.getElementById("checkBoxLabel");
+        var myHTML = ''; 
+        for (var i = 0; i < labels.length; i++)
+         {  
+
+            myHTML +='<input type="checkbox" class="checks" value='+labels[i].label+'>'+labels[i].label+'<br>';
+          //myHTML +='<input class="checks" type="checkbox"value='+labels[i].label+'>'+labels[i].label+'</br>';
+         }
+         wrapper.innerHTML = myHTML
+      },
         error: function (errorMessage)
         {
          console.log("failed");
@@ -913,6 +922,50 @@ $(document).ready(function(){
     });
    });
  
+  /************ add label to note *************************************************************/  
+  $(document).on("click" , "#addLabel" , function(e) { 
+    console.log("in addlabel to note");
+     
+    $(".addLabelWithCreate").css("display","block")
+   
+    $('.checks').click(function(){
+      var text = "";
+      $('.checks:checked').each(function(){
+        text +=$(this).val();
+        alert(text);
+
+        let obj = labels.find(label => label.label === text);
+        console.log("res = >",obj);
+        id= obj.id,
+           
+        $.ajax({
+          url: "http://fundoonotes.incubation.bridgelabz.com/api/noteLabels/"+id,
+          data:  JSON.stringify(obj), 
+          type: "PATCH",
+            headers: {
+               'Authorization': localStorage.getItem('token')
+             },
+              contentType: "application/json;charset=utf-8",
+              success: function (result) 
+              {
+                var x = document.getElementById("snackbarLabelAdded");
+                x.className = "show"; 
+                
+                console.log("success");
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+              },
+              error: function (errorMessage)
+              {
+                console.log("fail");
+                console.log("Error", errorMessage);
+              }
+            });
+         
+      })
+    })
+  });
+
+
 /************ delete label *****************************************************/  
 $(document).on("click" , "#deleteLabelIcon" , function(e) { 
   console.log("in delete label");
@@ -1201,3 +1254,9 @@ $(document).on("click" , ".signout" , function(e) {
     }
   });
 });
+
+// 
+function getValue(a){
+  console.log("helllo ",a);
+      
+ }

@@ -377,7 +377,7 @@ height: 200px;
     margin-top: 10px;
     z-index: 1;
 }
-#snackbarTrash,#snackbarunPin,#snackbarunArchive, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
+#snackbarTrash,#snackbarLabelAdded,#snackbarunPin,#snackbarunArchive, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
@@ -2902,5 +2902,45 @@ color: grey;
         font-weight: 500;
         color: gray;
     }
+    .addLabelWithCreate{
+        width: 250px;
+        display: grid;
+        height: 200px;
+        margin-left: 200px;
+        border: 1px solid rgba(0,0,0,.125);
+    }
+    .create{
+        display: flex;
+    }
+    .create input[type=text] {
+        font-weight: 500;
+        color: gray;
+        width: 81%;
+        height: 40px;
+        padding: 0px 23px;
+        margin: 0px -11px;
+    }
+    .create .fa .far-search{
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+    }
+    h{
+        font-size: 16px;
+    margin-left: 10px;
+    }
+   .container101 input[type="checkbox"] {
+    margin: 7px 10px 0;
+    }
+    .plusCreate{
+        margin-left: -13px;
+        height: 30px;
+        margin-top: -1px;
+        display: flex;padding: 7px;
+        justify-content: space-between;
+        width: 250px;
+        border: 1px solid rgba(0,0,0,.125);
+      }
+  
 }
+
 
