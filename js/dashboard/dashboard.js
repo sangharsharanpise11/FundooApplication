@@ -921,7 +921,47 @@ $(document).ready(function(){
         }
     });
    });
+/************ create label with plus icon ************ *************************** */
+$(".createNewLabel").click(function(){
+  $(".plusCreate").css("display","block") 
+  $(".createNewLabel").keyup(function(){
+    $("#result").html($("#createNewLabel").val())
+  });
+
+  $(document).on("click" , "#createLabelPlus" , function(e) { 
+    console.log("booom");
  
+      var labelCreate = {
+      label: $("#createNewLabel").val(),
+      isDeleted : false,
+      userId: localStorage.getItem('userId')
+    }
+    var x = document.getElementById("snackbarLabel")
+    x.className = "show";
+
+   $.ajax({
+    url: "http://fundoonotes.incubation.bridgelabz.com/api/noteLabels",
+    data:  JSON.stringify(labelCreate), 
+    type: "POST",
+      headers: {
+         'Authorization': localStorage.getItem('token')
+       },
+        contentType: "application/json;charset=utf-8",
+        success: function (result) 
+        {
+          console.log("success");
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+          location.reload(true);
+        },
+        error: function (errorMessage)
+        {
+         console.log("Error", errorMessage);
+        }
+      });
+
+  });
+});
+
   /************ add label to note *************************************************************/  
   $(document).on("click" , "#addLabel" , function(e) { 
     console.log("in addlabel to note");
@@ -950,7 +990,6 @@ $(document).ready(function(){
               {
                 var x = document.getElementById("snackbarLabelAdded");
                 x.className = "show"; 
-                
                 console.log("success");
                 setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
               },
