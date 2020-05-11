@@ -154,15 +154,15 @@ span{
     -webkit-font-smoothing: antialiased;
     color: black;
 }
-.w3-sidebar{
-    margin-top: -23px !important;
+.w3-sidebar{    margin-top: -15px !important;
     font-size: -21px;
     font-weight: 500;
     display: grid;
-    grid-row-gap: -155px;
+    grid-row-gap: -64px !important;
     padding: 20px;
+    font-size: 20px;
     height: 100%;
-    width: 270px;
+    width: 332px;
     padding-bottom: 360px;
 }
 .menu{
@@ -171,11 +171,21 @@ span{
     font-size: 25px;
 }
 a {
-    text-decoration: none;
     height: 50px;
-    display: inline-block;
     color: black;
     width: 170px;
+    text-decoration: none;
+    text-align: left;
+    display: inline-flex;
+}
+a .material-icons {
+    font-size: 35px !important;
+}
+a span {
+    margin-left: 30px;
+    word-wrap: break-word;
+    color: black;
+    word-break: break-word;
 }
 .line{
     width: 124%;
@@ -185,8 +195,15 @@ a {
 }
 #mySidebar a:hover{
     background-color: lavender;
-    color: black;    text-decoration: none;
-    border-radius: 50px;
+    color: black;
+    text-decoration: none;
+    color: #337ab7;
+    border-top-right-radius: 23px;
+    text-decoration: none;
+    border-bottom-right-radius: 23px;
+    width: 250px !important;
+    display: inline-flex;
+    padding: 16px;
 }
 .dataBody{
     width: 100%;
@@ -382,7 +399,7 @@ height: 200px;
     margin-top: 10px;
     z-index: 1;
 }
-#snackbarTrash,#snackbarLabelAdded,#snackbarunPin,#snackbarunArchive, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
+#snackbarTrash,#snackbarReminderDeleted,#snackbarLabelAdded,#snackbarunPin,#snackbarunArchive, #snackbarPin,#snackbarLabelUpdated, #snackbarArchive,#snackbarLabelDeleted, #snackbarNoteCreate,#snackbarColor, #snackbarReminder,#snackbarLabel, #snackbarCollaborator {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
@@ -1437,6 +1454,11 @@ border: ridge;position: absolute;
     margin-left: 27px;
     margin-top: 10px;
 }
+#remainderTime .material-icons{
+    font-size: 23px !important;
+    margin-top: 0px;
+    margin-left: 11px;
+} 
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
@@ -1792,9 +1814,15 @@ border: ridge;position: absolute;
 }
 #mySidebar a:hover{
     background-color: lavender;
-    color: black;  
+    color: black;
     text-decoration: none;
-    border-radius: 50px;
+     color: #337ab7;
+    border-top-right-radius: 23px;
+    text-decoration: none;
+    border-bottom-right-radius: 23px;
+    width: 250px !important;
+    display: inline-flex;
+    padding: 16px;
 }
 #colorList{
     position: absolute;
@@ -2050,12 +2078,12 @@ color: grey;
 
     #remainderTime{
         border-radius: 60px;
-        width: 125px;
+        width: 159px;
         border: none;
         display: flex;
         font-size: 15px;
         height: 25px;
-        margin-left: 27px;
+        margin-left: 30px;
         margin-top: 10px;
     }
     .card {
@@ -2240,6 +2268,17 @@ color: grey;
    table td{
     padding-left: 10px;
    }
+   #remainderTime .material-icons{
+    font-size: 23px !important;
+    margin-top: 0px;
+    margin-left: 11px;
+}
+ #unpincreateNote {
+    width: 25px;
+    height: 22px;
+    z-index: 1;
+    float: right;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
@@ -2247,6 +2286,11 @@ color: grey;
         height: 100% !important;
         width: 100% !important;
         display: flex;
+    }
+    #remainderTime .material-icons{
+        font-size: 23px !important;
+        margin-top: 0px;
+        margin-left: 11px;
     }
     .dataBody {
         width: 100%;
@@ -2320,6 +2364,17 @@ color: grey;
     z-index: 1;
     float: right;
     }
+    .midIcon .gridView{
+        margin-top: 1px;
+        font-size: 36px;
+    }
+     #unpincreateNote {
+        width: 25px;
+        height: 22px;
+        margin-left: 636px;
+        margin-top: 10px;
+        z-index: 1;
+    }
     .createNote .noteIcon {
         padding-right: 10px;
         margin-top: -32px;
@@ -2345,7 +2400,7 @@ color: grey;
     .threeIcons {
         list-style-type: none;
         display: flex;
-        font-size: 35px !important;
+        font-size: 30px !important;
         justify-content: space-between;
         width: 150px;
         margin-top: 10px;
@@ -2573,12 +2628,12 @@ color: grey;
     }
     #remainderTime{
         border-radius: 60px;
-        width: 125px;
+        width: 159px;
         border: none;
         display: flex;
         font-size: 15px;
         height: 25px;
-        margin-left: 27px;
+        margin-left: -2px;
         margin-top: 10px;
     }
     .remAndLabel {
@@ -2760,7 +2815,7 @@ color: grey;
         width: fit-content;
         height: 100%;
         margin-right: 0;
-        margin: 0;
+        margin: 0;margin: 30px;
         margin-top: 20px;
         display: flex;
         flex-direction: row;
@@ -2935,13 +2990,18 @@ color: grey;
     }
     #remainderTime{
         border-radius: 60px;
-        width: 125px;
+        width: 159px;
         border: none;
         display: flex;
         font-size: 15px;
         height: 25px;
         margin-left: -2px;
         margin-top: 10px;
+    }
+    #remainderTime .material-icons{
+        font-size: 23px !important;
+        margin-top: 0px;
+        margin-left: 11px;
     }
     table td{
         padding-left: 10px;
