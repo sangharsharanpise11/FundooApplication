@@ -1,65 +1,52 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Display Selected HTML Table TR Values In Input Text</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <style>
-            table tr:not(:first-child){
-                cursor: pointer;transition: all .25s ease-in-out;
-            }
-            table tr:not(:first-child):hover{background-color: #ddd;}
+  <!DOCTYPE html>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <title>GridList</title>
+      </head>
+      <style>
+      .mainGrid{
+          display:flex;justify-content:flex-start;align-items:center;flex-direction:row
+          }
+      /* .myClass{
+          background-color:red;color:white;font-size:44px
+          } */
+     .mainGrid .card{
+         width:200px;border:1px solid gray;text-align:center;height:100px;border-radius:5px;margin:10px 10px 10px 0
+         }
+    .mainList{
+        display:flex;flex-direction:column;justify-content:center;align-items:center
+        }
+    .mainList .card{
+        width:600px;height:100px;border-radius:5px;border:1px solid gray;text-align:center;margin:10px 0
+        }
+    .card{
+        animation:bounceIn 2s;transition-property:opacity;transition-duration:1s;transition-timing-function:ease-in
+        }
+        @keyframes bounceIn{
+            0%{transform:scale(0.1);opacity:0;}
+            100%{transform:scale(1);opacity:1;}
+        }
         </style>
-        
-    </head>
     <body>
-       
-        First Name:<input type="text" name="fname" id="fname"><br><br>
-          
-          <table id="table" border="1">
-            <tr>
-                <td>sangharsha</td>
-            </tr>
-            
-            <tr>
-                <td>satish</td>>
-            </tr>
-            
-            <tr>
-                <td>kishore</td>
-            </tr>
-            
-            <tr>
-               <td>iam</td>
-            </tr>
-            
-            <tr>
-                <td>wife</td>
-            </tr>
-            
-            <tr>
-                <td>me</td>
-           </tr>
-        </table>
-        
-        <script>
+    <button id="view">changeView</button>
+    <div id='main' class="mainGrid"></div>
+ </body>
+ <script>
+   ;let ele='';
+   for(let i=0;i<10;i++){
+       ele+='<div class="card" id="foo" >hello world!</div>' 
+    }
+    ;document.getElementById('main').innerHTML=ele;
     
-                var table = document.getElementById('table');
-                
-                for(var i = 1; i < table.rows.length; i++)
-                {
-                    table.rows[i].onclick = function()
-                    {
-                         //rIndex = this.rowIndex;
-                         document.getElementById("fname").value = this.cells[0].innerHTML;
-                        //  document.getElementById("lname").value = this.cells[1].innerHTML;
-                        //  document.getElementById("age").value = this.cells[2].innerHTML;
-                    };
-                }
-    
-         </script>
-        
-    </body>
+    $('#view').click(function(){
+        console.log('i am click',$('#main').hasClass('mainGrid'));
+        if($('#main').hasClass('mainGrid')){
+            $('#main').removeClass('mainGrid').addClass('mainList')
+        }
+        else{
+            $('#main').removeClass('mainList').addClass('mainGrid')
+        }
+        });
+    </script>
 </html>
-

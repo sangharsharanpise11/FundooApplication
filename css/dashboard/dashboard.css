@@ -46,7 +46,12 @@
 body{
     height: 100%;
     width: 100%;
-    background-color: ghostwhite;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    display: grid;
   }
 span{
     margin-left: 25px;
@@ -216,7 +221,7 @@ a {
     width: 100% !important;
     display: flex;
  }
- .createNote{
+ /* .createNote{
     background-color: white;
     width: 450px;
     border-radius: 5px;
@@ -227,7 +232,7 @@ a {
     height: 180px;
     border-style: solid;
     border-color: lightgrey;
- }
+ } */
  .material-icons{
     font-size: 18px !important;
  }
@@ -1444,6 +1449,10 @@ border: ridge;position: absolute;
      #a1, #a2{
         margin-left: -194px;
     }
+    .data{
+        margin-left: 170px;
+        padding-left: 90px;
+    }
     .pickData {
         float: left;
     margin-right: 135px;
@@ -1565,29 +1574,37 @@ border: ridge;position: absolute;
         float: left;
         margin-top: -11px;
     }
-    .keepLogo {
+    .keepLogo { 
         vertical-align: middle;
         border-style: none;
         margin-left: 15px;
         margin-top: 6px;
     }
     .navbar{
-        height: 65px !important;
-        width: 1040px;
+        height: 90px !important;
+        width: 1238px;
+        position: fixed;
+        min-height: 50px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
     }
     #flip{
         display: flex;
         padding: 5px;
+        border: ridge;
         text-align: left;
-        background-color: #e5eecc;
+        background-color: white;
         border-radius: 5px;
         justify-content: space-between;
-        height: 70px;
-        margin-top: -140px;
-        width: 660px;
-        margin-left: -23px;
-        font-size: 18px;
         height: 50px;
+        margin-top: -140px;
+        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 1px 2px 1px 2px;
+        width: 600px;
+        border-color: lightgrey;
+        margin-left: 50px;
     }
     .cal{
         margin-top: -15px;
@@ -1617,7 +1634,7 @@ border: ridge;position: absolute;
     justify-content: space-between;
     width: 115px;
     margin-top: 25px;
-    margin-left: 535px;
+    margin-left: 445px;
     }
     .threeIcons1{
         width: 175px;
@@ -1631,11 +1648,12 @@ border: ridge;position: absolute;
         color: black;
     }
     .menu {
-        margin-left: 21px;
+        margin-left: 50px;
         font-size: 25px !important;
     }     
     .middleIcon{
-        font-size: 30px !important;
+        font-size: 40px !important;
+        margin-top: 1px;
     }   
    
     .navbar{
@@ -1648,15 +1666,14 @@ border: ridge;position: absolute;
 
     .createNote {
         background-color: white;
-        width: 804px;
+        width: 700px;
         border-radius: 5px;
+        box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
         grid-row-gap: 15px;
-        margin-top: 30px;
-        margin-left: -15px;
-        height: 247px;
-        border-style: solid;
-        border-color: lightgrey;
+        margin-top: 35px;
+        margin-left: 35px;
+        height: 180px;
     }
     input[type=text] {
         width: 70%;
@@ -1717,7 +1734,8 @@ border: ridge;position: absolute;
         align-items: flex-start;
         place-content: initial;
         width: 700px;
-        margin-left: -208px;
+        justify-content: center;
+        margin-left: -100px;
         
     }
     .card {
@@ -1844,13 +1862,34 @@ height: 76px;position: absolute;
 z-index: 34 !important;
 border: ridge;
 }
-#dateAndTime{
+#dateAndTime,#labelName{
     font-size: 15px;
 color: grey;
+}
+.dataBody{
+    width: 100%;
+    height: 100%;
+    
+}
+.sideBody{
+    height: 100% !important;
+    width: 100% !important;
 }
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
+    .remAndLabel {
+        justify-content: start;
+        display: flex;
+        width: 314px;
+        margin-left: -38px;
+    }
+    .remainderTime{
+        margin-left: 10px;
+    }
+      #a1 , #a2{
+          margin-left: 105px;
+      }
     input[type=text] {
         width: 80%;
         padding: 12px 20px;
@@ -1860,7 +1899,7 @@ color: grey;
         font-weight: 600;
         color: gray;
     }
-    #dateAndTime{
+    #dateAndTime,#labelName{
         font-size: 15px;
     color: grey;
     }
@@ -1870,7 +1909,7 @@ color: grey;
         flex-wrap: wrap;
         align-items: flex-start;
         place-content: initial;
-        /* width: 1270px; */
+        justify-content: center;
     }
     #addCollaborator{
         content: "\e013";
@@ -2012,10 +2051,9 @@ color: grey;
     .card {
         width: 270px;
     background-color: white;
-    height: 170px;
+    height: 220px;
     width: 285px;
     background-color: white;
-    height: 180px;
     border-radius: 6px;
     margin: 5px;
     border-radius: 6px;
@@ -2103,16 +2141,20 @@ color: grey;
     #flip{
         display: flex;
         padding: 5px;
+        border: ridge;
         text-align: left;
-        background-color: #e5eecc;
+        background-color: white;
         border-radius: 5px;
         justify-content: space-between;
-        height: 60px;
-        margin-top: -145px;
-        width: 680px;
-        margin-left: 25px !important;
-        font-size: 20px;
-        font-weight: 400;
+        height: 50px;
+        margin-top: -140px;
+        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 1px 2px 1px 2px;
+        width: 600px;
+        border-color: lightgrey;
+        margin-left: 50px;
     }
     .middleIcon {
         font-size: 39px !important;
@@ -2142,19 +2184,18 @@ color: grey;
         width: 110px;
     display: flex;
     justify-content: space-around;
-    margin-top: 18px;
+    margin-top: 10px;
     }
     .createNote {
         background-color: white;
         width: 700px;
         border-radius: 5px;
+        box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
         grid-row-gap: 15px;
         margin-top: 35px;
         margin-left: 35px;
         height: 180px;
-        border-style: solid;
-        border-color: lightgrey;
     }
     #unpin {
         width: 25px;
@@ -2192,13 +2233,22 @@ color: grey;
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
+    .sideBody {
+        height: 100% !important;
+        width: 100% !important;
+        display: flex;
+    }
+    .dataBody {
+        width: 100%;
+        height: 100%;
+    }
     .collaboratorContent{
         border-bottom: 10px !important;
     width: 700px;
     border-radius: 10px;
     height: 265px;
     }
-    #dateAndTime{
+    #dateAndTime ,#labelName{  
         font-size: 15px;
     color: grey;
     }
@@ -2252,12 +2302,12 @@ color: grey;
     font-size: 20px;
     margin-left: 53px !important;
     }
-    #unpin {
-        width: 35px;
-        height: 30px;
-        margin-top: 10px;
-        z-index: 1;
-        float: right;
+    #unpin ,#pin{
+        width: 25px;
+    height: 22px;
+    margin-left: 280px;
+    margin-top: 10px;
+    z-index: 1;
     }
     .createNote .noteIcon{
             padding-right: 10px;
@@ -2298,14 +2348,20 @@ color: grey;
     #flip {
         display: flex;
         padding: 5px;
+        border: ridge;
         text-align: left;
-        background-color: #e5eecc;
+        background-color: white;
         border-radius: 5px;
         justify-content: space-between;
         height: 50px;
-        margin-top: -146px;
+        margin-top: -140px;
+        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 1px 2px 1px 2px;
         width: 600px;
-        margin-left: 240px;
+        border-color: lightgrey;
+        margin-left: 240px
     }
     .head{
         color: gray;
@@ -2316,9 +2372,9 @@ color: grey;
         height: 25px; 
     }
     .card {
-        width: 300px;
+        width: 320px;
         background-color: white;
-        height: 235px;
+        height: 220px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
@@ -2414,6 +2470,7 @@ color: grey;
         align-items: flex-start;
         place-content: initial;
         width: 1270px;
+        justify-content: center;
     }
     .fa-paint-brush, .fa-image {
         font-size: 22px;
@@ -2513,7 +2570,15 @@ color: grey;
         margin-left: 27px;
         margin-top: 10px;
     }
-    
+    .remAndLabel {
+        justify-content: space-around;
+    display: flex;
+    width: 314px;
+    margin-left: -25px;
+    }
+      #a1 , #a2{
+          margin-left: 105px;
+      }
 }
 
 /********************************************************************/
@@ -2525,9 +2590,9 @@ color: grey;
         word-wrap: break-word;
         word-break: break-word;
       }
-    #dateAndTime{
+    #dateAndTime ,#labelName{
         font-size: 15px;
-    color: grey;
+        color: grey;
     }
     #cars {
         border: none;
@@ -2642,7 +2707,6 @@ color: grey;
         height: 50px;
         margin-top: -140px;
         box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
-       /* / box-shadow: inset 2px 3px -3 rgba(4,-2,6,3.1), inset 6 -7px 5 rgba(0,0,4,5.07); */
         background-clip: padding-box;
         border: solid transparent;
         border-width: 1px 2px 1px 2px;
@@ -2893,6 +2957,7 @@ color: grey;
         flex-wrap: wrap;
         align-items: flex-start;
         place-content: initial;
+        justify-content: center;
         width: 1270px;
     }
     #flip .head  {
@@ -2945,6 +3010,9 @@ color: grey;
     display: flex;
     display: flexbox;
     width: 275px;
+      }
+      #a1 , #a2{
+          margin-left: 105px;
       }
 }
 
