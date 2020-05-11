@@ -1337,6 +1337,148 @@ $(document).on("click" , ".gridView" , function(e) {
   var resWidth = screen.width
 });
 
+/**********  create note functionality **********************************************************************/ 
+function insrt(color) {
+  $('.createNote').css({"background-color": color});// $('#colorList').val());
+}
 
+  $(document).on("click" , "#reminderData" , function(e) { 
+    console.log("hiii");
+    date=$('#reminderDate').val();
+    console.log("date is",date);
+  });
+
+  $(document).on("click" , "#unpincreateNote" , function(e) { 
+    value=true;
+     console.log("isPined ",value);
+    }); 
+
+  $(document).on("click" , "#archieveCreateNote" , function(e) { 
+      value=true;
+      console.log("isArchived ",value);
+  });   
+    
+  
+  // $("#newPerson").keyup(function ()
+  // {
+  //   var searchUser={
+  //     searchWord :$("#newPerson").val()
+  //   }
+  //   console.log("@",$("#newPerson").val)
+
+  //   /*************************** search userlist *****************************************/ 
+  //   $.ajax({
+  //       url: "http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",
+  //       data:  JSON.stringify(searchUser), 
+  //       type: "POST",
+  //       headers: { 'Authorization': localStorage.getItem('token') },
+  //       contentType: "application/json;charset=utf-8",
+  //       success: function(result)
+  //       {
+  //       users=result.data.details;
+  //       console.log("users = ",users);
+                 
+  //         /** display users ****/  
+  //      var wrapper = document.getElementById("collabUser");
+           
+  //      var myHTML = ''; 
+  //      for (var i = 0; i < users.length; i++)
+  //       {  
+  //         myHTML +='<tr><td>'+users[i].email+'</td></li>'; 
+  //       }
+  //        wrapper.innerHTML = myHTML
+
+  //        var table = document.getElementById('collabUser');
+  //        console.log("length === > ",table.rows.length);
+  //        var   newCollaborator;
+  //         for(var i = 1; i < table.rows.length; i++)
+  //         {
+  //             table.rows[i].onclick = function()
+  //             { 
+  //               newCollaborator =  this.cells[0].innerHTML;
+  //               document.getElementById("newPerson").value = this.cells[0].innerHTML;
+  //               console.log("fname = > ",newCollaborator);
+  //               console.log("user is arr = ",users);
+                
+  //               var res = users.find(({email}) => email === newCollaborator );
+  //               console.log("res = >",res);   
+                 
+  //               $(document).on("click" , "#addCollaborator" , function(e) {   
+                                  
+  //                 var x = document.getElementById("snackbarCollaborator")
+  //                  x.className = "show";
+
+  //                  $('.addCollaborator').css({"dispaly":" none"});
+
+
+                   
+  //               });
+  //              }//table
+  //           } //for
+  //         }
+  //       });//ajax
+  //     });
+    
+                  
+                
+      $("#closeCreateNote").click(function () {
+      console.log("in button");
+       
+      const createNoteObj={
+        title:$('#title').val(),
+        description:$('#desc').val(),
+        // isPined:$('#desc').val(),
+        // isArchived:$('#archieveCreateNote').val(),
+        color:$('#colorList .color').attr('value'),
+        reminder : $('#reminderDate').val()
+     
+      } 
+      console.log("createNoteObject =>  ",createNoteObj);
+      
+       if ( $('#title').val() != 0 && $('#desc').val() != 0)
+      {
+         var token= localStorage.getItem("token");
+         console.log("token =>",token);
+                  
+         var x = document.getElementById("snackbarNoteCreate")
+         x.className = "show";
+      
+         $.ajax({
+          url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/addNotes",
+          data:  JSON.stringify(createNoteObj),  
+          type: "POST",
+          headers: {
+             'Authorization': localStorage.getItem('token')
+           },
+          contentType: "application/json;charset=utf-8",
+          success: function (status) 
+          {
+             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
+            // resetForm();
+            // location.reload(true);
+          },
+            error: function (errorMessage)
+             {
+               console.log("Error", errorMessage);
+               alert("errorMessage==>",errorMessage.responseText);
+             }
+         });
+          return true;
+       } else 
+       {
+          alert("Please Fill Correctly");
+          return false;
+       }
+ });
+    
+      function resetForm(){
+      document.getElementById("title").value="";
+      document.getElementById("desc").value="";
+      }
+      
+     
+     
+ 
+ 
 
  

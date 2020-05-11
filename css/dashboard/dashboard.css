@@ -375,7 +375,7 @@ height: 200px;
 .data{
     margin-left: 170px;
 }
-#unpin, #pin {
+#unpin, #pin,#unpincreateNote {
     width: 25px;
     height: 22px;
     margin-left: 255px;
@@ -2669,14 +2669,14 @@ color: grey;
     .searchBox input[type=text]{
         font-weight: 500;    font-size: 20px;
     }
-    #unpin {
+    #unpin , #unpincreateNote{
         width: 25px;
         height: 22px;
         margin-left: 255px;
         margin-top: 10px;
         z-index: 1;
     }
-    .createNote #unpin {
+    .createNote #unpincreateNote {
         width: 25px;
         height: 22px;
         margin-right: -126px;
@@ -2897,7 +2897,7 @@ color: grey;
     }
     .footer-collab {
         background-color: lightgrey;
-        margin-top: -50px;
+        margin-top: 10px;
         height: 50px;
         position: fixed;
         border-radius: 4px;
