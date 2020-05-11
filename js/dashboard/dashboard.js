@@ -227,18 +227,20 @@ $(document).ready(function(){
           var labelName=notes[i].noteLabels;
           console.log("*** LabelName = ",labelName);
           
-          var wrapper = document.getElementById("labelName");
-          var myHTML = '';
-          for(var i=0;i<labelName.length;i++)
-          {
-            myHTML +='labelName.label';
-          } 
+          // var wrapper = document.getElementById("labelName");
+          // var myHTML = '';
+           //for(var i=0;i<labelName.length;i++)
+           //{
+          //  console.log(labelName[i].label);
+            
+          //   myHTML +='<button class="button remainderTime">'+labelName.label+'</button>';
+          // } 
 
-          if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].reminder.length > 0 && notes[i].noteLabels.length > 0 &&  notes[i].isDeleted === false)
+          if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].reminder.length > 0  &&  notes[i].isDeleted === false)
           {
-            myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/newImagePin.svg" id="pin" ><div class="card-body"><div class="info" style="color: black;"><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><div class="remAndLabel"><button class="button remainderTime" id="remainderTime"><i class="far fa-clock" style="font-size:18px;color:grey;"></i><span id="dateAndTime">'+newReminderDate+'</span></button> <button class="button remainderTime" id="remainderTime"></i><span id="labelName">'+labelName+'</span></button></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item"id="addLabel">Add Label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
+            myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/newImagePin.svg" id="pin" ><div class="card-body"><div class="info" style="color: black;"><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><div class="remAndLabel"><button class="button remainderTime" id="remainderTime"><i class="far fa-clock" style="font-size:18px;color:grey;"></i><span id="dateAndTime">'+newReminderDate+'</span></button><div class="labelName" id="labelName"></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item"id="addLabel">Add Label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
           }
-         else if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].reminder.length === 0 && notes[i].noteLabels.length === 0 &&  notes[i].isDeleted === false)
+         else if(notes[i].isPined === true && notes[i].isArchived === false && notes[i].reminder.length === 0  &&  notes[i].isDeleted === false)
           {
             myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/newImagePin.svg" id="pin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"  style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item" id="addLabel">Add label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
           }
@@ -258,13 +260,13 @@ $(document).ready(function(){
           var newRemDate=new Date(notes[i].reminder);
           newReminderDate=thisMonth+" "+newRemDate.getDate()+","+newRemDate.getHours()+":"+newRemDate.getMinutes();
          
-          var labelName=notes[i].noteLabels.label;
-          if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder.length > 0 && notes[i].noteLabels.length > 0 && notes[i].isDeleted === false)
+          var labelName=notes[i].noteLabels;
+
+          if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder.length > 0 &&  notes[i].isDeleted === false)
           {
-          var labelName=notes[i].noteLabels.label;
-          myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><div class="remAndLabel"><button class="button remainderTime" id="remainderTime"><i class="far fa-clock" style="font-size:18px ;color:grey;"></i><span id="dateAndTime">'+newReminderDate+'</span></button> <button class="button remainderTime" id="remainderTime"></i><span id="dateAndTime">'+labelName+'</span></button></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"   style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu lastDropdown" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item" id="addLabel>Add label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
+            myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><div class="remAndLabel"><button class="button remainderTime" id="remainderTime"><i class="far fa-clock" style="font-size:18px ;color:grey;"></i><span id="dateAndTime">'+newReminderDate+'</span></button><div class="labelName" id="labelName"></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"   style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu lastDropdown" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item" id="addLabel>Add label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
           }
-          else if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder.length === 0 && notes[i].noteLabels.length === 0 && notes[i].isDeleted === false)
+          else if(notes[i].isPined === false && notes[i].isArchived === false && notes[i].reminder.length === 0 &&  notes[i].isDeleted === false)
           {
            myHTML +='<div style=background-color:'+notes[i].color+' class="card" id='+[i]+'><img src="/images/unpinnnn.png" id="unpin" ><div class="card-body"><div class="info" style="color: black; "><div class="tit" id="tit"><span class="tite">'+notes[i].title+'</span></div><div id="desc" class="desc" style="margin-top: 10px;"><span class="descr">'+notes[i].description+'</span></div></div><ul class="noteIcon" ><li class="icon-item"><i class="material-icons"  id="remainder"  data-toggle="modal" data-target="#myRemindModal">add_alert</i></li><li class="icon-item"><i class="material-icons" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i></li> <li class="icon-item dropdown"><i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"   style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><i class="far fa-image" id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archieve.png" class="archive"></i></li><li class="icon-item dropdown" ><i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i><ul class="dropdown-menu lastDropdown" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item" id="addLabel">Add Label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></div></div></div>';
           }
@@ -1315,7 +1317,7 @@ $(document).on("click" , ".signout" , function(e) {
 /*********** grid view list ******************************************/ 
 $(document).on("click" , ".middleIcon" , function(e) { 
   console.log("in midleicon");
-  $(".midIcon").html('<i class="material-icons gridView" style="font-size:36px">widgets</i>');
+  $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
 
   $(".card").css({"width": "600px"})
   $("#a1, #a2").css({"margin-left": "255px"})
@@ -1335,89 +1337,6 @@ $(document).on("click" , ".gridView" , function(e) {
   var resWidth = screen.width
 });
 
-// width: 290px;
-//     background-color: white;
-//     height: 220px;
-//     border-radius: 6px;
-//     margin: 5px;
-//     border-radius: 6px;
-//     margin-left: 15px;
-// $(document).ready(function(){
-//   $("#note").click(function(){
-//       $(".createNote").css("display","block")
-//     $("#note").css("display","none");
-    
-//   });
-// });
-  // $(".createNote").css({"background-color": "white","width": "825px","border-radius": "5px","display": "grid",
-  //   "grid-row-gap": "15px"," margin-top": "90px","margin-left": "240px","height": "165px","border-style": "solid",
-  // "border-color":"lightgrey","display": "flex","justify-content": "space-between","margin-bottom": "13px","margin-top": "11px !important",
-  //   "margin-left": "140px","padding-right": "170px"});
-  // if(window.matchMedia('screen and (min-width: 426px) and (max-width: 768px)')){
-  //  console.log("tablet");
-  // }
-  // else if(window.matchMedia('screen and (min-width: 709px) and (max-width: 1024px)')){
-  //   console.log("display");
-  // }
-  // else if(window.matchMedia('screen and (min-width: 1025px) and (max-width: 1440px)')){
-  //   console.log("l");
-  // }
-  // else if(window.matchMedia('screen and (min-width: 1441px)')){
-  //   console.log("looooooooooooong");
-  // }
-  // else{
-  //   console.log("nothing");
-  // }
-  //checkScreen();
 
-
-// document.addEventListener('DOMContentLoaded',init);
-// function init(){
-//   var query=window.matchMedia('(min-width :601px)');
-//   if(query.matches){
-//     document.getElementsByName('card').style.color="red";
-//   }
-//   else{
-//     document.querySelector('span').style.display='none';
-//   }
-// }
- 
-// function checkScreen(){
-//   console.log("in check screen");
-  
-//   const checkTablet =window.matchMedia('screen and (min-width: 426px) and (max-width: 768px)');
-//   const checkDesktop =window.matchMedia('screen and (min-width: 709px) and (max-width: 1024px)');
-//   const checkLDesktop =window.matchMedia('screen and (min-width: 1025px) and (max-width: 1440px)');
-//   const checkLongDesktop =window.matchMedia('screen and (min-width: 1441px)');
-//   console.log("***********");
-
-//   checkTablet.addEventListener("change",e =>{
-//     console.log("in tablet");
-//     if(e.matches) {
-//       console.log("tablet matched");
-//        //document.getElementById("myElement").style.cssText = "display: block; position: absolute";
-//        document.getElementsByClassName('card').style.cssText = "width:500px; background-color:blue";
-//     }
-//   });
-
-//   checkDesktop.addListener(function(e){
-//     if(e.matches) {
-//         console.log('DESKTOP');
-//     }
-//   });
-  
-   
-//   checkLDesktop.addListener(function(e){
-//     if(e.matches) {
-//         console.log('LDesktop');
-//     }
-//   });
-
-//   checkLongDesktop.addListener(function(e){
-//     if(e.matches) {
-//         console.log('longDesktop');
-//     }
-//   });
-// }
 
  

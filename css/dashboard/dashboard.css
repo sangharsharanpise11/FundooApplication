@@ -1443,6 +1443,15 @@ border: ridge;position: absolute;
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
+     .createNote input[type=text] {
+        width: 70%;
+        border: none; 
+        outline: none;
+        font-weight: 500;
+        color: gray;
+        margin-top: -12px;
+        font-size: 20px;
+    }
      table td{
         padding-left: 10px;
        }
@@ -1666,7 +1675,7 @@ border: ridge;position: absolute;
 
     .createNote {
         background-color: white;
-        width: 700px;
+        width: 760px;
         border-radius: 5px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
@@ -1812,7 +1821,7 @@ border: ridge;position: absolute;
 }
 .createNote .noteIcon {
     padding-right: 10px;
-    margin-top: 9px;
+    margin-top: -23px;
     display: flex;
     margin-left: -25px;
     margin-right: 355px;
@@ -1890,11 +1899,12 @@ color: grey;
       #a1 , #a2{
           margin-left: 105px;
       }
-    input[type=text] {
+    .createNote input[type=text] {
         width: 80%;
         padding: 12px 20px;
         margin: 8px 0;
         border: none;
+        font-size: 15px;
         outline: none;
         font-weight: 600;
         color: gray;
@@ -2070,7 +2080,7 @@ color: grey;
         width: fit-content;
         height: 100%;
         margin-left: -115px;
-        margin-top: 10px;
+        margin-top: 20px;
         display: flex;
         align-items: flex-start;
         place-content: initial;
@@ -2188,14 +2198,14 @@ color: grey;
     }
     .createNote {
         background-color: white;
-        width: 700px;
+        width: 680px;
         border-radius: 5px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
         grid-row-gap: 15px;
         margin-top: 35px;
         margin-left: 35px;
-        height: 180px;
+        height: 165px;
     }
     #unpin {
         width: 25px;
@@ -2308,13 +2318,14 @@ color: grey;
     margin-left: 280px;
     margin-top: 10px;
     z-index: 1;
+    float: right;
     }
-    .createNote .noteIcon{
-            padding-right: 10px;
-    margin-top: -31px;
-    display: flex;
-    margin-left: -7px;
-    margin-right: 550px;
+    .createNote .noteIcon {
+        padding-right: 10px;
+        margin-top: -32px;
+        display: flex;
+        margin-left: -9px;
+        padding-right: 266px;
     }
     .keepLogo {
         vertical-align: middle;
@@ -2383,8 +2394,9 @@ color: grey;
        #display {
         width: fit-content;
         height: 100%;
-        margin-left: -115px;
-        margin-top: 10px;
+        margin-right: 0;
+        margin: 0;
+        margin-top: 20px;
         display: flex;
         align-items: flex-start;
         place-content: initial;
@@ -2404,15 +2416,14 @@ color: grey;
     }
     .createNote {
         background-color: white;
-    width: 950px;
-    border-radius: 5px;
-    display: grid;
-    grid-row-gap: 15px;
-    margin-top: 30px;
-    margin-left: 85px;
-    height: 248px;
-    border-style: solid;
-    border-color: lightgrey;
+        width: 680px;
+        border-radius: 5px;
+        display: grid;
+        grid-row-gap: 15px;
+        margin-top: 30px;
+        margin-left: 220px;
+        height: 165px;
+        box-shadow: 0 4px 11px rgba(0,0,0,0.20);
     }
     .threeIcons1{
         width: 100px;
@@ -2435,7 +2446,7 @@ color: grey;
         margin-left: 20px;    padding-right: 170px;
     }
     #desc {
-        margin-top: 9px !important;
+        margin-top: -11px !important;
         }
     .tit, .desc {
         border: none;
@@ -2579,6 +2590,17 @@ color: grey;
       #a1 , #a2{
           margin-left: 105px;
       }
+      .createNote input[type=text] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 18px;
+        margin-top: -24px;
+    }
 }
 
 /********************************************************************/
@@ -2657,9 +2679,10 @@ color: grey;
     .createNote #unpin {
         width: 25px;
         height: 22px;
-        margin-left: 780px;
+        margin-right: -126px;
         margin-top: 10px;
         z-index: 1;
+        float: right;
     }
     .keepLogo {
         vertical-align: middle;
@@ -2736,8 +2759,9 @@ color: grey;
     #display {
         width: fit-content;
         height: 100%;
-        margin-left: -35px;
-        margin-top: 10px;
+        margin-right: 0;
+        margin: 0;
+        margin-top: 20px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -2760,20 +2784,18 @@ color: grey;
     }
     .createNote {
         background-color: white;
-        width: 825px;
+        width: 680px;
         border-radius: 5px;
-        display: grid;
+        display: grid;box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         grid-row-gap: 15px;
         margin-top: 90px;
         margin-left: 240px;
         height: 165px;
-        border-style: solid;
-        border-color: lightgrey;
         display: flex;
         justify-content: space-between;
         margin-bottom: 13px;
         margin-top: 11px !important;
-        margin-left: 20px;
+        margin-left: 230px;
         padding-right: 170px;
     }
     .close {
