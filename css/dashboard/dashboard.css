@@ -2,7 +2,10 @@
     font-size: 16px;
     border: none;
   }
-  
+  .fa-pencil-alt:before {
+    content: "\f303";
+    color: black;
+}
 .dropup {
     position: relative;
     display: inline-block;
@@ -337,7 +340,7 @@ ul {
 }
 input[type=text] {
 width: 70%;
-border: none;
+border: none;    font-size: 15px;
 outline: none;
 font-weight: 600;
 color: gray;
@@ -749,27 +752,7 @@ border: ridge;position: absolute;
     .today h6 span{
         font-size: 15px !important;color: black;
     }
-    /* .dropdown-menu .show{
-        position: absolute;
-        height: 350px;
-    width: 355px !important;
-    margin-left: -280px;
-    } */
-/* 
-    ul .show .dropdown-item {
-        display: block;
-        width: 100%;
-        padding: .25rem 1.5rem;
-        clear: both;
-        font-weight: 400;
-        color: #212529;
-        text-align: inherit;
-        white-space: nowrap;
-        background-color: transparent;
-        border: 0;
-        font-size: 50px;
-    } */
-  .info .tite, .descr {
+     .info .tite, .descr {
     font-size: 65px !important;
     color: black;
 }
@@ -934,16 +917,12 @@ border: ridge;position: absolute;
         margin-left: -98px;
         margin-right: 210px;
     }
-    /* .close{
-        font-size: 70px;
-        opacity: 1.25;
-        margin-top: -102px;
-        margin-right: 
-    } */
+
     .noteIcon{
         padding-right: 45px;
-        margin-top: 245px;
+        margin-top: 20px;
         display: flex;
+        /* position: fixed; */
         margin-left: -35px;
     }
     .color {
@@ -1006,22 +985,27 @@ border: ridge;position: absolute;
   
     .card {
         width: 270px;
-        background-color: white;
-        height: 170px;
-        width: 1000px;
-        background-color: white;
-        height: 595px;
-        border-radius: 6px;
-        margin: 5px;
-        border-radius: 6px;
-        margin-left: -250px;
+    background-color: white;
+    height: 170px;
+    width: 1000px;
+    background-color: white;
+    height: 645px;
+    border-radius: 6px;
+    margin: 5px;
+    border-radius: 6px;
+    margin-left: -250px;
     }
-    #unpin{
-        width: 100px;
-        height: 85px;
-        z-index: 1;
-        float: right;
-        margin-left: 885px;
+    #unpin, #pin{
+        width: 113px;
+        height: 76px;
+        margin-left: 1120px;
+        margin-top: 10px;
+    }
+    #unpincreateNote {
+        width: 113px;
+        height: 76px;
+        margin-left: 1150px;
+        margin-top: 10px;
     }
     .threeIcons1{
         list-style-type: none;
@@ -1081,6 +1065,31 @@ border: ridge;position: absolute;
         margin-left: 27px;
         margin-top: 10px;
     }
+    #unpin, #pin, #unpincreateNote {
+        width: 113px;
+        height: 76px;
+        margin-left: 903px;
+        margin-top: 10px;
+    }
+    .far .fa-click{
+            font-size: 78px;
+            color: grey;
+    }
+    .remainderTime span{
+        font-size: 48px;
+        margin-left: 25px;
+        color: black;
+    }
+    #remainderTime {
+        border-radius: 60px;
+        width: 465px;
+        border: none;
+        display: flex;
+        font-size: 15px;
+        height: 87px;
+        margin-left: 27px;
+        margin-top: 195px;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
@@ -1088,6 +1097,22 @@ border: ridge;position: absolute;
         position: relative;
         margin-left: 0px;
         margin-top: 10px;
+    }
+    a span {
+        width: 175px;
+        margin-left: 39px;
+        word-wrap: break-word;
+        color: black;
+        font-size: 35px !important;
+        word-break: break-word;
+    }
+    a .material-icons {
+        font-size: 45px !important;
+    }
+    #pinnedNotes, #unpinNotes {
+        display: grid;
+        align-items: flex-start;margin-left: 95px;
+        place-content: initial;
     }
     table  td{
         padding-left: 10px;
@@ -1214,11 +1239,11 @@ border: ridge;position: absolute;
     background-color: #e5eecc;
     border-radius: 5px;
     justify-content: space-between;
-    height: 70px;
+    height: 70px;        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
     margin-top: -150px;
-    width: 575px;
+    width: 780px;
     margin-left: -103px;
-    font-size: 30px;
+    font-size: 40px;
     }
     .cal{
         margin-top: -8px;
@@ -1245,13 +1270,13 @@ border: ridge;position: absolute;
 
     .threeIcons {
         margin-right: -135px;
-        list-style-type: none;
-        display: flex;
-        font-size: 22px !important;
-        justify-content: space-between;
-        width: 152px;
-        margin-top: 15px;
-        margin-left: 197px;
+    list-style-type: none;
+    display: flex;
+    font-size: 22px !important;
+    justify-content: space-between;
+    width: 152px;
+    margin-top: 15px;
+    margin-left: 350px;
     }
     .menu {
         margin-left: 20px;
@@ -1268,31 +1293,36 @@ border: ridge;position: absolute;
         min-height: 50px;
         margin-bottom: 20px;
         border: 1px solid transparent;
-        width: 745px !important;
+        width: 922px !important
     }
     .fas, .far {
         font-size: 30px;
     }
-
+    #unpincreateNote {
+        width: 32px;
+        height: 32px;
+        float: right;
+        z-index: 1;
+    }
     .createNote {
         background-color: white;
-        width: 710px;
-        border-radius: 5px;
-        display: grid;
-        grid-row-gap: 15px;
-        margin-top: 40px;
-        margin-left: -162px;
-        height: 247px;
-        border-style: solid;
-        border-color: lightgrey;
+    width: 770px;
+    border-radius: 5px;
+    display: grid;
+    grid-row-gap: 15px;
+    margin-top: 40px;
+    margin-left: -103px;
+    height: 247px;
+    border-style: solid;
+    border-color: lightgrey;
     }
     input[type=text] {
-        width: 70%;
-        border: none;
-        outline: none;
-        font-weight: 600;
-        color: gray;
-        font-size: 25px;
+           width: 70%;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: gray;
+    font-size: 23px;
     }
     #desc {
         margin-top: 9px !important;
@@ -1341,9 +1371,7 @@ border: ridge;position: absolute;
         width: 100%;
         height: 100%;
         margin-top: 10px;
-        display: flex;
-        /* flex-direction: row; */
-        /* flex-wrap: wrap; */
+        display: grid;
         align-items: flex-start;
         place-content: initial;
     }
@@ -1358,11 +1386,18 @@ border: ridge;position: absolute;
         height: 170px;
         width: 585px;
         background-color: white;
-        height: 260px;
+        height: 290px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
         margin-left: -317px;
+    }
+     #unpincreateNote {
+        width: 45px;
+        height: 37px;
+        margin-left: 533px;
+        margin-top: 10px;
+        z-index: 1;
     }
     .card #unpin{
         width: 40px;
@@ -1373,16 +1408,15 @@ border: ridge;position: absolute;
     }
     .card-body .noteIcon{
         padding-right: 35px;
-        margin-top: 22px;
-        margin-left: -10px;
+    margin-top: 73px;
+    margin-left: -10px;
     }
-    #unpin{
-        width: 32px;
-    height: 32px;
-    /* margin-left: 531px; */
-    /* margin-top: 10px; */
-    z-index: 1;
-    float: right;
+   #pin, #unpin{
+        width: 40px;
+        height: 30px;
+        margin-left: 515px;
+        margin-top: 10px;
+        z-index: 1;
     }
   .image{
     width: 55px;
@@ -1392,16 +1426,26 @@ border: ridge;position: absolute;
     margin-left: 17px;
   }
   .w3-sidebar {
-    margin-top: 80px;
-    font-size: -21px;
     font-weight: 500;
     display: grid;
-    grid-row-gap: -155px;
     padding: 20px;
     height: 100%;
-    width: 270px;
+    width: 400px;grid-row-gap: 40px;
     padding-bottom: 360px;
     font-size: 20px !important;
+}
+#labelName {
+    font-size: 29px;
+    text-align: left;
+    color: black;
+    margin-top: -80px;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+    width: 305px;
+    height: 85px;
+    font-size: 30px;
 }
 #mySidebar a:hover{
     background-color: lavender;
@@ -1446,11 +1490,11 @@ border: ridge;position: absolute;
 }
 #remainderTime{
     border-radius: 60px;
-    width: 125px;
+    width: 235px;
     border: none;
     display: flex;
     font-size: 15px;
-    height: 25px;
+    height: 35px;
     margin-left: 27px;
     margin-top: 10px;
 }
@@ -1459,6 +1503,10 @@ border: ridge;position: absolute;
     margin-top: 0px;
     margin-left: 11px;
 } 
+.remAndLabel{
+    margin-top: 34px;
+    margin-bottom: -30px;
+}
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
@@ -1511,8 +1559,7 @@ border: ridge;position: absolute;
         margin-left: -129px;
     }
     .collaboratorContent {
-        margin-left: 150px;
-        width: 423px;
+        width: 530px;height: 245px;
         margin-top: 160px;
     }
     .collaboratorContent .modal-title{
@@ -1520,8 +1567,10 @@ border: ridge;position: absolute;
         margin-left: -286px !important;
     }
     .footer-collab {
-        background-color: lightgrey;
-        margin-top: -7px;
+        height: 50px;
+        position: fixed;    margin-top: 9px;
+        border-radius: 4px;
+        width: 528px;
     }
     #ownerFullName{
         font-size: 14px;
@@ -1549,7 +1598,7 @@ border: ridge;position: absolute;
     .remainderContent{
         margin-left: 205px;
         margin-top: 75px;
-        width: 335px;
+        width: 335px;    height: 257px;
     }
     #cars {
         border: none;
@@ -1577,11 +1626,11 @@ border: ridge;position: absolute;
     }
     #remainderTime{
         border-radius: 60px;
-        width: 125px;
+        width: 170px;
         border: none;
         display: flex;
-        font-size: 15px;
-        height: 25px;
+        font-size: 20px;
+        height: 30px;
         margin-left: 27px;
         margin-top: 10px;
     }
@@ -1597,9 +1646,10 @@ border: ridge;position: absolute;
     }
     span {
         margin-left: 15px;
-        font-size: 15px;color: black;
-        word-wrap: break-word;
-        word-break: break-word;
+    font-size: 20px;
+    color: black;
+    word-wrap: break-word;
+    word-break: break-word;
     }
     li {
         float: left;
@@ -1619,30 +1669,38 @@ border: ridge;position: absolute;
         margin-bottom: 20px;
         border: 1px solid transparent;
     }
-    #flip{
-        display: flex;
+    #flip{ 
+           display: flex;
         padding: 5px;
-        border: ridge;
         text-align: left;
         background-color: white;
         border-radius: 5px;
         justify-content: space-between;
-        height: 50px;
+        height: 65px;
         margin-top: -140px;
         box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
         background-clip: padding-box;
         border: solid transparent;
         border-width: 1px 2px 1px 2px;
-        width: 600px;
+        width: 755px;
         border-color: lightgrey;
-        margin-left: 50px;
+        margin-left: -107px;;
+    }
+    #flip input[type=text] {
+        font-size: 20px;
+    }
+    .far .fa-clock{
+        font-size: 23px;
+        color: grey;
+        margin-top: 2px;
     }
     .cal{
         margin-top: -15px;
     }
     .app{
         margin-top: 10px;
-        margin-left: 25px;
+        margin-left: 25px;    font-size: 32px !important;
+
     }
     .navbar-nav {
         display: list-item;
@@ -1663,9 +1721,9 @@ border: ridge;position: absolute;
     display: flex;
     font-size: 22px !important;
     justify-content: space-between;
-    width: 115px;
-    margin-top: 25px;
-    margin-left: 445px;
+    width: 145px;
+    margin-top: 32px;
+    margin-left: 710px;
     }
     .threeIcons1{
         width: 175px;
@@ -1681,18 +1739,22 @@ border: ridge;position: absolute;
     .menu {
         margin-left: 50px;
         font-size: 25px !important;
-    }     
+    }  
+    .modal-footer h6{
+        margin-top: 10px;
+        margin-right: 180px;
+    }   
     .middleIcon{
         font-size: 40px !important;
-        margin-top: 1px;
+        margin-top: -7px;
     }   
    
     .navbar{
         height: 85px;
     }
     .fas, .far {
-        font-size: 20px;
-    margin-top: -12px;
+        font-size: 27px;
+        margin-top: -9px;
     }
 
     .createNote {
@@ -1703,7 +1765,7 @@ border: ridge;position: absolute;
         display: grid;
         grid-row-gap: 15px;
         margin-top: 35px;
-        margin-left: 35px;
+        margin-left: -16px;
         height: 180px;
     }
     input[type=text] {
@@ -1712,7 +1774,7 @@ border: ridge;position: absolute;
         outline: none;
         font-weight: 500;
         color: gray;
-        font-size: 25px;
+        font-size: 15px;
     }
     #desc {
         margin-top: -7px;
@@ -1722,7 +1784,7 @@ border: ridge;position: absolute;
         height: 25px; 
     }
     .material-icons {
-        font-size: 25px !important;
+        font-size: 28px !important;
     }
     .icons{
         display: flex;
@@ -1749,7 +1811,7 @@ border: ridge;position: absolute;
         width: 100%;
         height: 100%;
         margin-top: 10px;
-        display: flex;
+        display: grid;
         align-items: flex-start;
         place-content: initial;
     }
@@ -1760,33 +1822,35 @@ border: ridge;position: absolute;
     }
     #pinnedNotes, #unpinNotes {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        place-content: initial;
-        width: 700px;
-        justify-content: center;
-        margin-left: -100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    place-content: initial;
+    width: 760px;
+    justify-content: center;
+    margin-left: -115px;
         
     }
+    #a1, #a2 {
+        margin-left: -71px;
+    }
     .card {
-        width: 270px;
         background-color: white;
         height: 170px;
-        width: 330px;
-        height: 200px;
+        width: 350px;
+        min-width: 330;
+        height: 225px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
         margin-left: 15px;
     }
-    #unpin{
-        width: 30px;
-        height: 30px;
-        margin-left: 295px;
-        margin-top: 10px;
-        z-index: 1;
-        float: right;
+   #pin, #unpin{
+    width: 25px;
+    height: 22px;
+    margin-left: 310px;
+    margin-top: 10px;
+    z-index: 1;
     }
     .info {
         display: grid;
@@ -1794,8 +1858,8 @@ border: ridge;position: absolute;
         margin-top: -35px;
     }
   .image{
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 70%;
     margin-top: 7px;
     margin-left: 17px;
@@ -1849,7 +1913,7 @@ border: ridge;position: absolute;
 }
 .createNote .noteIcon {
     padding-right: 10px;
-    margin-top: -23px;
+    margin-top: -5px;
     display: flex;
     margin-left: -25px;
     margin-right: 355px;
@@ -1908,9 +1972,25 @@ color: grey;
     height: 100%;
     
 }
+ #unpincreateNote {
+    height: 22px;
+    z-index: 1;
+    float: right;
+}
 .sideBody{
     height: 100% !important;
     width: 100% !important;
+}
+.today {
+    display: grid;
+    justify-content: space-between;
+    margin-top: -34px;
+}
+.remainderContent .modal-footer {
+    padding: 15px;
+    margin-top: -22px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
 }
 }
 /********************************************************************/
@@ -1920,6 +2000,26 @@ color: grey;
         display: flex;
         width: 314px;
         margin-left: -38px;
+    }
+    .today{
+        display: grid;
+    justify-content: space-between;
+    margin-top: -19px;
+    }
+    .modal-footer h6{
+        margin-top: 10px;
+        margin-right: 150px;
+    }
+    .w3-sidebar{
+        margin-top: -15px !important;
+        font-weight: 500;
+    display: grid;
+    grid-row-gap: -64px !important;
+    padding: 20px;
+    font-size: 20px;
+    height: 100%;
+    width: 280px;
+    padding-bottom: 360px;
     }
     .remainderTime{
         margin-left: 10px;
@@ -2046,7 +2146,10 @@ color: grey;
     }
     .remainderContent{
         margin-left: 10px;
-    margin-top: 200px;
+        margin-top: 200px;
+        flex-direction: column;
+    width: 60%;
+    height: 265px;
     }
     .input-group .form-control {
         display: table-cell;
@@ -2159,6 +2262,13 @@ color: grey;
     .keepLogo {
         vertical-align: middle;
         border-style: none;
+    }
+    .today span {
+        margin-left: 89px;
+        color: black;
+        float: right;
+        word-wrap: break-word;
+        word-break: break-word;
     }
     span {
         margin-left: 2px;color: black;
@@ -2279,6 +2389,16 @@ color: grey;
     z-index: 1;
     float: right;
 }
+.remainderContent .modal-body {
+        margin-bottom: -29px;
+        position: relative;
+        padding: 15px;
+    }
+
+.remainderContent .modal-title{
+    font-weight: 600;
+    margin-left: -169px !important;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
@@ -2324,8 +2444,9 @@ color: grey;
     }
     .footer-collab {
         background-color: lightgrey;
-        margin-top: -50px;
+        margin-top: 28px;
         height: 50px;
+        position: fixed;
         border-radius: 10px;
     }
     #collabSaveBtn, #collabCancelBtn {
@@ -2606,9 +2727,13 @@ color: grey;
     }
     .today{
         display: grid;
-        justify-content: space-between;
-        margin-top: -42px;
+        justify-content: inherit;
+        margin-top: -44px;
+        font-size: 19px;
     }
+      .today h6{
+        font-size: 18px;
+      }
     .remainderContent .modal-footer h6{
         margin-right: 140px;
         margin-top: 14px;
@@ -2624,7 +2749,7 @@ color: grey;
     float: right;
     }
     .today h6:hover {
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
     #remainderTime{
         border-radius: 60px;
@@ -3011,11 +3136,7 @@ color: grey;
         font-weight: 600;
         margin-left: -219px !important;
     }
-    .today{
-        display: grid;
-        justify-content: space-between;
-        margin-top: -42px;
-    }
+    
     .remainderContent .modal-footer h6{
         margin-right: 140px;
         margin-top: 0px;
@@ -3031,7 +3152,7 @@ color: grey;
     float: right;
     }
     .today h6:hover {
-        background-color: lightgrey;
+        /* background-color: lightgrey; */
     }
     #pinnedNotes ,#unpinNotes{
         display: flex;
@@ -3095,6 +3216,20 @@ color: grey;
       }
       #a1 , #a2{
           margin-left: 105px;
+      }
+      .modalData .form-control {
+        width: 480px !important;
+        font-size: 19px;
+        padding-left: 0px;
+      }
+      .today{
+        display: grid;
+        justify-content: inherit;
+        margin-top: -44px;
+        font-size: 19px;
+    }
+      .today h6{
+        font-size: 18px;
       }
 }
 
