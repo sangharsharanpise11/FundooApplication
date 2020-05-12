@@ -710,15 +710,46 @@ border: ridge;position: absolute;
     }
     .collaboratorContent {
         margin-left: -9px;
-        width: 320px;
+        width: 315px;
     }
     .collaboratorContent .modal-title{
         font-weight: 600;
         margin-left: -200px !important;
     }
     .footer-collab {
-        background-color: lightgrey;
-        margin-top: -7px;
+        height: 50px;
+        position: fixed;
+        border-radius: 4px;
+        width: 313px;
+        display: flex;
+    }
+    .modal-content {
+        width: 98%;
+        height: 600px;
+        margin-top: 335px;
+        margin-left: 10px;
+    }
+    .modalData{
+        height: 460px;
+        display: grid;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    #updateData{
+        border: none;
+    font-size: 50px;
+    margin-top: -8px;
+    width: 142px;
+    }
+    .modalData input[type=text] {
+        width: 70%;
+        border: none;
+        height: 44px;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 60px;
     }
     #collabSaveBtn, #collabCancelBtn {
         font-size: 17px;
@@ -744,6 +775,7 @@ border: ridge;position: absolute;
         position: relative;
         margin-left: 0px;
         margin-top: 10px;
+        height: 265px;
     }
     .remainderContent .modal-title {
         font-weight: 600;
@@ -920,9 +952,8 @@ border: ridge;position: absolute;
 
     .noteIcon{
         padding-right: 45px;
-        margin-top: 20px;
+        margin-top: 120px;
         display: flex;
-        /* position: fixed; */
         margin-left: -35px;
     }
     .color {
@@ -1055,40 +1086,92 @@ border: ridge;position: absolute;
     table td{
         padding-left: 10px;
        }
-       #remainderTime{
-        border-radius: 60px;
-        width: 125px;
-        border: none;
-        display: flex;
-        font-size: 15px;
-        height: 25px;
-        margin-left: 27px;
-        margin-top: 10px;
-    }
-    #unpin, #pin, #unpincreateNote {
+      
+    #unpin, #pin {
         width: 113px;
         height: 76px;
         margin-left: 903px;
         margin-top: 10px;
+    }
+    #unpincreateNote{
+        float: right;
     }
     .far .fa-click{
             font-size: 78px;
             color: grey;
     }
     .remainderTime span{
-        font-size: 48px;
-        margin-left: 25px;
-        color: black;
+        font-size: 50px !important;
     }
     #remainderTime {
         border-radius: 60px;
-        width: 465px;
+        width: 530px;
         border: none;
         display: flex;
         font-size: 15px;
         height: 87px;
         margin-left: 27px;
         margin-top: 195px;
+    }
+    #remainderTime .material-icons{
+        margin-right: -78px;
+        margin-left: 34px;
+    }
+    a span {
+        width: 310px;
+        margin-left: 39px;
+        color: black;
+        font-size: 57px !important;
+    }
+    a .material-icons {
+        font-size: 90px !important;
+    }
+    .w3-sidebar {
+        font-weight: 500;
+        display: grid;
+        padding: 20px;
+        height: 100%;
+        width: 935px;
+        grid-row-gap: 40px;
+        padding-bottom: 360px;
+        font-size: 20px !important;
+    }
+    .labelData {
+        height: 80px;
+        width: 453px;
+        display: flow-root;
+        min-width: 40px;
+    }
+    #labelName {
+        font-size: 45px;
+        text-align: left;
+        color: black;
+        margin-top: -80px;
+    }
+    a {
+        color: #337ab7;
+    text-decoration: none;
+    width: 800px;
+    height: 101px;
+    font-size: 55px;
+    }
+    #mySidebar a:hover{
+        background-color: lavender;
+        color: black;  
+        text-decoration: none;
+        border-radius: 50px;
+    }
+    span{
+        font-size: 25px !important;color: black;
+    }
+    .today {
+        display: grid;
+    justify-content: space-between;
+    margin-top: -31px;
+    }
+   .modal-footer h6{
+        margin-right: 152px;
+        margin-top: 10px;
     }
 }
 /********************************************************************/
@@ -3115,7 +3198,7 @@ color: grey;
     }
     #remainderTime{
         border-radius: 60px;
-        width: 159px;
+        width: 180px;
         border: none;
         display: flex;
         font-size: 15px;
