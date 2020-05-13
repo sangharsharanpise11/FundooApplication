@@ -45,7 +45,7 @@
         <div class="input-group">
           <div class="searchBox">
             <i class="fa fa-search" style="margin: 16px;"></i>
-            <input type="text" class="center" placeholder="Search"/>
+            <input type="text"  id="searchNote" class="center" placeholder="Search"/>
           </div>
         </div>    
       </form>
@@ -318,9 +318,8 @@
                 </div>
            </div>
            <div class="newCollaborator">
-              <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
-              <input type="text" id="newPerson" type="button" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/><button class="glyphicon glyphicon-ok ok" id="addCollaborator"></button>
-             <!-- <ul id="collabUser" class="dropdown-menu elements" role="menu" aria-labelledby="newPerson"></ul> -->
+               <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
+               <input type="text" id="newPerson" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/><button class="glyphicon glyphicon-ok ok" id="addCollaborator"></button>
             </div>
             <table id="collabUser" class="elements" style="height: 200px; overflow-y: auto;"></table>
 

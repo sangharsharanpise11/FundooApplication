@@ -321,7 +321,7 @@ $(document).ready(function () {
               'Authorization': localStorage.getItem('token')
               },
            //contentType: "application/json;",
-           'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/x-www-form-urlencoded',
 
            success: function (result) {
            console.log("note update result ==>", result);
@@ -345,67 +345,6 @@ $(document).ready(function () {
    });
 });
 
-
-// $(document).ready(function(){
-// //   $("#updateData").click(function(){
-// //    alert("update  note");
-// //    console.log("update note");
-   
-// //     error_title = false;
-// //     error_desc = false;
-
-// //     check_title();
-// //     check_desc();
-
-// //    const updateNoteData={
-// //       title:$('.updateTitle').val(),
-// //       description:$('.updateTitle').val(),
-// //     };
-
-
-// //     title=$('.updateTitle').val();
-// //     description=$('.updateTitle').val();
-
-// //     console.log("title=",title);
-// //     console.log("desc=",description);
-// //     console.log(updateNoteData);
-
-
-// // if ( error_title != false && error_desc != false)
-// // {
-// //    var token= localStorage.getItem("token");
-// //    console.log("token =>",token);
-// //    console.log("notes data ",updateNoteData);
-   
-// //    $.ajax({
-// //     url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/updateNotes",
-// //     data:  JSON.stringify(updateNoteData),  
-// //     type: "POST",
-// //     headers: {
-// //        'Authorization': localStorage.getItem('token')
-// //        },
-// //     contentType: "application/json;charset=utf-8",
-// //     success: function (result) {
-// //     console.log("note update result ==>", result);
-
-     
-// //       console.log("id============>", result.id);
-// //       alert("note update Successfull");
-// //       resetForm();
-// //       location.reload(true);       },
-// //       error: function (errorMessage) {
-// //       console.log("Error", errorMessage);
-// //       alert("errorMessage==>",errorMessage.responseText);
-// //       }
-// //    })
-// //     return true;
-// //  } else {
-// //     alert("Please Fill Correctly");
-// //     return false;
-// //  }
-// // });
-// // });
-// });
 
 // /********************* delete note **********************************************************/ 
 $(document).on("click" , "#deleteNote" , function(e) { 
@@ -825,9 +764,10 @@ $(document).on("click" , "#collaborator" , function(e) {
   console.log("data is :",data);
 
   var users=[];
- 
-  $("#newPerson").keyup(function ()
-  {
+
+  $("#newPerson").keyup(function (){
+    console.log("in keyup");
+    
     var searchUser={
       searchWord :$("#newPerson").val()
     }
@@ -887,7 +827,8 @@ $(document).on("click" , "#collaborator" , function(e) {
                           success: function (result) 
                           {
                             console.log("result =",result);
-                             if(result.statusCode === 200){
+                             if(result.statusCode === 200)
+                             {
                               console.log("success");
                               setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
                               location.reload(true);
@@ -897,15 +838,14 @@ $(document).on("click" , "#collaborator" , function(e) {
                           {
                            console.log("Error", errorMessage);
                           }
-                        });
-                  
-                });
-              };
-          }    
-      }
-     });
-  });
- });
+                        });//ajax
+                  });//addColl
+              }//table
+          }  //for  
+      }//succ
+     });//ajax
+  });//keyup
+ });//coll
 
 /**************************************** Label create ***********************************************************************/ 
   $(function() {
@@ -1438,70 +1378,7 @@ function insrt(color) {
       console.log("isArchived ",value);
   });   
     
-  
-  // $("#newPerson").keyup(function ()
-  // {
-  //   var searchUser={
-  //     searchWord :$("#newPerson").val()
-  //   }
-  //   console.log("@",$("#newPerson").val)
-
-  //   /*************************** search userlist *****************************************/ 
-  //   $.ajax({
-  //       url: "http://fundoonotes.incubation.bridgelabz.com/api/user/searchUserList",
-  //       data:  JSON.stringify(searchUser), 
-  //       type: "POST",
-  //       headers: { 'Authorization': localStorage.getItem('token') },
-  //       contentType: "application/json;charset=utf-8",
-  //       success: function(result)
-  //       {
-  //       users=result.data.details;
-  //       console.log("users = ",users);
-                 
-  //         /** display users ****/  
-  //      var wrapper = document.getElementById("collabUser");
-           
-  //      var myHTML = ''; 
-  //      for (var i = 0; i < users.length; i++)
-  //       {  
-  //         myHTML +='<tr><td>'+users[i].email+'</td></li>'; 
-  //       }
-  //        wrapper.innerHTML = myHTML
-
-  //        var table = document.getElementById('collabUser');
-  //        console.log("length === > ",table.rows.length);
-  //        var   newCollaborator;
-  //         for(var i = 1; i < table.rows.length; i++)
-  //         {
-  //             table.rows[i].onclick = function()
-  //             { 
-  //               newCollaborator =  this.cells[0].innerHTML;
-  //               document.getElementById("newPerson").value = this.cells[0].innerHTML;
-  //               console.log("fname = > ",newCollaborator);
-  //               console.log("user is arr = ",users);
-                
-  //               var res = users.find(({email}) => email === newCollaborator );
-  //               console.log("res = >",res);   
-                 
-  //               $(document).on("click" , "#addCollaborator" , function(e) {   
-                                  
-  //                 var x = document.getElementById("snackbarCollaborator")
-  //                  x.className = "show";
-
-  //                  $('.addCollaborator').css({"dispaly":" none"});
-
-
-                   
-  //               });
-  //              }//table
-  //           } //for
-  //         }
-  //       });//ajax
-  //     });
-    
-  // <input type="button" id="testbtn" value="Click me">
-
-  var pinClicked;
+    var pinClicked;
   $("#unpincreateNote").click(function(){
   if( pinClicked!= true )
    {
@@ -1571,3 +1448,25 @@ if( archiveClicked!= true ) {
           return false;
        }
  });
+
+/*********************** search Note and display on dashboard ********************************************/  
+$(document).ready(function(){
+  console.log("in ");
+  var searchNote;
+  $("#searchNote").keyup(function (){
+    console.log("in  searchNote keyup");
+    
+    var searchNote =$("#searchNote").val()
+    console.log("searching note = ",searchNote);
+
+    var filteredNames= notes.filter(function(note){
+      console.log("before");
+      return (note.title).charAt(0)  == searchNote;
+    })
+        
+      console.log("filtered Array is =  > ",filteredNames);
+   });
+
+   
+});
+

@@ -1,3 +1,7 @@
+div .card {
+     box-shadow: 10px 20px 50px lightgrey;
+  }
+
 .dropbtn {
     font-size: 16px;
     border: none;
@@ -224,7 +228,7 @@ a span {
     place-content: initial;
 }
 /**************** create note *********************************/
-#flip{
+/* #flip{
     display: flex;
     padding: 5px;
     text-align: left;
@@ -235,7 +239,7 @@ a span {
     margin-top: -70px;
     width: 500px;
     margin-left: 240px;
- }
+ } */
  .sideBody{
     height: 500px !important;
     width: 100% !important;
@@ -827,10 +831,10 @@ border: ridge;position: absolute;
         display: flex;
         padding: 5px;
         text-align: left;
-        background-color: #e5eecc;
         border-radius: 22px;
         justify-content: space-between;
         height: 140px;
+        box-shadow: inset 2px -5px 0 rgba(55, 0, 7, 0.1), inset 0 6px 0 rgba(2,3,3,0.07);
         margin-top: -115px;
         width: 1230px;
         margin-left: -154px;
@@ -872,7 +876,10 @@ border: ridge;position: absolute;
         margin-left: 20px;
         margin-top: 6px;
         font-size: 15px;
-    }     
+    }  
+    .threeIcons1 .material-icons{
+        font-size: 90px !important;
+    }   
     .middleIcon{
         font-size: 45px !important;
     margin-top: -5px;
@@ -911,12 +918,12 @@ border: ridge;position: absolute;
         border-color: lightgrey;
     }
     input[type=text] {
-        width: 70%;
-        border: none;
-        outline: none;
-        font-weight: 600;
-        color: gray;
-        font-size: 65px;
+       width: 70%;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: gray;
+    font-size: 50px;
     }
     #desc {
         margin-top: 45px !important;
@@ -1023,7 +1030,7 @@ border: ridge;position: absolute;
     height: 645px;
     border-radius: 6px;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 35px;
     margin-left: -250px;
     }
     #unpin, #pin{
@@ -1040,11 +1047,11 @@ border: ridge;position: absolute;
     }
     .threeIcons1{
         list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    width: 300px;
-    margin-top: 15px;
-    margin-left: 212px;
+        display: flex;
+        justify-content: space-around;
+        width: 450px;
+        margin-top: 15px;
+        margin-left: 212px;
     }
     .createNote .noteIcon{
         margin-top: 10px;
@@ -1877,11 +1884,10 @@ border: ridge;position: absolute;
     margin-left: -33px;
     }
     .noteIcon{
-        padding-right: 10px;
-        margin-top: 35px;
+        padding-right: 322px;
+        margin-top: 30px;
         display: flex;
-        margin-left: -25px;
-        margin-right: 10px;
+        margin-left: -35px;
     }
     .close {
         float: right;
@@ -1955,7 +1961,7 @@ border: ridge;position: absolute;
     grid-row-gap: -155px;
     padding: 20px;
     height: 100%;
-    width: 270px;
+    width: 363px;
     padding-bottom: 360px;
     font-size: 20px !important;
 }
@@ -2047,8 +2053,8 @@ z-index: 34 !important;
 border: ridge;
 }
 #dateAndTime,#labelName{
-    font-size: 15px;
-color: grey;
+    font-size: 20px;
+    color: grey;
 }
 .dataBody{
     width: 100%;
@@ -2121,8 +2127,8 @@ color: grey;
         color: gray;
     }
     #dateAndTime,#labelName{
-        font-size: 15px;
-    color: grey;
+        font-size: 14px;
+        color: grey
     }
     #pinnedNotes ,#unpinNotes{
         display: flex;
@@ -2138,6 +2144,11 @@ color: grey;
         margin-left: -17px;
         border: none;
         background-color: white;
+    }
+    .remainderTime .far .fa-clock{
+        margin-left: -4px;
+        color: grey;
+        margin-top: -1px;
     }
     .keepData{
         margin-left: 55px;
@@ -2293,7 +2304,7 @@ color: grey;
     #display {
         width: fit-content;
         height: 100%;
-        margin-left: -115px;
+        margin-left: -138px;
         margin-top: 20px;
         display: flex;
         align-items: flex-start;
@@ -2308,7 +2319,9 @@ color: grey;
         margin-top: 0px;
     }
     .fas, .far {
-        font-size: 25px;
+        margin-top: 2px;
+        font-size: 20px;
+        margin-left: -3px;
     }
     .image {
         width: 50px;
@@ -2518,7 +2531,7 @@ color: grey;
     }
     .keepData{
         margin-left: 28px !important;
-    margin-top: 26px;
+        margin-top: 15px;
     }
     .searchBox{
         width: 815px;
@@ -2631,7 +2644,7 @@ color: grey;
         border-width: 1px 2px 1px 2px;
         width: 600px;
         border-color: lightgrey;
-        margin-left: 240px
+        margin-left: 278px;
     }
     .head{
         color: gray;
@@ -2725,6 +2738,7 @@ color: grey;
         margin-left: 15px;
     }
     .middleIcon{
+        margin-top: -2px;
         font-size: 45px !important;
     }
     .keepData span{
@@ -2998,7 +3012,7 @@ color: grey;
         border-width: 1px 2px 1px 2px;
         width: 600px;
         border-color: lightgrey;
-        margin-left: 240px
+        margin-left:308px
     }
     .head{
         color: gray;
