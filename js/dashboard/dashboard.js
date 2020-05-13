@@ -287,7 +287,7 @@ $(document).ready(function () {
     
         $('.updateTitle').val(notes[noteId].title);
         $('.updateDesc').val(notes[noteId].description);
-
+      
         
         $("#updateData").click(function(){
                       
@@ -296,6 +296,12 @@ $(document).ready(function () {
              description:$('.updateDesc').val(),
              noteId : data
            };
+           const formBody = [];
+           for (const property in updateNoteData) {
+             const encodedKey = encodeURIComponent(property);
+             const encodedValue = encodeURIComponent(updateNoteData[property]);
+             formBody.push(encodedKey + '=' + encodedValue);
+           }
          console.log("updateNoteData => ",updateNoteData);
        
        
@@ -309,12 +315,14 @@ $(document).ready(function () {
           
           $.ajax({
            url: "http://fundoonotes.incubation.bridgelabz.com/api/notes/updateNotes",
-           data:   JSON.stringify({updateNoteData}),  
+          data:  formBody.join('&') ,  
            type: "POST",
            headers: {
               'Authorization': localStorage.getItem('token')
               },
-           contentType: "application/json;",
+           //contentType: "application/json;",
+           'Content-Type': 'application/x-www-form-urlencoded',
+
            success: function (result) {
            console.log("note update result ==>", result);
        
@@ -988,7 +996,7 @@ $(document).ready(function(){
        var myHTML = ''; 
        for (var i = 0; i < labels.length; i++)
         {  
-          myHTML +=' <div class="labelData"><i class="fas fa-caret-right" style="font-size:24px ;font-size: 24px;margin-left: 20px;"></i><input type="text" id="labelName"  value='+labels[i].label+'></div>';
+          myHTML +=' <div class="labelData"><img src="/images/labelIcon.svg" class=""><input type="text" id="labelName"  value='+labels[i].label+'></div>';
         }
         wrapper.innerHTML = myHTML
 
@@ -1174,7 +1182,7 @@ $(document).on("click" , "#editLabel" , function(e) {
        {
          console.log("success");
          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 8000);
-         location.reload(true);
+         //location.reload(true);
         },
        error: function (errorMessage)
        {
