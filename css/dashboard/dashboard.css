@@ -1,13 +1,18 @@
 div .card {
      box-shadow: 10px 20px 50px lightgrey;
   }
-.w3-sidebar a{
-    /* margin-bottom: 50px; */
+.today:hover{
+        background-color: transparent !important;
 }
   #closeCreateNote{
     color: black;
     margin-top: -73px;
     float: right;
+  }
+.updateTitle{
+    box-shadow: none;
+    font-size: 25px;
+    font-weight: 500;
 }
 .outer{
     padding: 12px;
@@ -24,7 +29,7 @@ footer{
 }
 footer .noteIcon{
    display: flex;
-   padding: 0;
+   padding: 0; pointer-events: auto;
    margin: 0;
 }
   .button5 {
@@ -59,7 +64,7 @@ footer .noteIcon{
     position: absolute;
     background-color: #f1f1f1;
     min-width: 250px;
-    height: 200px;
+    height: 200px; pointer-events: auto;
     bottom: 50px;
     z-index: 1;
     margin-top: 10px;
@@ -89,7 +94,7 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333;
+    color: #333; pointer-events: auto;
     background-color: #fff;
     display: grid;
   }
@@ -110,7 +115,7 @@ span{
     width: 755px !important;
     border-radius: 10px;
     height: 53px;
-    box-shadow: none;
+    box-shadow: none; pointer-events: auto;
     font-size: 25px;
 }
 .threeIcons{
@@ -144,7 +149,7 @@ span{
   ul {
     list-style-type: none;
     margin: -20px;
-    padding: 32px;
+    padding: 32px; pointer-events: auto;
     overflow: hidden;
     justify-content: space-between;
     display: contents;
@@ -157,7 +162,7 @@ span{
   li a {
     display: block;
     color: black;
-    text-align: center;
+    text-align: center; pointer-events: auto;
     padding: 14px 16px;
     text-decoration: none;
   }
@@ -168,7 +173,7 @@ span{
     font-size: 22px;
     left: 0;
     z-index: 1030;
-    color: gray;
+    color: gray; pointer-events: auto;
     height: 67px;
     border-bottom: ridge;
     border-bottom-color: white;
@@ -201,7 +206,7 @@ span{
     grid-row-gap: -64px !important;
     padding: 20px;
     font-size: 20px;
-    height: 100%;
+    height: 100%; pointer-events: auto;
     width: 332px;
     padding-bottom: 360px;
 }
@@ -237,7 +242,7 @@ a span {
     background-color: lavender;
     color: black;
     text-decoration: none;
-    color: #337ab7;
+    color: #337ab7; pointer-events: auto;
     border-top-right-radius: 23px;
     text-decoration: none;
     border-bottom-right-radius: 23px;
@@ -254,7 +259,7 @@ a span {
     height: 100%;
     margin-left: 203px;
     margin-top: 10px;
-    display: flex;
+    display: flex; pointer-events: auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -276,7 +281,7 @@ a span {
  .sideBody{
     height: 500px !important;
     width: 100% !important;
-    display: flex;
+    display: flex; pointer-events: auto;
     padding-top: 100px;
  }
  /* .createNote{
@@ -355,7 +360,7 @@ ul {
     background-color: white;
     border-radius: 6px;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: 6px; pointer-events: auto;
     margin-left: 15px;
     height: fit-content;
 }
@@ -419,7 +424,7 @@ height: 200px;
     transform: translate3d(106px, 25px, 0px); top: 0px;
     left: 0px;
     will-change: transform;
-    width: 80px;
+    width: 80px; pointer-events: auto;
 }
 
 .data{
@@ -503,7 +508,7 @@ However, delay the fade out process for 2.5 seconds */
     float: left;
     margin-right: 299px;
 }
-.modal-content{
+/* .modal-content{
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -518,7 +523,7 @@ However, delay the fade out process for 2.5 seconds */
     border: 1px solid rgba(0,0,0,.2);
     border-radius: .3rem;
     outline: 0;
-}
+} */
 .today:hover {
     background-color: lightgrey;
   }
@@ -759,12 +764,12 @@ border: ridge;position: absolute;
         width: 313px;
         display: flex;
     }
-    .modal-content {
+    /* .modal-content {
         width: 98%;
         height: 600px;
         margin-top: 335px;
         margin-left: 10px;
-    }
+    } */
     .modalData{
         height: 460px;
         display: grid;
@@ -2806,6 +2811,9 @@ border: ridge;
     .fa-paint-brush, .fa-image {
         font-size: 22px;
     }
+    .fa-palette , .fas .fa-ellipsis-v{
+        font-size: 20px;
+    }
     .closeBtn{
         border: none;
         margin-top: -66px;
@@ -2944,29 +2952,44 @@ border: ridge;
         width: 332px;
         padding-bottom: 360px;
     }
-    .modal-content{
+    .updateContent{
+        margin-left: -99px;
+        width: 700px;    border-radius: 12px;
+        margin-top: 315px;
+        height: fit-content;
+    }
+    /* .modal-content{
         display: flex;
         margin-left: -130px;
         width: 750px;
         height: fit-content;
   
-    }
+    } */
     .modal-content input[type="text"]{
         margin-left: 0px !important;
         font-size: 18px;
     
     }
-    .modal-content footer {
-        margin-left: 23px;
-        margin-right: 255px;
+    .modal-footer {
+        padding: 15px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+        height: 70px;
+    }
+    .modal-footer .noteIcon{
+        padding-right: 10px;
+    margin-top: -31px;
+    display: flex;
+    width: 500px;
+    margin-right: 185px;
     }
     #updateData{
         position: absolute;
-        margin-top: -37px;
-        color: black;
-        font-size: 18px;
-        margin-left: 615px;
+    margin-top: 5px;
+    color: black;
+    font-size: 18px;
     }
+ 
 }
 
 /********************************************************************/
@@ -2977,21 +3000,30 @@ border: ridge;
         float: right;
         margin-right: -155px;
     }
+    .modal-footer{
+        height: 75px;
+    }
     #lastDelete{
         margin-bottom: 50px;
     }
-    #updateData{
-        color: black;
-         margin-top: -40px;
-         z-index: 1;    margin-left: 485px;
-        position: absolute;
-    }
-    #myModal .modal-content{
-        display: flex;
-    justify-content: center;
-    margin-left: 50px;
+    .modal-footer .noteIcon{
+        padding-right: 10px;
+    margin-top: -31px;
+    display: flex;
     width: 500px;
-    height: 165px;
+    margin-right: 185px;
+    }
+    #updateData{
+        position: absolute;
+    margin-top: 5px;
+    color: black;
+    font-size: 18px;
+    }
+     .updateContent{
+        margin-left: -99px;
+        width: 700px;    border-radius: 12px;
+        margin-top: 315px;
+        height: fit-content;
     }
     span {
         margin-left: 4px;
@@ -3468,11 +3500,7 @@ border: ridge;
         margin-top: 25px;
         margin-right: 164px;
       }
-      /* .footer .noteIcon{
-        display: contents;
-        padding-left: -36px;
-        padding-right: 34px;
-      } */
+      
 
       .remainderTime .far .fa-clock{
         margin-left: -4px;
