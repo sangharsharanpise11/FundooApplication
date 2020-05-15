@@ -9,11 +9,24 @@ div .card {
     margin-top: -73px;
     float: right;
   }
+
+  /* change icon on hover */
+  /* .ok:hover .:before{
+    content:"\f05d";
+    opacity:0.4;
+  } */
 .updateTitle{
     box-shadow: none;
     font-size: 25px;
     font-weight: 500;
 }
+#myRemaindModal, #myCollaboratorModal{
+    padding: 200px 0px;
+    align-items: center;
+}
+.center {
+    text-align: center;
+  }
 .outer{
     padding: 12px;
     position: absolute;
@@ -2553,6 +2566,10 @@ border: ridge;
     .anotherAccBold{
         margin-left: -155px;
     }
+    .modalData input[type="text"]{
+        margin-left: 2px !important;
+        font-size: 18px;
+    }
     #remainderTime .material-icons{
         font-size: 23px !important;
         margin-top: 0px;
@@ -2718,11 +2735,14 @@ border: ridge;
         width: fit-content;
         height: 100%;
         margin-right: 0;
-        margin: 0;
+        margin: 0;margin: 30px;
         margin-top: 20px;
-        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: flex-start;
         place-content: initial;
+        display: flex;
+        justify-content: center;
     }
     .noteIcon {
         padding-right: 10px;
@@ -2796,7 +2816,8 @@ border: ridge;
         font-size: 35px;color: black;
     } 
     #a1, #a2 {
-        margin-left: 65px;
+        margin-right: 985px;
+        font-size: 20px;
     }
     #a2{margin-top: 60px;}
     #pinnedNotes ,#unpinNotes{
@@ -2965,8 +2986,8 @@ border: ridge;
         height: fit-content;
   
     } */
-    .modal-content input[type="text"]{
-        margin-left: 0px !important;
+    .collaboratorContent input[type="text"]{
+        margin-left: -110px !important;
         font-size: 18px;
     
     }
