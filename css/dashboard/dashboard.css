@@ -2142,6 +2142,9 @@ border: ridge;
         width: 314px;
         margin-left: -38px;
     }
+    .lastDelete{
+        margin-bottom: 100px;
+    }
     .today{
         display: grid;
     justify-content: space-between;
@@ -2210,8 +2213,9 @@ border: ridge;
         margin-left: 55px;
     }
     .viewProfileContent{
-        margin-left: 250px;
-    width: 433px;
+     width: 433px;
+     margin-left: 300px;
+}
     }
     .navbar{
         width: 1040px;
@@ -2252,6 +2256,8 @@ border: ridge;
         width: 700px;
         border-radius: 10px;
         height: 265px;
+        margin-top: 53px;
+    margin-left: -101px;
     }
     
     .footer-collab {
@@ -2284,9 +2290,8 @@ border: ridge;
     font-size: 15px;
     }
     .signoutFooter {
-        margin-top: -29px;
-        margin-bottom: 20px;
-        font-size: 17px;
+        display: flex;
+        justify-content: space-around;
     }
     .signout {
         margin-left: 145px;
@@ -2295,11 +2300,11 @@ border: ridge;
         font-size: 18px;
     }
     .remainderContent{
-        margin-left: 10px;
-        margin-top: 200px;
-        flex-direction: column;
+    flex-direction: column;
     width: 60%;
     height: 265px;
+    margin-left: 85px;
+    margin-top: 250px;
     }
     .input-group .form-control {
         display: table-cell;
@@ -2340,15 +2345,13 @@ border: ridge;
         margin-top: 10px;
     }
     .card {
-        width: 270px;
-    background-color: white;
-    height: 220px;
-    width: 285px;
-    background-color: white;
-    border-radius: 6px;
-    margin: 5px;
-    border-radius: 6px;
-    margin-left: 15px;
+        width: 320px;
+        background-color: white;
+        height: fit-content;
+        border-radius: 6px;
+        margin: 5px;
+        border-radius: 6px;
+        margin-left: 15px;
       }
     .form-control {
         width: 490px !important;
@@ -2509,6 +2512,10 @@ border: ridge;
         font-weight: 600;
         margin-left: -551px !important;
     }
+    .collaboratorContent input[type="text"]{
+        margin-left: -110px !important;
+        font-size: 18px;
+    }
     .twoIcons {
         list-style-type: none;
         display: flex;
@@ -2554,6 +2561,9 @@ border: ridge;
 .menu{
     margin-left: 35px;
     margin-top: 15px;
+}
+.side{
+    margin-top: -16px;
 }
 }
 /********************************************************************/
