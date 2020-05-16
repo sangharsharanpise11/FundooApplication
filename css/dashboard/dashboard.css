@@ -1489,11 +1489,19 @@ border: ridge;position: absolute;
     .remainderContent{
         position: relative;
         margin-left: 0px;
-        margin-top: 10px;
+        margin-top: 10px;height: 250px;
+        width: 290px;
     }
     .remainderContent .modal-title {
         font-weight: 600;
         margin-left: -178px !important;
+    }
+    .remainderContent .modal-footer {
+        padding: 15px;
+    border-top: 1px solid #e5e5e5;
+    float: left;
+    margin-right: 130px;
+    margin-top: -45px;
     }
     .today h6 span{
         font-size: 15px !important;color: black;
@@ -1681,7 +1689,7 @@ border: ridge;position: absolute;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
-        margin-left: -317px;
+        margin-left: -210px;
     }
      #unpincreateNote {
         width: 45px;
@@ -1820,6 +1828,13 @@ footer{
     font-size: 18px;
     margin-top: -19px;
     color: black;
+}
+.today{
+    display: grid;
+}
+.remainderContent .modal-body {
+    position: relative;
+    margin-top: -60px;
 }
  }
 /********************************************************************/
