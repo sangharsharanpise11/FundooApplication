@@ -1455,8 +1455,8 @@ $(document).on("click" , ".gridView" , function(e) {
   $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
 
   $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
-  $("#a1, #a2").css({"margin-left": "105px"})
-  $(".noteIcon").css({"padding-right": "10px","margin-top": "-31px","display": "flex","margin-left": "-35px"})
+  $("#a1, #a2").css({"margin-left": "140px"})
+  $(".noteIcon").css({"padding-right": "10px","margin-top": "0px","display": "flex"})
   $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
   var resWidth = screen.width
 });

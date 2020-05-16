@@ -748,6 +748,56 @@ border: ridge;position: absolute;
         margin-left: 23px;
         height: 80px;
     }
+    .w3-sidebar a {
+        color: black;
+    width: 440px;
+    text-align: left;
+    display: inline-flex;
+    }
+    .collaboratorContent .modalData{
+            height: 120px;
+            display: grid;
+            margin-left: -8px;
+            margin-top: -14px;
+    }
+    a{
+        text-decoration: none;
+        background-color: transparent;
+        height: 50px;
+    }
+    a span {
+        margin-left: 30px;
+        word-wrap: break-word;
+        color: black;
+        word-break: break-word;
+    }
+    #mySidebar a:hover{
+        width: 880px !important;
+    display: inline-flex;
+    padding: 16px
+    }
+    .collaboratorContent{
+        margin-left: -9px;
+        width: 315px;
+        height: 280px;
+    }
+    .signoutFooter {
+        margin-top: -29px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+    }
+    #lastDelete{
+        margin-bottom: 200px;
+    }
+    .side{
+        margin-top: 114px;
+    }
+    .updateDesc{
+        margin-top: -15px;
+    }
+    .midIcon{
+        display: none;
+    }
     .owner{
         display: flex;
     margin-top: 10px;
@@ -757,9 +807,7 @@ border: ridge;position: absolute;
         margin-left: 0px;
         margin-top: 10px;
     }
-   /* .fa-image{
-        font-size: 93px;
-    } */
+  
     .pickDataContent .titleDateTime{
         margin-right: -230px;
     }
@@ -784,9 +832,8 @@ border: ridge;position: absolute;
         width: 313px;
         display: flex;
         background-color: lightgrey;
-    margin-top: 186px;
-   
-    margin-left: -10px;
+        margin-top: 186px;
+        margin-left: 8px;
     }
   .ok{
     float: right;
@@ -795,7 +842,7 @@ border: ridge;position: absolute;
     .modalData{
         height: 120px;
         display: grid;
-        margin-left: 10px;
+        margin-left: -30px;
         margin-top: -14px;
     }
     #updateData{
@@ -939,9 +986,9 @@ border: ridge;position: absolute;
         display: flex;
         font-size: 22px !important;
         justify-content: space-between;
-        width: 197px;
+        width: 243px;
         margin-top: -3px;
-        margin-left: 231px;
+        margin-left: 160px;
     }
     .menu {
         margin-left: 20px;
@@ -951,7 +998,7 @@ border: ridge;position: absolute;
     .threeIcons1 .material-icons{
         font-size: 90px !important;
     }   
-    .middleIcon{
+    .midIcon{
         font-size: 45px !important;
     margin-top: -5px;
     }   
@@ -1278,6 +1325,15 @@ border: ridge;position: absolute;
     }
     .modal-footer .noteIcon .dropbtn,.dropbtn1,.dropbtn2{ 
         font-size: 22px;
+    }
+    .updateContent ,.modal-footer{
+        padding: 15px;
+        margin-bottom: -50px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+    }
+    .uploadImage{
+        font-size: 20px;
     }
 }
 /********************************************************************/
@@ -2228,7 +2284,7 @@ border: ridge;
         width: 314px;
         margin-left: -38px;
     }
-    .lastDelete{
+    #lastDelete{
         margin-bottom: 100px;
     }
     .today{
@@ -2255,7 +2311,10 @@ border: ridge;
         margin-left: 10px;
     }
       #a1 , #a2{
-          margin-left: 105px;
+          margin-left: 140px;
+      }
+      #searchNote{
+          height: 30px;
       }
       #a2{
         margin-top: 70px;
@@ -2659,6 +2718,9 @@ border: ridge;
         width: 100% !important;
         display: flex;
     }
+    #searchNote{
+        height: 30px;
+    }
     .anotherAccBold{
         margin-left: -155px;
     }
@@ -2808,7 +2870,7 @@ border: ridge;
         border-width: 1px 2px 1px 2px;
         width: 600px;
         border-color: lightgrey;
-        margin-left: 278px;
+        margin-left: 305px;
     }
     .head{
         color: gray;
@@ -3294,7 +3356,7 @@ border: ridge;
         border-width: 1px 2px 1px 2px;
         width: 600px;
         border-color: lightgrey;
-        margin-left:308px
+        margin-left:250px
     }
     .head{
         color: gray;
