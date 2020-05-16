@@ -748,11 +748,18 @@ border: ridge;position: absolute;
         margin-left: 23px;
         height: 80px;
     }
+    .owner{
+        display: flex;
+    margin-top: 10px;
+    }
     .viewProfileContent{
         position: relative;
         margin-left: 0px;
         margin-top: 10px;
     }
+   /* .fa-image{
+        font-size: 93px;
+    } */
     .pickDataContent .titleDateTime{
         margin-right: -230px;
     }
@@ -776,34 +783,40 @@ border: ridge;position: absolute;
         border-radius: 4px;
         width: 313px;
         display: flex;
+        background-color: lightgrey;
+    margin-top: 186px;
+   
+    margin-left: -10px;
     }
-    /* .modal-content {
-        width: 98%;
-        height: 600px;
-        margin-top: 335px;
-        margin-left: 10px;
-    } */
+  .ok{
+    float: right;
+    margin-top: -41px;
+  }
     .modalData{
-        height: 460px;
+        height: 120px;
         display: grid;
         margin-left: 10px;
-        margin-top: 10px;
-        padding-top: 10px;
+        margin-top: -14px;
     }
     #updateData{
+        margin-right: -40px;
         border: none;
-    font-size: 50px;
-    margin-top: -8px;
-    width: 142px;
+        font-size: 18px;
+        width: 142px;
+        color: black;
+        float: right;
+        margin-top: -90px;
+    }
+    .fas .fa-palette {
+        font-size: 70px;
     }
     .modalData input[type=text] {
-        width: 70%;
         border: none;
         height: 44px;
         outline: none;
         font-weight: 600;
         color: gray;
-        font-size: 60px;
+        font-size: 15px;
     }
     #collabSaveBtn, #collabCancelBtn {
         font-size: 17px;
@@ -829,7 +842,7 @@ border: ridge;position: absolute;
         position: relative;
         margin-left: 0px;
         margin-top: 10px;
-        height: 265px;
+        height: 265px;    width: 300px;
     }
     .remainderContent .modal-title {
         font-weight: 600;
@@ -868,9 +881,7 @@ border: ridge;position: absolute;
         margin-top: -10px;
         margin-left: 25px;
     }
-    /* h6,li span {
-        font-size: 65px !important;
-    } */
+    
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
@@ -885,7 +896,7 @@ border: ridge;position: absolute;
         justify-content: space-between;
         height: 140px;
         box-shadow: inset 2px -5px 0 rgba(55, 0, 7, 0.1), inset 0 6px 0 rgba(2,3,3,0.07);
-        margin-top: -115px;
+        margin-top: 10px;
         width: 1230px;
         margin-left: -154px;
         font-size: 69px;
@@ -912,7 +923,17 @@ border: ridge;position: absolute;
         align-items: center;
         display: none;
     }
-
+.modal-footer  .noteIcon .material-icons{
+    font-size: 24px !important;
+}
+/* .fas, .far {
+    font-size: 26px;
+    color: black;
+} */
+.archive {
+    width: 30px;
+    height: 30px;
+}
     .threeIcons {
         list-style-type: none;
         display: flex;
@@ -955,8 +976,18 @@ border: ridge;position: absolute;
         font-size: 75px;
     color: black;
     }
+.modal-footer .noteIcon{
+    padding-right: 129px;
+    margin-top: -38px;
+    display: flex;
+    margin-left: -15px;
+}
 
-    .createNote {
+.modal-footer .archive{
+    width: 30px;
+    height: 24px;
+}
+.createNote {
         background-color: white;
         width: 1254px;
         border-radius: 5px;
@@ -1073,15 +1104,12 @@ border: ridge;position: absolute;
     }
   
     .card {
-        width: 270px;
+    
     background-color: white;
-    height: 170px;
     width: 1000px;
-    background-color: white;
-    height: 645px;
-    border-radius: 6px;
+    height: fit-content;
+    border-radius: 10px;
     margin: 5px;
-    border-radius: 35px;
     margin-left: -250px;
     }
     #unpin, #pin{
@@ -1154,7 +1182,7 @@ border: ridge;position: absolute;
     #unpincreateNote{
         float: right;
     }
-    .far .fa-click{
+    .far .fa-click, .far .fa-image{
             font-size: 78px;
             color: grey;
     }
@@ -1231,6 +1259,26 @@ border: ridge;position: absolute;
         margin-right: 152px;
         margin-top: 10px;
     }
+    footer .noteIcon{
+        display: flex;
+        padding: 0;
+        pointer-events: auto;
+        margin: 0;
+        margin-top: 145px;
+        margin-right: 120px !important;
+    }
+    .updateContent{
+        height: 165px;
+    }
+    #closeCreateNote{
+        color: black;
+    margin-top: -124px;
+    float: right;
+    font-size: 45px;
+    }
+    .modal-footer .noteIcon .dropbtn,.dropbtn1,.dropbtn2{ 
+        font-size: 22px;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
@@ -1252,7 +1300,8 @@ border: ridge;position: absolute;
     }
     #pinnedNotes, #unpinNotes {
         display: grid;
-        align-items: flex-start;margin-left: 95px;
+        align-items: flex-start;
+        margin-left: 150px;
         place-content: initial;
     }
     table  td{
@@ -1265,8 +1314,9 @@ border: ridge;position: absolute;
         margin-left: 8px;
     }
     .tit, .desc {
+        margin-top: -35px;
         border: none;
-        font-size: 35px;
+        font-size: 50px;
     }
     b, strong {
         font-weight: bold;
@@ -1375,16 +1425,20 @@ border: ridge;position: absolute;
     }
     #flip{
         display: flex;
-    padding: 5px;
-    text-align: left;
-    background-color: #e5eecc;
-    border-radius: 5px;
-    justify-content: space-between;
-    height: 70px;        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
-    margin-top: -150px;
-    width: 780px;
-    margin-left: -103px;
-    font-size: 40px;
+        padding: 5px;
+        text-align: left;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 70px;
+        box-shadow: inset 0px 1px 0  1px rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+        margin-top: -100px;
+        width: 780px;
+        margin-left: -103px;
+        font-size: 40px;
+        margin-right: -10px;
+    }
+    .midIcon{
+        display: none;
     }
     .cal{
         margin-top: -8px;
@@ -1411,13 +1465,13 @@ border: ridge;position: absolute;
 
     .threeIcons {
         margin-right: -135px;
-    list-style-type: none;
-    display: flex;
-    font-size: 22px !important;
-    justify-content: space-between;
-    width: 152px;
-    margin-top: 15px;
-    margin-left: 350px;
+        list-style-type: none;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 152px;
+        margin-top: 15px;
+        margin-left: 500px;
     }
     .menu {
         margin-left: 20px;
@@ -1434,7 +1488,7 @@ border: ridge;position: absolute;
         min-height: 50px;
         margin-bottom: 20px;
         border: 1px solid transparent;
-        width: 922px !important
+        width: 1060px !important;
     }
     .fas, .far {
         font-size: 30px;
@@ -1524,9 +1578,9 @@ border: ridge;position: absolute;
     
     .card {
         background-color: white;
-        height: 170px;
-        width: 585px;
-        background-color: white;
+        height: fit-content;
+        width: 600px;
+        background-color: rgb(131, 118, 118);
         height: 290px;
         border-radius: 6px;
         margin: 5px;
@@ -1647,6 +1701,24 @@ border: ridge;position: absolute;
 .remAndLabel{
     margin-top: 34px;
     margin-bottom: -30px;
+}
+footer{
+    text-align: left;
+    padding: 3px;
+    margin-top: 30px;
+}
+.modal-footer .noteIcon{
+    padding-right: 10px;
+margin-top: -31px;
+display: flex;
+width: 500px;
+margin-right: 185px;
+}
+#updateData{
+    position: absolute;
+margin-top: 5px;
+color: black;
+font-size: 18px;
 }
  }
 /********************************************************************/
