@@ -270,7 +270,7 @@ a span {
 #display{
     width: 100%;
     height: 100%;
-    margin-left: 203px;
+    /* margin-left: 203px; */
     margin-top: 10px;
     display: flex; pointer-events: auto;
     flex-direction: row;
@@ -1075,7 +1075,8 @@ border: ridge;position: absolute;
         direction: ltr;
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
-        font-size: 103px !important;
+        font-size: 90px !important;
+    
     }
     .icons{
         display: flex;
@@ -1152,12 +1153,11 @@ border: ridge;position: absolute;
   
     .card {
     
-    background-color: white;
-    width: 1000px;
-    height: fit-content;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: -250px;
+        width: 1000px;
+        height: fit-content;
+        border-radius: 10px;
+        margin: 5px;
+        margin-left: -70px;
     }
     #unpin, #pin{
         width: 113px;
@@ -1247,8 +1247,9 @@ border: ridge;position: absolute;
         margin-top: 195px;
     }
     #remainderTime .material-icons{
-        margin-right: -78px;
-        margin-left: 34px;
+        margin-right: -125px;
+        margin-left: 17px;
+        font-size: 93px !important;
     }
     a span {
         width: 310px;
@@ -1342,6 +1343,23 @@ border: ridge;position: absolute;
         position: relative;
         margin-left: 0px;
         margin-top: 10px;
+    }
+    /* .navbar{
+        width: 1168px !important;
+    } */
+    #dateAndTime{
+        font-size: 21px !important;
+    color: black;
+    }
+    span {
+        font-size: 35px !important;
+        color: black;
+    }
+    #closeCreateNote{
+        color: black;
+        margin-top: -92px;
+        float: right;
+        font-size: 29px;
     }
     a span {
         width: 175px;
@@ -1527,7 +1545,7 @@ border: ridge;position: absolute;
         justify-content: space-between;
         width: 152px;
         margin-top: 15px;
-        margin-left: 500px;
+        margin-left: 287px;
     }
     .menu {
         margin-left: 20px;
@@ -1562,7 +1580,7 @@ border: ridge;position: absolute;
     display: grid;
     grid-row-gap: 15px;
     margin-top: 40px;
-    margin-left: -103px;
+    margin-left: -151px;
     height: 247px;
     border-style: solid;
     border-color: lightgrey;
@@ -1663,11 +1681,11 @@ border: ridge;position: absolute;
     margin-left: -10px;
     }
    #pin, #unpin{
-        width: 40px;
-        height: 30px;
-        margin-left: 515px;
-        margin-top: 10px;
-        z-index: 1;
+    width: 40px;
+    height: 30px;
+    margin-left: 545px;
+    margin-top: 10px;
+    z-index: 1;
     }
   .image{
     width: 55px;
@@ -1698,14 +1716,19 @@ a {
     height: 85px;
     font-size: 30px;
 }
-#mySidebar a:hover{
+#mySidebar a:hover {
+    width: 340px !important;
+    display: inline-flex;
+    padding: 16px;
     background-color: lavender;
-    color: black;  
+    color: black;
+    pointer-events: auto;
+    border-top-right-radius: 47px;
     text-decoration: none;
-    border-radius: 50px;
+    border-bottom-right-radius: 47px;
 }
-span{
-    font-size: 25px !important;color: black;
+.side{
+    margin-top: 42px;
 }
 #cars {
     border: none;
@@ -1750,7 +1773,7 @@ border: ridge;position: absolute;
     margin-top: 10px;
 }
 #remainderTime .material-icons{
-    font-size: 23px !important;
+    font-size: 29px !important;
     margin-top: 0px;
     margin-left: 11px;
 } 
@@ -1779,6 +1802,27 @@ font-size: 18px;
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
+    .clkRem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #newPerson{
+        font-size: 15px;
+        margin-left: -75px;
+      }
+      #remainderTime{
+        border-radius: 60px;
+        width: 167px;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        height: 25px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
@@ -1792,8 +1836,9 @@ font-size: 18px;
         font-size: 20px;
     }
     .data{
-        display: contents;
-    justify-content: initial;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
     }
      table td{
         padding-left: 10px;
@@ -1830,12 +1875,13 @@ font-size: 18px;
     }
     .collaboratorContent {
         width: 530px;height: 245px;
-        margin-top: 160px;
+        margin-top: 160px;margin-left: -21px;
     }
     .collaboratorContent .modal-title{
         font-weight: 600;
         margin-left: -286px !important;
     }
+    
     .footer-collab {
         height: 50px;
         position: fixed;    margin-top: 9px;
@@ -1894,16 +1940,7 @@ font-size: 18px;
         margin-top: 10px;
         margin-left: 23px;
     }
-    #remainderTime{
-        border-radius: 60px;
-        width: 170px;
-        border: none;
-        display: flex;
-        font-size: 20px;
-        height: 30px;
-        margin-left: 27px;
-        margin-top: 10px;
-    }
+  
      .closeBtn{
         margin-top: -75px;
         float: right;
@@ -1953,10 +1990,10 @@ font-size: 18px;
         background-clip: padding-box;
         border: solid transparent;
         border-width: 1px 2px 1px 2px;
-        width: 755px;
+        width: 679px;
         border-color: lightgrey;
-        margin-left: 370px;
-    }
+        margin-left: 45px;
+        }
     #flip input[type=text] {
         font-size: 20px;
     }
@@ -1966,8 +2003,8 @@ font-size: 18px;
         margin-top: 2px;
     }
     .cal{
-        margin-top: -15px;
-    }
+            margin-top: -4px;    
+        }
     .app{
         margin-top: 10px;
         margin-left: 25px;    font-size: 32px !important;
@@ -1994,7 +2031,8 @@ font-size: 18px;
         justify-content: space-between;
         width: 115px;
         margin-top: 32px;
-        margin-left: 630px !important;
+        margin-left: 280px !important;
+
     }
     footer {
         text-align: left;
@@ -2022,24 +2060,24 @@ font-size: 18px;
     }   
     .middleIcon{
         font-size: 40px !important;
-        margin-top: -7px;
+        margin-top: 2px;
     }   
    
     
     .fas, .far {
-        font-size: 27px;
-        margin-top: -9px;
+        font-size: 26px;
+        margin-top: -3px;
     }
 
     .createNote {
         background-color: white;
-        width: 750px;
+        width: 690px;
         border-radius: 5px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
         grid-row-gap: 15px;
         margin-top: 35px;
-        margin-left: 386px;
+        margin-left: 40px;
         height: 190px;
     }
     input[type=text] {
@@ -2083,10 +2121,13 @@ font-size: 18px;
     #display {
         width: 100%;
         height: 100%;
-        margin-top: 10px;
         display: grid;
         align-items: flex-start;
         place-content: initial;
+        pointer-events: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
     }
     .container {
         display: grid;
@@ -2101,7 +2142,6 @@ font-size: 18px;
         place-content: initial;
         justify-content: center;
         width: 720px;
-        margin-left: 214px;
         
     }
     #a1, #a2 {
@@ -2148,7 +2188,7 @@ font-size: 18px;
     grid-row-gap: -155px;
     padding: 20px;
     height: 100%;
-    width: 363px;
+    width: 280px;
     padding-bottom: 360px;
     font-size: 20px !important;
 }
@@ -2275,9 +2315,37 @@ border: ridge;
     float: right;
     font-size: 20px;
 }
+#deleteReminder{
+    font-size: 28px !important;
+    margin-top: -2px
+}
+.far .fa-clock{
+    color: grey;
+    margin-top: 3px;
+}
+#flip #newPerson{
+    margin-left: -35px;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
+    .clkRem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #remainderTime{
+        border-radius: 60px;
+        width: 157px;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        height: 25px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
     .remAndLabel {
         justify-content: start;
         display: flex;
@@ -2718,6 +2786,23 @@ border: ridge;
         width: 100% !important;
         display: flex;
     }
+    .clkRem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #remainderTime{
+        border-radius: 60px;
+        width: 157px;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        height: 25px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
     #searchNote{
         height: 30px;
     }
@@ -2967,8 +3052,8 @@ border: ridge;
         margin-left: 15px;
     }
     .middleIcon{
-        margin-top: -2px;
-        font-size: 45px !important;
+        margin-top: 13px;
+        font-size: 28px !important;
     }
     .keepData span{
         font-size: 35px;color: black;
@@ -3082,16 +3167,7 @@ border: ridge;
     .today h6:hover {
         /* background-color: lightgrey; */
     }
-    #remainderTime{
-        border-radius: 60px;
-        width: 159px;
-        border: none;
-        display: flex;
-        font-size: 15px;
-        height: 25px;
-        margin-left: -2px;
-        margin-top: 10px;
-    }
+ 
     .remAndLabel {
         justify-content: space-around;
     display: flex;
@@ -3545,16 +3621,7 @@ border: ridge;
     border: ridge;position: absolute;
     background-color: white !important;
     }
-    #remainderTime{
-        border-radius: 60px;
-        width: 180px;
-        border: none;
-        display: flex;
-        font-size: 15px;
-        height: 25px;
-        margin-left: -45px;
-        margin-top: 10px;
-    }
+   
     #remainderTime .material-icons{
         font-size: 23px !important;
         margin-top: 0px;
@@ -3689,6 +3756,25 @@ border: ridge;
       .side{
         margin-top: -17px;
       }
+      .clkRem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #remainderTime{
+        border-radius: 60px;
+        width: 180px;
+        border: none;
+        font-size: 15px;
+        height: 25px;
+        margin-left: -45px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
