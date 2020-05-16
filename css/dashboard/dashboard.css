@@ -1344,6 +1344,18 @@ border: ridge;position: absolute;
         margin-left: 0px;
         margin-top: 10px;
     }
+    .updateContent{
+        height: 170px;
+    }
+    .updateContent .modal-footer {
+        padding: 15px;
+        margin-top: -17px;
+        text-align: right;
+        border-top: 1px solid #e5e5e5;
+    }
+    .updateDesc{
+        margin-top: -17px;
+    }
     /* .navbar{
         width: 1168px !important;
     } */
@@ -1795,9 +1807,10 @@ margin-right: 185px;
 }
 #updateData{
     position: absolute;
-margin-top: 5px;
-color: black;
 font-size: 18px;
+
+margin-top: -19px;
+color: black;
 }
  }
 /********************************************************************/
@@ -2127,7 +2140,7 @@ font-size: 18px;
         pointer-events: auto;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: -60px;
     }
     .container {
         display: grid;
@@ -2326,6 +2339,13 @@ border: ridge;
 #flip #newPerson{
     margin-left: -35px;
 }
+.modal-footer .noteIcon {
+    padding-right: 10px;
+    margin-top: -10px;
+    display: flex;
+    width: 500px;
+    margin-right: 185px;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
@@ -2335,6 +2355,13 @@ border: ridge;
         justify-content: space-around;
         align-items: center;
       }
+      .modal-footer .noteIcon {
+        padding-right: 10px;
+        margin-top: -31px;
+        display: flex;
+        width: 500px;
+        margin-right: 185px;
+    }
       #remainderTime{
         border-radius: 60px;
         width: 157px;
@@ -2777,6 +2804,13 @@ border: ridge;
 }
 .side{
     margin-top: -16px;
+}
+.updateContent{
+    height: 170px;
+}
+#updateData{
+    margin-top: -90px;
+    color: black;
 }
 }
 /********************************************************************/
@@ -3254,6 +3288,9 @@ border: ridge;
         margin-top: -73px;
         float: right;
         margin-right: -155px;
+    }
+    .newCollaborator #newPerson{
+        margin-left: -117px;
     }
     .modal-footer{
         height: 75px;
