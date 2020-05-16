@@ -428,7 +428,7 @@ height: 200px;
     direction: ltr;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
-}ss
+}
 .fas , .far{
     font-size: 18px;color: black;
 }
@@ -1663,16 +1663,17 @@ border: ridge;position: absolute;
         margin-top: -12px;
         font-size: 20px;
     }
+    .data{
+        display: contents;
+    justify-content: initial;
+    }
      table td{
         padding-left: 10px;
        }
      #a1, #a2{
         margin-left: -194px;
     }
-    .data{
-        margin-left: 170px;
-        padding-left: 90px;
-    }
+    
     .pickData {
         float: left;
     margin-right: 135px;
@@ -1804,19 +1805,20 @@ border: ridge;position: absolute;
     }
     .navbar{
         height: 90px !important;
-        width: 1238px;
+        width: 1500px;
+        height: 85px;
         position: fixed;
-        min-height: 50px;
+        /* min-height: 50px; */
         margin-bottom: 20px;
         border: 1px solid transparent;
     }
     #flip{ 
-           display: flex;
+        display: flex;
         padding: 5px;
         text-align: left;
         background-color: white;
         border-radius: 5px;
-        justify-content: space-between;
+        justify-content: center;
         height: 65px;
         margin-top: -140px;
         box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
@@ -1825,7 +1827,7 @@ border: ridge;position: absolute;
         border-width: 1px 2px 1px 2px;
         width: 755px;
         border-color: lightgrey;
-        margin-left: -107px;;
+        margin-left: 370px;
     }
     #flip input[type=text] {
         font-size: 20px;
@@ -1857,14 +1859,19 @@ border: ridge;position: absolute;
         align-items: center;
         display: none;
     }
-       .threeIcons {
+     .navbar-nav ul .threeIcons {
         list-style-type: none;
-    display: flex;
-    font-size: 22px !important;
-    justify-content: space-between;
-    width: 145px;
-    margin-top: 32px;
-    margin-left: 710px;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 115px;
+        margin-top: 32px;
+        margin-left: 630px !important;
+    }
+    footer {
+        text-align: left;
+        padding: -3px;
+        margin-top: 18px;
     }
     .threeIcons1{
         width: 175px;
@@ -1890,9 +1897,7 @@ border: ridge;position: absolute;
         margin-top: -7px;
     }   
    
-    .navbar{
-        height: 85px;
-    }
+    
     .fas, .far {
         font-size: 27px;
         margin-top: -9px;
@@ -1900,14 +1905,14 @@ border: ridge;position: absolute;
 
     .createNote {
         background-color: white;
-        width: 760px;
+        width: 750px;
         border-radius: 5px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
         grid-row-gap: 15px;
         margin-top: 35px;
-        margin-left: -16px;
-        height: 180px;
+        margin-left: 386px;
+        height: 190px;
     }
     input[type=text] {
         width: 70%;
@@ -1962,33 +1967,35 @@ border: ridge;position: absolute;
     }
     #pinnedNotes, #unpinNotes {
         display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    place-content: initial;
-    width: 760px;
-    justify-content: center;
-    margin-left: -115px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        place-content: initial;
+        justify-content: center;
+        width: 720px;
+        margin-left: 214px;
         
     }
     #a1, #a2 {
-        margin-left: -71px;
+        margin-left: 3px;
+     }
+    #a2{
+        margin-top: 70px;
     }
     .card {
+        width: 320px;
         background-color: white;
-        height: 170px;
-        width: 350px;
-        min-width: 330;
-        height: 225px;
+        height: fit-content;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
         margin-left: 15px;
+      
     }
    #pin, #unpin{
     width: 25px;
     height: 22px;
-    margin-left: 310px;
+    margin-left: 285px;
     margin-top: 10px;
     z-index: 1;
     }
@@ -1996,6 +2003,7 @@ border: ridge;position: absolute;
         display: grid;
         height: 88px;
         margin-top: -35px;
+        padding: 12px;
     }
   .image{
     width: 50px;
@@ -2133,6 +2141,12 @@ border: ridge;
     text-align: right;
     border-top: 1px solid #e5e5e5;
 }
+#closeCreateNote {
+    color: black;
+    margin-top: -73px;
+    float: right;
+    font-size: 20px;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){
@@ -2215,7 +2229,7 @@ border: ridge;
     .viewProfileContent{
      width: 433px;
      margin-left: 300px;
-}
+
     }
     .navbar{
         width: 1040px;
