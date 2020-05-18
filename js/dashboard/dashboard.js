@@ -1,22 +1,33 @@
 $(document).ready(function(){
   $("#openNav").click(function(){
     $(".w3-sidebar").toggle();
-   // $("#display").css({"width":"fit-content", "height": "100%","margin-left": "100px","margin-top": "10px"});
-    // $(".createNote").css({"background-color": "white","width": "825px","border-radius": "5px","display": "grid",
-    //   "grid-row-gap": "15px"," margin-top": "90px","margin-left": "240px","height": "165px","border-style": "solid",
-    // "border-color":"lightgrey","display": "flex","justify-content": "space-between","margin-bottom": "13px","margin-top": "11px !important",
-    //   "margin-left": "140px","padding-right": "170px"});
-    $(".data").css("margin-left", "298px");
     $("#display").css("margin-left","-25px");
-    //$('#pinnedNotes, #unpinNotes').css("width" ,"1165px");
-  });
+    var className = $('#data').attr('class');
+// if($('#data').hasClass('marginLeftNone')){
+//   $('#data').removeClass('marginLeftNone');
+//   $('#data').addClass('marginLeft');
+ 
+// }else{
+//   $('#data').removeClass('marginLeft');
+//   $('#data').addClass('marginLeftNone');
+
+// }
+    console.log("3 icons => ",$('#data').hasClass('marginLeft'));
+    $("ul .threeIcons").css({"margin-left": "485px !important"});
+    $("#flip").css({"margin-left":"295px","width": "458px"});
+    $("#flip #newPerson").css("margin-left", "-3px")
+    console.log("after 3 icon");
+    $("#a1, #a2").css("margin-left", "370px");
+   //$(".createNote").css({"display":"block","background-color": "white","width": "470px","border-radius":"5px","box-shadow":" 0 4px 11px rgba(0,0,0,0.20)","display": "grid","grid-row-gap": "15px","margin-top": "35px","margin-left": "290px","height": "190px"});
+    $("#pinnedNotes, #unpinNotes").css({"display": "flex","flex-direction": "row","flex-wrap": "wrap","align-items": "flex-start","place-content": "initial","justify-content": "center","width": "420px","margin-left": "315px"});
+});
 });
 
 $(document).ready(function(){
   $("#note").click(function(){
       $(".createNote").css("display","block")
     $("#note").css("display","none");
-    
+    $("#a1").css("margin-top","60px")
   });
 });
 
