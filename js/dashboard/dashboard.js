@@ -1,26 +1,147 @@
-$(document).ready(function(){
-  $("#openNav").click(function(){
-    $(".w3-sidebar").toggle();
-    $("#display").css("margin-left","-25px");
-    var className = $('#data').attr('class');
-// if($('#data').hasClass('marginLeftNone')){
-//   $('#data').removeClass('marginLeftNone');
-//   $('#data').addClass('marginLeft');
- 
-// }else{
-//   $('#data').removeClass('marginLeft');
-//   $('#data').addClass('marginLeftNone');
+// $(document).ready(function(){
+//   $("#openNav").click(function(){
+//     $(".w3-sidebar").toggle();
+//     $("#display").css("margin-left","75px");
+//     //var className = $('#data').attr('class');
 
-// }
-    console.log("3 icons => ",$('#data').hasClass('marginLeft'));
-    $("ul .threeIcons").css({"margin-left": "485px !important"});
-    $("#flip").css({"margin-left":"295px","width": "458px"});
-    $("#flip #newPerson").css("margin-left", "-3px")
-    console.log("after 3 icon");
-    $("#a1, #a2").css("margin-left", "370px");
-   //$(".createNote").css({"display":"block","background-color": "white","width": "470px","border-radius":"5px","box-shadow":" 0 4px 11px rgba(0,0,0,0.20)","display": "grid","grid-row-gap": "15px","margin-top": "35px","margin-left": "290px","height": "190px"});
-    $("#pinnedNotes, #unpinNotes").css({"display": "flex","flex-direction": "row","flex-wrap": "wrap","align-items": "flex-start","place-content": "initial","justify-content": "center","width": "420px","margin-left": "315px"});
+//   // $("ul .threeIcons").css({"margin-left": "485px !important"});
+//    //$("#flip").css({"margin-left":"345px"});
+//   // $("#flip #newPerson").css("margin-left", "-3px")
+//     console.log("after 3 icon");
+//   //$("#a1, #a2").css("margin-left", "370px");
+//    //$(".createNote").css({"display":"block","background-color": "white","width": "470px","border-radius":"5px","box-shadow":" 0 4px 11px rgba(0,0,0,0.20)","display": "grid","grid-row-gap": "15px","margin-top": "35px","margin-left": "290px","height": "190px"});
+//   //$("#pinnedNotes, #unpinNotes").css({"display": "flex","flex-direction": "row","flex-wrap": "wrap","align-items": "flex-start","place-content": "initial","justify-content": "center","width": "420px","margin-left": "247px"});
+// });
+// });
+
+/************************* match media **********************************************************************/ 
+// document.addEventListener('DOMContentLoaded',init);
+//   function init(){
+//   
+//   }
+
+document.addEventListener('DOMContentLoaded',init);
+  function init(){
+  var largeSize = window.matchMedia('(min-width:769px) and (max-width:1024px)');
+  var largestSize = window.matchMedia('(min-width:1025px) and (max-width:1440px)');
+  var bigSize = window.matchMedia('(min-width:1441px)');
+  
+  var mobile = window.matchMedia('(max-width:320px) ');
+  var longMobile = window.matchMedia('(min-width:321px) and (max-width:425px)' )
+  var tablet = window.matchMedia('(min-width:426px) and (max-width:768px)');
+  if(tablet.matches){
+    var clicked;
+    $("#openNav").click(function(){
+    if(clicked != true )
+     {
+      $(".w3-sidebar").toggle();
+      $("#a1, #a2").css("margin-left", "160px");
+      $("#display").css("margin-left","5%");
+      $(".data").css("margin-left","25%");
+      $("#pinnedNotes, #unpinNotes").css({"display": "flex","flex-direction": "row","flex-wrap": "wrap","align-items": "flex-start","place-content": "initial","justify-content": "center","width": "600px","margin-left": "15px"});
+      $("#flip").click(function(){
+          $(".createNote").css({"background-color": "white","width": "548px","border-radius": "5px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)","display": "grid","grid-row-gap": "15px","margin-top": "35px","margin-left": "100px","height": "190px"});
+      })
+      $(".threeIcons").css({"list-style-type": "none","display": "flex","font-size": "22px !important","justify-content": "space-between","width": "115px","margin-top": "32px","margin-left": "265px"});
+     }
+     else if(clicked != false){
+       console.log("in false");
+       location.reload(true);
+     }
+    }); 
+  }
+    else if(mobile.matches){
+      console.log("its matching");
+      
+      var clicked;
+      $("#openNav").click(function(){
+      if(clicked != true )
+       {
+        $(".w3-sidebar").toggle();
+       }
+      });
+    }
+
+    else if(longMobile.matches){
+      console.log("its matching");
+      
+      var clicked;
+      $("#openNav").click(function(){
+      if(clicked != true )
+       {
+        $(".w3-sidebar").toggle();
+        $("createNote").css({"display": "block","background-color": "rgb(255, 255, 255)","width": "675px","border-radius": "5px","box-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 11px","row-gap": "15px","margin-top": "35px","margin-left": "-90px","height": "254px"});
+       }
+      });
+    }
+
+    else if(largeSize.matches){
+      console.log("its matching");
+      
+      var clicked;
+      $("#openNav").click(function(){
+      if(clicked != true )
+       {
+        $(".w3-sidebar").toggle();
+        $(".data").css("margin-left", "358px");
+        $("#flip").css({"display": "flex","padding": "5px","text-align": "left","background-color": "white","border-radius": "5px","justify-content": "space-between","height": "50px","margin-top": "-140px","box-shadow": "inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07)","background-clip": "padding-box","border": "solid transparent","border-width": "1px 2px 1px 2px","width": "600px","border-color":"lightgrey","margin-left": "-40px"});
+       }
+      });
+    }
+
+    else if(largestSize.matches){
+      console.log("its matching");
+      
+      var clicked;
+      $("#openNav").click(function(){
+      if(clicked != true )
+       {
+        $(".w3-sidebar").toggle();
+        $("#display").css("margin-left", "82px");
+      //  $("createNote").css({"display": "block","background-color": "rgb(255, 255, 255)","width": "675px","border-radius": "5px","box-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 11px","row-gap": "15px","margin-top": "35px","margin-left": "-90px","height": "254px"});
+       }
+      });
+    }
+
+    else if(bigSize.matches){
+      console.log("its matching");
+      
+      var clicked;
+      $("#openNav").click(function(){
+      if(clicked != true )
+       {
+        $(".w3-sidebar").toggle();
+        //$("createNote").css({"display": "block","background-color": "rgb(255, 255, 255)","width": "675px","border-radius": "5px","box-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 11px","row-gap": "15px","margin-top": "35px","margin-left": "-90px","height": "254px"});
+       }
+      });
+    }
+    else{
+      console.log("nothing to match");
+      
+    }
+}
+/*********** grid view list ******************************************/ 
+$(document).on("click" , ".middleIcon" , function(e) { 
+  console.log("in midleicon");
+  $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+
+  $(".card").css({"width": "600px"})
+  $("#a1, #a2").css({"margin-left": "255px"})
+  $(".createNote").css({"width":"195px","background-color":"white","width": "680px","border-radius": "5px","grid-row-gap": "15px","margin-top":"30px","margin-left": "305px","height": "195px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)"});
+  $(".noteIcon").css({"padding-right": "-9px","margin-top": "2px","display": "flex","margin-left": "-9px"})
+  $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
 });
+
+
+$(document).on("click" , ".gridView" , function(e) { 
+  console.log("in grid view");
+  $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+
+  $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+  $("#a1, #a2").css({"margin-left": "140px"})
+  $(".noteIcon").css({"padding-right": "-1px","margin-top": "0px","display": "flex"})
+  $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+  var resWidth = screen.width
 });
 
 $(document).ready(function(){
@@ -1449,28 +1570,29 @@ $(document).on("click" , ".signout" , function(e) {
   });
 });
 
-/*********** grid view list ******************************************/ 
-$(document).on("click" , ".middleIcon" , function(e) { 
-  console.log("in midleicon");
-  $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+// /*********** grid view list ******************************************/ 
+// $(document).on("click" , ".middleIcon" , function(e) { 
+//   console.log("in midleicon");
+//   $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
 
-  $(".card").css({"width": "600px"})
-  $("#a1, #a2").css({"margin-left": "255px"})
-  $(".noteIcon").css({"padding-right": "322px","margin-top": "2px","display": "flex","margin-left": "-9px"})
-  $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
-});
+//   $(".card").css({"width": "600px"})
+//   $("#a1, #a2").css({"margin-left": "255px"})
+//   $(".createNote").css({"width":"195px","background-color":"white","width": "680px","border-radius": "5px","grid-row-gap": "15px","margin-top":"30px","margin-left": "305px","height": "195px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)"});
+//   $(".noteIcon").css({"padding-right": "-9px","margin-top": "2px","display": "flex","margin-left": "-9px"})
+//   $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+// });
 
 
-$(document).on("click" , ".gridView" , function(e) { 
-  console.log("in grid view");
-  $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+// $(document).on("click" , ".gridView" , function(e) { 
+//   console.log("in grid view");
+//   $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
 
-  $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
-  $("#a1, #a2").css({"margin-left": "140px"})
-  $(".noteIcon").css({"padding-right": "10px","margin-top": "0px","display": "flex"})
-  $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
-  var resWidth = screen.width
-});
+//   $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+//   $("#a1, #a2").css({"margin-left": "140px"})
+//   $(".noteIcon").css({"padding-right": "-1px","margin-top": "0px","display": "flex"})
+//   $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+//   var resWidth = screen.width
+// });
 let createColor='';
 /**********  create note functionality **********************************************************************/ 
 function insrt(color) {
@@ -1485,15 +1607,6 @@ function insrt(color) {
     console.log("date is",date);
   });
 
-  // $(document).on("click" , "#unpincreateNote" , function(e) { 
-  //   value=true;
-  //    console.log("isPined ",value);
-  //   }); 
-
-  // $(document).on("click" , "#archieveCreateNote" , function(e) { 
-  //     value=true;
-  //     console.log("isArchived ",value);
-  // });   
     
     var pinClicked;
   $("#unpincreateNote").click(function(){

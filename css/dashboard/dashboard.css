@@ -1361,6 +1361,9 @@ border: ridge;position: absolute;
     .updateContent{
         height: 170px;
     }
+    #lastDelete{
+        margin-bottom: 150px;
+    }
     .updateContent .modal-footer {
         padding: 15px;
         margin-top: 5px;
@@ -1392,7 +1395,7 @@ border: ridge;position: absolute;
         margin-left: 39px;
         word-wrap: break-word;
         color: black;
-        font-size: 35px !important;
+        font-size: 30px !important;
         word-break: break-word;
     }
     a .material-icons {
@@ -1433,7 +1436,7 @@ border: ridge;position: absolute;
         background-color: white;
     }
     #a1, #a2{
-        margin-left: -312px;
+        margin-left: -65px;
     }
     .pickData {
         float: left;
@@ -1540,8 +1543,8 @@ border: ridge;position: absolute;
         height: 70px;
         box-shadow: inset 0px 1px 0  1px rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
         margin-top: -100px;
-        width: 780px;
-        margin-left: -103px;
+        width: 710px;
+        margin-left: -157px;
         font-size: 40px;
         margin-right: -10px;
     }
@@ -1554,7 +1557,7 @@ border: ridge;position: absolute;
     }
     .app{
         margin-top: 3px;
-        margin-left: 97px;
+        margin-left: 88px;
     }
     .navbar-nav {
         display: list-item;
@@ -1573,13 +1576,13 @@ border: ridge;position: absolute;
 
     .threeIcons {
         margin-right: -135px;
-        list-style-type: none;
-        display: flex;
-        font-size: 22px !important;
-        justify-content: space-between;
-        width: 152px;
-        margin-top: 15px;
-        margin-left: 287px;
+    list-style-type: none;
+    display: flex;
+    font-size: 22px !important;
+    justify-content: space-between;
+    width: 152px;
+    margin-top: 15px;
+    margin-left: 150px;
     }
     .menu {
         margin-left: 20px;
@@ -1596,7 +1599,7 @@ border: ridge;position: absolute;
         min-height: 50px;
         margin-bottom: 20px;
         border: 1px solid transparent;
-        width: 100% !important;
+        width: 865px !important;
     }
     .fas, .far {
         font-size: 30px;
@@ -1671,10 +1674,10 @@ border: ridge;position: absolute;
         color: black;
     }
     #display {
-        width: 100%;
+        width: 80%;
         height: 100%;
         margin-top: 10px;
-        display: grid;
+        display: grid;margin-left: -64px;
         align-items: flex-start;
         place-content: initial;
     }
@@ -1733,7 +1736,7 @@ border: ridge;position: absolute;
     display: grid;
     padding: 20px;
     height: 100%;
-    width: 400px;grid-row-gap: 40px;
+    width: 400px;grid-row-gap: 25px;
     padding-bottom: 360px;
     font-size: 20px !important;
 }
@@ -1747,7 +1750,7 @@ a {
     color: #337ab7;
     text-decoration: none;
     width: 305px;
-    height: 85px;
+    height: 38px;
     font-size: 30px;
 }
 #mySidebar a:hover {
@@ -1852,6 +1855,9 @@ footer{
       #updateData{
         margin-top: -100px;
         color: black;
+      }
+      #lastDelete{
+        margin-bottom: 280px;
       }
       .updateContent .modal-footer{
         padding: 15px;
@@ -2042,12 +2048,17 @@ footer{
         background-clip: padding-box;
         border: solid transparent;
         border-width: 1px 2px 1px 2px;
-        width: 679px;
+        width: 450px;
         border-color: lightgrey;
-        margin-left: 45px;
+        margin-left: 160px;
         }
     #flip input[type=text] {
         font-size: 20px;
+        width: 50%;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: gray;
     }
     .far .fa-clock{
         font-size: 23px;
@@ -2133,12 +2144,12 @@ footer{
         height: 190px;
     }
     input[type=text] {
-        width: 70%;
-        border: none;
-        outline: none;
-        font-weight: 500;
-        color: gray;
-        font-size: 15px;
+            /* width: 59%;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: gray;
+        font-size: 15px; */
     }
     #desc {
         margin-top: -7px;
@@ -2782,7 +2793,7 @@ border: ridge;
     }
     .createNote {
         background-color: white;
-        width: 680px;
+        width: 600px;
         border-radius: 5px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
         display: grid;
@@ -3093,7 +3104,7 @@ border: ridge;
         grid-row-gap: 15px;
         margin-top: 30px;
         margin-left: 220px;
-        height: 165px;
+        height: 170px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
     }
     .threeIcons1{
@@ -3289,7 +3300,7 @@ border: ridge;
         padding: 30px;
         font-size: 20px;
         height: 100%;
-        width: 332px;
+        width: 295px;
         padding-bottom: 360px;
     }
     .updateContent{
@@ -3318,7 +3329,7 @@ border: ridge;
     }
     .modal-footer .noteIcon{
         padding-right: 10px;
-    margin-top: -31px;
+    margin-top: -26px;
     display: flex;
     width: 500px;
     margin-right: 185px;
@@ -3390,7 +3401,7 @@ border: ridge;
    
     padding: 20px;
     font-size: 20px;
-    width: 332px;
+    width: 302px;
     }
     .w3-sidebar a{
     /* margin-bottom: 50px; */
