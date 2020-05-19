@@ -43,13 +43,40 @@ document.addEventListener('DOMContentLoaded',init);
           $(".createNote").css({"background-color": "white","width": "548px","border-radius": "5px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)","display": "grid","grid-row-gap": "15px","margin-top": "35px","margin-left": "100px","height": "190px"});
       })
       $(".threeIcons").css({"list-style-type": "none","display": "flex","font-size": "22px !important","justify-content": "space-between","width": "115px","margin-top": "32px","margin-left": "265px"});
-     }
-     else if(clicked != false){
-       console.log("in false");
-       location.reload(true);
-     }
-    }); 
-  }
+     
+      $(".middleIcon").click(function(){//    width: 523px;  margin-left: 43px;
+        
+         $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+         $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "490px","margin-top": "10px","z-index": "1"})
+        $(".card").css({"width": "523px"," margin-left": "43px"})
+      })
+      // $(".gridView").click(function(){
+      // console.log("in grid view");
+      
+      //   $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+      //   $("#a1, #a2").css({"margin-left": "140px"})
+      //   $(".noteIcon").css({"padding-right": "-1px","margin-top": "0px","display": "flex"})
+      //   $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+      // })
+    }
+   });
+   $(".middleIcon").click(function(){
+    console.log("**********");
+    $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+    $(".card").css({"width": "600px"})
+    $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+    $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
+  }) 
+
+  $(document).on("click" , ".gridView" , function(e) { 
+    console.log("in grid view");
+    $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+    $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+    $("#a1, #a2").css({"margin-left": "140px"})
+    $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
+    $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+   });
+}
     else if(mobile.matches){
       console.log("its matching");
       
@@ -85,7 +112,26 @@ document.addEventListener('DOMContentLoaded',init);
         $(".w3-sidebar").toggle();
         $(".data").css("margin-left", "358px");
         $("#flip").css({"display": "flex","padding": "5px","text-align": "left","background-color": "white","border-radius": "5px","justify-content": "space-between","height": "50px","margin-top": "-140px","box-shadow": "inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07)","background-clip": "padding-box","border": "solid transparent","border-width": "1px 2px 1px 2px","width": "600px","border-color":"lightgrey","margin-left": "-40px"});
-       }
+        $(".createNote").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
+      }
+      });
+      $(".middleIcon").click(function(){
+        console.log("**********");
+        $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+        $(".card").css({"width": "600px"})
+        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+        $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
+      }) 
+    
+      $(document).on("click" , ".gridView" , function(e) { 
+        console.log("in grid view");
+        $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+        $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+        $("#a1, #a2").css({"margin-left": "140px"})
+        $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
+        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+        $(".createNote").css({"margin-left": "-35px"}) 
+        $(".createNote .noteIcon").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
       });
     }
 
@@ -98,9 +144,38 @@ document.addEventListener('DOMContentLoaded',init);
        {
         $(".w3-sidebar").toggle();
         $("#display").css("margin-left", "82px");
-      //  $("createNote").css({"display": "block","background-color": "rgb(255, 255, 255)","width": "675px","border-radius": "5px","box-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 11px","row-gap": "15px","margin-top": "35px","margin-left": "-90px","height": "254px"});
-       }
+        
+        $(".middleIcon").click(function(){
+          console.log("**********");
+          $(".flip").css({"margin-left": "355px"})
+          $(".createNote").css({"margin-left": "305px"})
+          $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+          $(".card").css({"width": "600px"})
+          $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+          $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
+        })        }
       });
+      $(".middleIcon").click(function(){
+        console.log("**********");
+        $(".flip").css({"margin-left": "355px"})
+        $(".createNote").css({"margin-left": "305px"})
+        $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+        $(".card").css({"width": "600px"})
+        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+        $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
+      }) 
+    
+      $(document).on("click" , ".gridView" , function(e) { 
+        console.log("in grid view");
+        $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+        $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+        $("#a1, #a2").css({"margin-left": "140px"})
+        $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
+        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+        $(".createNote").css({"margin-left": "-35px"}) 
+        $(".createNote .noteIcon").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
+      });
+
     }
 
     else if(bigSize.matches){
@@ -114,6 +189,28 @@ document.addEventListener('DOMContentLoaded',init);
         //$("createNote").css({"display": "block","background-color": "rgb(255, 255, 255)","width": "675px","border-radius": "5px","box-shadow": "rgba(0, 0, 0, 0.2) 0px 4px 11px","row-gap": "15px","margin-top": "35px","margin-left": "-90px","height": "254px"});
        }
       });
+
+      $(".middleIcon").click(function(){
+        console.log("**********");
+        $(".flip").css({"margin-left": "355px"})
+        $(".createNote").css({"margin-left": "260px"})
+        $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+        $(".card").css({"width": "600px"})
+        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+        $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
+      }) 
+    
+      $(document).on("click" , ".gridView" , function(e) { 
+        console.log("in grid view");
+        $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+        $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+        $("#a1, #a2").css({"margin-left": "140px"})
+        $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
+        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+        $(".createNote").css({"margin-left": "-35px"}) 
+        $(".createNote .noteIcon").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
+        $("#pinnedNotes, #unpinNotes").css({"margin-left": "80px"})
+      });
     }
     else{
       console.log("nothing to match");
@@ -121,28 +218,28 @@ document.addEventListener('DOMContentLoaded',init);
     }
 }
 /*********** grid view list ******************************************/ 
-$(document).on("click" , ".middleIcon" , function(e) { 
-  console.log("in midleicon");
-  $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
+// $(document).on("click" , ".middleIcon" , function(e) { 
+//   console.log("in midleicon");
+//   $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
 
-  $(".card").css({"width": "600px"})
-  $("#a1, #a2").css({"margin-left": "255px"})
-  $(".createNote").css({"width":"195px","background-color":"white","width": "680px","border-radius": "5px","grid-row-gap": "15px","margin-top":"30px","margin-left": "305px","height": "195px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)"});
-  $(".noteIcon").css({"padding-right": "-9px","margin-top": "2px","display": "flex","margin-left": "-9px"})
-  $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
-});
+//   $(".card").css({"width": "600px"})
+//   $("#a1, #a2").css({"margin-left": "255px"})
+//   $(".createNote").css({"width":"195px","background-color":"white","width": "680px","border-radius": "5px","grid-row-gap": "15px","margin-top":"30px","margin-left": "305px","height": "195px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)"});
+//   $(".noteIcon").css({"padding-right": "-9px","margin-top": "2px","display": "flex","margin-left": "-9px"})
+//   $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+// });
 
 
-$(document).on("click" , ".gridView" , function(e) { 
-  console.log("in grid view");
-  $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
+// $(document).on("click" , ".gridView" , function(e) { 
+//   console.log("in grid view");
+//   $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
 
-  $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
-  $("#a1, #a2").css({"margin-left": "140px"})
-  $(".noteIcon").css({"padding-right": "-1px","margin-top": "0px","display": "flex"})
-  $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
-  var resWidth = screen.width
-});
+//   $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+//   $("#a1, #a2").css({"margin-left": "140px"})
+//   $(".noteIcon").css({"padding-right": "-1px","margin-top": "0px","display": "flex"})
+//   $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
+//   var resWidth = screen.width
+// });
 
 $(document).ready(function(){
   $("#note").click(function(){
