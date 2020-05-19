@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded',init);
         $(".w3-sidebar").toggle();
         $(".data").css("margin-left", "358px");
         $("#flip").css({"display": "flex","padding": "5px","text-align": "left","background-color": "white","border-radius": "5px","justify-content": "space-between","height": "50px","margin-top": "-140px","box-shadow": "inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07)","background-clip": "padding-box","border": "solid transparent","border-width": "1px 2px 1px 2px","width": "600px","border-color":"lightgrey","margin-left": "-40px"});
-        $(".createNote").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
+       // $(".createNote").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
       }
       });
       $(".middleIcon").click(function(){
