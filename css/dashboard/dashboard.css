@@ -1,5 +1,5 @@
 div .card {
-     box-shadow: 10px 20px 50px lightgrey;
+     box-shadow: 10px 20px 50px lightgrey;    font-family: Roboto,Arial,sans-serif;
   }
 .today:hover{
         background-color: transparent !important;
@@ -634,13 +634,13 @@ However, delay the fade out process for 2.5 seconds */
     margin-left: 15px;
     margin-top: 10px;
 }
-#pinnedNotes, #unpinNotes{
+/* #pinnedNotes, #unpinNotes{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     place-content: initial;
-}
+} */
 .viewImage{
     width: 100px;
     height: 100px;
@@ -662,13 +662,16 @@ However, delay the fade out process for 2.5 seconds */
 }
 #remainderTime{
     border-radius: 60px;
-    width: 125px;
+    width: fit-content;
     border: none;
-    display: flex;
     font-size: 15px;
     height: 25px;
-    margin-left: 27px;
+    
     margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .anotherAcc{
     display: flex;
@@ -735,13 +738,55 @@ border: ridge;position: absolute;
 }
 .modalData input[type =text]{
     background-color: transparent;
-    box-shadow: none;
+    box-shadow: none;       padding-left: 30px;
     color: beige;
     color: black;
   }
   
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
+    .archive,#remainder,#collaborator,#colors,#image,#moreIcon,#unpincreateNote,#remainderCreateNote,#collaboratorCreateNote,.dropbtn,#colorsCreateNote,#archieveCreateNote{
+        width: 83px;
+        height: 76px;
+    }
+    #unpincreateNote {
+        width: 113px;
+        height: 76px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .labelTitle {
+        margin-left: -125px !important;
+    }
+    .labelContent{
+        margin-left: 10px;
+    width: 245px;
+    }
+    .modalData input[type =text] {
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 7px;
+    }
+
+    .info{
+        margin-top: 36px;
+    }
+    #pinnedNotes,#unpinNotes{
+        display: grid;
+    grid-row-gap: 50px;
+    }
+    .createNote .in #unpincreateNote{
+        margin-top: 5px;
+        margin-left: 237px;
+    }
+    .tit, .desc {
+        font-size: 18px;
+        margin-top: 0px;
+        display: inline-flex;
+    }
+    .tite, .descr{
+        width: 825px;
+    }
     .keepLogo {
     vertical-align: middle;
         border-style: none;
@@ -749,8 +794,8 @@ border: ridge;position: absolute;
         height: 80px;
     }
     .labelData img{
-        width: 80px;
-        height: 60px !important;
+        width: 112px;
+        height: 82px !important;
     }
     .w3-sidebar a {
         color: black;
@@ -845,8 +890,9 @@ border: ridge;position: absolute;
   }
     .modalData{
         height: 120px;
-        display: grid;
-        margin-left: -30px;
+        display: flex;
+        width: 245px;
+        margin-left: 14px;
         margin-top: -14px;
     }
     #updateData{
@@ -861,13 +907,9 @@ border: ridge;position: absolute;
     .fas .fa-palette {
         font-size: 70px;
     }
-    .modalData input[type=text] {
+    .ok{
         border: none;
-        height: 44px;
-        outline: none;
-        font-weight: 600;
-        color: gray;
-        font-size: 15px;
+        background-color: white;
     }
     #collabSaveBtn, #collabCancelBtn {
         font-size: 17px;
@@ -899,8 +941,14 @@ border: ridge;position: absolute;
         font-weight: 600;
         margin-left: -178px !important;
     }
-    .today h6 span{
+    .today span{
         font-size: 15px !important;color: black;
+    }
+    h6 {
+        display: flex;        font-size: 15px !important;color: black;
+
+    justify-content: space-between;
+    width: 215px;
     }
      .info .tite, .descr {
     font-size: 65px !important;
@@ -977,15 +1025,8 @@ border: ridge;position: absolute;
 .modal-footer  .noteIcon .material-icons{
     font-size: 24px !important;
 }
-/* .fas, .far {
-    font-size: 26px;
-    color: black;
-} */
-.archive {
-    width: 30px;
-    height: 30px;
-}
-    .threeIcons {
+
+  .threeIcons {
         list-style-type: none;
         display: flex;
         font-size: 22px !important;
@@ -1039,16 +1080,15 @@ border: ridge;position: absolute;
     height: 24px;
 }
 .createNote {
-        background-color: white;
-        width: 1254px;
-        border-radius: 5px;
-        display: grid;
-        grid-row-gap: 15px;
-        margin-top: 100px;
-        margin-left: -160px;
-        height: 550px;
-        border-style: solid;
-        border-color: lightgrey;
+    background-color: white;
+    width: 1254px;
+    border-radius: 5px;
+    grid-row-gap: 15px;
+    margin-top: 133px;
+    margin-left: -160px;
+    height: 430px;
+    border-style: solid;
+    border-color: lightgrey;
     }
     input[type=text] {
        width: 70%;
@@ -1079,7 +1119,7 @@ border: ridge;position: absolute;
         direction: ltr;
         -webkit-font-feature-settings: 'liga';
         -webkit-font-smoothing: antialiased;
-        font-size: 90px !important;
+        font-size: 20px !important;
     
     }
     .icons{
@@ -1145,8 +1185,6 @@ border: ridge;position: absolute;
         margin-top: 10px;
         margin-top: 10px;
         display: grid;
-        /* align-items: flex-start; */
-        /* place-content: initial; */
         grid-row-gap: 60px;
     }
     .container {
@@ -1159,7 +1197,7 @@ border: ridge;position: absolute;
     
         width: 1000px;
         height: fit-content;
-        border-radius: 10px;
+        border-radius: 25px;
         margin: 5px;
         margin-left: -70px;
     }
@@ -1169,12 +1207,7 @@ border: ridge;position: absolute;
         margin-left: 1120px;
         margin-top: 10px;
     }
-    #unpincreateNote {
-        width: 113px;
-        height: 76px;
-        margin-left: 1150px;
-        margin-top: 10px;
-    }
+   
     .threeIcons1{
         list-style-type: none;
         display: flex;
@@ -1230,9 +1263,7 @@ border: ridge;position: absolute;
         margin-left: 903px;
         margin-top: 10px;
     }
-    #unpincreateNote{
-        float: right;
-    }
+   
     .far .fa-click, .far .fa-image{
             font-size: 78px;
             color: grey;
@@ -1241,14 +1272,17 @@ border: ridge;position: absolute;
         font-size: 50px !important;
     }
     #remainderTime {
-        border-radius: 60px;
-        width: 530px;
-        border: none;
-        display: flex;
-        font-size: 15px;
         height: 87px;
-        margin-left: 27px;
-        margin-top: 195px;
+    border-radius: 60px;
+    width: fit-content;
+    border: none;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     }
     #remainderTime .material-icons{
         margin-right: -125px;
@@ -1275,16 +1309,18 @@ border: ridge;position: absolute;
         font-size: 20px !important;
     }
     .labelData {
-        height: 80px;
+        height: 40px;
         width: 453px;
         display: flow-root;
         min-width: 40px;
     }
     #labelName {
-        font-size: 45px;
+        font-size: 16px;
         text-align: left;
         color: black;
         margin-top: -80px;
+        font-weight: 400;
+        width: 165px;
     }
     a {
         color: #337ab7;
@@ -1308,8 +1344,8 @@ border: ridge;position: absolute;
     margin-top: -31px;
     }
    .modal-footer h6{
-        margin-right: 152px;
-        margin-top: 10px;
+    margin-right: 128px;
+    margin-top: 10px;
     }
     footer .noteIcon{
         display: flex;
@@ -1350,9 +1386,61 @@ border: ridge;position: absolute;
     .uploadImage{
         font-size: 20px;
     }
+    .dropdown-item {
+        display: block;
+        width: 100%;
+        padding: .25rem 1.5rem;
+        clear: both;
+        font-size: 45px;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+    }
+    .allLabels .labelData {
+        height: 100px;
+        width: 453px;
+        display: flow-root;
+    }
+    .allLabels .labelData #labelName{
+        font-size: 47px;
+        text-align: left;
+        color: black;
+        margin-top: -80px;
+        font-weight: 400;
+        width: 326px;
+    }
+    .app .material-icons{
+        font-size: 90px !important;
+    }
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
+    #unpincreateNote {
+        margin-left: 26px;
+        margin-top: 2px;
+    }
+    .info{
+        margin-top: 36px;
+    }
+   .labelData #deleteLabelIcon{
+        font-size: 20px !important;
+        margin-left: 20px;
+    }
+    .createNote .in #unpincreateNote{
+        margin-top: 5px;
+        margin-left: 142px;
+    }
+    .tit, .desc {
+        font-size: 18px;
+        margin-top: 0px;
+        display: inline-flex;
+    }
+    .tite, .descr{
+        width: 475px;
+    }
     .viewProfileContent{
         position: relative;
         margin-left: 0px;
@@ -1373,9 +1461,7 @@ border: ridge;position: absolute;
     .modalData .updateDesc{
         margin-top: 5px;
     }
-    /* .navbar{
-        width: 1168px !important;
-    } */
+    
     #dateAndTime{
         font-size: 21px !important;
     color: black;
@@ -1403,9 +1489,7 @@ border: ridge;position: absolute;
     }
     #pinnedNotes, #unpinNotes {
         display: grid;
-        align-items: flex-start;
-        margin-left: 150px;
-        place-content: initial;
+        grid-row-gap: 35px;
     }
     table  td{
         padding-left: 10px;
@@ -1604,12 +1688,7 @@ border: ridge;position: absolute;
     .fas, .far {
         font-size: 30px;
     }
-    #unpincreateNote {
-        width: 32px;
-        height: 32px;
-        float: right;
-        z-index: 1;
-    }
+   
     .createNote {
         background-color: white;
     width: 770px;
@@ -1633,7 +1712,7 @@ border: ridge;position: absolute;
     #desc {
         margin-top: 9px !important;
         }
-    .archive{
+    .archive,#remainder,#collaborator,#colors,#image,#moreIcon,#unpincreateNote,#remainderCreateNote,#collaboratorCreateNote,.dropbtn,#colorsCreateNote,#archieveCreateNote{
         width: 40px;
         height: 35px;
     }
@@ -1688,23 +1767,15 @@ border: ridge;position: absolute;
     }
     
     .card {
+        width: 600px;
         background-color: white;
         height: fit-content;
-        width: 600px;
-        background-color: rgb(131, 118, 118);
-        height: 290px;
         border-radius: 6px;
         margin: 5px;
         border-radius: 6px;
         margin-left: -210px;
     }
-     #unpincreateNote {
-        width: 45px;
-        height: 37px;
-        margin-left: 533px;
-        margin-top: 10px;
-        z-index: 1;
-    }
+    
     .card #unpin{
         width: 40px;
         height: 35px;
@@ -1714,8 +1785,8 @@ border: ridge;position: absolute;
     }
     .card-body .noteIcon{
         padding-right: 35px;
-    margin-top: 73px;
-    margin-left: -10px;
+        margin-top: 73px;
+        margin-left: 14px;
     }
    #pin, #unpin{
     width: 40px;
@@ -1851,12 +1922,32 @@ footer{
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
-    .clkRem{
+    #unpincreateNote {
+        margin-left: 26px;
+        margin-top: 2px;
+    }
+    #moreIcon{
+        height: 20px;
+    }
+    .createNote .in #unpincreateNote{
+        margin-top: 5px;
+        margin-left: 142px;
+    }
+    .tit, .desc {
+        font-size: 18px;
+        margin-top: 0px;
+        display: inline-flex;
+    }
+    .tite, .descr{
+        width: 230px;
+    }
+     .clkRem{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
       }
+
       #updateData{
         margin-top: -100px;
         color: black;
@@ -1875,7 +1966,7 @@ footer{
         font-size: 15px;
         margin-left: -75px;
       }
-      #remainderTime{
+      /* #remainderTime{
         border-radius: 60px;
         width: 167px;
         border: none;
@@ -1885,18 +1976,15 @@ footer{
         height: 25px;
         margin-left: 30px;
         margin-top: 10px;
-    }
+    } */
     .card:hover {
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
      .createNote input[type=text] {
-        width: 70%;
-        border: none; 
+        border: none;
         outline: none;
         font-weight: 500;
         color: gray;
-        margin-top: -12px;
-        font-size: 20px;
     }
     .data{
         display: flex;
@@ -2037,7 +2125,6 @@ footer{
         width: 1500px;
         height: 85px;
         position: fixed;
-        /* min-height: 50px; */
         margin-bottom: 20px;
         border: 1px solid transparent;
     }
@@ -2140,23 +2227,15 @@ footer{
 
     .createNote {
         background-color: white;
-        width: 690px;
+        width: 650px;
         border-radius: 5px;
         box-shadow: 0 4px 11px rgba(0,0,0,0.20);
-        display: grid;
         grid-row-gap: 15px;
         margin-top: 35px;
         margin-left: 40px;
-        height: 190px;
+        height: 160px;
     }
-    input[type=text] {
-            /* width: 59%;
-    border: none;
-    outline: none;
-    font-weight: 500;
-    color: gray;
-        font-size: 15px; */
-    }
+    
     #desc {
         margin-top: -7px;
     }
@@ -2245,8 +2324,6 @@ footer{
     .info {
         display: grid;
         height: 88px;
-        margin-top: -35px;
-        padding: 12px;
     }
   .image{
     width: 50px;
@@ -2307,7 +2384,7 @@ footer{
     padding-right: 10px;
     margin-top: -5px;
     display: flex;
-    margin-left: -25px;
+    margin-left: -11px;
     margin-right: 355px;
 }
 #moreData{
@@ -2370,11 +2447,7 @@ border: ridge;
     height: 100%;
     
 }
- #unpincreateNote {
-    height: 22px;
-    z-index: 1;
-    float: right;
-}
+
 .sideBody{
     height: 100% !important;
     width: 100% !important;
@@ -2423,6 +2496,12 @@ border: ridge;
         justify-content: space-around;
         align-items: center;
       }
+      #moreIcon{
+        height: 20px;
+    }
+      #remainderTime{
+        margin-left: 38px;
+      }
       .modal-footer .noteIcon {
         padding-right: 10px;
         margin-top: -31px;
@@ -2430,7 +2509,7 @@ border: ridge;
         width: 500px;
         margin-right: 185px;
     }
-      #remainderTime{
+      /* #remainderTime{
         border-radius: 60px;
         width: 157px;
         border: none;
@@ -2440,7 +2519,7 @@ border: ridge;
         height: 25px;
         margin-left: 30px;
         margin-top: 10px;
-    }
+    } */
     .remAndLabel {
         justify-content: start;
         display: flex;
@@ -2532,13 +2611,13 @@ border: ridge;
         box-shadow: 0 0 11px rgba(33,33,33,.2); 
      }
       #title , #desc{
-        margin-top: -10px;
+        margin-top: 3px;
       }
       .createNote .noteIcon {
         padding-right: 10px;
         margin-top: -31px;
         display: flex;
-        margin-left: -26px;
+        margin-left: -16px;
         margin-right: 335px;
     }
     .closeBtn{
@@ -2551,7 +2630,7 @@ border: ridge;
     }
     .viewProfileContent{
         margin-top: 10px;
-    margin-left: 240px;
+        margin-left: 240px;
     }
     .selfData {
         display: grid !important;
@@ -2642,16 +2721,6 @@ border: ridge;
         margin-top: 10px;
     }
 
-    #remainderTime{
-        border-radius: 60px;
-        width: 159px;
-        border: none;
-        display: flex;
-        font-size: 15px;
-        height: 25px;
-        margin-left: 30px;
-        margin-top: 10px;
-    }
     .card {
         width: 320px;
         background-color: white;
@@ -2711,9 +2780,9 @@ border: ridge;
         margin-top: -4px;
     }
     .tit, .desc {
-        border: none;
         font-size: 18px;
-        margin-top: -15px;
+        margin-top: 0px;
+        display: inline-flex;
     }
     .form-control {
         width: 475px !important;
@@ -2808,14 +2877,7 @@ border: ridge;
         margin-left: 35px;
         height: 165px;
     }
-    #unpin {
-        width: 25px;
-        height: 22px;
-        /* margin-left: 255px; */
-        margin-top: 10px;
-        z-index: 1;
-        float: right;
-    }
+    
     .collaboratorContent .modal-title {
         font-weight: 600;
         margin-left: -551px !important;
@@ -2850,12 +2912,7 @@ border: ridge;
     margin-top: 0px;
     margin-left: 11px;
 }
- #unpincreateNote {
-    width: 25px;
-    height: 22px;
-    z-index: 1;
-    float: right;
-}
+
 .remainderContent .modal-body {
         margin-bottom: -29px;
         position: relative;
@@ -2880,10 +2937,24 @@ border: ridge;
     margin-top: -90px;
     color: black;
 }
+ #unpincreateNote {
+    margin-left: 20px;
+    margin-top: 2px;
+}
+.createNote #unpincreateNote{
+    margin-left: 75px;
+    margin-top: 2px;
+}
+.tite, .desc{
+    width: 250px;
+}
 }
 /********************************************************************/
 @media screen and (min-width: 1025px) and (max-width:1440px){
-    .sideBody {
+    #moreIcon{
+        height: 20px;
+    }
+    /* .sideBody {
         height: 100% !important;
         width: 100% !important;
         display: flex;
@@ -3268,7 +3339,7 @@ border: ridge;
     }
     .today h6:hover {
         /* background-color: lightgrey; */
-    }
+    /* }
  
     .remAndLabel {
         justify-content: space-around;
@@ -3315,13 +3386,7 @@ border: ridge;
         margin-top: 315px;
         height: fit-content;
     }
-    /* .modal-content{
-        display: flex;
-        margin-left: -130px;
-        width: 750px;
-        height: fit-content;
-  
-    } */
+   
     .collaboratorContent input[type="text"]{
         margin-left: -110px !important;
         font-size: 18px;
@@ -3345,17 +3410,21 @@ border: ridge;
     margin-top: 5px;
     color: black;
     font-size: 18px;
-    }
- 
-}
+    }  */
 
-/********************************************************************/
-@media screen and (min-width:1441px){
     #closeCreateNote {
         color: black;
         margin-top: -73px;
         float: right;
         margin-right: -155px;
+    }
+    .info #desc{
+        margin-top: -20px !important;
+    }
+    .in{
+        display: inline-flex;
+        padding-top: 30px;
+        width: inherit;
     }
     .newCollaborator #newPerson{
         margin-left: -117px;
@@ -3469,20 +3538,13 @@ border: ridge;
     .searchBox input[type=text]{
         font-weight: 500;    font-size: 20px;
     }
-    #unpin , #unpincreateNote{
-        width: 25px;
-        height: 22px;
-        margin-left: 255px;
-        margin-top: 10px;
-        z-index: 1;
-    }
+    /* #unpin {
+        margin-left: 236px;
+        margin-top: -51px;
+    } */
     .createNote #unpincreateNote {
-        width: 25px;
-        height: 22px;
-        margin-right: -126px;
-        margin-top: 10px;
-        z-index: 1;
-        float: right;
+        margin-right: 30px;
+        margin-top: -5px;
     }
     .keepLogo {
         vertical-align: middle;
@@ -3752,9 +3814,6 @@ border: ridge;
     #time{
     float: right;
     }
-    .today h6:hover {
-        /* background-color: lightgrey; */
-    }
     #pinnedNotes ,#unpinNotes{
         display: flex;
         flex-direction: row;
@@ -3762,7 +3821,7 @@ border: ridge;
         align-items: flex-start;
         place-content: initial;
         justify-content: center;
-        width: 1270px;
+        width: 1110px;
     }
     #flip .head  {
         width: 70%;
@@ -3824,7 +3883,7 @@ border: ridge;
       .modalData .form-control {
         width: 480px !important;
         font-size: 19px;
-        padding-left: 0px;
+        padding-left: 30px;
       }
       .today{
         display: grid;
@@ -3876,6 +3935,541 @@ border: ridge;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    #unpin, #unpincreateNote {
+        margin-left: 236px;
+        margin-top: -51px;
+    }
+ 
+}
+
+/********************************************************************/
+@media screen and (min-width:1441px){
+    #closeCreateNote {
+        color: black;
+        margin-top: -73px;
+        float: right;
+        margin-right: -155px;
+    }
+    #moreIcon{
+        height: 20px;
+    }
+    .info #desc{
+        margin-top: -20px !important;
+    }
+    .in{
+        display: inline-flex;
+        padding-top: 30px;
+        width: inherit;
+    }
+    .newCollaborator #newPerson{
+        margin-left: -117px;
+    }
+    .modal-footer{
+        height: 75px;
+    }
+    #lastDelete{
+        margin-bottom: 50px;
+    }
+    .modal-footer .noteIcon{
+        padding-right: 10px;
+    margin-top: -31px;
+    display: flex;
+    width: 500px;
+    margin-right: 185px;
+    }
+    #updateData{
+        position: absolute;
+    margin-top: 5px;
+    color: black;
+    font-size: 18px;
+    }
+     .updateContent{
+        margin-left: -99px;
+        width: 700px;    border-radius: 12px;
+        margin-top: 315px;
+        height: fit-content;
+    }
+    span {
+        margin-left: 4px;
+        font-size: 17px;
+        color: black;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+    #dateAndTime ,#labelName{
+        font-size: 14px;
+        color: grey;
+        margin-top: 4px;
+    }
+    .w3-sidebar{
+        overflow: auto;
+        height: 100%;
+        padding-bottom: 40px;
+        margin-top: -15px !important;
+    font-weight: 500;
+    display: grid;
+   
+    padding: 20px;
+    font-size: 20px;
+    width: 302px;
+    }
+    .w3-sidebar a{
+    color: black;
+    width: 170px;
+    text-align: left;
+    display: inline-flex;
+    }
+    #cars {
+        border: none;
+        margin-top: 23px;
+        width: 350px;
+    }
+    #addCollaborator{
+        content: "\e013";
+        margin-right: 11px;
+        margin-left: -17px;
+        border: none;
+        background-color: white;
+    }
+    .closeBtn{
+        margin-top: -73px;
+    float: right;
+    color: black;
+    font-size: 23px;
+    margin-left: 10;
+    margin-right: -150px;
+    border: none;
+    background-color: white;
+        }
+    .card:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2); 
+     }
+      .image{
+        width: 42px;
+        height: 42px;
+        border-radius: 70%;
+        margin-top: -5px;
+      }
+    .input-group .form-control {
+        width: 308px !important;
+        margin-left: 55px;
+     }
+     .input-group-addon{
+        display: table-cell;
+        width: -22px !important;
+     }
+    .createNote input[type=text] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray; 
+        background-color: transparent;
+        font-size: 18px;
+        margin-top: -24px;
+    }
+    .searchBox input[type=text]{
+        font-weight: 500;    font-size: 20px;
+    }
+    
+    .createNote #unpincreateNote {
+        margin-right: 30px;
+        margin-top: -5px;
+    }
+    .keepLogo {
+        vertical-align: middle;
+        border-style: none;
+        margin-left: 12px;
+    }
+    .titleDateTime{
+        margin-right: -145px !important;
+    }
+    .date{
+        margin-left: -78px;
+    }
+    .date input .form-control {
+        display: table-cell;
+        width: 304px !important;
+        height: 45px;
+    }
+    .twoIcons {
+        list-style-type: none;
+        display: flex;
+        margin-top: 10px;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 90px;
+        margin-right: 6px;
+        margin-left: 31px;
+    }
+    .threeIcons {
+        list-style-type: none;
+        display: flex;
+        font-size: 22px !important;
+        justify-content: space-between;
+        width: 115px;
+        margin-top: 10px;
+        margin-left: 125px;
+    }
+    #flip {
+        display: flex;
+        padding: 5px;
+        border: ridge;
+        text-align: left;
+        background-color: white;
+        border-radius: 5px;
+        justify-content: space-between;
+        height: 50px;
+        margin-top: -140px;
+        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+        background-clip: padding-box;
+        border: solid transparent;
+        border-width: 1px 2px 1px 2px;
+        width: 600px;
+        border-color: lightgrey;
+        margin-left:310px
+    }
+    .head{
+        color: gray;
+        font-size: 20px;
+    }
+    .archive{
+        width: 27px;
+        height: 25px; 
+    }
+     
+    #display {
+        width: fit-content;
+        height: 100%;
+        margin-right: 0;
+        margin: 0;margin: 30px;
+        margin-top: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        place-content: initial;
+        display: flex;
+        justify-content: center;
+    }
+   .createNote .noteIcon {
+        padding-right: 10px;
+        margin-top: -32px;
+        display: flex;
+        margin-left: -9px;
+        padding-right: 266px;
+    }
+    .material-icons {
+        font-size: 26px !important;
+    }
+    .app {
+        font-size: 30px !important;
+        margin-top: 0px;
+    }
+    .createNote {
+        background-color: white;
+        width: 680px;
+        border-radius: 5px;
+        display: grid;box-shadow: 0 4px 11px rgba(0,0,0,0.20);
+        grid-row-gap: 15px;
+        margin-top: 90px;
+        margin-left: 240px;
+        height: 165px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+        margin-top: 11px !important;
+        margin-left: 230px;
+        padding-right: 170px;
+    }
+    .close {
+        float: right;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    filter: alpha(opacity=20);
+    margin-top: -39px;
+    margin-right: -146px;
+    opacity: 1.2 !important;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px;
+        margin-top: 7px !important;
+        margin-left: 20px;
+        padding-right: 265px;
+    }
+   .createNote #desc {
+    margin-top: -5px !important;
+    font-size: 15px;
+   }
+    .tit, .desc {
+        border: none;
+        font-size: 18px !important;
+    }
+    .fa, .far, .fas {
+        font-family: "Font Awesome 5 Free";
+    font-size: 22px;
+    }
+   li .input-group-addon, .input-group-btn, .input-group .form-control .center {
+    width: 810px !important;
+    height: 45px;
+    margin-top: 3px;
+    font-size: 19px;
+    font-weight: 500;
+    font-weight: 400;margin-left: 1px !important;
+    border-radius: 8px;
+    }
+    .threeIcons1{
+        display: inline-flex;
+        width: 130px;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .searchBox{
+        display: inline-flex;
+        background-color: white;
+        width: 815px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .menu {
+        margin-left: 60px;
+        margin-top: 15px;
+        font-size: 25px;
+    }
+    li span{
+        font-size: 25px !important;color: black;
+    }
+    .middleIcon{
+        font-size: 33px !important;
+    margin-top: 1px;
+    }
+    .pickDataContent {
+        margin-top: 155px;
+        margin-left: 10px;
+    }
+    .viewProfileContent{
+        position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -15px;
+    margin-left: 460px;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    }
+    .collaboratorContent .modal-title {
+        font-weight: 600;
+        margin-left: -540px !important;
+    }
+    .collaboratorContent{
+        border-bottom: 10px !important;
+        width: 700px;
+        border-radius: 10px;
+        height: 260px;
+        border: 2px solid red;
+        padding: 10px;
+    }
+    .footer-collab {
+        background-color: lightgrey;
+        margin-top: 10px;
+        height: 50px;
+        position: fixed;
+        border-radius: 4px;
+        margin-left: -10px;
+        width: 698px;
+    }
+    #collabSaveBtn, #collabCancelBtn {
+        font-size: 23px;
+        border: none;
+        float: right;
+        margin-top: 4px;
+        float: right;
+        background: lightgrey;
+        margin-left: 36px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
+    .remainderContent{
+        margin-top: 153px;
+        margin-left: 10px;
+        width: 70%;
+        height: 250px;
+    }
+   
+    tbody{
+        margin-left: 20px;
+    }
+    table{
+        width: 510px;
+    margin-left: 65px;
+    height: 60px;
+    z-index: 34 !important;
+    border: ridge;position: absolute;
+    background-color: white !important;
+    }
+   
+    #remainderTime .material-icons{
+        margin-top: 0px;
+        color: grey;
+    }
+    table td{
+        padding-left: 10px;
+       }
+       
+       .remainderContent .modal-title {
+        font-weight: 600;
+        margin-left: -219px !important;
+    }
+    
+    .remainderContent .modal-footer h6{
+        margin-right: 140px;
+        margin-top: 0px;
+    }
+
+    .remainderContent .modal-footer{
+        padding: 15px;
+        text-align: right;
+        margin-top: -19px;
+        border-top: 1px solid #e5e5e5;
+    }
+    #time{
+    float: right;
+    }
+    #pinnedNotes ,#unpinNotes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        place-content: initial;
+        justify-content: center;
+        width: 1110px;
+    }
+    #flip .head  {
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        color: gray;
+    }
+    .addLabelWithCreate{
+        width: 250px;
+        display: grid;
+        height: 200px;
+        margin-left: 200px;
+        border: 1px solid rgba(0,0,0,.125);
+    }
+    .create{
+        display: flex;
+    }
+    .create input[type=text] {
+        font-weight: 500;
+        color: gray;
+        width: 81%;
+        height: 40px;
+        padding: 0px 23px;
+        margin: 0px -11px;
+    }
+    .create .fa .far-search{
+        font-family: "Font Awesome 5 Free";
+        font-size: 15px;
+    }
+    h{
+        font-size: 16px;
+    margin-left: 10px;
+    }
+   .container101 input[type="checkbox"] {
+    margin: 7px 10px 0;
+    }
+    .plusCreate{
+        margin-left: -13px;
+        height: 30px;
+        margin-top: -1px;
+        display: flex;padding: 7px;
+        justify-content: space-between;
+        width: 250px;
+        border: 1px solid rgba(0,0,0,.125);
+      }
+      .remAndLabel{
+        justify-content: space-around;
+    display: flex;
+    display: flexbox;
+    width: 275px;
+      }
+      #a1 , #a2{
+        margin-right: 845px;
+      }
+      #a2{
+        margin-top: 70px;
+      }
+      .modalData .form-control {
+        width: 480px !important;
+        font-size: 19px;
+        padding-left: 30px;
+      }
+      .today{
+        display: grid;
+        justify-content: inherit;
+        margin-top: -44px;
+        font-size: 19px;
+    }
+      .today h6{
+        font-size: 18px;
+      }
+      .modalData input[type =text]{
+        background-color: transparent;
+        box-shadow: none;
+        color: beige;
+        color: black;
+      }
+      .footer{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -11px;
+        margin-top: 25px;
+        margin-right: 164px;
+      }
+      .remainderTime .far .fa-clock{
+        margin-left: -4px;
+        color: grey;
+      }
+
+      .side{
+        margin-top: -17px;
+      }
+      .clkRem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #remainderTime{
+        border-radius: 60px;
+        width: fit-content;
+        border: none;
+        font-size: 15px;
+        height: 25px;
+        margin-left: -45px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #unpin, #unpincreateNote {
+        margin-left: 236px;
+        margin-top: -51px;
     }
 }
 

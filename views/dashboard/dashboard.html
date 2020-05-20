@@ -121,12 +121,12 @@
 
      <!-- open note -->
      <div class="createNote" style="display: none;" id="openNote">
-      <img src="/images/unpinnnn.png" id="unpincreateNote" value="Click me">
+      <!-- <img src="/images/unPinNew.svg" id="unpincreateNote" value="Click me"> -->
       <!-- <form> -->
-          <!-- <div class="in"> -->
-            <!-- <input type="text" class="center" placeholder="title"/> -->
-            <input type="text" placeholder="Title" id="title" />
-          <!-- </div> -->
+          <div class="in">
+              <input type="text" placeholder="Title" id="title" />
+              <img src="/images/unPinNew.svg" id="unpincreateNote" value="Click me">
+          </div>
           
           <!-- <input type="text" class="center" placeholder="Take a note ..."/> -->
             <input type="text" placeholder="Take a note ..." id="desc" >  
@@ -142,30 +142,30 @@
      </div>
       <ul class="noteIcon" >
         <li class="icon-item">
-          <i class="material-icons"  id="remainderCreateNote"  data-toggle="modal" data-target="#myRemindModal">add_alert</i>
+          <img src="/images/remNew.svg"   id="remainderCreateNote"  data-toggle="modal" data-target="#myRemindModal"></i>
         </li>
         <li class="icon-item">
-          <i class="material-icons" id="collaboratorCreateNote" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i>
+          <img src="/images/addNew.svg" id="collaboratorCreateNote" data-toggle="modal" data-target="#myCollaboratorModal"></i>
         </li> 
         <li class="icon-item dropdown">
-          <i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colorsCreateNote"></i>
+          <img src="/images/colorNew.svg" class="dropbtn"  data-toggle="dropdown" role="button" id="im"></i>
           <ul class="dropdown-menu" id="colorList" aria-labelledby="colors">
-              <li><div href="#" class="color" onclick="insrt('#FF0000')" value="#FF0000"  style="background-color: #FF0000;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#FFA500')"  value="#FFA500" style="background-color: #FFA500;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#FFFF00')"  value="#FFFF00" style="background-color: #FFFF00;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#008000')"  value="#008000" style="background-color: #008000;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#008080')" value="#008080" style="background-color: #008080"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#0000FF')"  value="#0000FF" style="background-color: #0000FF;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#0000A0')"  value="#0000A0" style="background-color: #0000A0;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#800080')"  value="#800080" style="background-color:#800080 ;"></div></li>
-              <li><div href="#" class="color" onclick="insrt('#FFC0CB')"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#FF1493')" value="#FF1493"  style="background-color: #FF1493;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#FFB6C1')"  value="#FFB6C1" style="background-color: #FFB6C1;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#FAEBD7')"  value="#FAEBD7" style="background-color: #FAEBD7;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#FFE4E1')"  value="#FFE4E1" style="background-color: #FFE4E1;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#F5FFFA')" value="#F5FFFA" style="background-color: #F5FFFA"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#87CEEB')"  value="#87CEEB" style="background-color: #87CEEB;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#FA8072')"  value="#FA8072" style="background-color: #FA8072;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#E0FFFF')"  value="#E0FFFF" style="background-color:#E0FFFF ;"></div></li>
+              <li><div href="#" class="color" onclick="insrt('#FFEFD5')"  value="#FFEFD5" style="background-color: #FFEFD5;"></div></li>
           </ul>
         </li>
         <li class="icon-item">
-              <i class="far fa-image" id=""></i></li>
+              <img src="/images/imgNew.svg"  id="image"></i></li>
               <li class="icon-item" id="archieveCreateNote" value="Click me"><img src="/images/archiveNew.svg" class="archive"></i></li>
               <li class="icon-item dropdown" >
-              <i class="fas fa-ellipsis-v" role="button" data-toggle="dropdown" id="moreIcon"></i>
+              <img src="/images/moreNew.svg"  role="button" data-toggle="dropdown" id="moreIcon"></i>
               <ul class="dropdown-menu lastDropdown" aria-labelledby="moreIcon">
               <li class="dropdown-item" id="deleteNote">Delete note</li>
               <li class="dropdown-item" id="addLabel">Add Label</li>
@@ -175,7 +175,6 @@
             </li>
       </ul>
       <button type="button" class="btn btn-link" id="closeCreateNote">Close</button>      
-      <!-- <button type="button" class="closeBtn" id="closeCreateNote">Close</button>       -->
     </div>
 
 <!-- display note  on dashboard-->
@@ -183,6 +182,24 @@
         <b id="a1" >PINNED</b>
         <div class="pinnedNotes" id="pinnedNotes">
           
+      <!-- <div style=background-color:pink class="card" id='+[i]+'>
+        <div class="card-body">
+          <div class="info" data-toggle="modal" data-target="#myModal" style="color: black;">
+            <div class="tit" id="tit">
+              <span class="tite">'+notes[i].title+'</span>
+              <img src="/images/unPinNew.svg" id="unpincreateNote" value="Click me">
+            </div>
+         
+          <div id="desc" class="desc" style="margin-top: 10px;">
+            <span class="descr">'+notes[i].description+'</span>
+          </div>
+        </div>
+          <div class="remAndLabel"><button class="button remainderTime" id="remainderTime">
+            <div class="clkRem"><i class="far fa-clock" style="color:grey;"></i>
+              <span id="dateAndTime">'+newReminderDate+'</span>
+            </div>
+            <i class="material-icons" role="button" id="deleteReminder">cancel</i></button><div class="labelName" id="labelName"></div></div><footer><ul class="noteIcon" ><li class="icon-item"><img src="/images/remNew.svg"  id="remainder"  data-toggle="modal" data-target="#myRemindModal"></i></li><li class="icon-item"><img src="/images/addNew.svg" id="collaborator" data-toggle="modal" data-target="#myCollaboratorModal"></i></li> <li class="icon-item dropdown"><img src="/images/colorNew.svg" class="dropbtn"  data-toggle="dropdown" role="button" id="colors"></i><ul class="dropdown-menu" id="colorList" aria-labelledby="colors"><li><div href="#" class="color"  class="color" value="#FF0000"   style="background-color: #FF0000;"></div></li><li><div href="#" class="color"  value="#FFA500" style="background-color: #FFA500;"></div></li><li><div href="#" class="color"  value="#FFFF00" style="background-color: #FFFF00;"></div></li><li><div href="#" class="color"  value="#008000" style="background-color: #008000;"></div></li><li><div href="#" class="color"  value="#008080" style="background-color: #008080"></div></li><li><div href="#" class="color"   value="#0000FF" style="background-color: #0000FF;"></div></li><li><div href="#" class="color"  value="#0000A0" style="background-color: #0000A0;"></div></li><li><div href="#" class="color"  value="#800080" style="background-color:#800080 ;"></div></li><li><div href="#" class="color"  value="#FFC0CB" style="background-color: #FFC0CB;"></div></li></ul></li></li><li class="icon-item"><img src="/images/imgNew.svg"  id=""></i></li><li class="icon-item" id="archieveNote"><img src="/images/archiveNew.svg" class="archive"></i></li><li class="icon-item dropdown" ><img src="/images/moreNew.svg" role="button" data-toggle="dropdown" style="height: 20px;" id="moreIcon"></i><ul class="dropdown-menu lastDropdown" id="moreData" aria-labelledby="moreIcon"><li class="dropdown-item" id="deleteNote">Delete note</li><li class="dropdown-item popup" onclick="myFunction()" id="addLabel>Add label</li><li class="dropdown-item">Add drawing</li><li class="dropdown-item">Make a copy</li></ul></li></ul></footer></div></div></div>'; -->
+
         </div>
         <b id="a2">OTHERS</b>
         <div class="unpinNotes" id="unpinNotes">
@@ -191,31 +208,6 @@
         
     </div> 
  
-<!-- modal is here for update note -->
- <!-- The Modal -->
- <!-- <div class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    
-     
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      
-     
-      <div class="modal-body">
-        Modal body..
-      </div>
-      
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-      
-    </div>
-  </div>
-</div> -->
    <div class="modal" id="myModal">
        <div class="modal-dialog">
           <div class="modal-content updateContent">
@@ -318,8 +310,15 @@
             
         <div class="modal-body">
             <ul class="today" id="today">
-              <h6><div class="laterToday" id="laterToday" style="justify-content: space-between;">Today <span id="time"style="scolor: gray;">8:00 PM</span></div></h6>
-              <h6><div class="laterTomarrow" id="laterTomarrow" style="justify-content: space-between;">Tomarrow <span id="time"style="scolor: gray;">8:00 PM</span></div></h6>
+              <h6>
+                <div class="laterToday" id="laterToday" style="justify-content: space-between;">Today </div>
+                <span id="time"style="scolor: gray;">8:00 PM</span>
+              </h6>
+              
+              <h6>
+                <div class="laterTomarrow" id="laterTomarrow" style="justify-content: space-between;">Tomarrow</div>
+                <span id="time"style="scolor: gray;">8:00 PM</span>
+              </h6>
             </ul>
         </div>
               
@@ -375,9 +374,10 @@
         </div>
 
          <div class="modalData">
-          <span class="glyphicon glyphicon-remove"></span></span><input type="text" class="center newLabel" style='font-size:15px'placeholder="create new label"/><span class="glyphicon glyphicon-ok ok"></span>
-          <div class="labelsAll" id="labelsAll"></div>
+          <img src="/images/crossNew.svg"><input type="text" class="center newLabel" style='font-size:15px'placeholder="create new label"/><img src="/images/newOk.svg">
+          <!-- <div class="labelsAll" id="labelsAll"></div> -->
          </div> 
+         <div class="labelsAll" id="labelsAll"></div>
          <hr>
          <div class="footer-label">
             <button type="button" class="btn btn-default " id="createLabel">Done</button>
@@ -413,20 +413,20 @@
         </div>
              
           <select id="cars" name="cars">
-              <option value="volvo">8:00</option>
-              <option value="saab">morning</option>
-              <option value="fiat">afternoon</option>
-              <option value="saab">evening</option>
-              <option value="fiat">night</option> 
-              <option value="fiat">custom</option> 
+              <option value="8:00">8:00</option>
+              <option value="morning">morning</option>
+              <option value="afternoon">afternoon</option>
+              <option value="evening">evening</option>
+              <option value="night">night</option> 
+              <option value="custom">custom</option> 
           </select>
           <select id="cars" name="cars">
-              <option value="volvo">Does not repeat</option>
-              <option value="saab">Daily</option>
-              <option value="fiat">weekly</option> 
-              <option value="saab">monthly</option>
-              <option value="fiat">yearly</option>
-              <option value="saab">custom</option>
+              <option value="Does not repeat">Does not repeat</option>
+              <option value="Daily">Daily</option>
+              <option value="weekly">weekly</option> 
+              <option value="monthly">monthly</option>
+              <option value="yearly">yearly</option>
+              <option value="custom">custom</option>
           </select>
         </form>
         <button type="button" class="btn btn-default" id="reminderData">save</button>
