@@ -786,10 +786,10 @@ border: ridge;position: absolute;
         height: 280px;
     }
     .signoutFooter {
-        margin-top: -29px;
-        margin-bottom: 20px;
-        margin-left: 60px;
-    }
+    margin-top: -29px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
     #lastDelete{
         margin-bottom: 200px;
     }
@@ -1423,7 +1423,7 @@ border: ridge;position: absolute;
     }
     b, strong {
         font-weight: bold;
-        font-size: 25px;
+        font-size: 15px;
     }
     .closeBtn{
         float: right;
@@ -1456,7 +1456,7 @@ border: ridge;position: absolute;
         font-size: 35px !important;
     }
     .anotherAccBold {
-        margin-left: -129px;
+        margin-left: -129px;font-size: 15px;
     }
     .collaboratorContent {
         margin-left: -9px;
@@ -1843,6 +1843,11 @@ footer{
     position: relative;
     margin-top: -60px;
 }
+.signoutFooter {
+    margin-top: -29px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
@@ -1929,7 +1934,7 @@ footer{
         font-size: 35px !important;
     }
     .anotherAccBold {
-        margin-left: -129px;
+        margin-left: -129px;font-size: 15px;
     }
     .collaboratorContent {
         width: 530px;height: 245px;
@@ -1987,6 +1992,7 @@ footer{
         font-size: 15px !important;color: black;
     }
     .signoutFooter {
+        margin-left: 86px;
         margin-top: -4px;
         margin-bottom: 20px;
     }
@@ -2331,13 +2337,13 @@ footer{
 }
 .viewProfileContent{
     margin-top: 10px;
-    margin-left: 340px;
+    margin-left: 215px;
     height: 445px;
     width: 395px;
 }
 b, strong {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 15px;
 }
 #emailData{
     font-size: 17px;
@@ -3404,10 +3410,8 @@ border: ridge;
     width: 302px;
     }
     .w3-sidebar a{
-    /* margin-bottom: 50px; */
     color: black;
     width: 170px;
-    /* text-decoration: none; */
     text-align: left;
     display: inline-flex;
     }
@@ -3722,9 +3726,8 @@ border: ridge;
     }
    
     #remainderTime .material-icons{
-        font-size: 23px !important;
         margin-top: 0px;
-        margin-left:32px;
+        color: grey;
     }
     table td{
         padding-left: 10px;
@@ -3863,7 +3866,7 @@ border: ridge;
       }
       #remainderTime{
         border-radius: 60px;
-        width: 180px;
+        width: fit-content;
         border: none;
         font-size: 15px;
         height: 25px;
