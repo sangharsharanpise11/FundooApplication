@@ -2807,17 +2807,7 @@ h6{
         width: 500px;
         margin-right: 185px;
     }
-      /* #remainderTime{
-        border-radius: 60px;
-        width: 157px;
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        font-size: 15px;
-        height: 25px;
-        margin-left: 30px;
-        margin-top: 10px;
-    } */
+    
     .remAndLabel {
         justify-content: start;
         display: flex;
@@ -3087,6 +3077,7 @@ h6{
         margin-top: 0px;
         display: inline-flex;
     }
+    
     .form-control {
         width: 475px !important;
         border-radius: 10px;
@@ -3262,8 +3253,13 @@ h6{
     #moreIcon{
         height: 20px;
     }
+    .tit, .desc {
+        font-size: 18px;
+        margin-top: 0px;
+        display: inline-flex;
+    }
     .tite, .desc{
-        width: 250px;
+        width: 200px;
     }
     .modalData{
             width: 395px;
@@ -3535,10 +3531,7 @@ h6{
     margin-top: -5px !important;
     font-size: 15px;
    }
-    .tit, .desc {
-        border: none;
-        font-size: 18px !important;
-    }
+
     .fa, .far, .fas {
         font-family: "Font Awesome 5 Free";
     font-size: 22px;
@@ -3798,8 +3791,8 @@ h6{
         align-items: center;
     }
     #unpin, #unpincreateNote {
-        margin-left: 236px;
-        margin-top: -51px;
+        margin-left: 34px;
+        margin-top: 5px;
     }
  
 }
