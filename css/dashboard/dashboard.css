@@ -745,9 +745,26 @@ border: ridge;position: absolute;
   
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
-    .archive,#remainder,#collaborator,#colors,#image,#moreIcon,#unpincreateNote,#remainderCreateNote,#collaboratorCreateNote,.dropbtn,#colorsCreateNote,#archieveCreateNote{
+  .modal-footer .archive , #moreIcon{
+    width: 30px;
+    height: 24px;
+}
+    .updateContent .modal-footer .noteIcon  #image,  #moreIcon,.archive{
+        width: 30px;
+        height: 24px;
+    }
+    .archive, #remainder, #collaborator, #colors, #image, #unpincreateNote, #remainderCreateNote, #collaboratorCreateNote, #colorsCreateNote,#archieveCreateNote{
         width: 83px;
         height: 76px;
+    }
+    .updateContent .modal-footer .noteIcon {
+        padding-right: 110px;
+        margin-top: -38px;
+        display: flex;
+        margin-bottom: 10px;
+        margin-left: 23px;
+        height: 95px;
+   
     }
     #unpincreateNote {
         width: 113px;
@@ -760,7 +777,8 @@ border: ridge;position: absolute;
     }
     .labelContent{
         margin-left: 10px;
-    width: 245px;
+        width: 245px;
+        height: fit-content;
     }
     .modalData input[type =text] {
         background-color: transparent;
@@ -875,34 +893,34 @@ border: ridge;position: absolute;
         margin-left: -200px !important;
     }
     .footer-collab {
-        height: 50px;
-        position: fixed;
-        border-radius: 4px;
-        width: 313px;
-        display: flex;
-        background-color: lightgrey;
-        margin-top: 186px;
-        margin-left: 8px;
+      height: 50px;
+    position: fixed;
+    border-radius: 4px;
+    width: 313px;
+    display: flex;
+    background-color: lightgrey;
+    margin-top: 181px;
+    margin-left: 3px;
     }
   .ok{
     float: right;
     margin-top: -41px;
   }
     .modalData{
-        height: 120px;
-        display: flex;
+        height: 50px;padding: 5px;
+        /* display: flex;
         width: 245px;
         margin-left: 14px;
-        margin-top: -14px;
+        margin-top: -14px; */
     }
     #updateData{
-        margin-right: -65px;
+        margin-right: -52px;
         border: none;
         font-size: 18px;
         width: 142px;
         color: black;
         float: right;
-        margin-top: -90px;
+        margin-top: -103px;
     }
     .fas .fa-palette {
         font-size: 70px;
@@ -945,10 +963,10 @@ border: ridge;position: absolute;
         font-size: 15px !important;color: black;
     }
     h6 {
-        display: flex;        font-size: 15px !important;color: black;
-
-    justify-content: space-between;
-    width: 215px;
+        display: flex; 
+        font-size: 15px !important;color: black;
+        justify-content: space-between;
+        width: 215px;
     }
      .info .tite, .descr {
     font-size: 65px !important;
@@ -1074,11 +1092,6 @@ border: ridge;position: absolute;
     display: flex;
     margin-left: -15px;
 }
-
-.modal-footer .archive{
-    width: 30px;
-    height: 24px;
-}
 .createNote {
     background-color: white;
     width: 1254px;
@@ -1101,10 +1114,7 @@ border: ridge;position: absolute;
     #desc {
         margin-top: 45px !important;
     }
-    .archive{
-       width: 83px;
-    height: 76px;
-    }
+   
     .material-icons {
         font-family: 'Material Icons';
         font-weight: normal;
@@ -1227,10 +1237,7 @@ border: ridge;position: absolute;
         margin-left: -23px;
     }
     #snackbarTrash, #snackbarPin, #snackbarLabelUpdated, #snackbarArchive, #snackbarLabelDeleted, #snackbarNoteCreate, #snackbarColor, #snackbarReminder, #snackbarLabel, #snackbarCollaborator {
-        visibility: hidden;
         min-width: 500px;
-        height: 135px;
-        font-size: 61px;
         margin-left: -125px;
         background-color: #333;
         color: #fff;
@@ -1239,6 +1246,7 @@ border: ridge;position: absolute;
         padding: 16px;
         position: fixed;
         z-index: 100;
+        font-size: 50px;
         left: 50%;
         bottom: 30px;
     }
@@ -1367,19 +1375,13 @@ border: ridge;position: absolute;
     float: right;
     font-size: 45px;
     }
-    .modal-footer .noteIcon .dropbtn,.dropbtn1,.dropbtn2{ 
-        font-size: 22px;
-    }
-    .updateContent ,.modal-footer{
-        padding: 15px;
+   
+    /* .updateContent ,.modal-footer{
         margin-bottom: -50px;
-        margin-top: -10px;
-        /* width: 267px; */
         display: flex;
         justify-content: flex-end;
         text-align: right;
-        border-top: 1px solid #e5e5e5;
-    }
+    } */
     .modalData .updateDesc{
         margin-top: -15px;
     }
@@ -1400,13 +1402,14 @@ border: ridge;position: absolute;
         border: 0;
     }
     .allLabels .labelData {
+
         height: 100px;
         width: 453px;
         display: flow-root;
     }
     .allLabels .labelData #labelName{
         font-size: 47px;
-        text-align: left;
+        text-align: left; 
         color: black;
         margin-top: -80px;
         font-weight: 400;
@@ -1414,6 +1417,18 @@ border: ridge;position: absolute;
     }
     .app .material-icons{
         font-size: 90px !important;
+    }
+    .updateContent .modal-footer{
+        padding: 15px;
+        margin-top: 45px;
+    }
+    .updateContent input[type=text] {
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        color: gray;
+        font-size: 20px;
     }
 }
 /********************************************************************/
@@ -1520,7 +1535,8 @@ border: ridge;position: absolute;
         background-color: white;
     }
     #a1, #a2{
-        margin-left: -65px;
+        margin-left: -205px;
+        font-size: 20px;
     }
     .pickData {
         float: left;
@@ -1553,6 +1569,19 @@ border: ridge;position: absolute;
     .footer-collab {
         background-color: lightgrey;
         margin-top: -7px;
+        height: 50px;
+        position: fixed;
+        border-radius: 4px;
+        width: 421px;
+    }
+    #flip input[type=text] {
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 23px;
+        margin-left: 6px;
     }
     #ownerFullName{
         font-size: 14px;
@@ -1588,11 +1617,8 @@ border: ridge;position: absolute;
         margin-left: -178px !important;
     }
     .remainderContent .modal-footer {
-        padding: 15px;
-    border-top: 1px solid #e5e5e5;
-    float: left;
-    margin-right: 130px;
-    margin-top: -45px;
+        margin-bottom: -50px;
+        margin-top: -35px;
     }
     .today h6 span{
         font-size: 15px !important;color: black;
@@ -1692,7 +1718,7 @@ border: ridge;position: absolute;
     .createNote {
         background-color: white;
     width: 770px;
-    border-radius: 5px;
+    border-radius: 20px;
     display: grid;
     grid-row-gap: 15px;
     margin-top: 40px;
@@ -1702,12 +1728,17 @@ border: ridge;position: absolute;
     border-color: lightgrey;
     }
     input[type=text] {
-           width: 70%;
-    border: none;
-    outline: none;
-    font-weight: 600;
-    color: gray;
-    font-size: 23px;
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 23px;
+        margin-left: -35px;
+    }
+    .ok{
+        border: none;
+        background-color: white;
     }
     #desc {
         margin-top: 9px !important;
@@ -1741,7 +1772,7 @@ border: ridge;position: absolute;
     }
     .noteIcon{
         padding-right: 285px;
-    margin-top: -31px;
+    margin-top: 6px;
     display: flex;
     margin-left: -19px;
     }
@@ -1756,7 +1787,8 @@ border: ridge;position: absolute;
         width: 80%;
         height: 100%;
         margin-top: 10px;
-        display: grid;margin-left: -64px;
+        display: grid;
+        margin-left: 90px;
         align-items: flex-start;
         place-content: initial;
     }
@@ -1765,14 +1797,22 @@ border: ridge;position: absolute;
         flex-wrap: wrap-reverse;
         grid-row-gap: 20px;
     }
-    
+    .createNote input[type=text] {
+        width: 70%;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 23px;
+        margin-left: 12px;
+    }
     .card {
         width: 600px;
         background-color: white;
         height: fit-content;
         border-radius: 6px;
         margin: 5px;
-        border-radius: 6px;
+        border-radius: 20px;
         margin-left: -210px;
     }
     
@@ -1918,6 +1958,13 @@ footer{
     margin-top: -29px;
     margin-bottom: 20px;
     margin-left: 100px;
+}
+h6{
+    display: flex;
+    font-size: 15px !important;
+    color: black;
+    justify-content: space-between;
+    width: 215px;
 }
  }
 /********************************************************************/
