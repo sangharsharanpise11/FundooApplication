@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded',init);
     console.log("**********");
     $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
     $(".card").css({"width": "600px"})
-    $("#unpincreateNote").css({"margin-left": "305px","width": "25px","height": "22px","margin-top": "2px"})
+    $(".card #unpincreateNote").css({"margin-left":"295px","margin-top": "2px","width": "25px","height": "22px","z-index": "1"})
     // $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
     $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
   }) 
@@ -131,6 +131,9 @@ document.addEventListener('DOMContentLoaded',init);
         console.log("**********");
         $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
         $(".card").css({"width": "600px"})
+       
+        $(".card #unpincreateNote").css({"margin-left":"295px","margin-top": "2px","width": "25px","height": "22px","z-index": "1"})
+       
         $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
         $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
       }) 
@@ -138,8 +141,11 @@ document.addEventListener('DOMContentLoaded',init);
       $(document).on("click" , ".gridView" , function(e) { 
         console.log("in grid view");
         $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
-        $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+        $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"10px","margin-left": "15px"})
         $("#a1, #a2").css({"margin-left": "140px"})
+       
+        $(".card #unpincreateNote").css({"margin-left": "20px","z-index": "1","margin-top": "2px","width": "25px","height": "22px"})
+       
         $("#closeCreateNote").css({"color": "black","margin-top": "-45px","float": "right"})
         $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
         $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
@@ -205,24 +211,26 @@ document.addEventListener('DOMContentLoaded',init);
       });
 
       $(".middleIcon").click(function(){
-        console.log("**********");
+        console.log("******  in big screen ****");
         $(".flip").css({"margin-left": "355px"})
         $(".createNote").css({"margin-left": "260px"})
+        $(".tite, .desc").css({"width":"360px"})
         $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
-        $(".card").css({"width": "600px"})
-        $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "565px","margin-top": "10px","z-index": "1"})
+        $(".card").css({"width": "600px","margin": "5px","border-radius": "6px","pointer-events": "auto","margin-left": "15px","height": "fit-content"})
+        $(".card #unpincreateNote").css({"margin-left": "500px","margin-top":"-5px","width":"25px","height":"22px","z-index":"1"})
         $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
       }) 
     
       $(document).on("click" , ".gridView" , function(e) { 
         console.log("in grid view");
+        //location.reload(true);
         $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
-        $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+        $(".card").css({"width": "290px","height":"fit-content","margin":"5px","border-radius":"10px","margin-left": "15px","pointer-events":"auto"})
         $("#a1, #a2").css({"margin-left": "140px"})
         $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
         $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
         $(".createNote").css({"margin-left": "270px"}) 
-        $(".createNote #unpincreateNote").css({"width": "25px","height": "22px","margin-right": "-126px","margin-top": "10px","z-index": "1","float": "right"})
+        $(".card #unpincreateNote").css({"margin-left": "236px","margin-top":"-51px","width": "25px","height": "22px","z-index":"1"})
         $("#closeCreateNote").css({"color": "black","margin-top": "-44px","float": "right","margin-right": "-155px"})
         $(".createNote .noteIcon").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
         $("#pinnedNotes, #unpinNotes").css({"margin-left": "80px"})

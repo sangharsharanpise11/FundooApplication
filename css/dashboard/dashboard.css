@@ -2782,6 +2782,12 @@ h6{
         display: flex;
         justify-content: space-between;margin-top: 15px;
     }
+    .modalData input[type =text] {
+        background-color: transparent;
+        box-shadow: none;
+        padding-left: 12px;
+        color: black;
+    }
     .clkRem{
         display: flex;
         flex-direction: row;
@@ -3256,464 +3262,12 @@ h6{
     #moreIcon{
         height: 20px;
     }
-    /* .sideBody {
-        height: 100% !important;
-        width: 100% !important;
-        display: flex;
+    .tite, .desc{
+        width: 250px;
     }
-    .clkRem{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-      }
-      #remainderTime{
-        border-radius: 60px;
-        width: 157px;
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        font-size: 15px;
-        height: 25px;
-        margin-left: 30px;
-        margin-top: 10px;
+    .modalData{
+            width: 395px;
     }
-    #searchNote{
-        height: 30px;
-    }
-    .anotherAccBold{
-        margin-left: -155px;
-    }
-    .modalData input[type="text"]{
-        margin-left: 2px !important;
-        font-size: 18px;
-    }
-    #remainderTime .material-icons{
-        font-size: 23px !important;
-        margin-top: 0px;
-        margin-left: 11px;
-    }
-    .dataBody {
-        width: 100%;
-        height: 100%;
-    }
-    .collaboratorContent{
-        border-bottom: 10px !important;
-    width: 700px;
-    border-radius: 10px;
-    height: 265px;
-    }
-    #dateAndTime ,#labelName{  
-        font-size: 14px;
-        color: grey;
-        margin-top: 4px;
-    }
-    #addCollaborator{
-        content: "\e013";
-        margin-right: 11px;
-        margin-left: -17px;
-        border: none;
-        background-color: white;
-    }
-    .keepData{
-        margin-left: 28px !important;
-        margin-top: 15px;
-    }
-    .searchBox{
-        width: 815px;
-    background-color: white;
-    border-radius: 10px;
-    }
-    .footer-collab {
-        background-color: lightgrey;
-        margin-top: 28px;
-        height: 50px;
-        position: fixed;
-        border-radius: 10px;
-    }
-    #collabSaveBtn, #collabCancelBtn {
-        font-size: 23px;
-        border: none;
-        float: right;
-        margin-top: 4px;
-        float: right;
-        background: lightgrey;
-        margin-left: 36px;
-        margin-right: 35px;
-        margin-bottom: 10px;
-    }
-    span {
-        margin-left: 3px;
-        word-wrap: break-word;color: black;
-        word-break: break-word;
-    }
-        .card:hover {
-        box-shadow: 0 0 11px rgba(33,33,33,.2); 
-     }
-      
-    .form-control {
-        width: 438px !important;
-    border-radius: 10px;
-    height: 45px;
-    box-shadow: none;
-    font-size: 20px;
-    margin-left: 53px !important;
-    }
-    #unpin ,#pin{
-        width: 25px;
-    height: 22px;
-    margin-left: 280px;
-    margin-top: 10px;
-    z-index: 1;
-    float: right;
-    }
-    .midIcon .gridView{
-        margin-top: 1px;
-        font-size: 36px;
-    }
-     #unpincreateNote {
-        width: 25px;
-        height: 22px;
-        margin-left: 636px;
-        margin-top: 10px;
-        z-index: 1;
-    }
-    .createNote .noteIcon {
-        padding-right: 10px;
-        margin-top: -32px;
-        display: flex;
-        margin-left: -9px;
-        padding-right: 266px;
-    }
-    .keepLogo {
-        vertical-align: middle;
-        border-style: none;
-        margin-left: -22px;
-    }
-    .twoIcons {
-        list-style-type: none;
-        display: flex;
-        margin-top: 5px;
-        font-size: 22px !important;
-        justify-content: space-between;
-        width: 90px;
-        margin-right: 33px;
-        margin-left: 15px;
-    }
-    .threeIcons {
-        list-style-type: none;
-        display: flex;
-        font-size: 30px !important;
-        justify-content: space-between;
-        width: 150px;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    .menu {
-        margin-left: 20px;
-        margin-top: 15px;
-        font-size: 35px;
-    }
-    #flip {
-        display: flex;
-        padding: 5px;
-        border: ridge;
-        text-align: left;
-        background-color: white;
-        border-radius: 5px;
-        justify-content: space-between;
-        height: 50px;
-        margin-top: -140px;
-        box-shadow: inset 2px 2px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
-        background-clip: padding-box;
-        border: solid transparent;
-        border-width: 1px 2px 1px 2px;
-        width: 600px;
-        border-color: lightgrey;
-        margin-left: 305px;
-    }
-    .head{
-        color: gray;
-        font-size: 20px;
-    }
-    .archive{
-        width: 27px;
-        height: 25px; 
-    }
-    .card {
-        width: 320px;
-        background-color: white;
-        height: fit-content;
-        border-radius: 6px;
-        margin: 5px;
-        border-radius: 6px;
-        margin-left: 15px;
-       }
-       #display {
-        width: fit-content;
-        height: 100%;
-        margin-right: 0;
-        margin: 0;margin: 30px;
-        margin-top: 20px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        place-content: initial;
-        display: flex;
-        justify-content: center;
-    }
-    .noteIcon {
-        padding-right: 10px;
-        margin-top: -31px;
-        display: flex;
-        margin-left: -35px;
-    }
-    .material-icons {
-        font-size: 26px !important;
-    }
-    .app {
-        font-size: 40px !important;
-        margin-top: 3px;
-    }
-    .createNote {
-        background-color: white;
-        width: 680px;
-        border-radius: 5px;
-        display: grid;
-        grid-row-gap: 15px;
-        margin-top: 30px;
-        margin-left: 220px;
-        height: 170px;
-        box-shadow: 0 4px 11px rgba(0,0,0,0.20);
-    }
-    .threeIcons1{
-        width: 100px;
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .close {
-        float: right;
-        font-size: 19px;
-        font-weight: bold;
-        line-height: 1;
-        color: black;
-    }
-    .icons {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 13px;
-        margin-top: 45px !important;
-        margin-left: 20px;    padding-right: 170px;
-    }
-    #desc {
-        margin-top: -11px !important;
-        }
-    .tit, .desc {
-        border: none;
-        font-size: 20px;
-        margin-top: -22px;
-    }
-    .navbar{
-    position: fixed;
-    height: 80px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    }
-    .image {
-        width: 65px;
-        height: 65px;
-        border-radius: 70%;
-        margin-left: 15px;
-    }
-    .middleIcon{
-        margin-top: 13px;
-        font-size: 28px !important;
-    }
-    .keepData span{
-        font-size: 35px;color: black;
-    } 
-    #a1, #a2 {
-        margin-right: 985px;
-        font-size: 20px;
-    }
-    #a2{margin-top: 60px;}
-    #pinnedNotes ,#unpinNotes{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        place-content: initial;
-        width: 1270px;
-        justify-content: center;
-    }
-    .fa-paint-brush, .fa-image {
-        font-size: 22px;
-    }
-    .fa-palette , .fas .fa-ellipsis-v{
-        font-size: 20px;
-    }
-    .closeBtn{
-        border: none;
-        margin-top: -66px;
-        float: right;
-        margin-right: 10px;
-        font-size: 20px;
-        background-color: white;
-    }
-    .viewProfileContent{
-            width: 400px;margin-top: 10px;
-            margin-left: 550px;
-    }
-    .remainderContent{
-        margin-top: 171px;
-    margin-left: 10px;
-    width: 70%;
-    height: 270px;
-    }
-    .pickDataContent{
-        margin-top: 170px;
-    margin-left: 10px;
-    }
-    #cars {
-        border: none;
-        margin-top: 23px;
-        width: 350px;
-    }
-    .pickDataContent .modal-title {
-        font-weight: 600;
-        margin-left: -202px !important;
-    }
-    .input-group .form-control {
-        display: table-cell;
-        width: 237px !important;
-        height: 45px;
-        margin-left: -14px !important;
-    }
-    .collaboratorContent .modal-title {
-        font-weight: 600;
-        margin-left: -559px !important;
-    }
-    table{
-        width: 510px;position: absolute;
-    margin-left: 65px;
-    height: 76px;background-color: white !important;
-    z-index: 34 !important;
-    border: ridge;
-    }
-    #laterToday, #laterTomarrow{
-        justify-content: space-between;
-        width: 265px;
-    }
-    .today:hover {
-        background-color: none;
-    }
-    table td{
-        padding-left: 10px;
-       }
-       
-       .remainderContent .modal-title {
-        font-weight: 600;
-        margin-left: -219px !important;
-    }
-    .today{
-        display: grid;
-        justify-content: inherit;
-        margin-top: -44px;
-        font-size: 19px;
-    }
-      .today h6{
-        font-size: 18px;
-      }
-    .remainderContent .modal-footer h6{
-        margin-right: 140px;
-        margin-top: 14px;
-    }
-
-    .remainderContent .modal-footer{
-        padding: 15px;
-        text-align: right;
-        margin-top: -31px;
-        border-top: 1px solid #e5e5e5;
-    }
-    #time{
-    float: right;
-    }
-    .today h6:hover {
-        /* background-color: lightgrey; */
-    /* }
- 
-    .remAndLabel {
-        justify-content: space-around;
-    display: flex;
-    width: 314px;
-    margin-left: -25px;
-    }
-      #a1 , #a2{
-          margin-left: 105px;
-      }
-      .createNote input[type=text] {
-        width: 70%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        border: none;
-        outline: none;
-        font-weight: 600;
-        color: gray;
-        font-size: 18px;
-        margin-top: -24px;
-    }
-    .signout{
-        margin-left: 132px;
-        width: 100px;
-        height: 40px;
-        font-size: 18px;
-    }
-    #lastDelete{
-        margin-bottom: 100px;
-    }
-    .w3-sidebar{
-        margin-top: -15px !important;
-        font-weight: 500;
-        display: grid;
-        padding: 30px;
-        font-size: 20px;
-        height: 100%;
-        width: 295px;
-        padding-bottom: 360px;
-    }
-    .updateContent{
-        margin-left: -99px;
-        width: 700px;    border-radius: 12px;
-        margin-top: 315px;
-        height: fit-content;
-    }
-   
-    .collaboratorContent input[type="text"]{
-        margin-left: -110px !important;
-        font-size: 18px;
-    
-    }
-    .modal-footer {
-        padding: 15px;
-        text-align: right;
-        border-top: 1px solid #e5e5e5;
-        height: 70px;
-    }
-    .modal-footer .noteIcon{
-        padding-right: 10px;
-    margin-top: -26px;
-    display: flex;
-    width: 500px;
-    margin-right: 185px;
-    }
-    #updateData{
-        position: absolute;
-    margin-top: 5px;
-    color: black;
-    font-size: 18px;
-    }  */
-
     #closeCreateNote {
         color: black;
         margin-top: -73px;
@@ -3723,13 +3277,18 @@ h6{
     .info #desc{
         margin-top: -20px !important;
     }
+    .newCollaborator .ok{
+        float: right;
+    margin-right: -246px;
+    margin-top: 35px;
+    }
     .in{
         display: inline-flex;
         padding-top: 30px;
         width: inherit;
     }
     .newCollaborator #newPerson{
-        margin-left: -117px;
+        margin-left: -28px;
     }
     .modal-footer{
         height: 75px;
@@ -4074,7 +3633,7 @@ h6{
         margin-top: 153px;
         margin-left: 10px;
         width: 70%;
-        height: 250px;
+        height: 270px;
     }
    
     tbody{
@@ -4253,6 +3812,29 @@ h6{
         float: right;
         margin-right: -155px;
     }
+    .tite, .desc {
+        width: 360px;
+    }
+    .tit{
+        display: flex;
+        height: 40px;
+        border: none;
+    font-size: 18px !important;
+    }
+    .wrapper  input[type="text"]{
+        font-size: 15px;
+    width: 260px;
+    }
+    
+    .newCollaborator{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        width: 640px;
+    }
+    .newCollaborator .ok{
+        margin-right: -666px;
+    }
     #moreIcon{
         height: 20px;
     }
@@ -4265,7 +3847,7 @@ h6{
         width: inherit;
     }
     .newCollaborator #newPerson{
-        margin-left: -117px;
+        margin-left: -15px;
     }
     .modal-footer{
         height: 75px;
@@ -4607,9 +4189,13 @@ h6{
         margin-top: 153px;
         margin-left: 10px;
         width: 70%;
-        height: 250px;
+        height: 270px;
     }
-   
+   .plusCreate{
+    display: flex;
+    justify-content: space-between;
+    border: none;margin-top: 10px;
+   }
     tbody{
         margin-left: 20px;
     }
@@ -4772,6 +4358,18 @@ h6{
     #unpin, #unpincreateNote {
         margin-left: 236px;
         margin-top: -51px;
+    }
+    .modalData{
+        margin-left: 0px;
+    width: 295px;
+    }
+    .newCollaborator .modalData{
+        margin-left: 0px;
+    width: 295px;
+    }
+    .modalData .ok{
+        float: right;
+    margin-top: 25px;
     }
 }
 

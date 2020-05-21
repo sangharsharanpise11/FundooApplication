@@ -348,9 +348,13 @@
                   <div id="ownerEmailData"></div>
                 </div>
            </div>
+           
            <div class="newCollaborator">
-               <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
-               <input type="text" id="newPerson" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/><button class="glyphicon glyphicon-ok ok" id="addCollaborator"></button>
+                <div class="wrapper">
+                  <i class='far fa-user-circle colab-data' style='font-size:48px'></i>
+                  <input type="text" id="newPerson" data-toggle="dropdown" class="center newPerson dropdown-toggle" style='font-size:15px'placeholder="Person or email to share with"/>
+                </div>
+                <button class="glyphicon glyphicon-ok ok" id="addCollaborator"></button>
             </div>
             <table id="collabUser" class="elements" style="height: 200px; display: none; overflow-y: auto;"></table>
 
@@ -374,7 +378,7 @@
         </div>
 
          <div class="modalData">
-          <img src="/images/crossNew.svg"><input type="text" class="center newLabel" style='font-size:15px'placeholder="create new label"/><img src="/images/newOk.svg">
+          <img src="/images/crossNew.svg"><input type="text" class="center newLabel" style='font-size:15px'placeholder="create new label"/><img src="/images/newOk.svg" class="ok">
           <!-- <div class="labelsAll" id="labelsAll"></div> -->
          </div> 
          <div class="labelsAll" id="labelsAll"></div>
