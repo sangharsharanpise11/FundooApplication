@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded',init);
         $(".tite, .desc").css({"width":"360px"})
         $(".midIcon").html('<i class="material-icons gridView" style="margin-top: 1px;font-size:36px">widgets</i>');
         $(".card").css({"width": "600px","margin": "5px","border-radius": "6px","pointer-events": "auto","margin-left": "15px","height": "fit-content"})
-        $(".card #unpincreateNote").css({"margin-left": "500px","margin-top":"-5px","width":"25px","height":"22px","z-index":"1"})
+        $(".card #unpincreateNote").css({"margin-left": "185px","margin-top":"-5px","width":"25px","height":"22px","z-index":"1"})
         $("footer .noteIcon").css({"margin-top": "7px","display": "flex","margin-left": "20px","margin-right": "250px","margin-bottom": "-10px","margin": "2px 250px -10px -9px"});
       }) 
     
@@ -224,11 +224,14 @@ document.addEventListener('DOMContentLoaded',init);
         $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
         $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
         $(".createNote").css({"margin-left": "270px"}) 
-        $(".card #unpincreateNote").css({"margin-left": "236px","margin-top":"-51px","width": "25px","height": "22px","z-index":"1"})
+        $(".card #unpincreateNote").css({"margin-left": "-121px","margin-top":"0px","width": "25px","height": "22px","z-index":"1"})
         $("#closeCreateNote").css({"color": "black","margin-top": "-44px","float": "right","margin-right": "-155px"})
         $(".createNote .noteIcon").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
         $("#pinnedNotes, #unpinNotes").css({"margin-left": "80px"})
       });
+      $(".createNote").css({"margin-left": "250px"}) 
+      $(".createNote #unpincreateNote").css({"margin-right": "37px","margin-left": "150px","width": "25px","z-index":"1","height": "22px","margin-left":"150px","margin-top": "-5px"})
+
     }
     else{
       console.log("nothing to match");

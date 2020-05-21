@@ -3805,14 +3805,18 @@ h6{
         float: right;
         margin-right: -155px;
     }
-    .tite, .desc {
-        width: 360px;
-    }
-    .tit{
-        display: flex;
-        height: 40px;
+    .tit, .desc {
         border: none;
-    font-size: 18px !important;
+        font-size: 18px !important;
+        height: 30px;
+        display: flex;
+    }
+    .tite, .desc{
+        width: 200px;
+    }
+    #unpin, #unpincreateNote {
+        margin-left: 40px;
+        margin-top: 0px;
     }
     .wrapper  input[type="text"]{
         font-size: 15px;
@@ -4084,10 +4088,7 @@ h6{
     margin-top: -5px !important;
     font-size: 15px;
    }
-    .tit, .desc {
-        border: none;
-        font-size: 18px !important;
-    }
+  
     .fa, .far, .fas {
         font-family: "Font Awesome 5 Free";
     font-size: 22px;
@@ -4348,12 +4349,9 @@ h6{
         justify-content: space-between;
         align-items: center;
     }
-    #unpin, #unpincreateNote {
-        margin-left: 236px;
-        margin-top: -51px;
-    }
+   
     .modalData{
-        margin-left: 0px;
+        margin-left: 18px;
     width: 295px;
     }
     .newCollaborator .modalData{
