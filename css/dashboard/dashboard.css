@@ -334,9 +334,7 @@ a span {
     margin-bottom: 20px;
     margin-top: 15px;
 }
-#desc{
-    margin-top: -45px;
-}
+
 .close{
     float: right;
     font-size: 19px;
@@ -745,15 +743,74 @@ border: ridge;position: absolute;
   
 /******************* MEDIA QUERY STARTED **************************************************/
 @media screen and (max-width: 320px) {
-  .modal-footer .archive , #moreIcon{
+    .outer {
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        
+        box-shadow: 2px 52px 339px 50px grey;
+        margin-left: 141px;
+        padding: 12px;
+        width: 955px;
+        height: fit-content;
+    }
+    .plusCreate{    
+        display: inline-flex;
+        align-items: baseline;
+        justify-content: space-around;
+        width: 325px;
+    }
+    #createNewLabel{
+        font-size: 45px;
+    }
+    h{
+        font-size: 60px;
+    }
+    .create input[type=text] {
+        width: 81%;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        color: gray;
+        font-size: 18px;
+        margin-left: -9px;
+    }
+    input[type=value] {
+        font-size: inherit;
+    }
+    .fa .fa-search{
+        margin: 16px;
+        font-size: 35px;
+        color: grey;
+    }
+    .plusCreate{    
+        display: inline-flex;
+        align-items: baseline;
+        justify-content: space-around;
+        width: 325px;
+    }
+    #checkBoxLabel input[type="checkbox"] {
+        margin: 28px 25px 34px;
+        width: 65px;
+        height: 60px;
+    }
+    #checkBoxLabel input[type="text"] {
+    font-size: 20px;
+    }
+  
+    .modal-footer .archive , #moreIcon{
     width: 30px;
     height: 24px;
 }
-    .updateContent .modal-footer .noteIcon  #image,  #moreIcon,.archive{
+    .updateContent .modal-footer .noteIcon  #image,  #moreIcon, .archive{
         width: 30px;
         height: 24px;
     }
-    .archive, #remainder, #collaborator, #colors, #image, #unpincreateNote, #remainderCreateNote, #collaboratorCreateNote, #colorsCreateNote,#archieveCreateNote{
+    .createNote .updateContent .modal-footer .noteIcon  #image,  #moreIcon, .archive{
+        width: 30px;
+        height: 24px;
+    }
+    .archive,  #remainder, #collaborator, #colors, #image, #unpincreateNote, #remainderCreateNote, #collaboratorCreateNote, #colorsCreateNote,#archieveCreateNote{
         width: 83px;
         height: 76px;
     }
@@ -1433,9 +1490,44 @@ border: ridge;position: absolute;
 }
 /********************************************************************/
 @media screen and (min-width: 321px) and (max-width:425px){
+    .updateContent .modal-footer .noteIcon  #image,  #moreIcon, .archive{
+        width: 30px !important;
+        height: 24px !important;
+    }
+    .collaboratorContent .modalData {
+        padding: 5px;
+        margin-left: -6px;
+        width: 365px;
+    }
+    .createNewLabel{
+        font-size: 20px;
+    }
+    .in {
+        display: flex;
+        margin-left: 19px;
+        font-size: 15px;
+    }
+    /* #desc{
+        font-size: 15px;
+        margin-left: 10px;
+    } */
+   footer .noteIcon .archive, #remainder, #collaborator, #colors, #image, #moreIcon, #unpincreateNote, #remainderCreateNote, #collaboratorCreateNote, #colorsCreateNote, #archieveCreateNote{
+        width: 40px !important;
+        height: 35px !important;
+    }
     #unpincreateNote {
         margin-left: 26px;
         margin-top: 2px;
+    }
+    .labelTitle {
+        margin-left: -180px !important;
+    }
+    #createLabel {
+        float: right;
+        margin-right: 15px;
+        margin-top: 5px;
+        font-size: 20px;
+        border: none;
     }
     .info{
         margin-top: 36px;
@@ -1741,12 +1833,10 @@ border: ridge;position: absolute;
         background-color: white;
     }
     #desc {
-        margin-top: 9px !important;
-        }
-    .archive,#remainder,#collaborator,#colors,#image,#moreIcon,#unpincreateNote,#remainderCreateNote,#collaboratorCreateNote,.dropbtn,#colorsCreateNote,#archieveCreateNote{
-        width: 40px;
-        height: 35px;
-    }
+        font-size: 20px;
+        margin-left: 10px;
+                }
+    
     .material-icons {
         font-family: 'Material Icons';
         font-weight: normal;
@@ -1798,13 +1888,14 @@ border: ridge;position: absolute;
         grid-row-gap: 20px;
     }
     .createNote input[type=text] {
-        width: 70%;
-        border: none;
-        outline: none;
-        font-weight: 600;
-        color: gray;
-        font-size: 23px;
-        margin-left: 12px;
+        width: 81%;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    color: gray;
+    font-size: 18px;
+    margin-left: -9px;
+    font-size: 25px;
     }
     .card {
         width: 600px;
@@ -1852,7 +1943,7 @@ border: ridge;position: absolute;
     font-size: 20px !important;
 }
 #labelName {
-    font-size: 29px;
+    font-size: 15px;
     text-align: left;
     color: black;
     margin-top: -80px;
@@ -1935,11 +2026,11 @@ footer{
     margin-top: 30px;
 }
 .modal-footer .noteIcon{
-    padding-right: 10px;
+    padding-right: 7px;
     margin-top: -40px;
     display: flex;
     width: 500px;
-    margin-right: 185px;
+    margin-right: 140px;
 }
 #updateData{
     position: absolute;
@@ -1966,12 +2057,109 @@ h6{
     justify-content: space-between;
     width: 215px;
 }
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+}
+.modalData{
+    padding: 5px;
+    margin-left: 16px;
+    width: 365px;
+}
+.allLabels .labelData {
+    height: 50px;
+    width: 325px;
+    display: flow-root;
+}
+.allLabels .labelData #labelName {
+    font-size: 25px;
+    text-align: left;
+    color: black;
+    font-weight: 400;
+    margin-left: 45px;
+}
+.labelData img {
+    width: 40px;
+    height: 57px !important;
+}
+.labelsAll .labelData .material-icons{
+    font-size: 18px !important;
+}
+.labelsAll .labelData input[type=text] {
+    width: 50%;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: gray;
+    font-size: 23px;
+    margin-left: 21px;
+}
+.newLabel{
+    width: 77%;
+}
+.labelContent{
+    margin-left: 10px;
+    width: 300px;
+}
+.newCollaborator #newPerson{
+    font-size: 13px;
+    margin-top: 22px;
+}
+.outer {
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    
+    box-shadow: 2px 52px 339px 50px grey;
+    margin-left: 141px;
+    padding: 12px;
+    width: 450px;
+    height: fit-content;
+}
+h{
+    font-size: 25px;
+}
+.create input[type=text] {
+    width: 81%;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: gray;
+    font-size: 18px;
+    margin-left: -9px;
+}
+.fa .fa-search{
+    margin: 16px;
+    font-size: 20px;
+    color: grey;
+}
+#checkBoxLabel input[type="checkbox"] {
+    margin: 19px 14px 15px;
+    width: 20px;
+    height: 20px
+}
+#checkBoxLabel input[type="text"] {
+font-size: 20px;
+}
  }
 /********************************************************************/
 @media screen and (min-width: 426px) and (max-width:768px){
     #unpincreateNote {
         margin-left: 26px;
         margin-top: 2px;
+    }
+   #mySidebar .archive{
+        width: 35px !important;
+        height: 35px !important;
     }
     #moreIcon{
         height: 20px;
@@ -2534,6 +2722,7 @@ border: ridge;
     width: 500px;
     margin-right: 185px;
 }
+ 
 }
 /********************************************************************/
 @media screen and (min-width: 769px) and (max-width:1024px){

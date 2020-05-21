@@ -219,13 +219,13 @@
                 
                 <ul class="noteIcon" >
                   <li class="icon-item">
-                    <i class="material-icons"  id="remainderUpdateNote"  data-toggle="modal" data-target="#myRemindModal">add_alert</i>
+                    <img src="/images/remNew.svg"  id="remainderUpdateNote"  data-toggle="modal" data-target="#myRemindModal">
                   </li>
                   <li class="icon-item">
-                    <i class="material-icons" id="collaboratorUpdateNote" data-toggle="modal" data-target="#myCollaboratorModal">person_add</i>
+                    <img src="/images/addNew.svg" id="collaboratorUpdateNote" data-toggle="modal" data-target="#myCollaboratorModal">
                   </li> 
                   <li class="icon-item dropdown">
-                    <i class="fas fa-palette dropbtn"  data-toggle="dropdown" role="button" id="colorsUpdateNote"></i>
+                    <img src="/images/colorNew.svg" class="dropbtn"  data-toggle="dropdown" role="button" id="colorsUpdateNote">
                     <ul class="dropdown-menu" id="colorList" aria-labelledby="colors">
                         <li><div href="#" class="color" onclick="insrt('#FF0000')" value="#FF0000"  style="background-color: #FF0000;"></div></li>
                         <li><div href="#" class="color" onclick="insrt('#FFA500')"  value="#FFA500" style="background-color: #FFA500;"></div></li>
@@ -239,10 +239,10 @@
                     </ul>
                   </li>
                   <li class="icon-item">
-                        <i class="far fa-image dropbtn" id=""></i></li>
+                        <img src="/images/imgNew.svg" class="dropbtn" id="image"></i></li>
                         <li class="icon-item" id="archieveUpdateNote" value="Click me"><img src="/images/archiveNew.svg" class="archive"></i></li>
-                        <li class="icon-item dropdown " >
-                        <i class="fas fa-ellipsis-v dropbtn" role="button" data-toggle="dropdown" id="moreIcon"></i>
+                        <li class="icon-item dropdown">
+                        <img src="/images/moreNew.svg" class="dropbtn" role="button" data-toggle="dropdown" id="moreIcon">
                         <ul class="dropdown-menu lastDropdown" aria-labelledby="moreIcon">
                         <li class="dropdown-item" id="deleteNote">Delete note</li>
                         <li class="dropdown-item" id="addLabel">Add Label</li>
@@ -439,7 +439,7 @@
   <div class="outer" style="padding: 12px;">
       <h>Label note</h>
       <div class="create">
-        <input type="text" type="button" id="createNewLabel" class="createNewLabel" style='font-size:13px'placeholder="Enter label name"/><span><i class="fa fa-search" style="margin: 16px;font-size: 11px; color:grey;"></i></span>
+        <input type="text" type="button" id="createNewLabel" class="createNewLabel" placeholder="Enter label name"/><span><i class="fa fa-search"></i></span>
       </div>
       <div class="container101" id="checkBoxLabel"></div>
       <div class="plusCreate" style="display: none;">
