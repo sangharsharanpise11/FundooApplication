@@ -26,9 +26,12 @@ document.addEventListener('DOMContentLoaded',init);
       $(".data").css("margin-left","25%");
       $("#pinnedNotes, #unpinNotes").css({"display": "flex","flex-direction": "row","flex-wrap": "wrap","align-items": "flex-start","place-content": "initial","justify-content": "center","width": "600px","margin-left": "15px"});
       $("#flip").click(function(){
-          $(".createNote").css({"background-color": "white","width": "519px","border-radius": "5px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)","display": "grid","grid-row-gap": "15px","margin-top": "35px","margin-left": "103px","height": "190px"});
-          $("#closeCreateNote").css({"color": "rgb(0, 0, 0)","margin-top": "-75px","font-size": "20px","margin-left": "430px"}) 
-          $(".createNote .noteIcon").css({"padding-right": "10px","margin-top": "17px","display": "flex","margin-left": "-25px","margin-right": "265px"});
+          $(".createNote").css({"width": "540px","border-radius": "10px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)","margin-left": "105px","height": "fit-content"});
+          $(".createNote .in").css({"height": "77px","align-items": "flex-start","display": "flex","justify-content": "space-between"})
+          $(".in #title").css({"width": "250px !important"})
+          $(".createNote #unpincreateNote").css({"margin-top": "10px","margin-right": "10px"})
+          $(".createNote #closeCreateNote").css({"width":"25px","height":"22px","z-index":"1","color": "rgb(0, 0, 0)","margin-top": "-78px","font-size": "20px","margin-left": "430"}) 
+        //  $(".createNote .noteIcon").css({"padding-right": "10px","margin-top": "17px","display": "flex","margin-left": "-25px","margin-right": "265px"});
 
         })
       $(".threeIcons").css({"list-style-type": "none","display": "flex","font-size": "22px !important","justify-content": "space-between","width": "115px","margin-top": "32px","margin-left": "265px"});
@@ -69,12 +72,16 @@ document.addEventListener('DOMContentLoaded',init);
   $(document).on("click" , ".gridView" , function(e) { 
     console.log("in grid view");
     $(".midIcon").html('<i class="material-icons middleIcon">view_stream</i>');
-    $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"6px","margin-left": "15px"})
+    $(".card").css({"width": "320px","height":"fit-content","margin":"5px","border-radius":"10px","margin-left": "15px"})
+    $(".card #unpincreateNote").css({"margin-left": "26px","margin-top": "2px","width": "25px","height": "22px","z-index": "1"}) 
     $("#a1, #a2").css({"margin-left": "140px"})
-    $(".createNote .noteIcon").css({"display": "flex","padding": "0px","pointer-events": "auto","margin": "10px","margin-left": "1","margin-right": "230px"})
+    $(".createNote .noteIcon").css({"padding-right": "290px !important","display": "flex","margin": "0px","padding":"21px"})
     $(".noteIcon").css({"display": "flex","padding": "0","pointer-events": "auto","margin": "0"});
     $("#unpin, #pin").css({"width": "25px","height": "22px","margin-left": "255px","margin-top": "10px","z-index": "1"})
-   });
+    $(".createNote").css({"background-color": "white","width": "650px","border-radius": "10px","box-shadow": "0 4px 11px rgba(0,0,0,0.20)","grid-row-gap": "15px","margin-top": "35px","margin-left": "40px","height": "160px"})
+    $(".createNote #closeCreateNote").css({"color": "black","margin-top": "-56px","float": "right","font-size": "20px"})
+    $(".createNote #unpincreateNote").css({"margin-top": "5px","margin-left": "142px","width": "25px","height": "22px","z-index": "1"})
+  });
 }
     else if(mobile.matches){
       console.log("its matching");
